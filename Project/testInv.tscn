@@ -1,0 +1,117 @@
+[gd_scene load_steps=12 format=3 uid="uid://dks6s83uq0d1j"]
+
+[ext_resource type="Script" path="res://Scripts/testInv.gd" id="1_3tpy2"]
+[ext_resource type="Texture2D" uid="uid://c7fb08fdeun6" path="res://Images/Inventory.webp" id="1_mdnbf"]
+[ext_resource type="Texture2D" uid="uid://bexj0hcfjx5rp" path="res://Images/HiddenItem.webp" id="2_v5pd3"]
+[ext_resource type="Texture2D" uid="uid://bpsivjb5vce3" path="res://Images/password.jpeg" id="3_esyxj"]
+[ext_resource type="Script" path="res://Scripts/Password.gd" id="4_q5fnh"]
+[ext_resource type="Texture2D" uid="uid://31ngmm63bu50" path="res://Images/key.jpg" id="5_cdjoh"]
+[ext_resource type="Script" path="res://Scripts/Key.gd" id="7_5ejh7"]
+[ext_resource type="Texture2D" uid="uid://clqn4kq0vofdq" path="res://Images/knife.jpg" id="8_dubjj"]
+[ext_resource type="Script" path="res://Scripts/Knife.gd" id="9_bcmc6"]
+[ext_resource type="Texture2D" uid="uid://c1cat2t4xjwkt" path="res://Images/Book.webp" id="10_hes41"]
+[ext_resource type="Script" path="res://Scripts/Book.gd" id="14_i5yqj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3tpy2")
+
+[node name="Inventory" type="Sprite2D" parent="."]
+position = Vector2(313.2, 299.2)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("1_mdnbf")
+
+[node name="HiddenItem" type="Sprite2D" parent="Inventory"]
+position = Vector2(-144.118, 17.0588)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem2" type="Sprite2D" parent="Inventory"]
+position = Vector2(-108.235, 17.6471)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem3" type="Sprite2D" parent="Inventory"]
+position = Vector2(-72.3529, 17.6471)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem4" type="Sprite2D" parent="Inventory"]
+position = Vector2(-35.8824, 17.6471)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem5" type="Sprite2D" parent="Inventory"]
+position = Vector2(-1.17646, 17.0588)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem6" type="Sprite2D" parent="Inventory"]
+position = Vector2(35.8824, 17.6471)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem7" type="Sprite2D" parent="Inventory"]
+position = Vector2(71.1765, 18.2353)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem8" type="Sprite2D" parent="Inventory"]
+position = Vector2(107.647, 18.2353)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="HiddenItem9" type="Sprite2D" parent="Inventory"]
+position = Vector2(142.941, 18.2353)
+scale = Vector2(0.0235294, 0.0235294)
+texture = ExtResource("2_v5pd3")
+
+[node name="Book" type="Sprite2D" parent="."]
+position = Vector2(794, 232)
+scale = Vector2(1.264, 1.35065)
+texture = ExtResource("10_hes41")
+script = ExtResource("14_i5yqj")
+
+[node name="Password" type="Sprite2D" parent="."]
+position = Vector2(69.2, 329.2)
+scale = Vector2(0.0175833, 0.025375)
+texture = ExtResource("3_esyxj")
+script = ExtResource("4_q5fnh")
+
+[node name="Label" type="RichTextLabel" parent="Password"]
+offset_left = 34794.0
+offset_top = -10294.0
+offset_right = 47420.0
+offset_bottom = 2632.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Password: 1234"
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(250.2, 329.2)
+scale = Vector2(0.125, 0.1275)
+texture = ExtResource("5_cdjoh")
+script = ExtResource("7_5ejh7")
+
+[node name="Label" type="RichTextLabel" parent="Key"]
+offset_left = 3470.0
+offset_top = -2033.0
+offset_right = 5238.0
+offset_bottom = 516.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "A key to a mysterious door"
+
+[node name="Knife" type="Sprite2D" parent="."]
+position = Vector2(496.2, 328.2)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("8_dubjj")
+script = ExtResource("9_bcmc6")
+
+[node name="Label" type="RichTextLabel" parent="Knife"]
+offset_left = 9340.0
+offset_top = -13110.0
+offset_right = 20390.0
+offset_bottom = 3290.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "You could kill someone with this. Or just chop vegetables"
