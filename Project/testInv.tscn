@@ -83,7 +83,7 @@ offset_top = -10294.0
 offset_right = 47420.0
 offset_bottom = 2632.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 19
 text = "Password: 1234"
 
 [node name="Key" type="Sprite2D" parent="."]
@@ -98,7 +98,7 @@ offset_top = -2033.0
 offset_right = 5238.0
 offset_bottom = 516.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 19
 text = "A key to a mysterious door"
 
 [node name="Knife" type="Sprite2D" parent="."]
@@ -113,5 +113,5 @@ offset_top = -13110.0
 offset_right = 20390.0
 offset_bottom = 3290.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 19
 text = "You could kill someone with this. Or just chop vegetables"
