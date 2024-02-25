@@ -21,8 +21,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Jesse": "res://TestCharacters/Jesse.dch"
+}
 directories/dtl_directory={
+"DialogueTestTimeline": "res://Timelines/DialogueTestTimeline.dtl",
 "InvTestTimeline": "res://Timelines/InvTestTimeline.dtl"
 }
 variables={
@@ -46,6 +49,11 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+layout/style_list=["res://Styles/Dialogue_Style1.tres", "res://Styles/Test.tres"]
+layout/default_style="res://Styles/Dialogue_Style1.tres"
+glossary/default_case_sensitive=true
+history/simple_history_enabled=true
+history/full_history_enabled=true
 
 [editor_plugins]
 
