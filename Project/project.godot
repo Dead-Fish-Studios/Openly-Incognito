@@ -30,8 +30,8 @@ directories/dtl_directory={
 }
 variables={
 "ITEMS": {
-"Item0": false,
-"Item1": false
+"Item0": true,
+"Item1": true
 },
 "NOTES": {
 "Note0": "",
