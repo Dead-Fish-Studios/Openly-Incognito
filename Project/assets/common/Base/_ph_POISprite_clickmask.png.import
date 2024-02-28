@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://hon2ithivq2b"
+path="res://.godot/imported/_ph_POISprite_clickmask.png-6b8dee99a85a8c03c52e181f6c8d5552.res"
+
+[deps]
+
+source_file="res://assets/common/Base/_ph_POISprite_clickmask.png"
+dest_files=["res://.godot/imported/_ph_POISprite_clickmask.png-6b8dee99a85a8c03c52e181f6c8d5552.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
