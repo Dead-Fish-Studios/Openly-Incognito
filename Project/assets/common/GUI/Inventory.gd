@@ -4,6 +4,7 @@ extends VBoxContainer
 func _ready():
 	# hide inventory view by default
 	$InventoryContainer.visible = false
+	$PanelContainer.visible = false
 	# display default text in inventory description box
 	# connect all item buttons' signals to callback _on_item_button_pressed()
 	for item_button in $"InventoryContainer/ScrollContainer/ItemIconsGrid".get_children():
@@ -40,9 +41,11 @@ func _on_inventory_button_toggled(toggled_on):
 		update_inventory()
 		# show inventory panel
 		$InventoryContainer.visible = true
+		$PanelContainer.visible = true
 	else:
 		print_debug("inventory button toggled off - close inventory")
 		$InventoryContainer.visible = false
+		$PanelContainer.visible = false
 
 # callback for item buttons
 # inspect items in inventory
@@ -59,7 +62,7 @@ func _on_item_button_pressed(emitter: NodePath):
 	# get item description text
 	var item_description = item_button.editor_description
 	# display in bottom text box
-	$"InventoryContainer/PanelContainer/ItemText".text \
+	$"PanelContainer/ItemText".text \
 		= item_name + '\n' + item_description
 
 # callback for variable changes in Dialogic
