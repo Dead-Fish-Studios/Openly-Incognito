@@ -9,7 +9,7 @@ enum LimitedAlignments {LEFT=0, RIGHT=1}
 @export var text_alignment: Alignments = Alignments.LEFT
 @export_subgroup('Size')
 @export var text_use_global_size: bool = true
-@export var text_custom_size: int = 15
+@export var text_custom_size: int = 10
 @export_subgroup('Color')
 @export var text_use_global_color: bool = true
 @export var text_custom_color: Color = Color.WHITE
@@ -39,7 +39,7 @@ enum NameLabelColorModes {GLOBAL_COLOR, CHARACTER_COLOR, CUSTOM_COLOR}
 @export_file('*.tres') var box_panel: String = this_folder.path_join("default_stylebox.tres")
 @export var box_modulate_global_color: bool = true
 @export var box_modulate_custom_color: Color = Color(0.47247135639191, 0.31728461384773, 0.16592600941658)
-@export var box_size: Vector2 = Vector2(600, 160)
+@export var box_size: Vector2 = Vector2(600, 260)
 @export var box_distance: int = 25
 
 @export_group('Portrait')
@@ -103,27 +103,27 @@ func _apply_export_overrides() -> void:
 
 	portrait_panel.get_parent().move_child(portrait_panel, portrait_position)
 
-	## NAME LABEL SETTINGS
-	var name_label: DialogicNode_NameLabel = %DialogicNode_NameLabel
-	if name_label_use_global_size:
-		name_label.add_theme_font_size_override(&"font_size", get_global_setting(&'font_size', name_label_custom_size) as int)
-	else:
-		name_label.add_theme_font_size_override(&"font_size", name_label_custom_size)
-
-	var name_label_font: String = name_label_customfont
-	if name_label_use_global_font and ResourceLoader.exists(get_global_setting(&'font', '') as String):
-		name_label_font = get_global_setting(&'font', '')
-	if !name_label_font.is_empty():
-		name_label.add_theme_font_override(&'font', load(name_label_font) as Font)
-
-	name_label.use_character_color = false
-	match name_label_color_mode:
-		NameLabelColorModes.GLOBAL_COLOR:
-			name_label.add_theme_color_override(&"font_color", get_global_setting(&'font_color', name_label_custom_color) as Color)
-		NameLabelColorModes.CUSTOM_COLOR:
-			name_label.add_theme_color_override(&"font_color", name_label_custom_color)
-		NameLabelColorModes.CHARACTER_COLOR:
-			name_label.use_character_color = true
-
-	name_label.horizontal_alignment = name_label_alignment as HorizontalAlignment
-	name_label.hide_when_empty = name_label_hide_when_no_character
+	### NAME LABEL SETTINGS
+	#var name_label: DialogicNode_NameLabel = %DialogicNode_NameLabel
+	#if name_label_use_global_size:
+		#name_label.add_theme_font_size_override(&"font_size", get_global_setting(&'font_size', name_label_custom_size) as int)
+	#else:
+		#name_label.add_theme_font_size_override(&"font_size", name_label_custom_size)
+#
+	#var name_label_font: String = name_label_customfont
+	#if name_label_use_global_font and ResourceLoader.exists(get_global_setting(&'font', '') as String):
+		#name_label_font = get_global_setting(&'font', '')
+	#if !name_label_font.is_empty():
+		#name_label.add_theme_font_override(&'font', load(name_label_font) as Font)
+#
+	#name_label.use_character_color = false
+	#match name_label_color_mode:
+		#NameLabelColorModes.GLOBAL_COLOR:
+			#name_label.add_theme_color_override(&"font_color", get_global_setting(&'font_color', name_label_custom_color) as Color)
+		#NameLabelColorModes.CUSTOM_COLOR:
+			#name_label.add_theme_color_override(&"font_color", name_label_custom_color)
+		#NameLabelColorModes.CHARACTER_COLOR:
+			#name_label.use_character_color = true
+#
+	#name_label.horizontal_alignment = name_label_alignment as HorizontalAlignment
+	#name_label.hide_when_empty = name_label_hide_when_no_character

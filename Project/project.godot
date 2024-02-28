@@ -21,8 +21,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Jesse": "res://TestCharacters/Jesse.dch"
+}
 directories/dtl_directory={
+"DialogueTestTimeline": "res://Timelines/DialogueTestTimeline.dtl",
 "ph_timeline": "res://assets/common/Dialogic/ph_timeline.dtl"
 }
 variables={
@@ -35,8 +38,8 @@ variables={
 "Note1": ""
 }
 }
-layout/style_list=[]
-layout/default_style=""
+layout/style_list=["res://Styles/Dialogue_Style1.tres", "res://Styles/Test.tres"]
+layout/default_style="res://Styles/Dialogue_Style1.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -53,12 +56,15 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/default_case_sensitive=true
+history/simple_history_enabled=true
+history/full_history_enabled=true
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
