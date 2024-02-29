@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwbwi45uhci08"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
+[ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
+[ext_resource type="Script" path="res://assets/common/Base/BasePOI.gd" id="3_rws2x"]
+[ext_resource type="Texture2D" uid="uid://dua7ef88youqe" path="res://assets/levels/Atrium/POI_MarkusDesk.png" id="4_cjyi4"]
+[ext_resource type="Texture2D" uid="uid://b0fn2n7o5gpuo" path="res://assets/common/GUI/POI_normal.png" id="5_gye0o"]
+[ext_resource type="Texture2D" uid="uid://do5frau38agcn" path="res://assets/levels/Atrium/POI_Atrium2ConstructionSiteDoor.png" id="6_agoit"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/POI_enter.png" id="7_817jp"]
+
+[node name="AtriumLevel" type="Node2D"]
+script = ExtResource("1_r7mdt")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_024kr")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="MarkusPOI" type="Node2D" parent="POIs"]
+position = Vector2(296, 204)
+script = ExtResource("3_rws2x")
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="POIs/MarkusPOI"]
+texture = ExtResource("4_cjyi4")
+
+[node name="Polygon2D" type="Polygon2D" parent="POIs/MarkusPOI/Sprite2D"]
+editor_description = "Base POI"
+
+[node name="TextureButton" type="TextureButton" parent="POIs/MarkusPOI"]
+offset_left = -10.0
+offset_top = -37.0
+offset_right = 30.0
+offset_bottom = 3.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_gye0o")
+metadata/_edit_use_anchors_ = true
+
+[node name="Door2ConstructionSitePOI" type="Node2D" parent="POIs"]
+position = Vector2(429, 217)
+script = ExtResource("3_rws2x")
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="POIs/Door2ConstructionSitePOI"]
+texture = ExtResource("6_agoit")
+
+[node name="Polygon2D" type="Polygon2D" parent="POIs/Door2ConstructionSitePOI/Sprite2D"]
+editor_description = "Base POI"
+
+[node name="TextureButton" type="TextureButton" parent="POIs/Door2ConstructionSitePOI"]
+offset_left = 2.0
+offset_top = -58.0
+offset_right = 42.0
+offset_bottom = -18.0
+texture_normal = ExtResource("7_817jp")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="POIs/MarkusPOI/TextureButton" to="POIs/MarkusPOI" method="_on_button_pressed"]
+[connection signal="pressed" from="POIs/Door2ConstructionSitePOI/TextureButton" to="POIs/Door2ConstructionSitePOI" method="_on_button_pressed"]

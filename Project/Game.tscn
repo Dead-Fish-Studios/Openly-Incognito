@@ -1,19 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=6 format=3 uid="uid://cqm0jg8nrnepf"]
 
+[ext_resource type="Script" path="res://Game.gd" id="1_7r83t"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="1_wgkcr"]
-[ext_resource type="PackedScene" uid="uid://dot8ofedhmf5d" path="res://assets/common/Levels/Level1.tscn" id="2_4nhjb"]
+[ext_resource type="PackedScene" uid="uid://cqltlyx4mnj6q" path="res://assets/common/Base/BaseLevel.tscn" id="2_fqbb4"]
+[ext_resource type="PackedScene" uid="uid://3qui464y71sr" path="res://assets/levels/ConstructionSite/construction_site.tscn" id="4_jggun"]
+[ext_resource type="PackedScene" uid="uid://dwbwi45uhci08" path="res://assets/levels/Atrium/atrium_level.tscn" id="4_mr8l8"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7r83t")
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="HUD" parent="HUD_Layer" instance=ExtResource("1_wgkcr")]
 
-[node name="Level1" parent="." instance=ExtResource("2_4nhjb")]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
 
-[node name="MainCamera" type="Camera2D" parent="."]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 3
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="MainCamera" type="Camera2D" parent="SubViewportContainer/SubViewport"]
 editor_description = "Main Game Camera"
-position = Vector2(320, 180)
-scale = Vector2(2.48611, 10.3927)
-zoom = Vector2(2, 2)
+position = Vector2(240, 135)
+zoom = Vector2(2.667, 2.667)
 position_smoothing_enabled = true
+
+[node name="BaseLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_fqbb4")]
+visible = false
+
+[node name="ConstructionSiteLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_jggun")]
+visible = false
+
+[node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_mr8l8")]

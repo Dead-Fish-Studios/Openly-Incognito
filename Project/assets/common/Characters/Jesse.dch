@@ -17,7 +17,7 @@
 "portraits": {
 "Fox": {
 "export_overrides": {
-"image": "\"icons8-fox-100.png\""
+"image": "\"res://assets/common/Characters/Portrait_Jesse.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

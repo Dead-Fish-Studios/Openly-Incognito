@@ -45,6 +45,18 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 columns = 3
 
+[node name="Item0" type="Button" parent="InventoryContainer/ScrollContainer/ItemIconsGrid"]
+editor_description = "This is a test item"
+layout_mode = 2
+tooltip_text = "Form"
+icon = ExtResource("2_v78ak")
+
+[node name="Item1" type="Button" parent="InventoryContainer/ScrollContainer/ItemIconsGrid"]
+editor_description = "This is another test item"
+layout_mode = 2
+tooltip_text = "Form"
+icon = ExtResource("2_v78ak")
+
 [node name="Form" type="Button" parent="InventoryContainer/ScrollContainer/ItemIconsGrid"]
 editor_description = "Form Description here with stats/info, etc."
 layout_mode = 2

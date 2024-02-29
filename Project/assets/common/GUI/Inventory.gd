@@ -1,5 +1,8 @@
 extends VBoxContainer
 
+const item_description_noselect = "this is your inventory. \n click on an item above to learn more."
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# hide inventory view by default
@@ -36,14 +39,17 @@ func update_inventory():
 # open and close inventory
 func _on_inventory_button_toggled(toggled_on):
 	if toggled_on:
-		print_debug("inventory button toggled on - open inventory")
+		#print_debug("inventory button toggled on - open inventory")
 		# update inventory items from Dialogic
 		update_inventory()
+		# reset desciption text
+		$"PanelContainer/ItemText".text \
+			= item_description_noselect
 		# show inventory panel
 		$InventoryContainer.visible = true
 		$PanelContainer.visible = true
 	else:
-		print_debug("inventory button toggled off - close inventory")
+		#print_debug("inventory button toggled off - close inventory")
 		$InventoryContainer.visible = false
 		$PanelContainer.visible = false
 
@@ -54,7 +60,7 @@ func _on_inventory_button_toggled(toggled_on):
 # display item description text in bottom panel 
 # 	i.e. $"InventoryContainer/PanelContainer/ItemText".text
 func _on_item_button_pressed(emitter: NodePath):
-	print_debug("item button pressed:  "+ emitter.get_concatenated_names())
+	#print_debug("item button pressed:  "+ emitter.get_concatenated_names())
 	# get ref to emitter node (item button)
 	var item_button = get_node(emitter)
 	# get item name

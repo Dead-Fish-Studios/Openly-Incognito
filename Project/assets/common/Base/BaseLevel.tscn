@@ -16,5 +16,4 @@ centered = false
 [node name="POIs" type="Node2D" parent="."]
 
 [node name="BasePOI" parent="POIs" instance=ExtResource("2_au4mx")]
-position = Vector2(233, 214)
-camera_focus = Vector2(233, 214)
+position = Vector2(239, 146)
