@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://7qyvlqhs5i2h"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BasePOI.gd" id="1_vsgjj"]
+[ext_resource type="Texture2D" uid="uid://bj8y3mgfqnlge" path="res://assets/common/Base/_ph_POISprite.png" id="2_w61if"]
+[ext_resource type="Texture2D" uid="uid://b0fn2n7o5gpuo" path="res://assets/common/GUI/POI_normal.png" id="2_ykhcv"]
+
+[node name="BasePOI" type="Node2D"]
+position = Vector2(239, 194)
+script = ExtResource("1_vsgjj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w61if")
+
+[node name="Polygon2D" type="Polygon2D" parent="Sprite2D"]
+editor_description = "Base POI"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -21.0
+offset_top = -67.0
+offset_right = 19.0
+offset_bottom = -27.0
+texture_normal = ExtResource("2_ykhcv")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]

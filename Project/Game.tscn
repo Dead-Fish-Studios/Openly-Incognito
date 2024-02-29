@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqm0jg8nrnepf"]
+
+[ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="1_wgkcr"]
+[ext_resource type="PackedScene" uid="uid://cqltlyx4mnj6q" path="res://assets/common/Base/BaseLevel.tscn" id="2_6nd20"]
+
+[node name="Game" type="Node2D"]
+
+[node name="HUD_Layer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="HUD_Layer" instance=ExtResource("1_wgkcr")]
+
+[node name="BaseLevel" parent="." instance=ExtResource("2_6nd20")]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+editor_description = "Main Game Camera"
+position = Vector2(320, 180)
+scale = Vector2(2.48611, 10.3927)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true

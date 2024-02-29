@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7gjon4d3nmyf"]
+
+[ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
+[ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/GUI/Inventory.tscn" id="2_sbpco"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6k8la")
+
+[node name="InfoHUD" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LocationHUD" type="PanelContainer" parent="InfoHUD"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InfoHUD/LocationHUD"]
+layout_mode = 2
+text = "In Game Location"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InfoHUD"]
+layout_mode = 2
+alignment = 1
+
+[node name="DateHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InfoHUD/HBoxContainer/DateHUD"]
+layout_mode = 2
+text = "Day 00"
+
+[node name="TimeHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InfoHUD/HBoxContainer/TimeHUD"]
+layout_mode = 2
+text = "24:00"
+
+[node name="Inventory" parent="." instance=ExtResource("2_sbpco")]
+layout_mode = 1
+anchors_preset = 11

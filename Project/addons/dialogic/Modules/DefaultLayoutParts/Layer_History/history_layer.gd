@@ -7,7 +7,7 @@ extends DialogicLayoutLayer
 @export_group('Look')
 @export_subgroup('Font')
 @export var font_use_global_size: bool = true
-@export var font_custom_size: int = 15
+@export var font_custom_size: int = 4
 @export var font_use_global_fonts: bool = true
 @export_file('*.ttf') var font_custom_normal: String = ""
 @export_file('*.ttf') var font_custom_bold: String = ""
@@ -28,6 +28,8 @@ extends DialogicLayoutLayer
 @export var name_delimeter: String = ": "
 
 var scroll_to_bottom_flag: bool = false
+var last_known_child_count: int = 0
+
 
 @export_group('Private')
 @export var HistoryItem: PackedScene = null
@@ -55,7 +57,9 @@ func _ready() -> void:
 		return
 	Dialogic.History.open_requested.connect(_on_show_history_pressed)
 	Dialogic.History.close_requested.connect(_on_hide_history_pressed)
-
+	Dialogic.History.simple_history_changed.connect(show_history)
+	# Initialize last_known_child_count with the current child count
+	#last_known_child_count = get_history_log().get_child_count()
 
 func _apply_export_overrides() -> void:
 	var history_subsystem: Node = DialogicUtil.autoload().get(&'History')
@@ -86,16 +90,32 @@ func _apply_export_overrides() -> void:
 func _process(_delta : float) -> void:
 	if Engine.is_editor_hint():
 		return
+		# Check if the child count has changed
+	var current_child_count = get_history_log().get_child_count()
+	
+	if current_child_count != last_known_child_count:
+	# Update the history box if there's a change
+		print_debug("ran")
+		print_debug("last known: " + str(last_known_child_count))
+		print_debug("current: " + str(current_child_count))
+		last_known_child_count = current_child_count  # Update the tracked child 
+		get_history_box().hide()
+		show_history()
+		
+		
 	if scroll_to_bottom_flag and get_history_box().visible and get_history_log().get_child_count():
 		await get_tree().process_frame
 		get_history_box().ensure_control_visible(get_history_log().get_children()[-1] as Control)
 		scroll_to_bottom_flag = false
 
-
 func _on_show_history_pressed() -> void:
-	DialogicUtil.autoload().paused = true
+	DialogicUtil.autoload().paused = false
 	show_history()
 
+func test() -> void:
+	print_debug("Ran Test")
+	
+	
 
 func show_history() -> void:
 	for child: Node in get_history_log().get_children():
@@ -139,7 +159,7 @@ func show_history() -> void:
 		scroll_to_bottom_flag = true
 
 	get_show_history_button().hide()
-	get_hide_history_button().visible = show_close_button
+	#get_hide_history_button().visible = show_close_button
 	get_history_box().show()
 
 
