@@ -44,5 +44,14 @@ layout_mode = 2
 text = "24:00"
 
 [node name="Inventory" parent="." instance=ExtResource("2_sbpco")]
-layout_mode = 1
-anchors_preset = 11
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 853.0
+offset_top = 0.0
+offset_right = 1277.0
+offset_bottom = 689.0
+grow_horizontal = 1
+grow_vertical = 1
