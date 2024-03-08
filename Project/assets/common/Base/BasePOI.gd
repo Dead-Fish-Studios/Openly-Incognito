@@ -1,10 +1,8 @@
+@tool
 extends Node2D
 
-var button # control button (TextureButton node)
-var sprite # sprite (Sprite2D node)
-var highlight # highlighting sprite
-
 signal switch_level_requested(to_level:StringName)
+signal camera_zoom_requested(focus: Vector2, zoom: float)
 
 # editor properties
 
@@ -25,15 +23,26 @@ signal switch_level_requested(to_level:StringName)
 # 3. disable
 enum POIMode {OPEN_DIALOGIC_TIMELINE, SWITCH_LEVEL, DISABLED}
 @export var POI_mode : POIMode = POIMode.OPEN_DIALOGIC_TIMELINE
+@export var POI_button_icon : Texture2D = preload("res://assets/common/GUI/icons/POI_inspect.png")
+@export var POI_button_offset : Vector2 = Vector2(0.0, -60.0)
 @export_file("*.dtl") var dtl_path = "res://assets/common/Dialogic/ph_timeline.dtl"
-@export_file("*.tscn") var level_path
+@export_file("*.tscn") var dest_level_name = null
+
+@export_group("Sprite")
+@export var POI_sprite_enable : bool = true
+@export var POI_sprite : Texture2D = preload("res://assets/common/Base/_ph_POISprite.png")
+
 
 # Called when the node enters the scene tree for the first time.
-# get children
 func _ready():
-	button = get_child(0)
-	sprite = get_child(1)
-	highlight = sprite.get_rect()
+	add_to_group("POI")
+	# set sprite
+	$Sprite2D.texture = POI_sprite if POI_sprite_enable else null
+	# set button icon
+	$TextureButton.texture_normal = POI_button_icon
+	# set button offset
+	$TextureButton.set_anchors_preset(Control.LayoutPreset.PRESET_CENTER)
+	$TextureButton.position = $TextureButton.size / -2.0 + POI_button_offset
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -48,16 +57,15 @@ func _input(event):
 
 # executes juice and desired action
 func _on_button_pressed():
-	print_debug("POI button pressed:" + self.editor_description)
-	# zoom camera
-	if camera_zoom_in_enable:
-		var maincamera:Camera2D = $"../../../MainCamera"
-		maincamera.zoom = Vector2(2.0, 2.0) * camera_zoom
-		if camera_focus_mode == 0: # relative
-			maincamera.position = self.position + camera_focus
-		elif camera_focus_mode == 1: # absolute
-			maincamera.position = camera_focus
+	print_debug("POI button pressed:" + self.name)
 	
+	# zoom camera
+	# TODO: make this code use the `camera_zoom_requested` signal 
+	# instead of directly referencing main camera with relative nodepath 
+	if camera_zoom_in_enable:
+		camera_zoom_requested.emit(camera_focus + (self.position if camera_focus_mode == 0 else Vector2(0.0, 0.0)), camera_zoom * 2.0)
+	
+	# execute desired behavior depending on mode
 	match POI_mode:
 		# option 1: open a dialogic timeline
 		POIMode.OPEN_DIALOGIC_TIMELINE:
@@ -65,9 +73,9 @@ func _on_button_pressed():
 			Dialogic.start(dtl_path)
 		# option 2: move to another level
 		POIMode.SWITCH_LEVEL:
-			print_debug("requesting level switch to " + level_path)
+			print_debug("requesting level switch to " + dest_level_name)
 			#TODO: switch level
-			switch_level_requested.emit(level_path)
-		_:
-			print_debug("POI button is disabled")
+			switch_level_requested.emit(dest_level_name)
+		POIMode.DISABLED:
+			print_debug("POI button" + self.name + "is disabled")
 			return

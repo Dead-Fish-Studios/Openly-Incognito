@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Game-name-temporary"
+config/name="Openly Incognito"
 run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -25,15 +25,11 @@ directories/dch_directory={
 "Characters/Jesse": "res://assets/common/Characters/Jesse.dch",
 "Characters/Jordan": "res://assets/common/Characters/Jordan.dch",
 "Characters/Molly": "res://assets/common/Characters/Molly.dch",
-"Jesse": "res://assets/Characters/Jesse.dch",
-"Jordan": "res://assets/Characters/Jordan.dch",
-"Markus": "res://assets/common/Characters/Markus.dch",
-"Molly": "res://assets/Characters/Molly.dch"
+"Markus": "res://assets/common/Characters/Markus.dch"
 }
 directories/dtl_directory={
 "ConstructionSite": "res://Timelines/ConstructionSite.dtl",
 "DialogueTestTimeline": "res://Timelines/DialogueTestTimeline.dtl",
-"Level1": "res://assets/Levels/Level1.dtl",
 "Levels/Level1": "res://assets/common/Levels/Level1.dtl",
 "ph_timeline": "res://assets/common/Dialogic/ph_timeline.dtl",
 "test": "res://Timelines/test.dtl"
@@ -70,6 +66,7 @@ text/autopauses={}
 glossary/default_case_sensitive=true
 history/simple_history_enabled=true
 history/full_history_enabled=true
+history/already_read_history_enabled=true
 
 [display]
 

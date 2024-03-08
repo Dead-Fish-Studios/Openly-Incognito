@@ -10,16 +10,17 @@ action = &"main_gameplay_inventory"
 events = [SubResource("InputEventAction_noa2c")]
 
 [node name="Inventory" type="VBoxContainer"]
-anchors_preset = 11
+anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.609722
 offset_left = -424.0
 offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 script = ExtResource("1_u5i2x")
+metadata/_edit_use_anchors_ = true
 
 [node name="InventoryButton" type="Button" parent="."]
 layout_mode = 2
@@ -35,7 +36,7 @@ layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="InventoryContainer"]
 clip_contents = false
-custom_minimum_size = Vector2(0, 550)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -71,6 +72,7 @@ size_flags_vertical = 8
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 2
 text = "this is your inventory. 
 click on an item above to learn more"
 fit_content = true

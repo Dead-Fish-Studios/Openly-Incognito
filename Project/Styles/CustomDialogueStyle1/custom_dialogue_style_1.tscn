@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqpb3ie51rwl5"]
+[gd_scene load_steps=17 format=3 uid="uid://cqpb3ie51rwl5"]
 
 [ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/default_layout_base.gd" id="1_ifsho"]
-[ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/TextConsole.gd" id="3_eg5ls"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="3_wyr0p"]
 [ext_resource type="PackedScene" uid="uid://cuoywrmvda1yg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.tscn" id="4_uqnh1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/speaker_portrait_textbox_layer.gd" id="5_lfu4a"]
@@ -41,14 +40,17 @@ corner_radius_bottom_left = 3
 script = ExtResource("1_ifsho")
 
 [node name="FullAdvanceInputLayer" parent="." instance=ExtResource("6_fg82g")]
+anchors_preset = -1
+anchor_left = 0.329688
 apply_overrides_on_ready = true
+metadata/_edit_use_anchors_ = true
 
 [node name="ExampleHistoryScene" type="Control" parent="."]
 layout_direction = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 422.0
-offset_bottom = 710.0
+offset_bottom = 472.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
@@ -58,11 +60,9 @@ show_close_button = false
 show_all_choices = false
 show_join_and_leave = false
 HistoryItem = ExtResource("4_uqnh1")
-apply_overrides_on_ready = true
 
 [node name="HistoryBox" type="ScrollContainer" parent="ExampleHistoryScene"]
 unique_name_in_owner = true
-z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,36 +83,6 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="ShowHistory" type="Button" parent="ExampleHistoryScene"]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -73.0
-offset_top = 7.0
-offset_right = -9.0
-offset_bottom = 38.0
-grow_horizontal = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "History"
-
-[node name="HideHistory" type="Button" parent="ExampleHistoryScene"]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -70.0
-offset_top = 9.0
-offset_right = -9.0
-offset_bottom = 40.0
-grow_horizontal = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Return"
-
 [node name="TextboxWithSpeakerPortrait" type="Control" parent="."]
 layout_mode = 3
 anchor_top = 0.656
@@ -124,10 +94,8 @@ size_flags_vertical = 3
 script = ExtResource("5_lfu4a")
 name_label_color_mode = 1
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
-apply_overrides_on_ready = true
 
 [node name="Anchor" type="Control" parent="TextboxWithSpeakerPortrait"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,22 +112,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBox" type="HBoxContainer" parent="TextboxWithSpeakerPortrait/Anchor/Panel"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextboxWithSpeakerPortrait/Anchor/Panel/HBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextboxWithSpeakerPortrait/Anchor/Panel"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="DialogicNode_NameLabel" type="Label" parent="TextboxWithSpeakerPortrait/Anchor/Panel/HBox/VBoxContainer"]
+[node name="DialogicNode_NameLabel" type="Label" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "Name"
 script = ExtResource("6_nav3t")
 
-[node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextboxWithSpeakerPortrait/Anchor/Panel/HBox/VBoxContainer"]
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -184,8 +148,8 @@ size_flags_horizontal = 8
 unique_name_in_owner = true
 clip_children = 1
 layout_mode = 1
-offset_right = 227.0
-offset_bottom = 307.0
+offset_right = 122.0
+offset_bottom = 165.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 theme_override_styles/panel = SubResource("StyleBoxFlat_dmg1w")
@@ -242,56 +206,43 @@ metadata/_edit_layout_mode = 1
 [node name="DialogicNode_ChoiceButton1" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton2" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton3" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton4" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton5" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton6" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton7" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("10_ij4o1")
-
-[node name="DialogicNode_ChoiceButton8" type="Button" parent="VN_ChoiceLayer/Choices"]
-layout_mode = 2
-text = "Some text"
-script = ExtResource("10_ij4o1")
-
-[node name="DialogicNode_ChoiceButton9" type="Button" parent="VN_ChoiceLayer/Choices"]
-layout_mode = 2
-text = "Some text"
-script = ExtResource("10_ij4o1")
-
-[node name="DialogicNode_ChoiceButton10" type="Button" parent="VN_ChoiceLayer/Choices"]
-layout_mode = 2
-text = "Some text"
-script = ExtResource("10_ij4o1")
-
-[node name="DialogicNode_ChoiceButton11" type="Button" parent="VN_ChoiceLayer/Choices"]
-layout_mode = 2
-text = "Some text"
+alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="VN_ChoiceLayer/Choices"]
@@ -300,15 +251,3 @@ script = ExtResource("11_ehmtx")
 sound_pressed = ExtResource("12_sd857")
 sound_hover = ExtResource("13_qbpvm")
 sound_focus = SubResource("AudioStream_pe27w")
-
-[node name="TextConsole" type="VBoxContainer" parent="."]
-visible = false
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 422.0
-grow_vertical = 2
-alignment = 2
-script = ExtResource("3_eg5ls")
-
-[connection signal="pressed" from="ExampleHistoryScene/ShowHistory" to="ExampleHistoryScene" method="_on_show_history_pressed"]
-[connection signal="pressed" from="ExampleHistoryScene/HideHistory" to="ExampleHistoryScene" method="_on_hide_history_pressed"]

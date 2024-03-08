@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0fn2n7o5gpuo"
-path="res://.godot/imported/POI_normal.png-72885f86aca606f4778ddb23db4d6884.ctex"
+uid="uid://bxt7wyaych8dg"
+path="res://.godot/imported/POI_ConstructionSiteDoor.png-285ab770583661176ce65175d6a89531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/common/GUI/POI_normal.png"
-dest_files=["res://.godot/imported/POI_normal.png-72885f86aca606f4778ddb23db4d6884.ctex"]
+source_file="res://assets/levels/ConstructionSite/POI_ConstructionSiteDoor.png"
+dest_files=["res://.godot/imported/POI_ConstructionSiteDoor.png-285ab770583661176ce65175d6a89531.ctex"]
 
 [params]
 

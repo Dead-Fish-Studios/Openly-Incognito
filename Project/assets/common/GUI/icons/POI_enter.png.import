@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ftli7wng4xd"
-path="res://.godot/imported/BG_Atrium.png-866698f1b6fd676c09c54675c1071d90.ctex"
+uid="uid://la7brrrgqa8"
+path="res://.godot/imported/POI_enter.png-a2e00120f9ee20e313ab3355585aa223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/common/BG_Atrium.png"
-dest_files=["res://.godot/imported/BG_Atrium.png-866698f1b6fd676c09c54675c1071d90.ctex"]
+source_file="res://assets/common/GUI/icons/POI_enter.png"
+dest_files=["res://.godot/imported/POI_enter.png-a2e00120f9ee20e313ab3355585aa223.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://la7brrrgqa8"
-path="res://.godot/imported/POI_enter.png-4a6188cbab13e887ad442cc6b493b493.ctex"
+uid="uid://c4v4bsqbwurm4"
+path="res://.godot/imported/POI_talk.png-90b8faa18e38989aa982c90c3eb6b8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/common/GUI/POI_enter.png"
-dest_files=["res://.godot/imported/POI_enter.png-4a6188cbab13e887ad442cc6b493b493.ctex"]
+source_file="res://assets/common/GUI/icons/POI_talk.png"
+dest_files=["res://.godot/imported/POI_talk.png-90b8faa18e38989aa982c90c3eb6b8fe.ctex"]
 
 [params]
 

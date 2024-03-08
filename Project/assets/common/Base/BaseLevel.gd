@@ -1,5 +1,7 @@
+@tool
 extends Node2D
 
+@export_file var init_dtl_path
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
