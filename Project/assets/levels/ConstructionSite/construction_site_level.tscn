@@ -8,6 +8,7 @@
 
 [node name="ConstructionSiteLevel" type="Node2D"]
 script = ExtResource("1_q82j2")
+init_dtl_path = "res://Timelines/ConstructionSite.dtl"
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -31,3 +32,7 @@ POI_button_icon = ExtResource("4_ydgwj")
 POI_button_offset = Vector2(0, 0)
 dest_level_name = "AtriumLevel"
 POI_sprite_enable = false
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]

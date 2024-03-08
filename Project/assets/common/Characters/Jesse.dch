@@ -8,14 +8,14 @@
 "sound_moods": {},
 "style": "Dialogue_Style1"
 },
-"default_portrait": "Fox",
+"default_portrait": "Default",
 "description": "",
 "display_name": "Jesse",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Fox": {
+"Default": {
 "export_overrides": {
 "image": "\"res://assets/common/Characters/Portrait_Jesse.png\""
 },

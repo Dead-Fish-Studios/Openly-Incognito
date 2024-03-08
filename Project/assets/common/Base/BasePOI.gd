@@ -74,7 +74,6 @@ func _on_button_pressed():
 		# option 2: move to another level
 		POIMode.SWITCH_LEVEL:
 			print_debug("requesting level switch to " + dest_level_name)
-			#TODO: switch level
 			switch_level_requested.emit(dest_level_name)
 		POIMode.DISABLED:
 			print_debug("POI button" + self.name + "is disabled")

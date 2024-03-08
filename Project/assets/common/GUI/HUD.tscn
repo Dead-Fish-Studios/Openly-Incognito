@@ -30,6 +30,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "In Game Location"
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="InfoHUD"]
 layout_mode = 2
@@ -53,8 +54,5 @@ text = "24:00"
 
 [node name="Inventory" parent="." instance=ExtResource("2_sbpco")]
 layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.609722
 offset_top = 0.0
 offset_bottom = 0.0
-metadata/_edit_use_anchors_ = true

@@ -50,9 +50,13 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="BaseLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_fqbb4")]
-visible = false
 
 [node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_mr8l8")]
+visible = false
+init_dtl_path = "res://Timelines/Atrium_init.dtl"
+music_path = "res://assets/levels/Atrium/Atrium_Music.mp3"
 
 [node name="ConstructionSiteLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iro7l")]
 visible = false
+init_dtl_path = "res://Timelines/ConstructionSite_init.dtl"
+music_path = "res://assets/levels/ConstructionSite/ConstructionSite_Music.mp3"
