@@ -17,16 +17,14 @@ signal camera_zoom_requested(focus: Vector2, zoom: float)
 @export var camera_focus:Vector2 = Vector2(0.0, 0.0) # camera focus location
 
 @export_group("POI Behavior")
-# options: 
-# 1. open dialogic timeline
-# 2. switch to different level
-# 3. disable
 enum POIMode {OPEN_DIALOGIC_TIMELINE, SWITCH_LEVEL, DISABLED}
 @export var POI_mode : POIMode = POIMode.OPEN_DIALOGIC_TIMELINE
 @export var POI_button_icon : Texture2D = preload("res://assets/common/GUI/icons/POI_inspect.png")
 @export var POI_button_offset : Vector2 = Vector2(0.0, -60.0)
 @export_file("*.dtl") var dtl_path = "res://assets/common/Dialogic/ph_timeline.dtl"
 @export_file("*.tscn") var dest_level_name = null
+@export var is_collectble_item: bool = false
+@export var item_id: String
 
 @export_group("Sprite")
 @export var POI_sprite_enable : bool = true
@@ -43,6 +41,9 @@ func _ready():
 	# set button offset
 	$TextureButton.set_anchors_preset(Control.LayoutPreset.PRESET_CENTER)
 	$TextureButton.position = $TextureButton.size / -2.0 + POI_button_offset
+	# if this is a collectible item, set despawn callback
+	if is_collectble_item:
+		Dialogic.VAR.variable_changed.connect(_on_item_collect)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -78,3 +79,10 @@ func _on_button_pressed():
 		POIMode.DISABLED:
 			print_debug("POI button" + self.name + "is disabled")
 			return
+
+func _on_item_collect(info:Dictionary):
+	print_debug(info)
+	# check if collected item is this item
+	if info["variable"] == "ITEMS."+ item_id and info["new_value"] == true:
+		# despawn POI
+		self.visible = false

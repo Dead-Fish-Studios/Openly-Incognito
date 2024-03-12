@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7gjon4d3nmyf"]
 
 [ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
-[ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/GUI/Inventory.tscn" id="2_sbpco"]
+[ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/Inventory/Inventory.tscn" id="2_x1m1l"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -52,7 +52,6 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "24:00"
 
-[node name="Inventory" parent="." instance=ExtResource("2_sbpco")]
+[node name="Inventory" parent="." instance=ExtResource("2_x1m1l")]
 layout_mode = 1
-offset_top = 0.0
 offset_bottom = 0.0

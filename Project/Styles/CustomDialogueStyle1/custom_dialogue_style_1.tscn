@@ -92,6 +92,8 @@ offset_right = 422.0
 offset_bottom = 239.68
 size_flags_vertical = 3
 script = ExtResource("5_lfu4a")
+text_use_global_size = false
+text_custom_size = 14
 name_label_color_mode = 1
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
 
@@ -114,13 +116,11 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextboxWithSpeakerPortrait/Anchor/Panel"]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="DialogicNode_NameLabel" type="Label" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "Name"
 script = ExtResource("6_nav3t")
 
 [node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
@@ -128,8 +128,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 10
-bbcode_enabled = true
-text = "As you look around, you notice a lion, turning the corner at the other end of the hallway, wearing a black suit and sunglasses with dark lenses. They’re pushing a cart while slightly hunched over, with a few stacked crates on it with one hand, wheels squeaking as it moves along, and reading something on a clipboard with the other. They do not notice you until they get a little closer, and quickly tuck the clipboard under their arm, nodding to you as they turn and wheel into the construction site.  "
 script = ExtResource("7_iuuse")
 
 [node name="Portrait Anchor" type="Control" parent="TextboxWithSpeakerPortrait"]

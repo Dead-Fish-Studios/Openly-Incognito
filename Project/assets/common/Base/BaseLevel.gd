@@ -1,6 +1,12 @@
 @tool
 extends Node2D
 
+@export_group("Info")
+@export var level_name: String = "Level Name Here"
+
+@export_group("Background")
+@export var background_texture: Texture2D = preload("res://assets/common/Base/BG0.png")
+
 @export_group("First Entered")
 @export_file var init_dtl_path
 
@@ -13,6 +19,10 @@ var seen : bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	seen = false
+	
+	#initialize background
+	$Background/Sprite2D.texture = background_texture
+	
 	# initialize audio resources
 	#if music_path != null:
 		#$Music.stream = load(music_path)
@@ -37,4 +47,4 @@ func init_level() -> void:
 	# start audio playback
 	#$Music.play()
 	#$EnvSFX.play()
-	
+

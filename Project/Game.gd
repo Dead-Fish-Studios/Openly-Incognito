@@ -40,7 +40,7 @@ func switch_level(to_level:StringName):
 	target.init_level()
 	
 	# update HUD info
-	$HUD_Layer/HUD.set_location_info(to_level)
+	$HUD_Layer/HUD.set_location_info(target.level_name)
 	
 	print_debug("successfully switched level to: " + to_level)
 

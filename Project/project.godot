@@ -33,11 +33,13 @@ directories/dtl_directory={
 "Atrium_init": "res://Timelines/Atrium_init.dtl",
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
 "Levels/Level1": "res://assets/common/Levels/Level1.dtl",
+"ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl",
 "ph_timeline": "res://assets/common/Dialogic/ph_timeline.dtl",
 "test": "res://Timelines/test.dtl"
 }
 variables={
 "ITEMS": {
+"Atrium_CrumpledNote": false,
 "Form": false,
 "Item0": false,
 "Item1": false

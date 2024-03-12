@@ -11,6 +11,7 @@
 
 [node name="AtriumLevel" type="Node2D"]
 script = ExtResource("1_r7mdt")
+background_texture = ExtResource("2_024kr")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -43,6 +44,8 @@ camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -20)
 dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
+is_collectble_item = true
+item_id = "Atrium_CrumpledNote"
 POI_sprite = ExtResource("8_jmi6y")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

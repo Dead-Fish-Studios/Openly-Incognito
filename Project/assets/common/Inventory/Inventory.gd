@@ -1,14 +1,19 @@
+@tool
 extends VBoxContainer
 
-const item_description_noselect = "this is your inventory. \n click on an item above to learn more."
+var item_inspect_dtl: String
 
+@export_multiline var item_description_noselect ="""this is your inventory.
+click on an item above to learn more."""
+@export_node_path("RichTextLabel") var item_text_box = ^"HBoxContainer/PanelContainer/ItemText"
+@export_node_path("Button") var inspect_button = ^"HBoxContainer/InspectItemButton"
+
+var selected_item # currently selected item
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# hide inventory view by default
-	$InventoryContainer.visible = false
-	$PanelContainer.visible = false
-	# display default text in inventory description box
+	_on_inventory_button_toggled(false)
 	# connect all item buttons' signals to callback _on_item_button_pressed()
 	for item_button in $"InventoryContainer/ScrollContainer/ItemIconsGrid".get_children():
 		item_button.pressed.connect(_on_item_button_pressed.bind(item_button.get_path()))
@@ -39,38 +44,43 @@ func update_inventory():
 # open and close inventory
 func _on_inventory_button_toggled(toggled_on):
 	if toggled_on:
-		#print_debug("inventory button toggled on - open inventory")
 		# update inventory items from Dialogic
 		update_inventory()
 		# reset desciption text
-		$"PanelContainer/ItemText".text \
+		get_node(item_text_box).text \
 			= item_description_noselect
-		# show inventory panel
-		$InventoryContainer.visible = true
-		$PanelContainer.visible = true
+		# hide inspect button by default
+		get_node(inspect_button).visible = false
+		# show inventory
+		for node in get_children():
+			node.visible = true
 	else:
-		#print_debug("inventory button toggled off - close inventory")
-		$InventoryContainer.visible = false
-		$PanelContainer.visible = false
+		# hide inventory
+		for node in get_children():
+			node.visible = false
+	# always display inventory button
+	$InventoryButton.visible = true
 
 # callback for item buttons
 # inspect items in inventory
-# upon pressing item button in inventory 
-# 	i.e. $"InventoryContainer/ScrollContainer/ItemIconsGrid" children
-# display item description text in bottom panel 
-# 	i.e. $"InventoryContainer/PanelContainer/ItemText".text
 func _on_item_button_pressed(emitter: NodePath):
-	#print_debug("item button pressed:  "+ emitter.get_concatenated_names())
 	# get ref to emitter node (item button)
-	var item_button = get_node(emitter)
-	# get item name
-	var item_name = item_button.name
-	# get item description text
-	var item_description = item_button.editor_description
-	# display in bottom text box
-	$"PanelContainer/ItemText".text \
-		= item_name + '\n' + item_description
+	selected_item = get_node(emitter)
+	# display item info in bottom text box
+	get_node(item_text_box).text \
+		= "[b]" + selected_item.item_name + "[/b]" + '\n' + selected_item.item_description
+	# if item has dialogic timeline attached,
+	# display button to open timeline
+	get_node(inspect_button).visible = selected_item.has_dtl
 
 # callback for variable changes in Dialogic
-func _on_Dialogic_var_change(info:Dictionary):
+func _on_Dialogic_var_change(_info:Dictionary):
 	update_inventory()
+
+func _on_inspect_item_button_pressed():
+	# check if dialogic timeline is already open
+	if Dialogic.current_timeline:
+		# TODO: display some error message / sfx to player
+		return
+	# open inspect DTL
+	Dialogic.start(selected_item.item_dtl, selected_item.dtl_start_label)

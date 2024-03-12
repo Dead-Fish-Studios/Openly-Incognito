@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=7 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_7r83t"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="1_wgkcr"]
 [ext_resource type="PackedScene" uid="uid://cqltlyx4mnj6q" path="res://assets/common/Base/BaseLevel.tscn" id="2_fqbb4"]
 [ext_resource type="PackedScene" uid="uid://3qui464y71sr" path="res://assets/levels/ConstructionSite/construction_site_level.tscn" id="4_iro7l"]
 [ext_resource type="PackedScene" uid="uid://dwbwi45uhci08" path="res://assets/levels/Atrium/atrium_level.tscn" id="4_mr8l8"]
+[ext_resource type="Texture2D" uid="uid://i8can6h8eu0b" path="res://assets/levels/ConstructionSite/BG_ConstructionSite.png" id="6_km3ww"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -53,10 +54,13 @@ editor_draw_limits = true
 
 [node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_mr8l8")]
 visible = false
+level_name = "Atrium"
 init_dtl_path = "res://Timelines/Atrium_init.dtl"
 music_path = "res://assets/levels/Atrium/Atrium_Music.mp3"
 
 [node name="ConstructionSiteLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iro7l")]
 visible = false
+level_name = "Construction Site"
+background_texture = ExtResource("6_km3ww")
 init_dtl_path = "res://Timelines/ConstructionSite_init.dtl"
 music_path = "res://assets/levels/ConstructionSite/ConstructionSite_Music.mp3"
