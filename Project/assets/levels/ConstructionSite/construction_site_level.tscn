@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://3qui464y71sr"]
+[gd_scene load_steps=9 format=3 uid="uid://3qui464y71sr"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_q82j2"]
-[ext_resource type="Texture2D" uid="uid://i8can6h8eu0b" path="res://assets/levels/ConstructionSite/BG_ConstructionSite.png" id="2_k5pah"]
+[ext_resource type="Texture2D" uid="uid://7ujbmc5d60sy" path="res://assets/common/Base/BG0.png" id="2_qxnv7"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_snx4n"]
+[ext_resource type="Texture2D" uid="uid://bj28nqlyklnkh" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteTools.png" id="4_3odq7"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_ydgwj"]
+[ext_resource type="Texture2D" uid="uid://c5n3j411cbqx7" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteMortarBox.jpg" id="5_7cqpy"]
 [ext_resource type="Texture2D" uid="uid://bxt7wyaych8dg" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteDoor.png" id="5_c2ysh"]
+[ext_resource type="Texture2D" uid="uid://b6xmlmv6t8hsp" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteSecCam.jpg" id="6_diq6y"]
 
 [node name="ConstructionSiteLevel" type="Node2D"]
 script = ExtResource("1_q82j2")
@@ -13,18 +16,44 @@ init_dtl_path = "res://Timelines/ConstructionSite.dtl"
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("2_k5pah")
+texture = ExtResource("2_qxnv7")
 centered = false
 
 [node name="POIs" type="Node2D" parent="."]
+
+[node name="CSiteCamPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(136, 169)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -30)
+dtl_path = "res://Timelines/ConstructionSite_SecCam.dtl"
+dest_level_name = "<null>"
+POI_sprite = ExtResource("6_diq6y")
+
+[node name="CSiteMortarPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(290, 176)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -40)
+dtl_path = "res://Timelines/ConstructionSite_MortarBox.dtl"
+dest_level_name = "<null>"
+POI_sprite = ExtResource("5_7cqpy")
+
+[node name="CSiteToolsPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(432, 191)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -40)
+dtl_path = "res://Timelines/ConstructionSite_Tools.dtl"
+dest_level_name = "<null>"
+POI_sprite = ExtResource("4_3odq7")
 
 [node name="CSiteDoorPOI" parent="POIs" instance=ExtResource("3_snx4n")]
 position = Vector2(342, 152)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -60)
-is_collectble_item = null
-item_id = null
+dtl_path = "res://Timelines/ConstructionSite_Door.dtl"
 POI_sprite = ExtResource("5_c2ysh")
 
 [node name="CSite2AtriumPOI" parent="POIs" instance=ExtResource("3_snx4n")]
@@ -33,8 +62,6 @@ POI_mode = 1
 POI_button_icon = ExtResource("4_ydgwj")
 POI_button_offset = Vector2(0, 0)
 dest_level_name = "AtriumLevel"
-is_collectble_item = null
-item_id = null
 POI_sprite_enable = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
