@@ -47,10 +47,14 @@ func switch_level(to_level:StringName):
 # zoom camera
 func zoom_camera(focus: Vector2, zoom: float):
 	cam.position = focus
-	cam.zoom = Vector2(2.0, 2.0) * zoom
+	#cam.zoom = Vector2(2.0, 2.0) * zoom
+	create_tween().tween_property(cam, "zoom", Vector2(2.0, 2.0) * zoom, 1.0)\
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 
 # reset camera
 func reset_camera() -> void:
 	# reset properties
-	cam.zoom = Vector2(2.667, 2.667)
+	# cam.zoom = Vector2(2.667, 2.667)
 	cam.position  = Vector2(240.0, 135.0)
+	create_tween().tween_property(cam, "zoom", Vector2(2.667, 2.667), 1.0)\
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
