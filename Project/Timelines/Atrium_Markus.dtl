@@ -57,13 +57,13 @@ You lower your voice as you talk to Markus.
 	Markus: Dunno…he haven’t ever been charged or anything, but it seems like there’s something going on for sure. 
 	Markus: I’ve heard a bunch of people talking, a lot of them worried: I wouldn’t criticize too loudly, if you know what I mean.
 - Ask what happened after
-		Jesse: What happened then?
-		Markus takes a subtle glance around before answering.
-		Markus: I don’t think he ever came back from his “leave”. All I know is that once this “Director” comes into a place, that place suddenly seems to make a lot more money.
-		Jesse: Why would someone leave if a company is doing that well?
-		Markus: That’s the thing, isn’t it? For one reason or another, they all seem to go under the moment they leave. I dunno…I’d keep my eye out if I were you.
+	Jesse: What happened then?
+	Markus takes a subtle glance around before answering.
+	Markus: I don’t think he ever came back from his “leave”. All I know is that once this “Director” comes into a place, that place suddenly seems to make a lot more money.
+	Jesse: Why would someone leave if a company is doing that well?
+	Markus: That’s the thing, isn’t it? For one reason or another, they all seem to go under the moment they leave. I dunno…I’d keep my eye out if I were you.
 Jesse: Jeez, okay…yeah, I got you.
-do Game.set_POI_label("AtriumLevel", "MarkusPOI", revisit)
+do Game.set_POI_label("AtriumLevel", "MarkusPOI", "revisit")
 jump end_1
 
 

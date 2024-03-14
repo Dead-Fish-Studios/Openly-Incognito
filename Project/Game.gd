@@ -48,6 +48,9 @@ func switch_level(to_level:String):
 	# update HUD info
 	$HUD_Layer/HUD.set_location_info(target.level_name)
 	
+	# reset camera
+	reset_camera()
+	
 	print_debug("successfully switched level to: " + to_level)
 	print(get_tree_string())
 
@@ -68,7 +71,7 @@ func reset_camera() -> void:
 
 # find a specified POI in a certain level
 func find_POI(level: String, POI: String) -> Variant:
-	var targetPOI = get_node("SubViewportContainer/SubViewport/"+level).get_node("/POIs/"+POI)
+	var targetPOI = get_node("SubViewportContainer/SubViewport/"+level+"/POIs/"+POI)
 	if targetPOI == null:
 		printerr("could not find POI " + POI + " in level " + level)
 	return targetPOI
@@ -79,7 +82,7 @@ func set_POI_visible(level: String, POI: String, is_visible: bool):
 	var targetPOI = find_POI(level, POI)
 	if targetPOI == null: return
 	targetPOI.visible = is_visible
-	print_debug(level+"-"+POI+ " : set visibility to " + "true" if is_visible else "false")
+	print_debug(level+"-"+POI+ " : set visibility to " + ("true" if is_visible else "false"))
 
 # set POI timeline start label
 func set_POI_label(level: String, POI: String, label: String):
