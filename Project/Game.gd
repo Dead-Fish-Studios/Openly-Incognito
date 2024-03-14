@@ -20,7 +20,6 @@ func _ready():
 	
 	# start game at Atrium
 	switch_level("AtriumLevel")
-	print_debug("initialized game")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
