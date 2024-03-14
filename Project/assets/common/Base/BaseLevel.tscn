@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqltlyx4mnj6q"]
+[gd_scene load_steps=3 format=3 uid="uid://cqltlyx4mnj6q"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_by5fu"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="2_au4mx"]
-[ext_resource type="Texture2D" uid="uid://7ujbmc5d60sy" path="res://assets/common/Base/BG0.png" id="3_emjej"]
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_by5fu")
+background_texture = null
 
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("3_emjej")
 centered = false
 
 [node name="POIs" type="Node2D" parent="."]
 
 [node name="BasePOI" parent="POIs" instance=ExtResource("2_au4mx")]
-position = Vector2(233, 214)
-camera_focus = Vector2(233, 214)
+position = Vector2(239, 146)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]

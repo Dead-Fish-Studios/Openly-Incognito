@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwbwi45uhci08"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
+[ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_gba8k"]
+[ext_resource type="Texture2D" uid="uid://c4v4bsqbwurm4" path="res://assets/common/GUI/icons/POI_talk.png" id="4_4xeda"]
+[ext_resource type="Texture2D" uid="uid://dua7ef88youqe" path="res://assets/levels/Atrium/POI_MarkusDesk.png" id="4_cjyi4"]
+[ext_resource type="Texture2D" uid="uid://do5frau38agcn" path="res://assets/levels/Atrium/POI_Atrium2ConstructionSiteDoor.png" id="6_agoit"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="7_817jp"]
+[ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
+
+[node name="AtriumLevel" type="Node2D"]
+script = ExtResource("1_r7mdt")
+background_texture = ExtResource("2_024kr")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_024kr")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="MarkusPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(293, 200)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_4xeda")
+POI_button_offset = Vector2(0, -30)
+dtl_path = "res://Timelines/Atrium_Markus.dtl"
+POI_sprite = ExtResource("4_cjyi4")
+
+[node name="Atrium2CSitePOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(441, 218)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("7_817jp")
+POI_button_offset = Vector2(0, -50)
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2csite"
+POI_sprite = ExtResource("6_agoit")
+
+[node name="CrumpledNotePOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(203, 254)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -20)
+dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
+dtl_start_label = ""
+POI_sprite = ExtResource("8_jmi6y")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]

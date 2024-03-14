@@ -1,0 +1,18 @@
+label atrium2csite
+Head outside?
+- yes
+	do Game.switch_level("ConstructionSiteLevel")
+- no
+[end_timeline]
+
+label csite2atrium
+Head back to the Atrium?
+- yes
+	do Game.switch_level("AtriumLevel")
+-no
+[end_timeline]
+Head back outside?
+- yes
+	do Game.switch_level("ConstructionSiteLevel")
+- no
+label csiteroom_exit

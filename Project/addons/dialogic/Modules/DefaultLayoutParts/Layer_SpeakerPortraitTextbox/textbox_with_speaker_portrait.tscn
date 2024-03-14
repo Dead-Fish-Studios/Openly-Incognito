@@ -21,35 +21,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jt4d")
-text_custom_size = 15
+name_label_color_mode = 1
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
-box_size = Vector2(600, 160)
 
 [node name="Anchor" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="Panel" type="PanelContainer" parent="Anchor"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -250.0
-offset_top = -200.0
-offset_right = 250.0
-offset_bottom = -50.0
 grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(1.01271, 1.32)
+grow_vertical = 2
 
 [node name="HBox" type="HBoxContainer" parent="Anchor/Panel"]
 layout_mode = 2
@@ -77,23 +67,20 @@ script = ExtResource("3_11puy")
 
 [node name="Portrait Anchor" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -306.0
-offset_top = -38.0
-offset_right = -266.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = 2.0
 offset_bottom = 2.0
-grow_vertical = 0
+grow_horizontal = 0
+size_flags_horizontal = 8
 
 [node name="PortraitPanel" type="Panel" parent="Portrait Anchor"]
 unique_name_in_owner = true
 clip_children = 1
-z_index = 1
-layout_mode = 2
-offset_top = -160.0
-offset_right = 111.0
-offset_bottom = -10.0
+layout_mode = 1
+offset_right = 82.0
+offset_bottom = 111.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 theme_override_styles/panel = SubResource("StyleBoxFlat_dmg1w")

@@ -1,0 +1,16 @@
+The formidable door at the back protrudes from the wall. It looks like it’s made solely out of a thick sheet of metal.
+It appears relatively cleaner; Nothing else in this room looks like it’s been touched for a very long time.
+do Game.set_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI", "inspect")
+label inspect
+label inspected
+- try to open the door
+	You give the door a halfhearted tug.
+	The door does not budge.
+	jump inspect
+- inspect around the sides
+	There is a little keycard reader to the side of it.
+	Jesse: A keycard reader? In a place like this?
+	jump inspect
+- (move on)
+do Game.set_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI", "inspected")
+[end_timeline]

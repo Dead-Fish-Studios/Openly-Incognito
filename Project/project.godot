@@ -10,33 +10,49 @@ config_version=5
 
 [application]
 
-config/name="Game-name-temporary"
-run/main_scene="res://assets/common/Levels/Level1.tscn"
+config/name="Openly Incognito"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Game="*res://Game_Autoload.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Croc_Man": "res://assets/common/Characters/Croc_Man.dch",
+"Croc_Woman": "res://assets/common/Characters/Croc_Woman.dch",
 "Jesse": "res://assets/common/Characters/Jesse.dch",
 "Jordan": "res://assets/common/Characters/Jordan.dch",
+"Markus": "res://assets/common/Characters/Markus.dch",
 "Molly": "res://assets/common/Characters/Molly.dch"
 }
 directories/dtl_directory={
-"DialogueTestTimeline": "res://Timelines/DialogueTestTimeline.dtl",
-"Level1": "res://assets/common/Levels/Level1.dtl",
-"ph_timeline": "res://assets/common/Dialogic/ph_timeline.dtl",
-"test": "res://Timelines/test.dtl"
+"Atrium_CrumpledNote": "res://Timelines/Atrium_CrumpledNote.dtl",
+"Atrium_Markus": "res://Timelines/Atrium_Markus.dtl",
+"Atrium_init": "res://Timelines/Atrium_init.dtl",
+"ConstructionSiteRoom_BasementDoor": "res://Timelines/ConstructionSiteRoom_BasementDoor.dtl",
+"ConstructionSiteRoom_Floor": "res://Timelines/ConstructionSiteRoom_Floor.dtl",
+"ConstructionSiteRoom_Table": "res://Timelines/ConstructionSiteRoom_Table.dtl",
+"ConstructionSiteRoom_init": "res://Timelines/ConstructionSiteRoom_init.dtl",
+"ConstructionSite_Door": "res://Timelines/ConstructionSite_Door.dtl",
+"ConstructionSite_MortarBox": "res://Timelines/ConstructionSite_MortarBox.dtl",
+"ConstructionSite_SecCam": "res://Timelines/ConstructionSite_SecCam.dtl",
+"ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
+"ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
+"LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
+"Timelines/ph_timeline": "res://Timelines/ph_timeline.dtl",
+"ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl"
 }
 variables={
 "ITEMS": {
+"Atrium_CrumpledNote": false,
 "Form": false,
-"Item0": true,
-"Item1": true
+"Item0": false,
+"Item1": false
 },
 "NOTES": {
 "Note0": "",
@@ -64,6 +80,7 @@ text/autopauses={}
 glossary/default_case_sensitive=true
 history/simple_history_enabled=true
 history/full_history_enabled=true
+history/already_read_history_enabled=true
 
 [display]
 

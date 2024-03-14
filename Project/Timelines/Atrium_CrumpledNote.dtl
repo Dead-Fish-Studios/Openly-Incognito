@@ -1,0 +1,31 @@
+You direct your attention towards a crumpled piece of paper on the ground, next to the receptionist desk. You walk over and pick the paper up, intrigued, as you’ve never really seen trash lying around here before.
+Jesse (Fox): Huh.
+- Take note
+	set {ITEMS.Atrium_CrumpledNote} = true
+	do Game.set_POI_visible("AtriumLevel", "CrumpledNotePOI", false)
+	[i]you gained item\:[/i] [b]Crumpled Note[/b]
+	[i]you can view your items in your inventory.[/i]
+- Leave
+	Jesse: That janitor needs to step it up.
+	[end_timeline]
+label inspect
+Unfolding the paper, you see that it appears to have been torn out of something, judging from the ripped edges. It looks to be part of a personal note. It reads\:
+Audit Friday\
+- Get documents\
+- Money\
+- Check with J for discrepancies!!!\
+- Move files\
+- Get Hugo?
+- Audit Friday
+	You don’t really know what any of this means, but you assume an auditor was coming in this Friday.
+	jump inspect
+- Check with J for discrepancies!!!
+	You don’t know who “J” might be, but the triple exclamation marks draws your attention. Whomever wrote this clearly did not want any discrepancies.
+	jump inspect
+- Get Hugo?
+	Hugo is the head of security at this place. You’ve seen him before\: he’s a huge, bulky crocodile who always has a firm expression on his face. Every time he moves his arms you swear that his suit is going to rip.
+	You’ve never talked with him before, but to be honest, you were fine keeping it that way.
+	Jesse: Why would Hugo be needed for an audit? Doesn’t he have better things to do? Maybe he’ll beat 'em up if we get an adverse opinion, haha…
+	jump inspect
+- (move on)
+[end_timeline]
