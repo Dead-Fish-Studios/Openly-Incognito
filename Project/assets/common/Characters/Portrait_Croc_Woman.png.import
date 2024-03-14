@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5n3j411cbqx7"
-path="res://.godot/imported/POI_ConstructionSiteMortarBox.jpg-290f67a75f500c12eed7ac3d7b0d9687.ctex"
+uid="uid://cq8kcxwn0abus"
+path="res://.godot/imported/Portrait_Croc_Woman.png-f39254a218ae2497aa97f1d2b5fd0ad8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/ConstructionSite/POI_ConstructionSiteMortarBox.jpg"
-dest_files=["res://.godot/imported/POI_ConstructionSiteMortarBox.jpg-290f67a75f500c12eed7ac3d7b0d9687.ctex"]
+source_file="res://assets/common/Characters/Portrait_Croc_Woman.png"
+dest_files=["res://.godot/imported/Portrait_Croc_Woman.png-f39254a218ae2497aa97f1d2b5fd0ad8.ctex"]
 
 [params]
 

@@ -1,23 +1,33 @@
 Jesse: Markus, what’s up man?
-The owl at the desk looks up slowly and caringly, but his eyes widen slightly while his mouth breaks into a half-grin, his posture showing a bit more attention at the sight of his friend. His eyes go back to the computer screen he was working on, but looks back at you as he talks.
+The owl at the desk looks up slowly. His eyes widen slightly while his mouth breaks into a half-grin, his posture showing a bit more attention at the sight of his friend. 
+# His eyes go back to the computer screen he was working on, but looks back at you as he talks.
 Markus was the receptionist for the company, but it seems like people never really came to him. Every time you see him he always looks bored at his desk, trying to play games on his computer when no one is looking. His piercing eyes usually half-shut, you sometimes wonder how he’s lasted here for so long.
 Markus: Not my spirits for the day, that’s for sure.
 Jesse: Why’s that?
 Markus: Ah, well, you know work, never seems to end around here…
 Jesse: I hear you there. I’ve got to send off another round of reports sometime today.
 Upon hearing the word “reports”, Markus turns his body to you, visibly eager to say something.
-Markus: You know what that asshole Jackson is making me do?! Last week, half the HR team was let go in the middle of the week, but that was during the settlement process we were going through! We didn’t have enough people to finish the thing so guess who he dumped the brunt of it on cause it “looks like they’re doing nothing all day anyway”?!
-Jackson was the head of sales for Blurr Sector. An intimidating looking raven with long, slender limbs, he always wore a hard expression on his face and scowled when people spoke with him.
+Markus: You know what that asshole [b]Jackson[/b] is making me do?! 
+[b]Jackson[/b] was the head of sales for Blurr Sector. An intimidating looking raven with long, slender limbs, he always wore a hard expression on his face and scowled when people spoke with him.
 You certainly wouldn’t call him a “people person” and have created a kind of half-vendetta against him when talking to your friends, who usually shared your sentiment.
 You never really had to interact with him that much being from a different department, but when you did, it always created a slight pang of fear in your chest, wondering what he could possibly want with you.
-Jesse: I have a strange feeling that I know the answer.
-Markus: Yeah! But, I came in this week, and NOW he’s hinting that this could become a regular thing due to not having enough people around the building! Now I’ve gotta handle HR things wherever he wants to pawn it off to someone else, ON TOP of what I’ve already got going on!
-Markus finishes his rant by taking a long breath and heaving a deep exhale, sinking down into his chair, head perched on one hand.
-Jesse: Feel better?
-Markus: Haha, yeah, a little, I guess. Thanks for listening, Jesse. He DID say that he was looking to hire more people, but judging from the way he said it, I think we’re looking at the next five to ten business years before that happens.
-Jesse: Well, hey, if it ever gets too much, just let me know and I’ll try my best to help out.
-Markus: Thanks Jesse, I appreciate that.
-Markus gives a small smile, then leans forward in his chair, and assumes a serious position on the desk, looking at you like it was a very important interview.
+- Indulge Markus
+	Jesse: Nothing good, I bet?
+	Markus: Oh, it sucks. Last week, half the HR team was let go in the middle of the week, but that was during the settlement process we were going through! We didn’t have enough people to finish the thing so guess who he dumped the brunt of it on cause it “looks like they’re doing nothing all day anyway”?!
+	Jesse: I have a strange feeling that I know the answer.
+	Markus: Yeah! But, I came in this week, and NOW he’s hinting that this could become a regular thing due to not having enough people around the building! Now I’ve gotta handle HR things wherever he wants to pawn it off to someone else, ON TOP of what I’ve already got going on!
+	Markus finishes his rant by taking a long breath and heaving a deep exhale, sinking down into his chair, head perched on one hand.
+	Jesse: Feel better?
+	Markus: Haha, yeah, a little, I guess. Thanks for listening, Jesse. He DID say that he was looking to hire more people, but judging from the way he said it, I think we’re looking at the next five to ten business years before that happens.
+	Jesse: Well, hey, if it ever gets too much, just let me know and I’ll try my best to help out.
+	Markus gives a small smile.
+	Markus: Thanks Jesse, I appreciate that.
+- Not interested
+	Jesse: No doubt something miserable. I don't really want to start my morning with Jackson thoughts.
+	Markus: Well...you know what, you're right. Me neither.
+
+label jesse_promotion
+Markus leans forward in his chair, and assumes a serious position on the desk, looking at you like it was a very important interview.
 Markus: Now what’s this I hear about someone getting considered for a promotion? Why didn’t you tell me?
 - Banter
 	Jesse: Well well well, we got quite the little sleuth over here don’t we? And I was going to tell you that…
@@ -31,25 +41,57 @@ Markus: Now what’s this I hear about someone getting considered for a promotio
 	Markus: Well, sorry for ruining the surprise. Seriously though, nice work man, really moving up fast.
 
 Jesse: Well it’s not official yet, but Molly was talking with me and said I was one of the potential candidates.
-Markus: You know, that is kinda interesting…I heard this new CEO was really tight on budget and all that, so I would’ve thought something like a promotion would’ve been really far back on the burner…
-Jesse: New CEO?
-Markus: You didn’t hear? Apparently Blurr is taking a much needed leave of work, so we got this new person here now for the time being. Name’s “Director Connie”, if I remember correctly. Can’t really miss the pink feathers, them being a flamingo. Pretty interesting, you don’t usually see a flamingo in charge of a bunch of carnivores…
+Markus: You know, that is kinda interesting…I heard this [b]new CEO[/b] was really tight on budget and all that, so I would’ve thought something like a promotion would’ve been really far back on the burner…
+Jesse: What's this about a new CEO?
+Markus: Oh, you didn’t hear? 
+label new_ceo
+Markus: Apparently Blurr is taking a much needed leave of work, so we got this new person here now for the time being. Name’s “Director Connie”, if I remember correctly. Can’t really miss the pink feathers, them being a flamingo. Pretty interesting, you don’t usually see a flamingo in charge of a bunch of carnivores…
 Jesse: What? No one told me!
-Markus: Markus looks at you with a face that says “you’re kidding, right?”.
-Well it was kinda hard to miss, they sent out an email to everyone in the company.
-You put one hand behind your head, somewhat embarrassed.
+Markus: Well it was kinda hard to miss, they sent out an email to everyone in the company.
 Jesse: Oh… must’ve overlooked it, I guess…
 Markus: Apparently they’ve got quite the reputation too. Worked their way right to the top of every single company they’ve been employed at. If I remember correctly, they all took some form of a “leave of work” too…
-Really?
+Jesse: Really?
 You lower your voice as you talk to Markus.
-- Do you think they’re doing something to them?
-	Markus: Dunno…they haven’t ever been charged or anything, but it seems like there’s something going on for sure. 
+- Ask about the old CEO, Blurr
+	Jesse: Do you think they’re doing something to Blurr?
+	Markus: Dunno…he haven’t ever been charged or anything, but it seems like there’s something going on for sure. 
 	Markus: I’ve heard a bunch of people talking, a lot of them worried: I wouldn’t criticize too loudly, if you know what I mean.
-- What happened then?
-	Markus takes a subtle glance around before answering.
-	Markus: I don’t think they ever came back from their “leave”. All I know is that once this “Director” comes into a place, that place suddenly seems to make a lot more money.
-	Jesse: Why would someone leave if a company is doing that well?
-	Markus: That’s the thing, isn’t it? For one reason or another, they all seem to go under the moment they leave. I dunno…I’d keep my eye out if I were you.
+- Ask what happened after
+		Jesse: What happened then?
+		Markus takes a subtle glance around before answering.
+		Markus: I don’t think he ever came back from his “leave”. All I know is that once this “Director” comes into a place, that place suddenly seems to make a lot more money.
+		Jesse: Why would someone leave if a company is doing that well?
+		Markus: That’s the thing, isn’t it? For one reason or another, they all seem to go under the moment they leave. I dunno…I’d keep my eye out if I were you.
 Jesse: Jeez, okay…yeah, I got you.
+do Game.set_POI_label("AtriumLevel", "MarkusPOI", revisit)
+jump end_1
+
+
+label revisit
+Jesse: Hey Markus.
+Markus: ...
+Markus slowly rises from his semi-stupor.
+Markus: ...Oh, hey Jesse. What's up?
+- Ask about the new CEO
+	Jesse: I heard we had a new CEO right?
+	jump new_ceo
+- Ask about Jackson
+	Jesse: So, if I may ask ... what fresh horrors did Jackson unleash upon you last week?
+	Markus cringes at the name.
+	Markus: Oh, it sucks. Last week, half the HR team was let go in the middle of the week, but that was during the settlement process we were going through! We didn’t have enough people to finish the thing so guess who he dumped the brunt of it on cause it “looks like they’re doing nothing all day anyway”?!
+	Jesse: I have a strange feeling that I know the answer.
+	Markus: Yeah! But, I came in this week, and NOW he’s hinting that this could become a regular thing due to not having enough people around the building! Now I’ve gotta handle HR things wherever he wants to pawn it off to someone else, ON TOP of what I’ve already got going on!
+	Markus finishes his rant by taking a long breath and heaving a deep exhale, sinking down into his chair, head perched on one hand.
+	Jesse: Feel better?
+	Markus: Haha, yeah, a little, I guess. Thanks for listening, Jesse. He DID say that he was looking to hire more people, but judging from the way he said it, I think we’re looking at the next five to ten business years before that happens.
+	Jesse: Well, hey, if it ever gets too much, just let me know and I’ll try my best to help out.
+	Markus gives a small smile.
+	Markus: Thanks Jesse, I appreciate that.
+- (move on)
+	Jesse: It's nothing, just saying hi.
+jump end_1
+
+label end_1
 Markus: Well I better get back to work then, but feel free to drop by anytime.
 Jesse: Sounds good. See you around Markus.
+[end_timeline]

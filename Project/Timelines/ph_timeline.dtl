@@ -9,8 +9,8 @@ this section tests inventory functionality - item gain, check inventory, and use
 check your inventory at any point to see items and notes you currently have.
 label label #1.1 - test item gain
 you can collect items\:
-- take item0 [if {ITEMS.Item0} == false]
-	set {ITEMS.Item0} = true
+- take item0 [if {ITEMS.BaseItem} == false]
+	set {ITEMS.BaseItem} = true
 	(you gained item0)
 	jump label #1.1 - test item gain
 - take item1 [if {ITEMS.Item1} == false]
@@ -20,8 +20,8 @@ you can collect items\:
 - (move on)
 label label #1.2 - test item use
 and also use them\:
-- use item0 [if {ITEMS.Item0} == true]
-	set {ITEMS.Item0} = false
+- use item0 [if {ITEMS.BaseItem} == true]
+	set {ITEMS.BaseItem} = false
 	(you used item0)
 	jump label #1.2 - test item use
 - use item1 [if {ITEMS.Item1} == true]
@@ -36,14 +36,14 @@ you can explore dialogue paths. choose a path to explore\:
 	after you finish this path, you are put back to the previous branching hub.
 	jump label #2 - explore tree
 
-- explore the second path, but only if you have item0. [if {ITEMS.Item0} == true][else="disable"]
+- explore the second path, but only if you have item0. [if {ITEMS.BaseItem} == true][else="disable"]
 	check your inventory to confirm that you do have item0.
 	- yes - continue
 	- no - exit and debug
 		[end_timeline]
 	jump label #2 - explore tree
 
-- explore the third path, but only if you do NOT have item0. [if {ITEMS.Item0} == false][else="disable"]
+- explore the third path, but only if you do NOT have item0. [if {ITEMS.BaseItem} == false][else="disable"]
 	check your inventory to confirm that you don't have item0.
 	- yes - continue
 	- no - exit and debug

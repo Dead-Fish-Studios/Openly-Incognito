@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dot8ofedhmf5d"]
-
-[ext_resource type="Script" path="res://assets/common/Levels/Level1.gd" id="1_wtren"]
-
-[node name="Level1" type="Node2D"]
-script = ExtResource("1_wtren")

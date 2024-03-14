@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6xmlmv6t8hsp"
-path="res://.godot/imported/POI_ConstructionSiteSecCam.jpg-257c2f9b9dd9c74edfc58a624c32b401.ctex"
+uid="uid://kqiu5mfhyg8i"
+path="res://.godot/imported/Portrait_Croc_Man.png-a60fc92dbbff6ad09b2101593123857e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/ConstructionSite/POI_ConstructionSiteSecCam.jpg"
-dest_files=["res://.godot/imported/POI_ConstructionSiteSecCam.jpg-257c2f9b9dd9c74edfc58a624c32b401.ctex"]
+source_file="res://assets/common/Characters/Portrait_Croc_Man.png"
+dest_files=["res://.godot/imported/Portrait_Croc_Man.png-a60fc92dbbff6ad09b2101593123857e.ctex"]
 
 [params]
 

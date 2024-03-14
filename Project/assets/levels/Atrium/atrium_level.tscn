@@ -32,10 +32,12 @@ POI_sprite = ExtResource("4_cjyi4")
 
 [node name="Atrium2CSitePOI" parent="POIs" instance=ExtResource("3_gba8k")]
 position = Vector2(441, 218)
-POI_mode = 1
+camera_zoom_in_enable = true
+camera_zoom = 2.0
 POI_button_icon = ExtResource("7_817jp")
 POI_button_offset = Vector2(0, -50)
-dest_level_name = "ConstructionSiteLevel"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2csite"
 POI_sprite = ExtResource("6_agoit")
 
 [node name="CrumpledNotePOI" parent="POIs" instance=ExtResource("3_gba8k")]
@@ -44,8 +46,7 @@ camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -20)
 dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
-is_collectble_item = true
-item_id = "Atrium_CrumpledNote"
+dtl_start_label = ""
 POI_sprite = ExtResource("8_jmi6y")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
