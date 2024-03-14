@@ -24,13 +24,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Jesse": "res://assets/common/Characters/Jesse.dch",
 "Jordan": "res://assets/common/Characters/Jordan.dch",
-"Markus": "res://assets/common/Characters/Markus.dch",
 "Molly": "res://assets/common/Characters/Molly.dch"
 }
 directories/dtl_directory={
 "DialogueTestTimeline": "res://Timelines/DialogueTestTimeline.dtl",
 "Level1": "res://assets/common/Levels/Level1.dtl",
-"Level2": "res://assets/common/Levels/Level2.dtl",
 "ph_timeline": "res://assets/common/Dialogic/ph_timeline.dtl",
 "test": "res://Timelines/test.dtl"
 }
