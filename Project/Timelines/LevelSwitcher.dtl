@@ -11,8 +11,10 @@ Head back to the Atrium?
 	do Game.switch_level("AtriumLevel")
 -no
 [end_timeline]
+
+label csiteroom_exit
 Head back outside?
 - yes
 	do Game.switch_level("ConstructionSiteLevel")
 - no
-label csiteroom_exit
+[end_timeline]
