@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Game="*res://Game_Autoload.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -44,15 +44,20 @@ directories/dtl_directory={
 "ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
+"Office_Files": "res://Timelines/Office_Files.dtl",
+"Office_Shredder": "res://Timelines/Office_Shredder.dtl",
+"Office_WalkieTalkie": "res://Timelines/Office_WalkieTalkie.dtl",
+"Office_init": "res://Timelines/Office_init.dtl",
 "Timelines/ph_timeline": "res://Timelines/ph_timeline.dtl",
 "ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl"
 }
 variables={
 "ITEMS": {
 "Atrium_CrumpledNote": false,
-"Form": false,
 "Item0": false,
-"Item1": false
+"Item1": false,
+"Office_OrderForm": false,
+"Office_WalkieTalkie": false
 },
 "NOTES": {
 "Note0": "",

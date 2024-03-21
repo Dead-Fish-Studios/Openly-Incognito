@@ -24,10 +24,10 @@ func _ready():
 	$Background/Sprite2D.texture = background_texture
 	
 	# initialize audio resources
-	#if music_path != null:
-		#$Music.stream = load(music_path)
-	#if env_sfx_path != null:
-		#$EnvSFX.stream = load(env_sfx_path)
+	if music_path != null:
+		$Music.stream = load(music_path)
+	if env_sfx_path != null:
+		$EnvSFX.stream = load(env_sfx_path)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

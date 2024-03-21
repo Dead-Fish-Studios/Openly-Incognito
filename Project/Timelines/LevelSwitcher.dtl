@@ -18,3 +18,17 @@ Head back outside?
 	do Game.switch_level("ConstructionSiteLevel")
 - no
 [end_timeline]
+
+label office2atrium
+Head back to the Atrium?
+- yes
+	do Game.switch_level("AtriumLevel")
+- no
+[end_timeline]
+
+label atrium2office
+Head up to your office?
+- yes
+	do Game.switch_level("OfficeLevel")
+- no
+[end_timeline]
