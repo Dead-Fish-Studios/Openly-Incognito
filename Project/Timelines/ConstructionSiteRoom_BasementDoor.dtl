@@ -13,4 +13,8 @@ label inspected
 	jump inspect
 - (move on)
 do Game.set_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI", "inspected")
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
+	if Game.get_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI") == "inspected":
+		if Game.get_POI_label("ConstructionSiteRoomLevel", "FloorPOI") == "inspected":
+			jump ConstructionSiteRoom_Table/croc_enter
 [end_timeline]
