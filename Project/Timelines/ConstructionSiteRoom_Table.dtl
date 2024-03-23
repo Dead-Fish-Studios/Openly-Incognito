@@ -9,6 +9,7 @@ if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
 			jump croc_enter
 [end_timeline]
 label croc_enter
+do Game.reset_camera()
 Before you can look anymore, you hear a pair of voices outside growing louder, and a set of squeaking wheels, like the cart you saw earlier.
 You need to think quick:
 - Hide behind the table
