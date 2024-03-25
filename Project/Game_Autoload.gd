@@ -38,3 +38,7 @@ func set_POI_label(level: String, POI: String, label: String):
 # get POI timeline start label
 func get_POI_label(level: String, POI: String) -> String:
 	return game.get_POI_label(level, POI)
+
+# get game instance
+func inst() -> Game:
+	return game
