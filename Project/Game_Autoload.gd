@@ -42,3 +42,7 @@ func get_POI_label(level: String, POI: String) -> String:
 # get game instance
 func inst() -> Game:
 	return game
+
+# get HUD
+func HUD() -> Control:
+	return game.hud
