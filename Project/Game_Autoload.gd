@@ -5,7 +5,6 @@ var game: Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	game = get_node("/root/Main")
-	print(game.to_string())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
