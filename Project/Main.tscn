@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=9 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
 [ext_resource type="PackedScene" uid="uid://cqltlyx4mnj6q" path="res://assets/common/Base/BaseLevel.tscn" id="3_g2dhc"]
 [ext_resource type="PackedScene" uid="uid://dwbwi45uhci08" path="res://assets/levels/Atrium/atrium_level.tscn" id="4_55p42"]
+[ext_resource type="PackedScene" uid="uid://dwujesv0ttwh" path="res://assets/levels/Home/home_level.tscn" id="4_rslly"]
 [ext_resource type="PackedScene" uid="uid://3qui464y71sr" path="res://assets/levels/ConstructionSite/construction_site_level.tscn" id="5_dbh6f"]
 [ext_resource type="PackedScene" uid="uid://crmyj5lxqbfn7" path="res://assets/levels/Office/office_level.tscn" id="5_vc58l"]
 [ext_resource type="PackedScene" uid="uid://bypih6o8d4bc7" path="res://assets/levels/ConstructionSiteRoom/construction_site_room_level.tscn" id="6_a3rhm"]
@@ -52,6 +53,8 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="BaseLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_g2dhc")]
+
+[node name="HomeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_rslly")]
 
 [node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_55p42")]
 level_name = "Atrium"

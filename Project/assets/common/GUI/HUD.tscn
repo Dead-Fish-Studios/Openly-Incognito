@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7gjon4d3nmyf"]
+[gd_scene load_steps=4 format=3 uid="uid://b7gjon4d3nmyf"]
 
 [ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
+[ext_resource type="Texture2D" uid="uid://bm4hk64mrnhq5" path="res://assets/common/GUI/icons/HUD_gohome.png" id="2_4ruyp"]
 [ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/Inventory/Inventory.tscn" id="2_x1m1l"]
 
 [node name="HUD" type="Control"]
@@ -52,6 +53,17 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "24:00"
 
+[node name="GoHomeButton" type="Button" parent="InfoHUD"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Go Home"
+icon = ExtResource("2_4ruyp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
 [node name="Inventory" parent="." instance=ExtResource("2_x1m1l")]
 layout_mode = 1
 offset_bottom = 0.0
+
+[connection signal="pressed" from="InfoHUD/GoHomeButton" to="." method="go_home_pressed"]

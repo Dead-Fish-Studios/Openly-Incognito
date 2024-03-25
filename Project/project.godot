@@ -43,6 +43,7 @@ directories/dtl_directory={
 "ConstructionSite_SecCam": "res://Timelines/ConstructionSite_SecCam.dtl",
 "ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
+"Home": "res://Timelines/Home.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",
 "Office_Shredder": "res://Timelines/Office_Shredder.dtl",

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwujesv0ttwh"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_ks7aw"]
+[ext_resource type="Texture2D" uid="uid://doisuf5sggr78" path="res://assets/levels/Home/BG_Home_night.png" id="2_x0g4k"]
+
+[node name="HomeLevel" type="Node2D"]
+script = ExtResource("1_ks7aw")
+level_name = "Home"
+background_texture = ExtResource("2_x0g4k")
+init_dtl = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_x0g4k")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]
