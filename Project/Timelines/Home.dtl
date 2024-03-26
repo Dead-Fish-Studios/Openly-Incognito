@@ -2,7 +2,7 @@ label confirm_eod
 Jesse: Well, that was a long day.
 It's past 6pm. Do you want to head home now?
 You can also go home later by pressing the "Go Home" button on the top of your screen.
-- yes:
+- Yes
 	Jesse: Time to clock out.
 	do Game.switch_level("HomeLevel")
 	do Game.go_home_visible(false)
@@ -12,7 +12,7 @@ You can also go home later by pressing the "Go Home" button on the top of your s
 		jump eod_day2
 	elif Game.inst().get_day() == 3:
 		jump eod_day3
-- not yet:
+- Not Yet
 	Jesse: I'll head home in a bit.
 [end_timeline]
 
