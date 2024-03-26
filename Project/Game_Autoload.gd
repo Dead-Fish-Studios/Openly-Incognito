@@ -5,7 +5,6 @@ var game: Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	game = get_node("/root/Main")
-	print(game.to_string())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,3 +37,45 @@ func set_POI_label(level: String, POI: String, label: String):
 # get POI timeline start label
 func get_POI_label(level: String, POI: String) -> String:
 	return game.get_POI_label(level, POI)
+
+# region INGAME_TIME
+
+# initialize time and day
+func reset_time_and_day() -> void:
+	game.reset_time_and_day()
+
+# reset time to start of day
+func reset_time() -> void:
+	game.reset_time()
+
+# get current time of day
+func get_time() -> int:
+	return game.get_time()
+
+# get current day
+func get_day() -> int:
+	return game.get_day()
+
+# get time of day in string
+func tod_str(_24hr: bool = false) -> StringName:
+	return game.tod_str(_24hr)
+
+# progress time by specified amount
+func tod_progress(minutes: int) -> void:
+	game.tod_progress(minutes)
+
+# end the day and start new day
+func sleep() -> void:
+	game.sleep()
+
+# toggle "Head Home" button visibility
+func go_home_visible(visibility: bool) -> void:
+	game.go_home_visible(visibility)
+
+# get game instance
+func inst() -> Game:
+	return game
+
+# get HUD
+func HUD() -> Control:
+	return game.hud

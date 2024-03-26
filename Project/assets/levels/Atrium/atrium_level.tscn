@@ -57,7 +57,7 @@ camera_zoom = 2.0
 POI_button_icon = ExtResource("7_817jp")
 POI_button_offset = Vector2(0, -50)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
-dtl_start_label = "office2atrium"
+dtl_start_label = "atrium2office"
 POI_sprite = ExtResource("9_8vf85")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

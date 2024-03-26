@@ -41,7 +41,6 @@ script = ExtResource("1_ifsho")
 
 [node name="FullAdvanceInputLayer" parent="." instance=ExtResource("6_fg82g")]
 anchors_preset = -1
-anchor_left = 0.329688
 apply_overrides_on_ready = true
 metadata/_edit_use_anchors_ = true
 

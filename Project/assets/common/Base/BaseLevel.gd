@@ -8,7 +8,8 @@ extends Node2D
 @export var background_texture: Texture2D = preload("res://assets/common/Base/BG0.png")
 
 @export_group("First Entered")
-@export_file var init_dtl_path
+@export var init_dtl: bool = true
+@export_file var init_dtl_path = null
 
 @export_group("Audio")
 @export_file var music_path = null
@@ -39,7 +40,8 @@ func first_entered() -> void:
 	seen = true
 	# open init dialogic timeline
 	# use this for establishing levels to player
-	Dialogic.start(init_dtl_path)
+	if init_dtl:
+		Dialogic.start(init_dtl_path)
 
 # runs once every time level is entered
 func init_level() -> void:
