@@ -83,7 +83,8 @@ func _process(_delta : float) -> void:
 		
 	if scroll_to_bottom_flag and get_history_box().visible and get_history_log().get_child_count():
 		await get_tree().process_frame
-		get_history_box().ensure_control_visible(get_history_log().get_children()[-1] as Control)
+		if get_history_log().get_children().size() > 0:
+			get_history_box().ensure_control_visible(get_history_log().get_children()[-1] as Control)
 		scroll_to_bottom_flag = false
 
 # clear history log
