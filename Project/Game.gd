@@ -150,7 +150,7 @@ func tod_str(_24hr: bool = false) -> StringName:
 	var hour: int = time_of_day / 60
 	var minute: StringName = ("0" if (time_of_day % 60 < 10) else "") + str(time_of_day % 60)
 	if _24hr: return str(hour) + ":" + minute
-	else: return str((hour + 1) % 12 - 1) + ":" + minute + (" AM" if hour < 12 else " PM")
+	else: return str(hour - (12 if hour > 12 else 0)) + ":" + minute + (" AM" if hour < 12 else " PM")
 
 # progress time by specified amount
 func tod_progress(minutes: int) -> void:

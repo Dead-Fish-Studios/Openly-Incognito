@@ -49,7 +49,6 @@ func _ready() -> void:
 	# clear history log upon timeline open
 	Dialogic.timeline_started.connect(clear_history_log)
 	# update history log
-	# TODO: change to update upon advancing current text box
 	Dialogic.History.simple_history_changed.connect(show_history)
 
 
@@ -91,6 +90,8 @@ func _process(_delta : float) -> void:
 func clear_history_log() -> void:
 	for history_item: Node in get_history_log().get_children():
 		history_item.queue_free()
+	# clear dialogic history
+	DialogicUtil.autoload().get(&'History').call(&'get_simple_history').clear()
 
 # callback for updates to history 
 # append newest history item to end of history log
@@ -98,7 +99,9 @@ func show_history() -> void:
 	var history_subsystem: Node = DialogicUtil.autoload().get(&'History')
 	
 	# get latest history event before current text box event
-	var info: Dictionary = history_subsystem.call(&'get_simple_history')[-1]
+	var simple_hist: Array[Dictionary] = history_subsystem.call(&'get_simple_history')
+	if simple_hist.size() < 2: return
+	var info: Dictionary = simple_hist[-2]
 	# create history item
 	var history_item : Node = HistoryItem.instantiate()
 	history_item.set(&'theme', history_item_theme)
