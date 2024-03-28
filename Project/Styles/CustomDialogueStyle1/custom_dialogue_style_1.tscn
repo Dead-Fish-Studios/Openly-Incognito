@@ -47,9 +47,9 @@ metadata/_edit_use_anchors_ = true
 [node name="ExampleHistoryScene" type="Control" parent="."]
 layout_direction = 1
 layout_mode = 3
-anchors_preset = 0
+anchor_bottom = 0.735667
 offset_right = 422.0
-offset_bottom = 472.0
+offset_bottom = 8.31995
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
@@ -59,6 +59,7 @@ show_close_button = false
 show_all_choices = false
 show_join_and_leave = false
 HistoryItem = ExtResource("4_uqnh1")
+metadata/_edit_use_anchors_ = true
 
 [node name="HistoryBox" type="ScrollContainer" parent="ExampleHistoryScene"]
 unique_name_in_owner = true
@@ -84,27 +85,18 @@ alignment = 2
 
 [node name="TextboxWithSpeakerPortrait" type="Control" parent="."]
 layout_mode = 3
-anchor_top = 0.656
-anchor_bottom = 0.656
+anchor_top = 0.749056
+anchor_bottom = 1.0
 offset_top = 2.67999
 offset_right = 422.0
-offset_bottom = 239.68
+offset_bottom = -8.0
 size_flags_vertical = 3
 script = ExtResource("5_lfu4a")
-text_use_global_size = false
-text_custom_size = 14
 name_label_color_mode = 1
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
+metadata/_edit_use_anchors_ = true
 
-[node name="Anchor" type="Control" parent="TextboxWithSpeakerPortrait"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="PanelContainer" parent="TextboxWithSpeakerPortrait/Anchor"]
+[node name="Panel" type="HBoxContainer" parent="TextboxWithSpeakerPortrait"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -113,45 +105,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextboxWithSpeakerPortrait/Anchor/Panel"]
-layout_mode = 2
-
-[node name="DialogicNode_NameLabel" type="Label" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-script = ExtResource("6_nav3t")
-
-[node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextboxWithSpeakerPortrait/Anchor/Panel/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 10
-script = ExtResource("7_iuuse")
-
-[node name="Portrait Anchor" type="Control" parent="TextboxWithSpeakerPortrait"]
-layout_mode = 1
-anchor_left = 1.0
-anchor_top = -1.962
-anchor_right = 1.009
-anchor_bottom = -1.962
-offset_left = 4.0
-offset_top = -10.006
-offset_right = 40.202
-offset_bottom = -10.006
-size_flags_horizontal = 8
-
-[node name="PortraitPanel" type="Panel" parent="TextboxWithSpeakerPortrait/Portrait Anchor"]
+[node name="PortraitPanel" type="Panel" parent="TextboxWithSpeakerPortrait/Panel"]
 unique_name_in_owner = true
 clip_children = 1
-layout_mode = 1
-offset_right = 122.0
-offset_bottom = 165.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.3
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dmg1w")
 
-[node name="PortraitBackgroundColor" type="ColorRect" parent="TextboxWithSpeakerPortrait/Portrait Anchor/PortraitPanel"]
+[node name="PortraitBackgroundColor" type="ColorRect" parent="TextboxWithSpeakerPortrait/Panel/PortraitPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -165,7 +127,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.231373)
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="TextboxWithSpeakerPortrait/Portrait Anchor/PortraitPanel/PortraitBackgroundColor"]
+[node name="DialogicNode_PortraitContainer" type="Control" parent="TextboxWithSpeakerPortrait/Panel/PortraitPanel/PortraitBackgroundColor"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,23 +137,44 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_83lal")
 mode = 1
-debug_character_portrait = "speaker"
+
+[node name="Panel2" type="Panel" parent="TextboxWithSpeakerPortrait/Panel"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextboxWithSpeakerPortrait/Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogicNode_NameLabel" type="Label" parent="TextboxWithSpeakerPortrait/Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("6_nav3t")
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextboxWithSpeakerPortrait/Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("7_iuuse")
 
 [node name="VN_ChoiceLayer" type="Container" parent="."]
 anchors_preset = -1
 anchor_left = 0.33
-anchor_top = 0.669
-anchor_right = 0.33
-anchor_bottom = 0.669
+anchor_top = 0.762056
+anchor_right = 0.662
+anchor_bottom = 0.99
 offset_left = 3.59998
 offset_top = -9.68002
-offset_right = 425.6
-offset_bottom = 228.32
+offset_right = 0.639893
+offset_bottom = -2.80005
 size_flags_horizontal = 0
 size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("9_f65uj")
 apply_overrides_on_ready = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Choices" type="VBoxContainer" parent="VN_ChoiceLayer"]
 layout_mode = 2
