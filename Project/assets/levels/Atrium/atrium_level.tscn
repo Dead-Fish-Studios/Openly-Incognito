@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwbwi45uhci08"]
+[gd_scene load_steps=11 format=3 uid="uid://dwbwi45uhci08"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
 [ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="7_817jp"]
 [ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
 [ext_resource type="Texture2D" uid="uid://bq1pcd100yjfl" path="res://assets/levels/Office/POI_OfficeDoor.jpg" id="9_8vf85"]
+[ext_resource type="Texture2D" uid="uid://pf5rk034k2mr" path="res://assets/levels/Atrium/POI_Elevator.png" id="9_et1kf"]
 
 [node name="AtriumLevel" type="Node2D"]
 script = ExtResource("1_r7mdt")
@@ -50,7 +51,18 @@ dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
 dtl_start_label = ""
 POI_sprite = ExtResource("8_jmi6y")
 
-[node name="Office2AtriumPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+[node name="Atrium2ElevatorPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(172, 207)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("7_817jp")
+POI_button_offset = Vector2(0, -35)
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2elevator"
+POI_sprite = ExtResource("9_et1kf")
+POI_day = 2
+
+[node name="Atrium2OfficePOI" parent="POIs" instance=ExtResource("3_gba8k")]
 position = Vector2(61, 179)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
