@@ -26,10 +26,15 @@ signal camera_zoom_requested(focus: Vector2, zoom: float)
 @export var POI_sprite_enable : bool = true
 @export var POI_sprite : Texture2D = preload("res://assets/common/Base/_ph_POISprite.png")
 
+@export var POI_day : int = 1
+
+var game;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("POI")
+	game = Game
 	# set sprite
 	$Sprite2D.texture = POI_sprite if POI_sprite_enable else null
 	# set button icon
@@ -40,7 +45,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	# TODO: Get day checking working for POI visibility
+	#if POI_day == Game.get_day():
+	if true:
+		visible = true
+	else:
+		visible = false
 
 # handle input
 func _input(event):
