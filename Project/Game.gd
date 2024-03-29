@@ -16,7 +16,7 @@ var time_of_day: int :# time of day (in minutes)
 		hud.update_time_info()
 		print_debug("time set to : " + str(time_of_day) + " ( " + tod_str() + " )")
 		# check EOD
-		if time_of_day > end_of_day_time:
+		if time_of_day >= end_of_day_time:
 			_eod_reached()
 
 @export_group("Game Time")
