@@ -25,10 +25,12 @@ Game="*res://Game_Autoload.gd"
 directories/dch_directory={
 "Croc_Man": "res://assets/common/Characters/Croc_Man.dch",
 "Croc_Woman": "res://assets/common/Characters/Croc_Woman.dch",
+"Flamingo": "res://assets/common/Characters/Flamingo.dch",
 "Jesse": "res://assets/common/Characters/Jesse.dch",
 "Jordan": "res://assets/common/Characters/Jordan.dch",
 "Markus": "res://assets/common/Characters/Markus.dch",
-"Molly": "res://assets/common/Characters/Molly.dch"
+"Molly": "res://assets/common/Characters/Molly.dch",
+"Tim": "res://assets/common/Characters/Tim.dch"
 }
 directories/dtl_directory={
 "Atrium_CrumpledNote": "res://Timelines/Atrium_CrumpledNote.dtl",
@@ -43,6 +45,7 @@ directories/dtl_directory={
 "ConstructionSite_SecCam": "res://Timelines/ConstructionSite_SecCam.dtl",
 "ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
+"Elevator_init": "res://Timelines/Elevator_init.dtl",
 "Home": "res://Timelines/Home.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",

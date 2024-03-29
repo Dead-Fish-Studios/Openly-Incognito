@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://de0bgn2nsifqq"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_m0d2k"]
+[ext_resource type="Texture2D" uid="uid://dq556yyejmlw" path="res://assets/levels/Elevator/BG_Elevator.jpg" id="2_j700m"]
+
+[node name="ElevatorLevel" type="Node2D"]
+script = ExtResource("1_m0d2k")
+background_texture = ExtResource("2_j700m")
+init_dtl_path = "res://Timelines/Elevator_init.dtl"
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_j700m")
+centered = false

@@ -32,3 +32,10 @@ Head up to your office?
 	do Game.switch_level("OfficeLevel")
 - no
 [end_timeline]
+
+label atrium2elevator
+Head into the elevator?
+- yes
+	do Game.switch_level("ElevatorLevel")
+- no
+[end_timeline]
