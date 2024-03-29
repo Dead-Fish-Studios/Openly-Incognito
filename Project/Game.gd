@@ -30,11 +30,13 @@ func _ready():
 	# populate POI dictionary
 	for level in $SubViewportContainer/SubViewport.get_children():
 		if level is Camera2D: continue
-		POIs[level.name] = level.get_child(1).get_children()
-		for poi in POIs[level.name]:
-			# connect POI signals
-			poi.switch_level_requested.connect(switch_level)
-			poi.camera_zoom_requested.connect(zoom_camera)
+		var POIs_node = level.get_child(1)
+		if POIs_node != null:
+			POIs[level.name] = POIs_node.get_children()
+			for poi in POIs[level.name]:
+				# connect POI signals
+				poi.switch_level_requested.connect(switch_level)
+				poi.camera_zoom_requested.connect(zoom_camera)
 	# reset camera upon timeline exit
 	Dialogic.timeline_ended.connect(reset_camera)
 	
