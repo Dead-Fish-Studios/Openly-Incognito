@@ -1,7 +1,10 @@
 label inspect
 label inspected
+label croc_done
 A large conference table is pushed up against the wall.
 Jesse: That's a big table. Bet it could house a small family under it.
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
+	[end_timeline]
 do Game.tod_progress(10)
 do Game.set_POI_label("ConstructionSiteRoomLevel", "TablePOI", "inspected")
 if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
@@ -63,7 +66,6 @@ You need to think quick\:
 	do Game.tod_progress(20)
 	Jesse: Okay, well...I better head out before I get busted.
 	do Game.switch_level("ConstructionSiteLevel")
-	[end_timeline]
 - Open the door, and head back outside
 	You try to sneak out the door, but a man’s voice calls to you.
 	Croc_Man: "Hey!"
@@ -95,4 +97,5 @@ You need to think quick\:
 	- (move on)
 	# cumulative: 100
 	do Game.tod_progress(20)
+do Game.set_POI_label("ConstructionSiteRoomLevel", "TablePOI", "croc_done")
 [end_timeline]

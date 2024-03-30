@@ -3,6 +3,8 @@ label inspected
 Looking at the ground, you notice a distinct path leading from the door you walked in, straight to the other one at the end of the room.
 Judging from the sets of footprints that have cut through the dust on the ground over time, it looks like a lot of people come through here often.
 You also see many more set of tire tracks, some leaving skid marks on the ground.
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
+	[end_timeline]
 do Game.tod_progress(10)
 do Game.set_POI_label("ConstructionSiteRoomLevel", "FloorPOI", "inspected")
 if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
