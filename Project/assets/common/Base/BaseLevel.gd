@@ -17,6 +17,9 @@ extends Node2D
 
 var seen : bool
 
+var musicNode = get_node_or_null("Music")
+var sfxNode = get_node_or_null("EnvSFX")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	seen = false
@@ -25,9 +28,9 @@ func _ready():
 	$Background/Sprite2D.texture = background_texture
 	
 	# initialize audio resources
-	if music_path != null:
+	if music_path != null and musicNode != null:
 		$Music.stream = load(music_path)
-	if env_sfx_path != null:
+	if env_sfx_path != null and sfxNode != null:
 		$EnvSFX.stream = load(env_sfx_path)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,6 +50,8 @@ func first_entered() -> void:
 func init_level() -> void:
 	first_entered()
 	# start audio playback
-	#$Music.play()
-	#$EnvSFX.play()
+	if music_path != null and musicNode != null:
+		$Music.play()
+	if env_sfx_path != null and sfxNode != null:
+		$EnvSFX.play()
 
