@@ -22,19 +22,21 @@ signal camera_zoom_requested(focus: Vector2, zoom: float)
 @export_file("*.dtl") var dtl_path = "res://assets/common/Dialogic/ph_timeline.dtl"
 @export var dtl_start_label: String = "start"
 
+@export_subgroup("Days Enabled")
+# spawn this POI only on these days
+# default = all four days
+@export_flags("Day1:1", "Day2:2", "Day3:4", "Day4:8") var days_flags: int = 0b1111
+
 @export_group("Sprite")
 @export var POI_sprite_enable : bool = true
 @export var POI_sprite : Texture2D = preload("res://assets/common/Base/_ph_POISprite.png")
 
-@export var POI_day : int = 1
-
-var game;
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("POI")
-	game = Game
+	# connect callback for start of day
+	if not Engine.is_editor_hint():
+		Game.inst().day_started.connect(_on_day_start)
 	# set sprite
 	$Sprite2D.texture = POI_sprite if POI_sprite_enable else null
 	# set button icon
@@ -45,12 +47,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# TODO: Get day checking working for POI visibility
-	#if POI_day == Game.get_day():
-	if true:
-		visible = true
-	else:
-		visible = false
+	pass
 
 # handle input
 func _input(event):
@@ -70,3 +67,8 @@ func _on_button_pressed():
 	# open DTL
 	if dtl_start_label == "start": Dialogic.start(dtl_path)
 	else: Dialogic.start(dtl_path, dtl_start_label)
+
+# initialization at start of each new day
+func _on_day_start(day: int) -> void:
+	# set visibility (bit mask from days_flags)
+	self.visible = bool( (1 << (day-1)) & days_flags )
