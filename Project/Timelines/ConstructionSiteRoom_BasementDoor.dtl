@@ -12,6 +12,9 @@ label inspected
 	Jesse: A keycard reader? In a place like this?
 	jump inspect
 - (move on)
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
+	[end_timeline]
+do Game.tod_progress(20)
 do Game.set_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI", "inspected")
 if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
 	if Game.get_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI") == "inspected":

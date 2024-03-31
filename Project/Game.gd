@@ -19,6 +19,9 @@ var time_of_day: int :# time of day (in minutes)
 		if time_of_day >= end_of_day_time:
 			_eod_reached()
 
+# time signals
+signal day_started(day: int)
+
 @export_group("Game Time")
 @export var start_of_day_time: int = 9 * 60 # 09:00 AM
 @export var end_of_day_time: int = 17 * 60 # 05:00 PM
@@ -42,6 +45,9 @@ func _ready():
 	
 	# initialize time
 	reset_time_and_day()
+	# emit start of day signal
+	day_started.emit(day)
+
 	# start game at Atrium
 	switch_level("AtriumLevel")
 
@@ -180,6 +186,8 @@ func sleep() -> void:
 	reset_time()
 	# increment day
 	day += 1
+	# emit start of day signal
+	day_started.emit(day)
 	# send Jesse to work (put player in atrium)
 	switch_level("AtriumLevel")
 
