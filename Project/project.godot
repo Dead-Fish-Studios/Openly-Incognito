@@ -66,6 +66,9 @@ variables={
 "NOTES": {
 "Note0": "",
 "Note1": ""
+},
+"OTHER": {
+"Day": 1
 }
 }
 layout/style_list=["res://Styles/Dialogue_Style1.tres", "res://Styles/Test.tres"]
