@@ -188,6 +188,8 @@ func sleep() -> void:
 	day += 1
 	# emit start of day signal
 	day_started.emit(day)
+	# set day in dialogic vars
+	Dialogic.VAR.OTHER.Day = day
 	# send Jesse to work (put player in atrium)
 	switch_level("AtriumLevel")
 
