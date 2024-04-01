@@ -17,6 +17,7 @@ signal camera_zoom_requested(focus: Vector2, zoom: float)
 @export var camera_focus:Vector2 = Vector2(0.0, 0.0) # camera focus location
 
 @export_group("POI Behavior")
+@export var show_button: bool = true
 @export var POI_button_icon : Texture2D = preload("res://assets/common/GUI/icons/POI_inspect.png")
 @export var POI_button_offset : Vector2 = Vector2(0.0, -60.0)
 @export_file("*.dtl") var dtl_path = "res://assets/common/Dialogic/ph_timeline.dtl"
@@ -40,6 +41,7 @@ func _ready():
 	# set sprite
 	$Sprite2D.texture = POI_sprite if POI_sprite_enable else null
 	# set button icon
+	$TextureButton.visible = show_button
 	$TextureButton.texture_normal = POI_button_icon
 	# set button offset
 	$TextureButton.set_anchors_preset(Control.LayoutPreset.PRESET_CENTER)
