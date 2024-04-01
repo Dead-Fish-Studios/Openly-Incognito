@@ -38,14 +38,14 @@ POI_button_offset = Vector2(0, -30)
 dtl_path = "res://Timelines/Office_Shredder.dtl"
 POI_sprite = ExtResource("4_yj064")
 
-[node name="Office2AtriumPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
+[node name="Office2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
 position = Vector2(414, 232)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("6_aygm5")
 POI_button_offset = Vector2(0, -50)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
-dtl_start_label = "office2atrium"
+dtl_start_label = "office2righthallway"
 POI_sprite = ExtResource("6_gpk7p")
 
 [node name="FilesPOI" parent="POIs" instance=ExtResource("3_gvq2x")]

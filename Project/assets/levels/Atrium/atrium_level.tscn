@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwbwi45uhci08"]
+[gd_scene load_steps=11 format=3 uid="uid://dwbwi45uhci08"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
 [ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
 [ext_resource type="Texture2D" uid="uid://pf5rk034k2mr" path="res://assets/levels/Atrium/POI_Elevator.png" id="9_et1kf"]
 [ext_resource type="Texture2D" uid="uid://cqiycybjxtqef" path="res://assets/levels/Atrium/POI_Atrium2RightHallwayDoor.png" id="9_q8c8u"]
-[ext_resource type="Texture2D" uid="uid://5d7dl8id5772" path="res://assets/levels/Atrium/POI_OfficeDoor.jpg" id="11_fqelw"]
 
 [node name="AtriumLevel" type="Node2D"]
 script = ExtResource("1_r7mdt")
@@ -71,16 +70,6 @@ POI_button_offset = Vector2(0, -35)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "atrium2elevator"
 POI_sprite = ExtResource("9_et1kf")
-
-[node name="Atrium2OfficePOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(61, 179)
-camera_zoom_in_enable = true
-camera_zoom = 2.0
-POI_button_icon = ExtResource("7_817jp")
-POI_button_offset = Vector2(0, -50)
-dtl_path = "res://Timelines/LevelSwitcher.dtl"
-dtl_start_label = "atrium2office"
-POI_sprite = ExtResource("11_fqelw")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 

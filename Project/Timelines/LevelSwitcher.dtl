@@ -19,15 +19,15 @@ Head back outside?
 - no
 [end_timeline]
 
-label office2atrium
-Head back to the Atrium?
+label office2righthallway
+Head back to the Hallway?
 - yes
-	do Game.switch_level("AtriumLevel")
+	do Game.switch_level("RightHallwayLevel")
 - no
 [end_timeline]
 
-label atrium2office
-Head up to your office?
+label righthallway2office
+Head to your office?
 - yes
 	do Game.switch_level("OfficeLevel")
 - no
@@ -67,6 +67,3 @@ Head to the Atrium?
 	do Game.switch_level("AtriumLevel")
 - no
 [end_timeline]
-
-
-
