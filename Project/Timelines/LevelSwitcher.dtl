@@ -39,3 +39,34 @@ Head into the elevator?
 	do Game.switch_level("ElevatorLevel")
 - no
 [end_timeline]
+
+label atrium2righthallway
+Head down this hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
+
+label righthallway2breakroom
+Head to the break room?
+- yes
+	do Game.switch_level("BreakroomLevel")
+- no
+[end_timeline]
+
+label breakroom2righthallway
+Head to the hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
+
+label righthallway2atrium
+Head to the Atrium?
+- yes
+	do Game.switch_level("AtriumLevel")
+- no
+[end_timeline]
+
+
+

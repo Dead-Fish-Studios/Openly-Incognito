@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://867emhkdfcgv"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_t2hk6"]
+[ext_resource type="Texture2D" uid="uid://cdyop63eq2i8p" path="res://assets/levels/Breakroom/BG_Breakroom.jpg" id="2_ii7cm"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_pqr7n"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_gegpu"]
+[ext_resource type="Texture2D" uid="uid://b8d3y75jj5f86" path="res://assets/levels/Breakroom/POI_BreakroomCouch.png" id="6_vlybr"]
+[ext_resource type="Texture2D" uid="uid://dj1y2ehfdm8l0" path="res://assets/levels/Breakroom/POI_Door.jpg" id="6_w884o"]
+
+[node name="BreakroomLevel" type="Node2D"]
+script = ExtResource("1_t2hk6")
+background_texture = ExtResource("2_ii7cm")
+init_dtl = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_ii7cm")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="CouchPOI" parent="POIs" instance=ExtResource("3_pqr7n")]
+position = Vector2(326, 201)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_gegpu")
+POI_button_offset = Vector2(0, -30)
+dtl_path = "res://Timelines/Breakroom_Couch.dtl"
+dtl_start_label = "breakroom2righthallway"
+POI_sprite = ExtResource("6_vlybr")
+
+[node name="RightHallway2BreakRoomPOI" parent="POIs" instance=ExtResource("3_pqr7n")]
+position = Vector2(444, 238)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_gegpu")
+POI_button_offset = Vector2(0, -50)
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "breakroom2righthallway"
+POI_sprite = ExtResource("6_w884o")
