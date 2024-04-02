@@ -1,15 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwbwi45uhci08"]
+[gd_scene load_steps=8 format=3 uid="uid://dwbwi45uhci08"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
 [ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_gba8k"]
 [ext_resource type="Texture2D" uid="uid://c4v4bsqbwurm4" path="res://assets/common/GUI/icons/POI_talk.png" id="4_4xeda"]
-[ext_resource type="Texture2D" uid="uid://dua7ef88youqe" path="res://assets/levels/Atrium/POI_MarkusDesk.png" id="4_cjyi4"]
-[ext_resource type="Texture2D" uid="uid://do5frau38agcn" path="res://assets/levels/Atrium/POI_Atrium2ConstructionSiteDoor.png" id="6_agoit"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="7_817jp"]
 [ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
 [ext_resource type="Texture2D" uid="uid://pf5rk034k2mr" path="res://assets/levels/Atrium/POI_Elevator.png" id="9_et1kf"]
-[ext_resource type="Texture2D" uid="uid://cqiycybjxtqef" path="res://assets/levels/Atrium/POI_Atrium2RightHallwayDoor.png" id="9_q8c8u"]
 
 [node name="AtriumLevel" type="Node2D"]
 script = ExtResource("1_r7mdt")
@@ -24,26 +21,29 @@ centered = false
 [node name="POIs" type="Node2D" parent="."]
 
 [node name="MarkusPOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(293, 200)
+position = Vector2(180, 113)
 camera_zoom_in_enable = true
-camera_zoom = 2.0
+camera_zoom = 1.5
+camera_focus = Vector2(0, 50)
 POI_button_icon = ExtResource("4_4xeda")
-POI_button_offset = Vector2(0, -30)
+POI_button_offset = Vector2(0, 0)
 dtl_path = "res://Timelines/Atrium_Markus.dtl"
-POI_sprite = ExtResource("4_cjyi4")
+POI_sprite_enable = false
+POI_sprite = null
 
 [node name="Atrium2CSitePOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(441, 218)
+position = Vector2(348, 143)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("7_817jp")
-POI_button_offset = Vector2(0, -50)
+POI_button_offset = Vector2(0, 0)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "atrium2csite"
-POI_sprite = ExtResource("6_agoit")
+POI_sprite_enable = false
+POI_sprite = null
 
 [node name="CrumpledNotePOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(203, 254)
+position = Vector2(69, 247)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -20)
@@ -52,17 +52,18 @@ dtl_start_label = ""
 POI_sprite = ExtResource("8_jmi6y")
 
 [node name="Atrium2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(351, 202)
+position = Vector2(457, 252)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("7_817jp")
-POI_button_offset = Vector2(0, -35)
+POI_button_offset = Vector2(0, 0)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "atrium2righthallway"
-POI_sprite = ExtResource("9_q8c8u")
+POI_sprite_enable = false
+POI_sprite = null
 
 [node name="Atrium2ElevatorPOI" parent="POIs" instance=ExtResource("3_gba8k")]
-position = Vector2(172, 207)
+position = Vector2(438, 179)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("7_817jp")
