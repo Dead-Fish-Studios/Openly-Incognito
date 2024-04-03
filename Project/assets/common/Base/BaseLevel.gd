@@ -54,4 +54,5 @@ func init_level() -> void:
 		$Music.play()
 	if env_sfx_path != null and sfxNode != null:
 		$EnvSFX.play()
+		
 

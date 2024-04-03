@@ -19,6 +19,17 @@ centered = false
 
 [node name="POIs" type="Node2D" parent="."]
 
+[node name="BreakRoom2OutsideSecurityPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
+position = Vector2(240, 50)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_dw1pl")
+POI_button_offset = Vector2(0, 0)
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "righthallway2outsidesecurity"
+POI_sprite_enable = false
+POI_sprite = null
+
 [node name="BreakRoom2AtriumPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
 position = Vector2(212, 245)
 camera_zoom_in_enable = true

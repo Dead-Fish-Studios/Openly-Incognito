@@ -70,3 +70,17 @@ Head to the Atrium?
 	do Game.switch_level("AtriumLevel")
 - no
 [end_timeline]
+
+label righthallway2outsidesecurity
+Head down this hallway?
+- yes
+	do Game.switch_level("OutsideSecurityLevel")
+- no
+[end_timeline]
+
+label outsidesecurity2righthallway
+Head down this hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
