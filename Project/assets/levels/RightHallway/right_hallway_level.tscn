@@ -30,6 +30,17 @@ dtl_start_label = "righthallway2atrium"
 POI_sprite_enable = false
 POI_sprite = null
 
+[node name="RightHallway2OfficePOI" parent="POIs" instance=ExtResource("3_yjvl3")]
+position = Vector2(134, 98)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_dw1pl")
+POI_button_offset = Vector2(0, 0)
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "righthallway2office"
+POI_sprite_enable = false
+POI_sprite = null
+
 [node name="RightHallway2BreakRoomPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
 position = Vector2(358, 187)
 camera_zoom_in_enable = true
@@ -38,16 +49,5 @@ POI_button_icon = ExtResource("4_dw1pl")
 POI_button_offset = Vector2(0, 0)
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "righthallway2breakroom"
-POI_sprite_enable = false
-POI_sprite = null
-
-[node name="RightHallway2OfficePOI" parent="." instance=ExtResource("3_yjvl3")]
-position = Vector2(134, 98)
-camera_zoom_in_enable = true
-camera_zoom = 2.0
-POI_button_icon = ExtResource("4_dw1pl")
-POI_button_offset = Vector2(0, 0)
-dtl_path = "res://Timelines/LevelSwitcher.dtl"
-dtl_start_label = "righthallway2office"
 POI_sprite_enable = false
 POI_sprite = null
