@@ -26,6 +26,7 @@ POI_button_icon = ExtResource("4_gegpu")
 POI_button_offset = Vector2(0, 0)
 dtl_path = "res://Timelines/Breakroom_Couch.dtl"
 dtl_start_label = "breakroom2righthallway"
+days_flags = 2
 POI_sprite_enable = false
 POI_sprite = null
 
