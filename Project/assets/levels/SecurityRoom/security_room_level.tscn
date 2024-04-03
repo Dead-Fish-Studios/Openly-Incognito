@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdt58k7uyloj8"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_0haag"]
+[ext_resource type="Texture2D" uid="uid://cwsavldswp1uu" path="res://assets/levels/SecurityRoom/BG_SecurityRoom.jpg" id="2_35m5e"]
+
+[node name="SecurityRoomLevel" type="Node2D"]
+script = ExtResource("1_0haag")
+background_texture = ExtResource("2_35m5e")
+init_dtl = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_35m5e")
+centered = false

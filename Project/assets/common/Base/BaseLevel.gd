@@ -43,7 +43,7 @@ func first_entered() -> void:
 	seen = true
 	# open init dialogic timeline
 	# use this for establishing levels to player
-	if init_dtl:
+	if init_dtl and init_dtl_path != null:
 		Dialogic.start(init_dtl_path)
 
 # runs once every time level is entered
@@ -54,4 +54,5 @@ func init_level() -> void:
 		$Music.play()
 	if env_sfx_path != null and sfxNode != null:
 		$EnvSFX.play()
+		
 

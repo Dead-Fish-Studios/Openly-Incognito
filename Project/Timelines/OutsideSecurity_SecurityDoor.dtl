@@ -1,0 +1,141 @@
+Jesse: The security room. I assume this is where people watch the cameras and all that…wonder if Hugo’s in there.
+Listen at the door?
+- Yes
+	if {OTHER.Day} == 3:
+		You stop in front of the door, listening intently. You can faintly make out the sound of someone talking\: it sounds like they’re pretty upset. "…no, that’s it. I’m not gonna just pretend like he’s not-"
+		Another voice answers, this one sounding annoyed and angry, "Idiot! You can’t back out now, you’ll be killed. What do you think will happen if you say you randomly want to quit? You think they’ll just be okay with that?"
+		A silence falls between the two, with a familiar low growl eventually breaking the quiet.
+		"Hugo!", you think to yourself.
+		Hugo: It’s always “you can’t” or “it’s too late” or “you don’t have a choice”...
+		The other voice sounds like they’re trying to soothe Hugo.
+		"Unknown Voice": Trust me, I get it…I’m scared every day I’m here! But we’re so close to finishing, maybe you can look for an out then.
+		Another silence. You try your best to look casual outside the door, but your ears are expertly trained on the door, anxious for more information.
+		Hugo: This is the last time…I wonder if I could fake an injury or something, they wouldn’t want me then…
+		The voice sounds a bit relieved.
+		"Unknown Voice": That’s the spirit. Come on, let’s get going.
+		You suddenly hear the sound of footsteps, getting louder and louder. You hardly have any time to react and try to make it look like you were just walking by\: you didn’t want them thinking you were just standing there the whole time.
+		As you walk forward, you hear the door open behind you. Two sets of footsteps come out. The pair speak to each other.
+		"Unknown Voice": When’s the next rotation coming?
+		Hugo: Not for a while, they’re going on patrol first.
+		"Unknown Voice": Alright. Well, I’ll see you later then.
+		The other set of footsteps gets quieter as they walk away.
+		Hugo: Jesse.
+		You stop a little too quickly.
+		"Shit! Did they know I was there? I wasn’t making a sound!", you think to yourself
+		You turn around, feigning surprise.
+		Jesse: Oh, Hugo! What’s up?
+		Hugo: I know you were listening outside the door.
+		Your heart drops a bit, but Hugo doesn’t look mad. Rather, he looks oddly resolved, a look of determination on his face.
+		Jesse: I…don’t know what you’re talking about, I was just-
+		Hugo, arms crossed, jabs one of his thumbs towards the nameplate next to the door.
+		Hugo: There’s a camera behind that, I could see you standing outside here.
+		Your mouth drops.
+		Jesse: Are you kidding me?! That little thing?
+		Jesse: Well, I-I…uh…
+		Hugo: Jesse, if I was mad, do you think I would’ve just let you stand there? You should really be thankful that my employee didn’t see you and start asking questions.
+		You look at Hugo a bit skeptically before letting go of a breath you didn’t know you were holding.
+		Jesse: Alright, alright, fine, you caught me…but I-
+		Hugo: Just listen to me for a second, Jesse.
+		Hugo uncrosses his arms, exhaling.
+		Hugo: I don’t think I’m going to be here for much longer.
+		Jesse: What? Why?
+		Hugo: Listen! I’ve been feigning ignorance for a long time now, but I think my time is running out\: it’s too late for me to change anything about myself here, but you still have a chance…a choice. You don’t have to end up like this.
+		Jesse: …does this have anything to do with a “factory” of some kind?
+		It was a gamble, you knew it. You were warned to not bring that up, but you felt like Hugo was friend enough to tell something like this to…and you were very curious ever since you heard about it.
+		Hugo raises his eyebrows and looks down, slowly shaking his head.
+		Hugo: You know about that? Guess I underestimated you, Jesse.
+		Well, no, not really, more just heard that word a few times.
+		Hugo: …all the more reason to…
+		Hugo seems to be talking to himself.
+		Jesse: …Hugo?
+		Hugo looks up. He seems to have decided upon something.
+		Hugo: Come here for a moment.
+		He opens the security room door, gesturing for you to walk in.
+		do Game.switch_level("SecurityRoomLevel")
+		You walk in the room, and are met with a small room with monitors plastered on almost every wall you can see. There’s a little table in the middle of the room with stacks of papers on it, and chairs placed all over, seemingly spots to sit and watch the camera feeds. There seems to be a feed from almost every part of the building. A quick scan and you even see your office, the camera angle looking oddly from like where the lightswitch is…
+		Hugo follows you into the room, and quickly shuts the door behind him, locking it.
+		Jesse: Hugo, what-
+		Hugo: Jesse, I want you to do something for me.
+		Jesse: Um, alright…what is it?
+		Hugo: Tell Jordan to go to the construction site. There’s an elevator beyond the doors that leads to a factory below this building.
+		Jesse: Jordan-...a factory?! A factory for what?
+		Hugo: You’ll figure it out, but make sure you aren’t seen at all…I imagine they’ll be on high alert now. Here, you’ll need this.
+		Hugo gives you a keycard, completely blank except for a black line on one side.
+		Hugo: That’s the master keycard for the place, it’ll get her through there.
+		Jesse: Hugo…why don’t we just call the police? I heard Jackson basically admitting to killing people, we could-
+		Hugo: No! Jesse, I’ve seen so much shit here and I still haven’t gone…why? There’s no point\: the place is way too well hidden and Blurr covers its tracks really well…I should know, I’ve been doing it for years. Even if you did, once the cops come here they wouldn’t find anything, but I guarantee you the people here would start looking into who talked. Wouldn’t be long until you’re gone yourself.
+		You swallow, whitening a bit at Hugo’s words. Hugo sighs.
+		Hugo: I would say just leave and never come back, but I know better. You might be seen as a loose end, so it would only be a matter of time. But don’t worry, I’ve got a plan.
+		Hugo checks that the door is shut, looking a bit anxious.
+		Jesse: Hugo, if you have this all planned out, why don’t you do it?
+		Hugo looks at you, and you’re surprised to see a little sadness in his eyes.
+		Hugo: I should’ve Jesse, a long time ago. I was blinded by the money, cars, power, all that nonsense. For a while, it was fine, until I started having to do more and more of the dirty work.
+		Jesse: What do you mean?
+		Hugo: I started getting sent out onto labor jobs. I…I saw first hand what we were doing to people. I think that’s when I first realized I wanted out. But by this point, I’d seen too much\: they’d kill me if I hinted at leaving.
+		Jesse: Well it sounds like you’re going now, so isn’t it gonna happen anyway?! Why should I go down there?
+		Hugo gives a low chuckle.
+		Hugo: I think the only reason I haven’t been killed yet is because they can’t find a replacement for me. A few weeks ago, I made an offhand comment about quitting to someone, but Jackson overheard me. He asked me if I was serious, but I said it was more of a thought. I think he saw right through me\: he doesn’t trust me at all anymore. Everywhere I go, it always seems like Jackson’s there. I haven’t been called down to the factory since then, so I wanted to tell someone else, just in case.
+		Hugo: Honestly Jesse, if you hadn't talked to me yesterday, I wouldn’t have told you. Believe it or not, that’s the first time someone’s just talked to me like that since I’ve been here…I felt like you’d understand.
+		Jesse: Well, I don’t know if I-
+		Hugo: I want you to find Jordan.
+		Jesse: Jordan? What does she have to do with this?
+		Hugo: Hmm, I guess she hasn’t told you…you’re friends with her, right?
+		Jesse: Well, yeah, but told me what?
+		Hugo shakes his head, indicating for you to be quiet.
+		Then it’s fine, just make sure you’re alone when you talk to her. Find her, and tell her she’s on the right track\: that walkie-talkie of hers should help her out.
+		You look puzzled for a moment before taking out the walkie talkie, still carrying it since yesterday.
+		Jesse: You mean this walkie talkie? I found it on her desk.
+		Hugo: So you just took it?
+		Jesse: Well, we ARE friends…and it looked interesting…
+		Hugo: Nevermind then, just bring it to her. Be careful though\: I don’t know if the Director knows about her yet.
+		Jesse: The Director? They’re that person you follow around all the time, right?
+		Hugo: Yes, and they’re bad news Jesse, don’t be fooled by their exterior. If they have their sights on you, you better hope it’s not for too long.
+		Jesse: What do you-
+		Suddenly, Hugo raises a hand, indicating for you to stop talking. He looks at the monitors.
+		You turn and see what he’s looking at. Jackson is coming down the hallway outside the security room, and he doesn’t look happy.
+		Hugo: Get under here, now!
+		Hugo loudly whispers, pointing to a space under one of the tables. You hurry under the table, not eager to go against the massive crocodile.
+		Not a moment later, the door handle jiggles.
+		Hugo: Just a moment!
+		Hugo walks over, and unlocks the door, meeting Jackson face to face.
+		Jackson: Why the locked door?
+		Hugo: Force of habit, I guess. Sorry about that.
+		Jackson says nothing, but walks in the room, shutting and locking the door behind him.
+		Jackson: Sit down for a moment Hugo, I want to talk to you.
+		Hugo complies, looking stone faced as usual. Jackson stands in front of him, across the room.
+		Jackson: I know you’ve been having some thoughts of leaving, Hugo…I would’ve thought you’d know better than anyone what happens to those who want to get out.
+		Hugo: It’s more for my health, Jackson, I’m getting pretty old, and-
+		Jackson: Shut up.
+		SIlence falls between the two. Jackson paces around a little, and turns his back to Hugo. You can’t really see what’s going on, but you swear you see Hugo flinch just a little bit, hand moving inside his suit, but he stops himself. After a moment, Jackson speaks again.
+		Jackson: …yes…yes, I think I’ll have to. Can’t afford any slip ups now, can we?
+		In a flash, Jackson spins around, pistol in hand, and shoots Hugo twice in the chest. The gun must be silenced because you hear an odd sharp hissing sound followed by the rattling of two casings on the ground. Hugo groans, and sinks back into the couch, limp. Jackson lowers his gun, stowing it back inside his suit.
+		It took all you had in order to not make a sound, your eyes wide in shock.
+		Jackson: I do wish you would’ve just kept your mouth shut and went along, but I guess I’ll just have to find someone else.
+		Jackson walks out of the room. You stay there, unmoving, not sure if Hugo was alive or not. Once Jackson’s footsteps fade away, Hugo groans out to you.
+		Hugo: Lock the door…
+		You get up, rushing over to the door and locking it tight. You turn around but are surprised to see Hugo sitting up on his own, no blood in sight.
+		Jesse: Oh my god, are you alright?
+		Hugo: Well…I’m better than I would be if it weren’t for this.
+		Hugo unbuttons his shirt in order to reveal a bulletproof vest.
+		Hugo: I’ve been wearing this for a few weeks now…just in case.
+		Jesse: Hugo, why are you telling me all this?
+		Hugo looks at you with a serious expression.
+		Hugo: I’ve made a lot of mistakes, ones that I can’t fix. I keep seeing new people come in here all the time, and so many of them have no idea what they’re getting themselves into. I know I’m pretty much done for\: Jackson’s gonna send a cleaning crew here soon and once they see that I’m not here, they won’t stop coming after me. You still have a chance though\: I would get out while you still can.
+		Hugo stands up, clutching his chest. It’s evident he’s in some pain, but he moves over to the monitors to watch for anyone coming.
+		Hugo: Get out of here, Jesse. You should still be safe from Jackson. I’ll turn off this camera system then head out myself. Damn…I’d come with you, but I think I’d be more harm than good\: I think my ribs are broken.
+		Jesse: But-
+		Hugo: Now, Jesse! The cleaning crew’s gonna be here soon. Here, take this, I don’t need it anymore, not with people going to be shooting me on sight.
+		Hugo reaches into his suit and pulls out a silenced pistol, similar to the one Jackson had. You take it with shaking hands, tucking it into your waistband, under your shirt.
+		set {ITEMS.SecurityRoom_Gun} = true
+		Hugo: Just in case.
+		Jesse: What about you?!
+		Hugo gives a pained chuckle.
+		Hugo: Don’t worry about me, I know my way around the place. I’m sure I can find a shortcut or two.
+		Hugo: Remember! Find Jordan!
+		With that, Hugo pushes you out of the room, shutting and locking the door behind you.
+		do Game.switch_level("OutsideSecurityLevel")
+		Sweating, you listen for a moment before making your way back to the atrium, feeling like everyone’s eyes are on you.
+		Jesse: Shit… Jordan better have a good explanation for all this!
+	else:
+		You listen, but you don’t hear anything coming from beyond the door. Maybe you can try listening again some other day.
+- No

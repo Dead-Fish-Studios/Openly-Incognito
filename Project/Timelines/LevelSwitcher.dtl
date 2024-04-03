@@ -34,10 +34,13 @@ Head to your office?
 [end_timeline]
 
 label atrium2elevator
-Head into the elevator?
-- yes
-	do Game.switch_level("ElevatorLevel")
-- no
+if {OTHER.Day} == 2:
+	Head into the elevator?
+	- yes
+		do Game.switch_level("ElevatorLevel")
+	- no
+else:
+	The elevator is currently undergoing maintainance. Try again tommorow.
 [end_timeline]
 
 label atrium2righthallway
@@ -65,5 +68,19 @@ label righthallway2atrium
 Head to the Atrium?
 - yes
 	do Game.switch_level("AtriumLevel")
+- no
+[end_timeline]
+
+label righthallway2outsidesecurity
+Head down this hallway?
+- yes
+	do Game.switch_level("OutsideSecurityLevel")
+- no
+[end_timeline]
+
+label outsidesecurity2righthallway
+Head down this hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
 - no
 [end_timeline]
