@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7gjon4d3nmyf"]
+[gd_scene load_steps=6 format=3 uid="uid://b7gjon4d3nmyf"]
 
 [ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
 [ext_resource type="Texture2D" uid="uid://bm4hk64mrnhq5" path="res://assets/common/GUI/icons/HUD_gohome.png" id="2_4ruyp"]
+[ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="2_6m10f"]
 [ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/Inventory/Inventory.tscn" id="2_x1m1l"]
+[ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="3_w64ut"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -26,10 +28,12 @@ grow_horizontal = 2
 
 [node name="LocationHUD" type="PanelContainer" parent="InfoHUD"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
 
 [node name="LocationInfo" type="Label" parent="InfoHUD/LocationHUD"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "In Game Location"
 horizontal_alignment = 1
 
@@ -39,24 +43,30 @@ alignment = 1
 
 [node name="DateHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
 
 [node name="DateInfo" type="Label" parent="InfoHUD/HBoxContainer/DateHUD"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Day 00"
 
 [node name="TimeHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
 
 [node name="TimeInfo" type="Label" parent="InfoHUD/HBoxContainer/TimeHUD"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "24:00"
 
 [node name="GoHomeButton" type="Button" parent="InfoHUD"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_w64ut")
 text = "Go Home"
 icon = ExtResource("2_4ruyp")
 icon_alignment = 1
