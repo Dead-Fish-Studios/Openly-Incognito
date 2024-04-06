@@ -20,6 +20,8 @@ signal camera_zoom_requested(focus: Vector2, zoom: float)
 @export var show_button: bool = true
 @export var POI_button_icon : Texture2D = preload("res://assets/common/GUI/icons/POI_inspect.png")
 @export var POI_button_offset : Vector2 = Vector2(0.0, -60.0)
+@export var hover_info: String = ""
+signal mouse_hover(entered: bool, hover_info: String)
 @export_file("*.dtl") var dtl_path = "res://assets/common/Dialogic/ph_timeline.dtl"
 @export var dtl_start_label: String = "start"
 
@@ -46,6 +48,9 @@ func _ready():
 	# set button offset
 	$TextureButton.set_anchors_preset(Control.LayoutPreset.PRESET_CENTER)
 	$TextureButton.position = $TextureButton.size / -2.0 + POI_button_offset
+	# set hover enter/exit signals
+	$TextureButton.mouse_entered.connect(_on_hover.bind(true))
+	$TextureButton.mouse_exited.connect(_on_hover.bind(false))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -62,6 +67,9 @@ func _input(event):
 func _on_button_pressed():
 	print_debug("POI button pressed:" + self.name)
 	
+	# set hover info
+	Game.inst().POI_hover_info(true, hover_info)
+
 	# zoom camera
 	if camera_zoom_in_enable:
 		camera_zoom_requested.emit(camera_focus + (self.position if camera_focus_mode == 0 else Vector2(0.0, 0.0)), camera_zoom * 2.0)
@@ -74,3 +82,9 @@ func _on_button_pressed():
 func _on_day_start(day: int) -> void:
 	# set visibility (bit mask from days_flags)
 	self.visible = bool( (1 << (day-1)) & days_flags )
+
+# button mouse hover callback
+func _on_hover(enter: bool):
+	if hover_info != "":
+		mouse_hover.emit(enter, hover_info)
+		Game.inst().POI_hover_info(enter, hover_info)

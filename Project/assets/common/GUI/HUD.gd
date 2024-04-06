@@ -29,3 +29,6 @@ func update_day_info() -> void:
 	$InfoHUD/HBoxContainer/DateHUD/DateInfo.text = "Day " + str(Game.inst().get_day())
 func update_time_info() -> void:
 	$InfoHUD/HBoxContainer/TimeHUD/TimeInfo.text = Game.inst().tod_str()
+
+func set_hover_info(info: String):
+	$MouseHUD/MouseHoverInfo.text = info

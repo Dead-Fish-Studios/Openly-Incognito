@@ -77,6 +77,7 @@ func switch_level(to_level:String):
 	
 	# update HUD info
 	hud.set_location_info(target.level_name)
+	hud.set_hover_info("")
 	
 	# reset camera
 	reset_camera()
@@ -129,6 +130,13 @@ func get_POI_label(level: String, POI: String) -> String:
 	var targetPOI = find_POI(level, POI)
 	if targetPOI == null: return "error"
 	return targetPOI.dtl_start_label
+
+# display info for POI upon mouse hover
+func POI_hover_info(entered: bool, hover_info: String = ""):
+	if entered:
+		if hover_info != "":
+			hud.set_hover_info(hover_info)
+	else: hud.set_hover_info("")
 
 # region INGAME_TIME
 
