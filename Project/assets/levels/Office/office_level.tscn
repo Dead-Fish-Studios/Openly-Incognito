@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crmyj5lxqbfn7"]
+[gd_scene load_steps=8 format=3 uid="uid://crmyj5lxqbfn7"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_5axud"]
 [ext_resource type="Texture2D" uid="uid://dyutbn6inion1" path="res://assets/levels/Office/BG_Office.jpg" id="2_ypx0a"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bj0oyr7xx87f2" path="res://assets/levels/Office/POI_OfficeWalkieTalkie.png" id="4_803v2"]
 [ext_resource type="Texture2D" uid="uid://ofob8mkhy6vh" path="res://assets/levels/Office/POI_OfficeShredder.png" id="4_yj064"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="6_aygm5"]
-[ext_resource type="Texture2D" uid="uid://bq1pcd100yjfl" path="res://assets/levels/Office/POI_OfficeDoor.jpg" id="6_gpk7p"]
 [ext_resource type="Texture2D" uid="uid://bs0nvaiup3b5u" path="res://assets/levels/Office/POI_OfficeFiles.jpg" id="8_p1c8l"]
 
 [node name="OfficeLevel" type="Node2D"]
@@ -27,31 +26,36 @@ position = Vector2(332, 205)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -30)
+hover_info = "Walkie Talkie"
 dtl_path = "res://Timelines/Office_WalkieTalkie.dtl"
 POI_sprite = ExtResource("4_803v2")
 
 [node name="ShredderPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(71, 158)
+position = Vector2(111, 149)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -30)
+hover_info = "Paper Shredder"
 dtl_path = "res://Timelines/Office_Shredder.dtl"
 POI_sprite = ExtResource("4_yj064")
 
 [node name="Office2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(414, 232)
+position = Vector2(81, 251)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("6_aygm5")
-POI_button_offset = Vector2(0, -50)
+POI_button_offset = Vector2(0, 0)
+hover_info = "Back to Right Hallway"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "office2righthallway"
-POI_sprite = ExtResource("6_gpk7p")
+POI_sprite_enable = false
+POI_sprite = null
 
 [node name="FilesPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
 position = Vector2(152, 210)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -20)
+hover_info = "Files"
 dtl_path = "res://Timelines/Office_Files.dtl"
 POI_sprite = ExtResource("8_p1c8l")

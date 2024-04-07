@@ -27,6 +27,7 @@ position = Vector2(153, 209)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -30)
+hover_info = "Security Cameras"
 dtl_path = "res://Timelines/ConstructionSite_SecCam.dtl"
 POI_sprite = ExtResource("4_y6qmu")
 
@@ -35,6 +36,7 @@ position = Vector2(262, 187)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -40)
+hover_info = "Mortar Box"
 dtl_path = "res://Timelines/ConstructionSite_MortarBox.dtl"
 POI_sprite = ExtResource("5_nx5qy")
 
@@ -43,6 +45,7 @@ position = Vector2(373, 240)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -40)
+hover_info = "Tools"
 dtl_path = "res://Timelines/ConstructionSite_Tools.dtl"
 POI_sprite = ExtResource("4_3odq7")
 
@@ -51,6 +54,7 @@ position = Vector2(344, 150)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, -60)
+hover_info = "Doors"
 dtl_path = "res://Timelines/ConstructionSite_Door.dtl"
 POI_sprite = ExtResource("5_c2ysh")
 
@@ -60,6 +64,7 @@ camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_ydgwj")
 POI_button_offset = Vector2(0, 0)
+hover_info = "Head Back to Atrium"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "csite2atrium"
 POI_sprite_enable = false

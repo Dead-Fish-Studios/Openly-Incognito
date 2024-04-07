@@ -24,6 +24,7 @@ position = Vector2(402, 52)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
+hover_info = "Large Door"
 dtl_path = "res://Timelines/ConstructionSiteRoom_BasementDoor.dtl"
 POI_sprite_enable = false
 
@@ -32,6 +33,7 @@ position = Vector2(307, 210)
 camera_zoom_in_enable = true
 camera_zoom = 1.5
 POI_button_offset = Vector2(0, 0)
+hover_info = "Floor"
 dtl_path = "res://Timelines/ConstructionSiteRoom_Floor.dtl"
 POI_sprite_enable = false
 
@@ -40,6 +42,7 @@ position = Vector2(140, 91)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
 dtl_path = "res://Timelines/ConstructionSiteRoom_Table.dtl"
 POI_sprite_enable = false
 
@@ -47,6 +50,7 @@ POI_sprite_enable = false
 position = Vector2(29, 206)
 POI_button_icon = ExtResource("4_x1jih")
 POI_button_offset = Vector2(0, 0)
+hover_info = "Head Back"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "csiteroom_exit"
 POI_sprite_enable = false
