@@ -22,6 +22,8 @@ var time_of_day: int :# time of day (in minutes)
 # time signals
 signal day_started(day: int)
 
+@export var cam_offset: Vector2 = Vector2(-20.0, 0.0)
+
 @export_group("Game Time")
 @export var start_of_day_time: int = 9 * 60 # 09:00 AM
 @export var end_of_day_time: int = 17 * 60 # 05:00 PM
@@ -88,7 +90,7 @@ func switch_level(to_level:String):
 
 # zoom camera
 func zoom_camera(focus: Vector2, zoom: float):
-	cam.position = focus
+	cam.position = focus + cam_offset
 	#cam.zoom = Vector2(2.0, 2.0) * zoom
 	create_tween().tween_property(cam, "zoom", Vector2(2.0, 2.0) * zoom, 1.0)\
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
