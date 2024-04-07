@@ -23,6 +23,7 @@ var time_of_day: int :# time of day (in minutes)
 signal day_started(day: int)
 
 @export var cam_offset: Vector2 = Vector2(-20.0, 0.0)
+@export var fade_time: float = 0.7
 
 @export_group("Game Time")
 @export var start_of_day_time: int = 9 * 60 # 09:00 AM
@@ -51,7 +52,7 @@ func _ready():
 	day_started.emit(day)
 
 	# start game at Atrium
-	switch_level("AtriumLevel")
+	switch_level("AtriumLevel", false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -60,9 +61,15 @@ func _process(delta):
 # switch levels
 # simply toggles visibility of each level
 # @param to_level: node name of target level 
-func switch_level(to_level:String):
+func switch_level(to_level:String, fade: bool = true):
 	print_debug("trying to switch level to: " + to_level)
 	
+	if fade:
+		# fade out to black
+		var fade_tweener: Tween = create_tween()
+		fade_tweener.tween_property($HUD_Layer/Curtains, "color", Color(0,0,0,1), fade_time )
+		await fade_tweener.finished
+
 	# turn off visiblity for all levels
 	for level in $SubViewportContainer/SubViewport.get_children():
 		if level is Camera2D: continue
@@ -74,13 +81,21 @@ func switch_level(to_level:String):
 	
 	# turn on visibility for target level
 	target.visible = true
-	# call init for target level
-	target.init_level()
 	
 	# update HUD info
 	hud.set_location_info(target.level_name)
 	hud.set_hover_info("")
 	
+	# fade in from black
+	if fade:
+		var fade_tweener: Tween = create_tween()
+		print($HUD_Layer/Curtains.color)
+		fade_tweener.tween_property($HUD_Layer/Curtains, "color", Color(0,0,0,0), fade_time )
+		await fade_tweener.finished
+	
+	# call init for target level
+	target.init_level()
+
 	# reset camera
 	reset_camera()
 	
