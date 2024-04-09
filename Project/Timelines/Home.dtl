@@ -1,7 +1,6 @@
 label confirm_eod
 Jesse: Well, that was a long day.
 It's past 6pm. Do you want to head home now?
-You can also go home later by pressing the "Go Home" button on the top of your screen.
 - Yes
 	Jesse: Time to clock out.
 	do Game.switch_level("HomeLevel")
@@ -17,15 +16,107 @@ You can also go home later by pressing the "Go Home" button on the top of your s
 [end_timeline]
 
 label eod_day1
-Recap Day 1 events here.
+Making your way back home, you pull into the parkade, taking the elevator back up to your apartment.
+Jesse: Man…
+You step into your place, locking the door behind you. 
+You throw your things onto a nearby chair, and walk to the fridge, reheating some leftovers from yesterday. 
+Thinking about what you heard earlier today, your mind starts to wander away from the food in front of you.
+Jesse: [i]I wonder what’s in that basement? Those crocodiles seemed like they really didn’t want me going near there…maybe it was a service area? 
+Jesse: [i]No, it seemed like they were hiding something…and that order form in the office…[/i]
+Suddenly, the timer on the microwave starts beeping loudly, startling you. You take your food out and sit down at the table, more focused on eating than thinking.
+It isn’t until you’re about to go to bed that you start to think about work again.
+The uncertainty of it all bugged you the most. You felt as if you saw something you shouldn’t have. 
+Was that order form for something else? 
+What was behind those doors at the construction site? 
+Did this “Director Connie” know something about all this?
+- go to bed
+	As you turn off the lights for the night, you lay in silence, eventually falling asleep to the hum of the traffic outside.
 jump end_eod
 
 label eod_day2
-Recap Day 2 events here.
+
+You pull into your parkade as usual, take the elevator, and walk in your apartment. 
+As soon as the door closes, you let out a sigh, your head falling against the door. 
+Jesse: There’s just no way…we’re an investment firm…I would’ve seen something…
+A million thoughts were running through your head on the drive home, and even back in your apartment, they still persisted.
+Jesse: So there’s a factory in this place, and Jackson was talking about “disposing” of people. 
+A thought occurs to you. Your face scrunches up in thought.
+Jesse: Wait a minute…Jackson hates everyone! “Dispose” could mean a lot of things for him.
+But you remember something else he said as well. Your smile falters.
+Jesse: [i]But he did call them “herbivores”...as much as he is an asshole, I can’t really picture Jackson as a racist. I think he just hates everyone equally.[/i]
+Jesse: [i]He did mention something about a product, which would line up with what Tim was saying about a factory…but what could they be producing?[/i] 
+Jesse: [i]Tim seemed pretty shocked that I didn’t know about that. I wish I could ask someone, but-[/i]
+Suddenly, a thought occurs to you.
+Jesse: [i]Jordan![/i]
+You rush over to your phone, and give Jordan a call. After a few dials, it goes to her voicemail.
+Jesse: [i]Dammit.[/i]
+You put the phone down, feeling a bit defeated. You think to yourself for a few moments, trying to rationalize what you heard today.
+Jesse: [i]Well, I guess it wouldn’t be too far-fetched for there to be a factory down there. People rent out space all the time, maybe that’s it. [/i]
+Jesse: [i]The one thing I can’t figure out is why Tim seemed so afraid once he knew I didn’t know about it…[/i]
+- go to bed
+You didn’t realize how much time went by as you sat in thought, and by the time you get up, you see it’s dark outside. Your head snaps to the clock:
+Jesse: [i]{Game.tod_str()} already? Time flies, I suppose.[/i]
+You eat, freshen up, and head to bed, too tired to think about the day anymore. 
+Convinced it was simply a sort of misunderstanding, which wouldn’t be too surprising considering you were really just putting pieces together here, you turn out the lights, and drift into sleep.
 jump end_eod
 
 label eod_day3
-Recap Day 3 events here.
+Almost hitting another car in your rush to get home, you’re about to pull into your parkade when a thought crosses your mind.
+Jesse: Wait a second…wouldn’t they know what my car looks like? What if they come looking for me?
+Your fear getting the best of you, you park your car across the street. It’s across from a window of your apartment building, so you’ll be able to see it all night.
+You don’t see anyone around, so you get out of your car and quickly make your way inside. You take the stairs today, running up them two at a time. You unlock the door and throw it closed behind you, locking it tightly. 
+Jesse: Shit, shit, shit…they’re guarding the police station, but I can call them right? Or would they be watching the phones too.
+Just as soon as you finish that thought, the phone rings.
+Your eyes snap to the phone. You stand there, looking at it for a few moments, before picking it up with a shaky hand. A feeling of fear pangs in your chest as you hear the familiar airy voice that speaks. 
+Flamingo: Well, I wasn’t sure if you’d answer or not, but I’m glad you did. It makes things a lot easier.
+When you don’t answer, the voice continues.
+Flamingo: You know, that was quite the spectacle you put on today. Had you been a little slower, we might’ve been able to chat in person!
+Flamingo: You’re too afraid to say anything. When she speaks again, the airiness in her voice is gone, replaced by a much more firm tone.
+Flamingo: Listen, Jesse. I know you and Jordan were doing something down there. I actually went to security to see how that Hugo situation was doing. Still can’t seem to find him, but I just so happened to see Jordan handing you something in reception…
+You feel Jordan’s items grow heavy in your pockets.
+Flamingo: Now, I don’t know what that was, but here’s what’s going to happen. Tomorrow, you’re going to come into work as normal, and head to your office. Bring whatever it is Jordan gave you, and we can just forget this ever happened.
+Still trying to process what she said, she continues.
+Flamingo: And just so you don’t get cold feet…well, I’ll let you talk to her.
+You involuntarily gasp a little bit as you press your ear to the receiver and speak for the first time.
+Jesse: Jordan?
+Jordan: Jesse, remember what I told you. Don’t worry about me.
+Jesse: Jordan-
+You hear the phone being pulled away.
+Flamingo: So there’s the deal Jesse. Quite simple, really: you give me whatever it is you have, and I’ll let you go. Maybe I’ll even promote you! Want Hugo’s old job?
+Connie chuckles to herself, but continues with malice in her voice.
+Flamingo: But if not...well, I’m sure you get the picture. Tomorrow, your office, nine o’clock sharp.
+Her dark voice is replaced by her familiar airy one as she continues.
+Flamingo: Look, I’m really not an unreasonable person Jesse. I understand: these things happen in business! I’m just…giving you a counter-offer.
+A twinge of anger mixes with the fear in your chest as you hear her words, thinking of Jordan.
+Flamingo: One last thing: I’ll know if you call the police or anything like that. Trust me, let’s not go down that path, alright?
+Flamingo: Think it over. No tricks: you could have a real nice job here if you want. I need someone with initiative like you! Or, I suppose you could just go on your way…
+Flamingo: You’ve got one day. See you tomorrow!
+The dial tone plays loudly in your ear as you stand there in shock. You slowly put the phone down.
+You try your best to control your breathing as you think. 
+You feel as if you’re being watched at this very moment. How did she know to call you then? Is there someone outside who saw you?
+You run over to your windows and yank the blinds shut. Feeling marginally safer, you plop down into your couch.
+Your first instinct is that she was lying. Why would she give you a day to “think things over”...was she really serious about the job offer? If you give her Jordan’s things, would she really hold up her end of the bargain? What would happen to Jordan?
+As you absentmindedly go through your evening routine, you consider calling the police anyways, but the thought is quickly pushed out of your head.
+Jesse: No…if she found me here, there’s probably someone watching me. How would she know I called the police? Maybe they have something like Jordan’s walkie-talkie-
+You almost drop your toothbrush in realization.
+Jesse: Oh my god, Jordan’s walkie-talkie!
+You clamp your hands over your mouth, eyes darting around, before realizing that you’re alone in your bathroom. Your quickly rinse your mouth out and dash over to your work clothes, taking the walkie-talkie out. You glance over at your still-shut blinds, then take Hugo’s pistol with you as well.
+Walking into your bedroom, you shut the door behind you. Flipping the walkie-talkie on, you fiddle with it, hearing a familiar static sound. 
+Eventually, you hear a garbled voice, but with some more tuning, a deep male voice comes out clearly.
+Male Voice: Yeah, I’m at her place now. Well, I’m actually staking out her car.
+You’re surprised to not feel as scared as you think you ought to be. Perhaps it’s because you were expecting it. It seems like you picked up a call between two people.
+Male Voice: Nah, I’ll be gone in the morning, just gotta make sure she doesn't try anything tonight. 
+Male Voice: Heard she offered her a job…she might be on patrol with me next week, ha!
+You felt a bit better. It really seemed like they weren’t going to try anything tonight, but this only fueled your worry further. What were you going to do tomorrow?
+Hearing that their conversation has changed to more trivial things, you turn the volume down, placing the walkie-talkie on your nightstand. You felt a bit better knowing you could listen in on what was happening.
+As you sit on your bed, you take out Hugo’s pistol. Staring at it, you place it next to the walkie-talkie. 
+You’ve never even held a real gun before, let alone fire one, but considering your situation, you felt a whole lot safer having it as an option. 
+Deep down, you knew what you wanted to do: you couldn’t just leave Jordan there! But how were you going to get her out?! It seemed impossible.
+As you lay down, the stress of the day catches up with you, making you feel exhausted. 
+Jesse: I’ll go tomorrow. It doesn’t seem like she’s lying: she wants Jordan’s things more than anything. That’s gotta be my leverage. 
+As you go to turn off the light on your nightstand, you see Hugo’s pistol, reminding you of the danger you’ll face tomorrow. 
+With a steeled resolve, you turn off the light, and lie down, trying to mentally prepare yourself for tomorrow.
+It wasn’t going to be pretty, but you needed to get Jordan out of there.
 jump end_eod
 
 label end_eod

@@ -52,11 +52,13 @@ directories/dtl_directory={
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
 "Elevator_init": "res://Timelines/Elevator_init.dtl",
 "Home": "res://Timelines/Home.dtl",
+"Home_Morning": "res://Timelines/Home_Morning.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",
 "Office_Shredder": "res://Timelines/Office_Shredder.dtl",
 "Office_WalkieTalkie": "res://Timelines/Office_WalkieTalkie.dtl",
 "Office_init": "res://Timelines/Office_init.dtl",
+"OrderForm_inspect": "res://Timelines/Items/OrderForm_inspect.dtl",
 "OutsideSecurity_SecurityDoor": "res://Timelines/OutsideSecurity_SecurityDoor.dtl",
 "RightHallway_init": "res://Timelines/RightHallway_init.dtl",
 "Timelines/ph_timeline": "res://Timelines/ph_timeline.dtl",
@@ -69,14 +71,16 @@ variables={
 "Item1": false,
 "Office_OrderForm": false,
 "Office_WalkieTalkie": false,
-"SecurityRoom_Gun": false
+"SecurityRoom_Gun": false,
+"SecurityRoom_Keycard": false
 },
 "NOTES": {
 "Note0": "",
 "Note1": ""
 },
 "OTHER": {
-"Day": 1
+"Day": 1,
+"Time": 0
 }
 }
 layout/style_list=["res://Styles/Dialogue_Style1.tres", "res://Styles/Test.tres"]
@@ -101,6 +105,7 @@ glossary/default_case_sensitive=true
 history/simple_history_enabled=true
 history/full_history_enabled=true
 history/already_read_history_enabled=true
+text/autocolor_names=true
 
 [display]
 
@@ -108,6 +113,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/common/GUI/cursor.png"
+
+[editor]
+
+movie_writer/movie_file="d:/DEV/INTD450/Game-Name-Temporary/Captures/recording.avi"
 
 [editor_plugins]
 

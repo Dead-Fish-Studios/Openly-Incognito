@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7gjon4d3nmyf"]
+[gd_scene load_steps=8 format=3 uid="uid://b7gjon4d3nmyf"]
 
 [ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
 [ext_resource type="Texture2D" uid="uid://bm4hk64mrnhq5" path="res://assets/common/GUI/icons/HUD_gohome.png" id="2_4ruyp"]
 [ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="2_6m10f"]
 [ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/Inventory/Inventory.tscn" id="2_x1m1l"]
 [ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="3_w64ut"]
+[ext_resource type="StyleBox" uid="uid://c7sdar01jss0" path="res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres" id="4_ovdy4"]
+[ext_resource type="StyleBox" uid="uid://c2dlwcowvukyd" path="res://assets/common/GUI/styles/GUI_button_pressed_stylebox.tres" id="5_xdet8"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -67,6 +69,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("3_w64ut")
+theme_override_styles/hover = ExtResource("4_ovdy4")
+theme_override_styles/pressed = ExtResource("5_xdet8")
 text = "Go Home"
 icon = ExtResource("2_4ruyp")
 icon_alignment = 1

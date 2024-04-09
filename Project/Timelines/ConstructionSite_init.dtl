@@ -1,8 +1,14 @@
+label first
 Turning a corner, you see what appears to be a construction area.
 There are warning signs, various tools, carts of building supplies, and caution tape scattered all over the place.
 In front of you, a set of blue doors look to be the entrance into the construction inside.
 Jesse: Must be renovations, I remember hearing about that. Lot of people weren’t too happy they had to walk an extra minute to their office. Well, gotta get your steps in somehow…
+do Game.set_level_init_label("ConstructionSiteLevel", "default")
 [end_timeline]
+
+label default
+[end_timeline]
+
 # below content is edited out for now (reason: no visuals to animate lion sequence described below)
 As you look around, you notice a lion, turning the corner at the other end of the hallway, wearing a black suit and sunglasses with dark lenses. They’re pushing a cart while slightly hunched over, with a few stacked crates on it with one hand, wheels squeaking as it moves along, and reading something on a clipboard with the other. They do not notice you until they get a little closer, and quickly tuck the clipboard under their arm, nodding to you as they turn and wheel into the construction site.
 You snort to yourself.

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdt58k7uyloj8"]
+[gd_scene load_steps=6 format=3 uid="uid://cdt58k7uyloj8"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_0haag"]
 [ext_resource type="Texture2D" uid="uid://cwsavldswp1uu" path="res://assets/levels/SecurityRoom/BG_SecurityRoom.jpg" id="2_35m5e"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_2t34b"]
+[ext_resource type="Texture2D" uid="uid://ckwtqfmky6ire" path="res://assets/common/Characters/Portrait_Hugo.png" id="4_u1mp6"]
+[ext_resource type="Texture2D" uid="uid://b20o2f0bi7k3c" path="res://assets/common/Characters/Portrait_Jackson.png" id="5_nuk8f"]
 
 [node name="SecurityRoomLevel" type="Node2D"]
 script = ExtResource("1_0haag")
@@ -14,3 +17,23 @@ init_dtl = false
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("2_35m5e")
 centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="HugoPOI" parent="POIs" instance=ExtResource("3_2t34b")]
+position = Vector2(242, 177)
+scale = Vector2(-2.5, 2.5)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("4_u1mp6")
+
+[node name="JacksonPOI" parent="POIs" instance=ExtResource("3_2t34b")]
+position = Vector2(387, 178)
+scale = Vector2(3, 3)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("5_nuk8f")

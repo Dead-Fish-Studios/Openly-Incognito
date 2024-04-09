@@ -15,6 +15,9 @@ func switch_level(to_level:String):
 	game.switch_level(to_level)
 
 # zoom camera
+func zoom_camera_xy(focus_x: float, focus_y: float, zoom: float):
+	zoom_camera(Vector2(focus_x, focus_y), zoom)
+
 func zoom_camera(focus: Vector2, zoom: float):
 	game.zoom_camera(focus, zoom)
 
@@ -29,6 +32,9 @@ func find_POI(level: String, POI: String) -> Variant:
 # set POI visibility
 func set_POI_visible(level: String, POI: String, is_visible: bool):
 	game.set_POI_visible(level, POI, is_visible)
+
+func set_level_init_label(level: String, label: String):
+	game.set_level_init_label(level, label)
 
 # set POI timeline start label
 func set_POI_label(level: String, POI: String, label: String):

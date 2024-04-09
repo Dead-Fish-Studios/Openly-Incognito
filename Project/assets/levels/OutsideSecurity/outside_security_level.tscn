@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg7jg4uc5gmp1"]
+[gd_scene load_steps=6 format=3 uid="uid://bg7jg4uc5gmp1"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_rdya2"]
 [ext_resource type="Texture2D" uid="uid://chtpp45fuu6td" path="res://assets/levels/OutsideSecurity/BG_OutsideSecurity.jpg" id="2_exd5j"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_hcum5"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_htvk4"]
+[ext_resource type="Texture2D" uid="uid://ckwtqfmky6ire" path="res://assets/common/Characters/Portrait_Hugo.png" id="5_h48p8"]
 
 [node name="OutsideSecurityLevel" type="Node2D"]
 script = ExtResource("1_rdya2")
@@ -39,3 +40,12 @@ hover_info = "Entrance"
 dtl_path = "res://Timelines/OutsideSecurity_SecurityDoor.dtl"
 POI_sprite_enable = false
 POI_sprite = null
+
+[node name="HugoPOI" parent="POIs" instance=ExtResource("3_hcum5")]
+position = Vector2(339, 199)
+scale = Vector2(1.5, 1.5)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("5_h48p8")

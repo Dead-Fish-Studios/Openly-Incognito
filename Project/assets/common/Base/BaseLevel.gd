@@ -10,6 +10,7 @@ extends Node2D
 @export_group("First Entered")
 @export var init_dtl: bool = true
 @export_file var init_dtl_path = null
+@export var init_dtl_label: String = "start"
 
 @export_group("Audio")
 @export_file var music_path = null
@@ -37,18 +38,13 @@ func _ready():
 func _process(delta):
 	pass
 
-# run only when player first enters level
-func first_entered() -> void:
-	if seen: return
-	seen = true
-	# open init dialogic timeline
-	# use this for establishing levels to player
-	if init_dtl and init_dtl_path != null:
-		Dialogic.start(init_dtl_path)
-
 # runs once every time level is entered
 func init_level() -> void:
-	first_entered()
+	if !Dialogic.current_timeline:
+		if init_dtl and init_dtl_path != null:
+			if init_dtl_label != "start":
+				Dialogic.start(init_dtl_path, init_dtl_label)
+			else: Dialogic.start(init_dtl_path)
 	# start audio playback
 	if music_path != null and musicNode != null:
 		$Music.play()

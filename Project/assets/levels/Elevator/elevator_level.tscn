@@ -1,16 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://de0bgn2nsifqq"]
+[gd_scene load_steps=7 format=3 uid="uid://de0bgn2nsifqq"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_m0d2k"]
-[ext_resource type="Texture2D" uid="uid://dq556yyejmlw" path="res://assets/levels/Elevator/BG_Elevator.jpg" id="2_j700m"]
+[ext_resource type="Texture2D" uid="uid://d1pejjb70835p" path="res://assets/levels/Elevator/BG_Elevator.png" id="2_cb5wa"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_ocvh4"]
+[ext_resource type="Texture2D" uid="uid://ckwtqfmky6ire" path="res://assets/common/Characters/Portrait_Hugo.png" id="4_1jf5f"]
+[ext_resource type="Texture2D" uid="uid://d3gnlum84gaxq" path="res://assets/levels/Elevator/POI_Tim.png" id="4_h2553"]
+[ext_resource type="Texture2D" uid="uid://bcltpyfprjjtf" path="res://assets/common/Characters/Portrait_Flamingo.png" id="4_wpqg7"]
 
 [node name="ElevatorLevel" type="Node2D"]
 script = ExtResource("1_m0d2k")
 level_name = "Elevator"
-background_texture = ExtResource("2_j700m")
+background_texture = ExtResource("2_cb5wa")
 init_dtl_path = "res://Timelines/Elevator_init.dtl"
 
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("2_j700m")
+texture = ExtResource("2_cb5wa")
 centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="HugoPOI" parent="POIs" instance=ExtResource("3_ocvh4")]
+position = Vector2(271, 142)
+scale = Vector2(3, 3)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("4_1jf5f")
+
+[node name="ConniePOI" parent="POIs" instance=ExtResource("3_ocvh4")]
+position = Vector2(315, 159)
+scale = Vector2(3, 3)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("4_wpqg7")
+
+[node name="TimPOI" parent="POIs" instance=ExtResource("3_ocvh4")]
+position = Vector2(211, 159)
+scale = Vector2(3, 3)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("4_h2553")

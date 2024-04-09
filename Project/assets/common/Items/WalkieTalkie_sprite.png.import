@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq556yyejmlw"
-path="res://.godot/imported/BG_Elevator.jpg-58c157683cb232855838e9dbe7bfef65.ctex"
+uid="uid://buj1oyx5aybmr"
+path="res://.godot/imported/WalkieTalkie_sprite.png-428120a259b9871bb8322283e846b243.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/Elevator/BG_Elevator.jpg"
-dest_files=["res://.godot/imported/BG_Elevator.jpg-58c157683cb232855838e9dbe7bfef65.ctex"]
+source_file="res://assets/common/Items/WalkieTalkie_sprite.png"
+dest_files=["res://.godot/imported/WalkieTalkie_sprite.png-428120a259b9871bb8322283e846b243.ctex"]
 
 [params]
 

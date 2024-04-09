@@ -10,6 +10,7 @@ script = ExtResource("1_vgfjc")
 level_name = "Inside Construction Site"
 background_texture = ExtResource("2_7pmcg")
 init_dtl_path = "res://Timelines/ConstructionSiteRoom_init.dtl"
+init_dtl_label = null
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -20,9 +21,10 @@ centered = false
 [node name="POIs" type="Node2D" parent="."]
 
 [node name="BasementDoorPOI" parent="POIs" instance=ExtResource("2_tunya")]
-position = Vector2(402, 52)
+position = Vector2(400, 40)
 camera_zoom_in_enable = true
-camera_zoom = 2.0
+camera_zoom = 1.25
+camera_focus = Vector2(-50, 0)
 POI_button_offset = Vector2(0, 0)
 hover_info = "Large Door"
 dtl_path = "res://Timelines/ConstructionSiteRoom_BasementDoor.dtl"
