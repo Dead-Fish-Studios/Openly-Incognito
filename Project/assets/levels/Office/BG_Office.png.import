@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs0nvaiup3b5u"
-path="res://.godot/imported/POI_OfficeFiles.jpg-b48c4f678a5bb10ab755ce820d7b9c1d.ctex"
+uid="uid://cgfy6rewovums"
+path="res://.godot/imported/BG_Office.png-b99acc88d7d9f0dfcc18d5586afe3d7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/Office/POI_OfficeFiles.jpg"
-dest_files=["res://.godot/imported/POI_OfficeFiles.jpg-b48c4f678a5bb10ab755ce820d7b9c1d.ctex"]
+source_file="res://assets/levels/Office/BG_Office.png"
+dest_files=["res://.godot/imported/BG_Office.png-b99acc88d7d9f0dfcc18d5586afe3d7e.ctex"]
 
 [params]
 

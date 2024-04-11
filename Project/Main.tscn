@@ -1,16 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=14 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
-[ext_resource type="PackedScene" uid="uid://cqltlyx4mnj6q" path="res://assets/common/Base/BaseLevel.tscn" id="3_g2dhc"]
 [ext_resource type="PackedScene" uid="uid://dwbwi45uhci08" path="res://assets/levels/Atrium/atrium_level.tscn" id="4_55p42"]
 [ext_resource type="PackedScene" uid="uid://dwujesv0ttwh" path="res://assets/levels/Home/home_level.tscn" id="4_rslly"]
 [ext_resource type="PackedScene" uid="uid://3qui464y71sr" path="res://assets/levels/ConstructionSite/construction_site_level.tscn" id="5_dbh6f"]
+[ext_resource type="Texture2D" uid="uid://b6y4kjkg0jcpd" path="res://assets/levels/Home/BG_Home_day.png" id="5_jktwr"]
 [ext_resource type="PackedScene" uid="uid://crmyj5lxqbfn7" path="res://assets/levels/Office/office_level.tscn" id="5_vc58l"]
 [ext_resource type="PackedScene" uid="uid://bypih6o8d4bc7" path="res://assets/levels/ConstructionSiteRoom/construction_site_room_level.tscn" id="6_a3rhm"]
 [ext_resource type="PackedScene" uid="uid://de0bgn2nsifqq" path="res://assets/levels/Elevator/elevator_level.tscn" id="9_uwumh"]
 [ext_resource type="PackedScene" uid="uid://867emhkdfcgv" path="res://assets/levels/Breakroom/breakroom_level.tscn" id="10_nho3w"]
 [ext_resource type="PackedScene" uid="uid://dt6dsau5v6o3v" path="res://assets/levels/RightHallway/right_hallway_level.tscn" id="11_fk44q"]
+[ext_resource type="PackedScene" uid="uid://bg7jg4uc5gmp1" path="res://assets/levels/OutsideSecurity/outside_security_level.tscn" id="12_8lgyi"]
+[ext_resource type="PackedScene" uid="uid://cdt58k7uyloj8" path="res://assets/levels/SecurityRoom/security_room_level.tscn" id="13_plj6i"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -26,8 +28,22 @@ layer = 2
 
 [node name="HUD" parent="HUD_Layer" instance=ExtResource("2_ueuww")]
 unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 8.0
+offset_right = -9.0
+offset_bottom = -25.0
+
+[node name="Curtains" type="ColorRect" parent="HUD_Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,28 +71,50 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="BaseLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_g2dhc")]
-
 [node name="HomeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_rslly")]
+visible = false
+
+[node name="HomeMorningLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_rslly")]
+visible = false
+background_texture = ExtResource("5_jktwr")
+init_dtl = true
+init_dtl_path = "res://Timelines/Home_Morning.dtl"
 
 [node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_55p42")]
+visible = false
 level_name = "Atrium"
 init_dtl_path = "res://Timelines/Atrium_init.dtl"
+init_dtl_label = "start"
 music_path = "res://assets/levels/Atrium/Atrium_Music.mp3"
 
 [node name="OfficeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_vc58l")]
+visible = false
 level_name = "Office"
 
 [node name="ConstructionSiteLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_dbh6f")]
+visible = false
 level_name = "Construction Site"
 init_dtl_path = "res://Timelines/ConstructionSite_init.dtl"
+init_dtl_label = "first"
 music_path = "res://assets/levels/ConstructionSite/ConstructionSite_Music.mp3"
 
 [node name="ConstructionSiteRoomLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("6_a3rhm")]
+visible = false
+init_dtl_label = "first"
 
 [node name="ElevatorLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("9_uwumh")]
-level_name = "Elevator"
+visible = false
 
 [node name="BreakroomLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("10_nho3w")]
+visible = false
 
 [node name="RightHallwayLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("11_fk44q")]
+visible = false
+init_dtl_label = "start"
+
+[node name="OutsideSecurityLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("12_8lgyi")]
+visible = false
+level_name = "Outside Security"
+
+[node name="SecurityRoomLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("13_plj6i")]
+visible = false

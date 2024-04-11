@@ -1,57 +1,87 @@
-[gd_scene load_steps=9 format=3 uid="uid://crmyj5lxqbfn7"]
+[gd_scene load_steps=11 format=3 uid="uid://crmyj5lxqbfn7"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_5axud"]
-[ext_resource type="Texture2D" uid="uid://dyutbn6inion1" path="res://assets/levels/Office/BG_Office.jpg" id="2_ypx0a"]
+[ext_resource type="Texture2D" uid="uid://cgfy6rewovums" path="res://assets/levels/Office/BG_Office.png" id="2_ond87"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_gvq2x"]
 [ext_resource type="Texture2D" uid="uid://bj0oyr7xx87f2" path="res://assets/levels/Office/POI_OfficeWalkieTalkie.png" id="4_803v2"]
 [ext_resource type="Texture2D" uid="uid://ofob8mkhy6vh" path="res://assets/levels/Office/POI_OfficeShredder.png" id="4_yj064"]
+[ext_resource type="Texture2D" uid="uid://n883vt36ehbu" path="res://assets/common/Characters/Portrait_Molly.png" id="5_o4kya"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="6_aygm5"]
-[ext_resource type="Texture2D" uid="uid://bq1pcd100yjfl" path="res://assets/levels/Office/POI_OfficeDoor.jpg" id="6_gpk7p"]
-[ext_resource type="Texture2D" uid="uid://bs0nvaiup3b5u" path="res://assets/levels/Office/POI_OfficeFiles.jpg" id="8_p1c8l"]
+[ext_resource type="Texture2D" uid="uid://bk6n0tiak5xym" path="res://assets/levels/Office/POI_Desks.png" id="6_q8oby"]
+[ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="6_u1e02"]
+[ext_resource type="Texture2D" uid="uid://brcvydshmf1v8" path="res://assets/levels/Office/POI_Files.png" id="7_3difh"]
 
 [node name="OfficeLevel" type="Node2D"]
 script = ExtResource("1_5axud")
-background_texture = ExtResource("2_ypx0a")
+background_texture = ExtResource("2_ond87")
 init_dtl_path = "res://Timelines/Office_init.dtl"
 
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("2_ypx0a")
+texture = ExtResource("2_ond87")
 centered = false
 
 [node name="POIs" type="Node2D" parent="."]
 
-[node name="WalkieTalkiePOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(332, 205)
-camera_zoom_in_enable = true
-camera_zoom = 2.0
-POI_button_offset = Vector2(0, -30)
-dtl_path = "res://Timelines/Office_WalkieTalkie.dtl"
-POI_sprite = ExtResource("4_803v2")
-
 [node name="ShredderPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(71, 158)
+position = Vector2(112, 146)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
-POI_button_offset = Vector2(0, -30)
+POI_button_offset = Vector2(0, -35)
+hover_info = "Paper Shredder"
 dtl_path = "res://Timelines/Office_Shredder.dtl"
 POI_sprite = ExtResource("4_yj064")
 
+[node name="MollyPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(231, 168)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("5_o4kya")
+
+[node name="JordanPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(283, 167)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("6_u1e02")
+
+[node name="DesksPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(243, 226)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+POI_sprite = ExtResource("6_q8oby")
+
+[node name="WalkieTalkiePOI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(334, 212)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -30)
+hover_info = "Walkie Talkie"
+dtl_path = "res://Timelines/Office_WalkieTalkie.dtl"
+days_flags = 1
+POI_sprite = ExtResource("4_803v2")
+
 [node name="Office2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(414, 232)
+position = Vector2(92, 241)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("6_aygm5")
-POI_button_offset = Vector2(0, -50)
+POI_button_offset = Vector2(0, 0)
+hover_info = "Back to Right Hallway"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "office2righthallway"
-POI_sprite = ExtResource("6_gpk7p")
+POI_sprite_enable = false
+POI_sprite = null
 
 [node name="FilesPOI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(152, 210)
+position = Vector2(153, 206)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
-POI_button_offset = Vector2(0, -20)
+POI_button_offset = Vector2(0, -40)
+hover_info = "Get to Work"
 dtl_path = "res://Timelines/Office_Files.dtl"
-POI_sprite = ExtResource("8_p1c8l")
+days_flags = 1
+POI_sprite = ExtResource("7_3difh")

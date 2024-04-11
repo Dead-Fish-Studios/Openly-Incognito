@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyutbn6inion1"
-path="res://.godot/imported/BG_Office.jpg-a98e76c508c597fcb14c6e4a4fc17bb4.ctex"
+uid="uid://bcltpyfprjjtf"
+path="res://.godot/imported/Portrait_Flamingo.png-e029b494d9e7cac5cda6d6b0069f8183.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/Office/BG_Office.jpg"
-dest_files=["res://.godot/imported/BG_Office.jpg-a98e76c508c597fcb14c6e4a4fc17bb4.ctex"]
+source_file="res://assets/common/Characters/Portrait_Flamingo.png"
+dest_files=["res://.godot/imported/Portrait_Flamingo.png-e029b494d9e7cac5cda6d6b0069f8183.ctex"]
 
 [params]
 
