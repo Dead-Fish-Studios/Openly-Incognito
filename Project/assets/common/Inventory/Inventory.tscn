@@ -46,6 +46,7 @@ shortcut_feedback = false
 text = "Inventory"
 
 [node name="InventoryContainer" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 2
 theme_override_styles/panel = ExtResource("5_5iajw")
 
@@ -134,8 +135,8 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_uyf0x")
 theme_override_styles/hover = ExtResource("3_24qic")
 theme_override_styles/pressed = ExtResource("4_seedx")
-text = "Order Form"
-icon = ExtResource("9_0cutx")
+text = "Walkie Talkie"
+icon = ExtResource("10_r3gdy")
 icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("3_1ofro")
@@ -185,6 +186,7 @@ item_dtl = ""
 dtl_start_label = ""
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 alignment = 2
