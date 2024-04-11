@@ -1,40 +1,84 @@
-After taking a little walk around the room, you plop down onto one of the couches, the scent of cleaning product still slightly present in the material.
+label hugo_encounter
+do Game.set_POI_visible("BreakroomLevel", "CouchPOI", false)
+# cumulative: 20
+do Game.tod_progress(20)
 Jesse: Sigh…
-You think about all the reports that will probably come in by next week that you’ll have to take care of. You make a mental note to ask Jordan for help, even though she’ll probably whine about it.
 Thinking about work for a while, your thoughts slowly drift to yesterday and what you came across.
+You think about all the reports that will probably come in by next week that you’ll have to take care of. 
+You make a mental note to ask Jordan for help, even though she’ll probably whine about it.
+After taking a little walk around the room, you plop down onto one of the couches, the scent of cleaning product still slightly present in the material.
+# cumulative: 30
+do Game.tod_progress(10)
 Jesse: Man, I wonder what was in that construction area…and that weird order form too…was Markus right? Does this “Director” person really have something else going on?
 You go back and forth for a while in your own head and eventually stand up, having a big stretch.
 Jesse: Well, I can't think much on an empty stomach. Let’s see what we got here, shall we?
-You head over to the cabinets and start rummaging through the cupboards. While not required, a lot of people brought in stuff that anyone could use if they wanted, like utensils and food. You make yourself a sandwich and take one of the few remaining drinks from the fridge.
+# cumulative: 40
+do Game.tod_progress(10)
+do Game.zoom_camera_xy(410,130,2)
+You head over to the cabinets and start rummaging through the cupboards. 
+While not required, a lot of people brought in stuff that anyone could use if they wanted, like utensils and food. 
+You make yourself a sandwich and take one of the few remaining drinks from the fridge.
 Jesse: Eh, I’ll just bring some more next week.
-You take a step back and nearly drop your plate  as you slam into something solid right behind you. You snap your head around and your eyes go wide.
+do Game.reset_camera()
+# cumulative: 50
+do Game.tod_progress(10)
+You take a step back and nearly drop your plate as you slam into something solid right behind you. You snap your head around and your eyes go wide.
+do Game.set_POI_visible("BreakroomLevel", "HugoPOI", true)
 Hugo, the chief of security, was standing behind you, evidently waiting in line. You have no idea how you missed the huge, eight-foot crocodile walking in, his slit-like eyes fixated intimidatingly on you.
 Jesse: Oh, s-sorry Hugo, didn’t see you there…
 Hugo: It’s alright.
-His voice has a deep growl to it as he speaks that seems to reverberate inside your head. You step aside, and he moves over to the fridge, taking a look inside. You head over and sit down at one of the couches.
-After rummaging through the kitchen for a while, he sits down across from you, some food of his own, and the two of you sit in an awkward silence as you slowly eat your food, not knowing what to say to each other\: you both knew more of each other rather than personally.
-You could only avoid eye contact so much, so you swallow and talk to him.
+# cumulative: 60
+do Game.tod_progress(10)
+His voice has a deep growl to it as he speaks that seems to reverberate inside your head. 
+You step aside, and he moves over to the fridge, taking a look inside. You head over and sit down at one of the couches.
+After rummaging through the kitchen for a while, he sits down at one of the tables, some food of his own.
+The two of you sit in an awkward silence as you slowly eat your food, not knowing what to say to each other.
+label stall
+- keep your silence
+	Hugo stares out the window.
+	You contemplate the mouthfeel of your sandwich.
+	jump stall
+- break the ice
+	Hugo stares out the window.
+	You could only avoid eye contact so much, so you swallow and talk to him.
+# cumulative: 90
+do Game.tod_progress(30)
 Jesse: Well, how’s the job lately, Hugo? Everything alright around the place?
-Hugo pauses mid bite, looking up. It’s evident he didn’t expect that you would say anything to him. He slowly puts his food down, attention on you.
+Hugo pauses mid bite and turns to face you . 
+It’s evident he didn’t expect that you would say anything to him. He slowly puts his food down, attention on you.
+# cumulative: 100
+do Game.tod_progress(10)
 Hugo: Well, more of the same, I guess. We haven’t really had any huge problems or anything like that.
 Jesse: That’s good, I guess. I hardly ever see you around the place.
 Hugo slightly rolls his eyes and looks at his food.
 Hugo: Yeah, I’m usually with Connie most of the day.
+# cumulative: 110
+do Game.tod_progress(10)
 Jesse: Who’s Connie?
 Hugo looks up, his eyebrows half-raised.
 Hugo: The CEO of the place.
 Jesse: Oh, Director Connie… haha, my bad.
-Hugo looks down, a small smile on his face. You’re surprised by how easy conversation is with him\: based on his appearance, you would think he’d be like a brick wall verbally. Judging from how he’s relaxed over time, it looks like he enjoys talking with you.
+# cumulative: 120
+do Game.tod_progress(10)
+Hugo looks down, a small smile on his face. 
+You’re surprised by how easy conversation is with him\: based on his appearance, you would think he’d be like a brick wall verbally. 
+But judging from how he’s relaxed over time, it looks like he enjoys talking with you.
 - Heard anything strange recently?
+	# cumulative: 130
+	do Game.tod_progress(10)
 	Jesse: Hey, can I ask you something, employee to employee?
 	Hugo: Um, sure, I guess.
 	Jesse: This might be just me, but have you heard about anything weird going on at all? I feel like I’m going crazy a bit, but I’m not sure, it might be just me.
 	You choose your words carefully, unsure of how he’s going to react to this.
 	Jesse: He would be higher up in this place, right? He’s the head of security, after all.
 	Hugo looks up at you, eyes calculating.
+	# cumulative: 140
+	do Game.tod_progress(10)
 	Hugo: What do you mean?
 	Jesse: Well, I’m not sure. Just a weird air around this place, I guess. Feels like I’m missing something.
 	Hugo wears a hard expression as he looks at you, but sighs and drops it, looking down at his food again.
+	# cumulative: 150
+	do Game.tod_progress(10)
 	Jesse: Everything alright?
 	Hugo: Yeah, it’s just… I suppose I feel the same sometimes.
 	You’re a bit taken aback by this.
@@ -46,15 +90,22 @@ Hugo looks down, a small smile on his face. You’re surprised by how easy conve
 	Hugo gives a small snort before settling back into his usual demeanor.
 	Hugo: It’s fine, I guess. Been here almost twenty years now.
 	Jesse: Really? What made you wanna work here?
+	# cumulative: 130
+	do Game.tod_progress(10)
 	Strangely, Hugo looks pained for a moment, but perhaps you just imagined it because he looks at you with a somewhat bored expression.
 	Hugo: Well, uh…let’s just say I was brought on to help out with the place. Eventually a spot opened up for the security job and I’ve been here ever since.
 	Jesse: Wow, I had no idea. Bet your benefits are pretty good, haha.
-	Hugo looks like he’s about to say something but decides better of it, giving a small laugh of agreement. He leans back in his chair, stretching a little bit, and as he puts his arms behind his head, you see his suit sleeve come up a bit and reveal a very expensive looking watch.
+	Hugo looks like he’s about to say something but decides better of it, giving a small laugh of agreement. 
+	# cumulative: 140
+	do Game.tod_progress(10)
+	He leans back in his chair, stretching a little bit, and as he puts his arms behind his head, you see his suit sleeve come up a bit and reveal a very expensive looking watch.
 	Jesse: Wow, is that a Barkly?
 	Hugo looks confused for a minute, but then awkwardly brings his arms back down, shrugging his sleeve back over his arm, looking a bit annoyed.
 	Hugo: Yeah, but it’s nothing really. I don’t even like it that much.
 	Jesse: You don’t even like it? Why would you spend that much money on it then?
 	Hugo: It was a gift from this place, so I wear it to work. I actually got it pretty recently from the Director.
+	# cumulative: 150
+	do Game.tod_progress(10)
 	Hugo looks a bit angry as he says this, and stares at his wrist for a moment before returning his attention to you.
 	Jesse: Wow, what for? Just because?
 	Hugo pauses for a moment before answering.
@@ -65,6 +116,8 @@ Hugo looks down, a small smile on his face. You’re surprised by how easy conve
 	Hugo: Nope, I’m here pretty late tonight actually. We’ve noticed some evidence of tampering at one of the entrances, so we think some people might have tried to break in recently. We’re gonna stay a bit later and watch the cameras and all that.
 	Jesse: Oh really? That stuff happen often?
 	Hugo: Not so much now that we have this new CEO. They seem to really be all for “personal security”. I’ve got a lot of people to manage now, I should really ask for a shift scheduler…
+	# cumulative: 130
+	do Game.tod_progress(10)
 	Hugo looks off in thought a little before returning his attention to you.
 	Hugo: But I do have next week off, I’ve been working a lot of overtime recently and took some vacation days.
 	Jesse: Oh sweet, whatcha gonna do?
@@ -72,9 +125,14 @@ Hugo looks down, a small smile on his face. You’re surprised by how easy conve
 	Jesse: Hey, I’m not hating, sounds like you’re looking forward to it.
 	Hugo lets out a big exhale through his nose and leans back in his chair.
 	Hugo: Yeah, I really am.
+	# cumulative: 150
+	do Game.tod_progress(20)
 As the two of you finish talking, you both sit in silence for a moment before standing up and cleaning your area, getting ready to head out.
 Jesse: Well, hey\: nice talking to you Hugo. I’ll see you around the place!
 As Hugo throws his stuff in the trash, he gives a farewell wave, a tiny smile on his hard face.
 Hugo: Well, might be better if you don’t see me, cause if you do there’s probably something up.
 You give a small laugh.
 Jesse: Yeah, I suppose that’s true.
+do Game.set_POI_visible("BreakroomLevel", "HugoPOI", false)
+# cumulative: 160
+do Game.tod_progress(10)

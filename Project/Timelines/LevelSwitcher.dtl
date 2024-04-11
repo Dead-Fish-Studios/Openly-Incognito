@@ -1,5 +1,5 @@
 label atrium2csite
-Head outside?
+Head down left hallway?
 - yes
 	do Game.switch_level("ConstructionSiteLevel")
 - no
@@ -13,14 +13,14 @@ Head back to the Atrium?
 [end_timeline]
 
 label csiteroom_exit
-Head back outside?
+Head back to the hallway?
 - yes
 	do Game.switch_level("ConstructionSiteLevel")
 - no
 [end_timeline]
 
 label office2righthallway
-Head back to the Hallway?
+Head back to the hallway?
 - yes
 	do Game.switch_level("RightHallwayLevel")
 - no
@@ -44,7 +44,7 @@ else:
 [end_timeline]
 
 label atrium2righthallway
-Head down this hallway?
+Head down right hallway?
 - yes
 	do Game.switch_level("RightHallwayLevel")
 - no
@@ -58,7 +58,7 @@ Head to the break room?
 [end_timeline]
 
 label breakroom2righthallway
-Head to the hallway?
+Head back to the hallway?
 - yes
 	do Game.switch_level("RightHallwayLevel")
 - no

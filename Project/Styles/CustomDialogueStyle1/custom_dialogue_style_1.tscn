@@ -1,18 +1,24 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqpb3ie51rwl5"]
+[gd_scene load_steps=21 format=3 uid="uid://cqpb3ie51rwl5"]
 
 [ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/default_layout_base.gd" id="1_ifsho"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="3_wyr0p"]
-[ext_resource type="PackedScene" uid="uid://cuoywrmvda1yg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.tscn" id="4_uqnh1"]
-[ext_resource type="StyleBox" uid="uid://dys1bm7qcc3hm" path="res://assets/common/GUI/GUI_stylebox.tres" id="5_nsl0u"]
+[ext_resource type="PackedScene" uid="uid://dt8sc827u0oqo" path="res://Styles/CustomDialogueStyle1/history_item.tscn" id="4_mmlnj"]
+[ext_resource type="StyleBox" uid="uid://dys1bm7qcc3hm" path="res://assets/common/GUI/styles/GUI_textlog_stylebox.tres" id="5_pujjf"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="6_fg82g"]
+[ext_resource type="StyleBox" uid="uid://cuxuo4kivnrrn" path="res://assets/common/GUI/styles/GUI_textbox_stylebox.tres" id="6_hs5qw"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="6_nav3t"]
+[ext_resource type="StyleBox" uid="uid://sl1tje5rhvah" path="res://assets/common/GUI/styles/GUI_portrait_stylebox.tres" id="7_83fub"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="7_iuuse"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="8_83lal"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd" id="9_f65uj"]
+[ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="9_l16dr"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="10_ij4o1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="11_ehmtx"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="12_sd857"]
+[ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="13_o2kgv"]
 [ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="13_qbpvm"]
+[ext_resource type="StyleBox" uid="uid://c7sdar01jss0" path="res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres" id="14_lpyxk"]
+[ext_resource type="StyleBox" uid="uid://c2dlwcowvukyd" path="res://assets/common/GUI/styles/GUI_button_pressed_stylebox.tres" id="15_4e18i"]
 
 [sub_resource type="AudioStream" id="AudioStream_pe27w"]
 
@@ -27,10 +33,12 @@ metadata/_edit_use_anchors_ = true
 [node name="ExampleHistoryScene" type="Control" parent="."]
 layout_direction = 1
 layout_mode = 3
-anchor_right = 0.0335938
-anchor_bottom = 0.735667
-offset_right = 422.0
-offset_bottom = 8.31995
+anchor_right = 0.363
+anchor_bottom = 0.648389
+offset_left = 12.0
+offset_top = 48.0
+offset_right = 12.36
+offset_bottom = 0.159943
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
@@ -39,28 +47,32 @@ show_open_button = false
 show_close_button = false
 show_all_choices = false
 show_join_and_leave = false
-HistoryItem = ExtResource("4_uqnh1")
-metadata/_edit_use_anchors_ = true
+HistoryItem = ExtResource("4_mmlnj")
 
 [node name="PanelContainer" type="PanelContainer" parent="ExampleHistoryScene"]
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 509.0
-theme_override_styles/panel = ExtResource("5_nsl0u")
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0310263
+anchor_bottom = -0.0596659
+offset_right = 498.0
+offset_bottom = 467.0
+theme_override_styles/panel = ExtResource("5_pujjf")
+metadata/_edit_use_anchors_ = true
 
 [node name="HistoryBox" type="ScrollContainer" parent="ExampleHistoryScene"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.141935
-anchor_top = 0.10223
-anchor_right = 0.840697
-anchor_bottom = 0.930818
-offset_right = 0.0759964
-offset_bottom = 0.21994
+anchor_top = 0.102784
+anchor_right = 0.924568
+anchor_bottom = 0.963126
+offset_left = 0.000221252
+offset_top = -0.0664978
+offset_right = 0.0758667
+offset_bottom = 15.4502
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="HistoryLog" type="VBoxContainer" parent="ExampleHistoryScene/HistoryBox"]
 unique_name_in_owner = true
@@ -72,88 +84,99 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="TextBoxWithPortrait" type="HBoxContainer" parent="."]
-unique_name_in_owner = true
+[node name="Panel2" type="Panel" parent="."]
 anchors_preset = -1
-anchor_top = 0.708166
-anchor_right = 0.333
-anchor_bottom = 0.992944
-offset_top = -0.8797
-offset_right = -0.23999
-offset_bottom = -4.92004
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+anchor_top = 0.649
+anchor_right = 0.389
+anchor_bottom = 0.99
+offset_left = 12.0
+offset_top = -0.279999
+offset_right = 110.08
+offset_bottom = -2.79999
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_hs5qw")
 
-[node name="PortraitPanel" type="Panel" parent="TextBoxWithPortrait"]
-unique_name_in_owner = true
+[node name="Portrait" type="Control" parent="Panel2"]
 clip_children = 1
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+anchors_preset = 0
+offset_left = 52.0
+offset_top = 23.0
+offset_right = 172.0
+offset_bottom = 206.0
 size_flags_horizontal = 0
-
-[node name="PortraitBackgroundColor" type="ColorRect" parent="TextBoxWithPortrait/PortraitPanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0583333
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 7.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.231373)
 metadata/_edit_use_anchors_ = true
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="TextBoxWithPortrait/PortraitPanel/PortraitBackgroundColor"]
+[node name="Panel" type="Panel" parent="Panel2/Portrait"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 4.0
+anchors_preset = -1
+anchor_top = -0.125683
+anchor_right = 1.30833
+anchor_bottom = 1.04372
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_83fub")
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Panel2/Portrait"]
+layout_mode = 2
+anchors_preset = 0
+offset_top = -23.0
+offset_right = 129.0
+offset_bottom = 183.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_83lal")
 mode = 1
 
-[node name="Panel2" type="Panel" parent="TextBoxWithPortrait"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextBoxWithPortrait/Panel2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.0687919
+anchor_top = -0.0452675
+anchor_right = 0.171141
+offset_left = 176.0
+offset_top = 23.0
+offset_right = 441.0
+offset_bottom = 206.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="DialogicNode_NameLabel" type="Label" parent="TextBoxWithPortrait/Panel2/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Panel2/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("9_l16dr")
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Panel2/VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
 script = ExtResource("6_nav3t")
 
-[node name="DialogicNode_DialogText" type="RichTextLabel" parent="TextBoxWithPortrait/Panel2/VBoxContainer"]
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Panel2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("7_iuuse")
 
 [node name="VN_ChoiceLayer" type="Container" parent="."]
 anchors_preset = -1
-anchor_left = 0.33
-anchor_top = 0.723167
-anchor_right = 0.662
+anchor_left = 0.398844
+anchor_top = 0.648278
+anchor_right = 0.688
 anchor_bottom = 0.99
-offset_left = 22.6
-offset_top = -10.6803
-offset_right = 19.6399
-offset_bottom = -3.80035
+offset_left = 114.48
+offset_top = 0.239838
+offset_right = 115.36
+offset_bottom = -3.80048
 size_flags_horizontal = 0
 size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("9_f65uj")
+font_size_use_global = false
+boxes_stylebox_normal = ""
+boxes_stylebox_hovered = "res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres"
+boxes_stylebox_focused = "res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres"
+boxes_v_separation = 0
 apply_overrides_on_ready = true
 metadata/_edit_use_anchors_ = true
 
@@ -166,42 +189,63 @@ metadata/_edit_layout_mode = 1
 
 [node name="DialogicNode_ChoiceButton1" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton2" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton3" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton4" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton5" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton6" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")
 
 [node name="DialogicNode_ChoiceButton7" type="Button" parent="VN_ChoiceLayer/Choices"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("13_o2kgv")
+theme_override_styles/hover = ExtResource("14_lpyxk")
+theme_override_styles/pressed = ExtResource("15_4e18i")
 text = "Some text"
 alignment = 0
 script = ExtResource("10_ij4o1")

@@ -16,7 +16,8 @@ func go_home_visible(visibility: bool) -> void:
 
 # callback for "head home" button
 func go_home_pressed() -> void:
-	print_debug("\"go_home\" button pressed")
+	# check if there is a timeline currently playing
+	if Dialogic.current_timeline: return
 	# ask player if they want to end the day and head home
 	Dialogic.start("res://Timelines/Home.dtl", "confirm_eod")
 
@@ -29,3 +30,6 @@ func update_day_info() -> void:
 	$InfoHUD/HBoxContainer/DateHUD/DateInfo.text = "Day " + str(Game.inst().get_day())
 func update_time_info() -> void:
 	$InfoHUD/HBoxContainer/TimeHUD/TimeInfo.text = Game.inst().tod_str()
+
+func set_hover_info(info: String):
+	$MouseHUD/MouseHoverInfo.text = info

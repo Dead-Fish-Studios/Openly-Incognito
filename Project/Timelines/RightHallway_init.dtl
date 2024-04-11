@@ -1,54 +1,143 @@
-if {OTHER.Day} == 2:
-	Deciding to head to your office, you head down the right hallway. Just as you’re about to turn the corner, you hear some people having a conversation. You stop and take a few steps back as you recognize one of the voices. It’s Jackson. Quite unusually, however, you hear Jackson talking in a friendly manner. Your eyes scrunch up in confusion as you make sure you’re hearing what you are\: you’ve never seen Jackson so much as smile before, but it’s unmistakably him.
-	Jackson: Yes, well, I didn’t think we’d be able to progress so quickly, but it looks like we’ve been able to push out our product much faster than I initially thought.
-	"Unknown Voice": Good, good…well, with that out of the way, I just wanted to ask you about something I’ve heard through the grapevine.
-	You don’t recognize this second voice. You’re pretty intrigued to see who it could be, as they’re talking to Jackson in a superior manner, something most people who worked at this company wouldn’t dare do.
-	Jackson: Of course.
-	"Unknown Voice": I heard that you found two people who were getting a bit too nosy the other day. What did you end up doing with them?
-	Jackson: Ah, yes, those two herbivores. I had my team dispose of them once we…“spoke” with them a bit.
-	You release a silent breath you didn’t know you were holding as you take in what you just heard. Producing product? Disposing of them? Labeling people as herbivores?
-	Jesse: Is he speaking in code or something? There’s no way two people actually died here…right?
-	"Unknown Voice": Excellent. Now, I must speak with Hugo…got to see how they keep getting in. The police are bound to notice eventually if we keep picking people off like this\: we need some more measures in place to dissuade them from even trying to get down there.
-	Jesse: “Down there”? Are they talking about the basement I heard about yesterday?
-	Jackson: Yes, I agree, better to tackle the problem at the root rather than the leaf.
-	"Unknown Voice": Careful Jackson…talking like that, one might mistake you for a herbivore…
-	The two share a laugh as their conversation ends abruptly. You hear a sharp clicking of footsteps as someone walks away, slowly getting quieter. Suddenly, you hear a different set of footsteps, coming towards you from around the corner. You hastily dig for some past notes in your pocket and pretend to look engrossed in them, having no time to do anything else. You pause for a moment, and then start walking forward, making it look like you just happened to arrive…or so you hoped.
-	Jackson rounds the corner, and pauses for a moment upon seeing you, slight shock evident on his face. He recovers quickly, eyes darting behind him as if checking no one was there, and holds up a hand for you to stop walking, his usual hard expression on his face. He says nothing as you hear the second set of footsteps get quieter and quieter, walking the other direction around the corner. You feel an urge pulling you to move forward, just to peek around the corner to see who that was, but you don’t go, too afraid of the hard look Jackson is boring into you.
-	Putting on a face of confusion, you hope the sweat on your brow isn’t too noticeable. You were rapidly trying to go over what you just heard, but you couldn’t make heads or tails of it.
-	Jesse: Jackson and this person…they’re talking about people like they’re just objects. “Picking them off”?! What the hell is going on?! And “down there”...are they talking about the basement I heard about yesterday?
-	Not hearing any more footsteps, Jackson lowers his hand, and places them both behind his back, seemingly deep in thought as he looks at you. He says nothing.
-	Jesse: Uh… what’s up Jackson?
-	Jackson’s eyes narrow before he opens his mouth.
-	Jackson: Shouldn’t you be working, Jesse?
-	His voice is strong and composed as he talks.
-	Jesse: I-I was just on the way, it’s right behind you, actually…
-	"So it is… ", says Jackson, unmoving as he speaks.
-	There is a moment of silence that passes between you two. Jackson stares at you, apparently unsure of how to proceed. You wonder if he’s thinking about “disposing” of you too… the thought makes a pang of fear roll down into your chest, although you do your best not to show it. You decide to go on the offensive.
-	Jesse: Is everything alright Jackson? I should really get going, lots to do, you know…
-	You didn’t think he could narrow his eyes any further if he tried. Finally, he steps out of your way, beckoning you to move forward.
-	Jackson: Yes, I’m sure. On your way then.
-	You try to show a neutral face as you walk by him\: you can feel his gaze burning into the side of your head. You duck into your office as you round the corner, shutting the door quickly behind you.
-	Molly and Jordan aren’t here, their empty desks cluttered with a mess of papers. You wait with your back to the door, hearing Jackson’s quiet footsteps walk away. Not even turning the lights on, you let out a sigh and sink to the ground against the door, blending into the darkness of the room\: the frosted windows creating a dim environment from the light outside. You let your head fall into your hands.
-	Jesse: I’ve gotta… I’ve gotta do something… don’t I? There’s no way that’s just-just code or… or something… or he could-... no, but…
-	You take a few deep breaths, trying to calm yourself down. You close your eyes, sitting there in silence for a moment before slowly opening them, looking at the dim, dusty office space.
-	Jesse: I gotta… gotta call the police…
-	You walk over to the phone on your desk, but stop as you grab the handle, thinking to yourself.
-	Jesse: No… no, they wouldn’t believe me, would they? It’s just my word against theirs, and if I accuse them of something like that, would they just “dispose” of me next?
-	Jesse: Man, this sucks! I can’t do anything!
-	You stand in silence for a moment. The raging thoughts in your head are eventually toned out a bit by the contrasting silence of your office. You calm yourself down a bit.
-	Jesse: At the very least, it seems like Jackson doesn’t think I heard anything…or anything too important, I guess. I really need to watch my step from now on…maybe I just heard it completely out of context. But “down there”...
-	Jesse: …
-	Jesse: Nothing I can do right now, I guess. Who could I talk to about this…
-	Your eyes snap wide, realization hitting you like a truck.
-	Jesse: Jordan! She would believe me, she’s my best friend!
-	You turn to look at Jordan’s desk before realizing she’s not here.
-	Jesse: She must be on lunch or something, I’ll leave her a note at her desk.
-	Just as you’re about to grab a pen, you walk by your desk and see a note from Jordan.
-	“Went home, stomach ache \:(“
-	Of course, the one day she misses…
-	Still, feeling better than you did a few minutes ago, you get ready to leave.
-	You take a breath, then open the door. A quick glance down each hallway shows that you’re all alone. You can faintly make out the usual murmur of the atrium reaching down the hallways.
-	You head back down the hallway to the atrium.
-	do Game.switch_level("AtriumLevel")
+if {OTHER.Day} != 2:
+	jump jackson_encounter
 else:
-	[end_timeline]
+	jump first
+
+label first
+[end_timeline]
+
+label default
+[end_timeline]
+
+label jackson_encounter
+Just as you’re about to turn the corner, you hear some people having a conversation.
+You stop and take a few steps back as you recognize one of the voices\:
+It’s Jackson.
+His tone, however, is uncharacteristically friendly. You’ve never seen him so much as smile before, but it’s unmistakably him.
+# cumulative: 10
+do Game.tod_progress(10)
+Jackson: Yes, well, I didn’t think we’d be able to progress so quickly, but it looks like we’ve been able to push out our product much faster than I initially thought.
+The other female voice is unfarmiliar to you. It's breezy, a little uncaring, very formal.
+"Unknown Voice": Good, good…
+"Unknown Voice": Well, with that out of the way, I just wanted to ask you about something I’ve heard through the grapevine.
+She's talking to Jackson in a superior manner...something most people here wouldn’t dare do.
+# cumulative: 20
+do Game.tod_progress(10)
+Jackson: Of course.
+"Unknown Voice": I heard that you found two people who were getting a bit too nosy the other day. What did you end up doing with them?
+Jackson: Ah, yes, those two herbivores. I had my team dispose of them once we…“spoke” with them a bit.
+# cumulative: 30
+do Game.tod_progress(10)
+You release a silent breath you didn’t know you were holding as you take in what you just heard.
+Producing product? Disposing of them? Labeling people as herbivores?
+Jesse: [i]Is he speaking in code or something? There’s no way people actually died here…right?[/i]
+"Unknown Voice": Excellent.
+"Unknown Voice": Now, I must speak with Hugo. Got to see how they keep getting in. We need some more measures in place to dissuade them from even trying to get down there.
+# cumulative: 45
+do Game.tod_progress(15)
+The two share a laugh as their conversation ends abruptly. You hear a sharp clicking of heels as the other person walks away, slowly getting quieter.
+# cumulative: 50
+do Game.tod_progress(5)
+Suddenly, you hear a different set of footsteps, coming towards you from around the corner.
+It must be Jackson.
+- pretend to be innocent
+You hastily dig for some scrap notes in your pocket and look engrossed in them, having no time to do anything else.
+You pause for a moment, and then start walking forward, making it look like you just happened to arrive…or so you hoped.
+# cumulative: 70
+do Game.tod_progress(20)
+do Game.set_POI_visible("RightHallwayLevel", "JacksonPOI", true)
+Jackson rounds the corner, and pauses for a moment upon seeing you.
+Slight shock evident on his face, but he recovers quickly.
+His eyes darting behind to check no one was there, and holds up a hand for you to stop walking, his usual hard expression on his face.
+# cumulative: 80
+do Game.tod_progress(10)
+He says nothing as you hear the second set of footsteps get quieter and quieter, walking the other direction around the corner.
+You feel an urge pulling you to move forward, just to peek around the corner to see who that was, but you don’t go, too afraid of the hard look Jackson is boring into you.
+Putting on a face of confusion, you hope the sweat on your brow isn’t too noticeable. You were rapidly trying to go over what you just heard, but you couldn’t make heads or tails of it.
+# cumulative: 90
+do Game.tod_progress(10)
+Jesse: [i] Jackson and this person…they’re talking about people like they’re just objects. “Picking them off”?! What the hell is going on?! And “down there”...are they talking about the basement I heard about yesterday? [/i]
+# cumulative: 100
+do Game.tod_progress(10)
+Not hearing any more footsteps, Jackson lowers his hand, and places them both behind his back, seemingly deep in thought as he looks at you.
+# cumulative: 110
+do Game.tod_progress(10)
+He says nothing.
+Jesse: Uh… what’s up Jackson?
+# cumulative: 120
+do Game.tod_progress(10)
+Jackson’s eyes narrow before he opens his mouth. His voice is strong and composed.
+Jackson: Shouldn’t you be working, Jesse?
+Jesse: I-I was just on the way, it’s right behind you, actually…
+Jackson: So it is...
+# cumulative: 130
+do Game.tod_progress(10)
+There is a moment of silence that passes between you two. Jackson stares at you, apparently unsure of how to proceed.
+Is he thinking about “disposing” of you too?
+The thought makes a pang of fear roll down into your chest, although you do your best not to show it. You decide to go on the offensive.
+# cumulative: 140
+do Game.tod_progress(10)
+Jesse: Is everything alright Jackson? I should really get going, lots to do, you know…
+You didn’t think he could narrow his eyes any further if he tried.
+# cumulative: 150
+do Game.tod_progress(10)
+Finally, he steps out of your way, beckoning you to move forward.
+Jackson: Yes, I’m sure. On your way then.
+# cumulative: 160
+do Game.tod_progress(10)
+You try to show a neutral face as you walk by him, but you can feel his gaze burning into the side of your head.
+You duck into your office as you round the corner, shutting the door quickly behind you.
+do Game.switch_level("OfficeLevel")
+do Game.set_POI_visible("RightHallwayLevel", "JacksonPOI", false)
+# cumulative: 170
+do Game.tod_progress(10)
+The office is quiet. Molly and Jordan aren’t here, their empty desks cluttered with a mess of papers.
+You wait with your back to the door, hearing Jackson’s quiet footsteps walk away.
+You let out a sigh and sink to the ground against the door. The sunlight shines inside through the windows.
+You let your head fall into your hands.
+# cumulative: 180
+do Game.tod_progress(10)
+Jesse: I’ve gotta… I’ve gotta do something… don’t I? There’s no way that’s just-just code or… or something… or he could-... no, but…
+You take a few deep breaths, trying to calm yourself down.
+# cumulative: 190
+do Game.tod_progress(10)
+You close your eyes, sitting there in silence for a moment before slowly opening them, looking at the silent, dusty office.
+Jesse: I gotta… gotta call the police…
+do Game.zoom_camera(210, 210, 2)
+You reach to the phone on your desk, but stop as you grab the handle, thinking to yourself.
+Jesse: No… no, they wouldn’t believe me, would they? It’s just my word against theirs, and if I accuse them of something like that, would they just “dispose” of me next?
+do Game.reset_camera()
+Jesse: Man, this sucks! I can’t do anything!
+# cumulative: 200
+do Game.tod_progress(10)
+You stand in silence for a moment. The raging thoughts in your head are eventually toned out a bit by the contrasting silence of your office.
+# cumulative: 210
+do Game.tod_progress(10)
+You calm yourself down a bit.
+Jesse: At the very least, it seems like Jackson doesn’t think I heard anything…or anything too important, I guess.
+Jesse: I really need to watch my step from now on…maybe I just heard it completely out of context. But “down there”...
+Jesse: …
+Jesse: Nothing I can do right now, I guess. Who could I talk to about this…
+# cumulative: 220
+do Game.tod_progress(10)
+Your eyes snap wide, realization hitting you like a truck.
+Jesse: Jordan! She would believe me, she’s my best friend!
+do Game.zoom_camera_xy(300, 200, 2)
+You turn to look at Jordan’s desk before realizing she’s not here.
+Jesse: She must be on lunch or something, I’ll leave her a note at her desk.
+do Game.zoom_camera(210, 210, 2)
+Just as you’re about to grab a pen, you walk by your desk and see a note from Jordan.
+- read note
+“Went home, stomach ache \:(“
+Jesse: [i] Of course, the one day she misses… [/i]
+do Game.reset_camera()
+# cumulative: 230
+do Game.tod_progress(10)
+Still, feeling better than you did a few minutes ago, you get ready to leave.
+# cumulative: 240
+do Game.tod_progress(10)
+You take a breath, then open the door. A quick glance down each hallway shows that you’re all alone. You can faintly make out the usual murmur of the atrium reaching down the hallways.
+You step back outside.
+do Game.set_level_init_label("RightHallwayLevel", default)
+do Game.switch_level("RightHallwayLevel")
+[end_timeline]

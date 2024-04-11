@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs0nvaiup3b5u"
-path="res://.godot/imported/POI_OfficeFiles.jpg-b48c4f678a5bb10ab755ce820d7b9c1d.ctex"
+uid="uid://n883vt36ehbu"
+path="res://.godot/imported/Portrait_Molly.png-2bfa6e21dc9f19b14d3c8e5d6262a002.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/Office/POI_OfficeFiles.jpg"
-dest_files=["res://.godot/imported/POI_OfficeFiles.jpg-b48c4f678a5bb10ab755ce820d7b9c1d.ctex"]
+source_file="res://assets/common/Characters/Portrait_Molly.png"
+dest_files=["res://.godot/imported/Portrait_Molly.png-2bfa6e21dc9f19b14d3c8e5d6262a002.ctex"]
 
 [params]
 

@@ -1,5 +1,5 @@
 You direct your attention towards a crumpled piece of paper on the ground, next to the receptionist desk. You walk over and pick the paper up, intrigued, as you’ve never really seen trash lying around here before.
-Jesse (Fox): Huh.
+Jesse: Huh.
 - Take note
 	set {ITEMS.Atrium_CrumpledNote} = true
 	do Game.set_POI_visible("AtriumLevel", "CrumpledNotePOI", false)

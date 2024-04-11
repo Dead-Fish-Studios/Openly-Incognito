@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt6dsau5v6o3v"]
+[gd_scene load_steps=6 format=3 uid="uid://dt6dsau5v6o3v"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_fbmim"]
 [ext_resource type="Texture2D" uid="uid://c4qw68er7dc7d" path="res://assets/levels/RightHallway/BG_RightHallway.jpg" id="2_cf08k"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_yjvl3"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_dw1pl"]
+[ext_resource type="Texture2D" uid="uid://b20o2f0bi7k3c" path="res://assets/common/Characters/Portrait_Jackson.png" id="5_v84a4"]
 
 [node name="RightHallwayLevel" type="Node2D"]
 script = ExtResource("1_fbmim")
 level_name = "Right Hallway"
 background_texture = ExtResource("2_cf08k")
+init_dtl = false
 init_dtl_path = "res://Timelines/RightHallway_init.dtl"
+init_dtl_label = null
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -31,11 +34,12 @@ POI_sprite_enable = false
 POI_sprite = null
 
 [node name="BreakRoom2AtriumPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
-position = Vector2(212, 245)
+position = Vector2(250, 245)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_dw1pl")
 POI_button_offset = Vector2(0, 0)
+hover_info = "To Atrium"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "righthallway2atrium"
 POI_sprite_enable = false
@@ -47,6 +51,7 @@ camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_dw1pl")
 POI_button_offset = Vector2(0, 0)
+hover_info = "To Your Desk"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "righthallway2office"
 POI_sprite_enable = false
@@ -58,7 +63,17 @@ camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_dw1pl")
 POI_button_offset = Vector2(0, 0)
+hover_info = "To Break Room"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "righthallway2breakroom"
 POI_sprite_enable = false
 POI_sprite = null
+
+[node name="JacksonPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
+position = Vector2(215, 167)
+scale = Vector2(2, 2)
+show_button = false
+dtl_path = ""
+dtl_start_label = ""
+days_flags = 0
+POI_sprite = ExtResource("5_v84a4")

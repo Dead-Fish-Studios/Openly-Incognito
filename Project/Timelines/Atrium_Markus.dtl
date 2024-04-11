@@ -1,7 +1,8 @@
 Jesse: Markus, what’s up man?
 The owl at the desk looks up slowly. His eyes widen slightly while his mouth breaks into a half-grin, his posture showing a bit more attention at the sight of his friend. 
 # His eyes go back to the computer screen he was working on, but looks back at you as he talks.
-Markus was the receptionist for the company, but it seems like people never really came to him. Every time you see him he always looks bored at his desk, trying to play games on his computer when no one is looking. His piercing eyes usually half-shut, you sometimes wonder how he’s lasted here for so long.
+Markus was the receptionist for the company, but it seems like people never really came to him. Every time you see him he always looks bored at his desk, trying to play games on his computer when no one is looking. 
+His piercing eyes usually half-shut, you sometimes wonder how he’s lasted here for so long.
 # cumulative: 10
 do Game.tod_progress(10)
 Markus: Not my spirits for the day, that’s for sure.
@@ -19,9 +20,11 @@ You never really had to interact with him that much being from a different depar
 do Game.tod_progress(10)
 - Indulge Markus
 	Jesse: Nothing good, I bet?
-	Markus: Oh, it sucks. Last week, half the HR team was let go in the middle of the week, but that was during the settlement process we were going through! We didn’t have enough people to finish the thing so guess who he dumped the brunt of it on cause it “looks like they’re doing nothing all day anyway”?!
+	Markus: Oh, it sucks. Last week, half the HR team was let go in the middle of the week, but that was during the settlement process we were going through! 
+	Markus: We didn’t have enough people to finish the thing so guess who he dumped the brunt of it on cause it “looks like they’re doing nothing all day anyway”?!
 	Jesse: I have a strange feeling that I know the answer.
-	Markus: Yeah! But, I came in this week, and NOW he’s hinting that this could become a regular thing due to not having enough people around the building! Now I’ve gotta handle HR things wherever he wants to pawn it off to someone else, ON TOP of what I’ve already got going on!
+	Markus: Yeah! But, I came in this week, and NOW he’s hinting that this could become a regular thing due to not having enough people around the building! 
+	Markus: Now I’ve gotta handle HR things wherever he wants to pawn it off to someone else, ON TOP of what I’ve already got going on!
 	Markus finishes his rant by taking a long breath and heaving a deep exhale, sinking down into his chair, head perched on one hand.
 	Jesse: Feel better?
 	Markus: Haha, yeah, a little, I guess. Thanks for listening, Jesse. He DID say that he was looking to hire more people, but judging from the way he said it, I think we’re looking at the next five to ten business years before that happens.
@@ -77,8 +80,8 @@ do Game.tod_progress(20)
 	Jesse: Why would someone leave if a company is doing that well?
 	Markus: That’s the thing, isn’t it? For one reason or another, they all seem to go under the moment they leave. I dunno…I’d keep my eye out if I were you.
 Jesse: Jeez, okay…yeah, I got you.
-# cumulative: 130
-do Game.tod_progress(20)
+# cumulative: 150
+do Game.tod_progress(60)
 do Game.set_POI_label("AtriumLevel", "MarkusPOI", "revisit")
 jump end_1
 
