@@ -1,0 +1,124 @@
+if {OTHER.Day} == 2:
+	jump tim_encounter
+else:
+	jump default
+
+label tim_encounter
+Jesse: Hmm… I could go for some food right about now, let’s see what’s on the menu for today.
+You walk to the elevator, and press the “up” button. The doors instantly open.
+You click the third floor button, being where the cafeteria is located.
+# cumulative: 10
+do Game.tod_progress(10)
+One of the benefits of working here was the free employee lunch every single day. While not restaurant-quality by any means, it was still a great alternative to having to bring in your own every single day.
+You tended to stay away from the greens though; there was a bit of a joke at the company that they were poisoning the vegetables cause a few people got really sick after eating them.
+While people laughed this off, you were still wary of touching them; you didn’t want to be in the bathroom for the rest of the day.
+# cumulative: 20
+do Game.tod_progress(10)
+Jesse: Pizza would be nice…
+The elevator dings as it reaches the third floor, doors opening. You surprisingly don’t see that many people\: while there was no dedicated “lunch time”, this place was routinely busy throughout the day due to people usually just coming here whenever they have a moment.
+You see the cafeteria doors are shut, and you’re wondering what could’ve happened. 
+# cumulative: 30
+do Game.tod_progress(10)
+Just then, someone calls out to you.
+Tim: "Not today, Jesse, cooker’s broke. I heard they won’t be able to get someone to fix it until next week at least."
+do Game.set_POI_visible("ElevatorLevel", "TimPOI", true)
+You turn to see Tim, one of the janitors, walking towards you. You give an exasperated exhale, then shrug your shoulders.
+Jesse: Oh well… I’m sure I can live off vending machines for the rest of my shift.
+# cumulative: 40
+do Game.tod_progress(10)
+Tim was one of the first people you met here. 
+It all started when you managed to lock yourself out of your office one day and had to phone the janitors office to come unlock it. 
+After laughing the incident off, you two have become friends, talking to each other in passing and even eating lunch together when you can.
+Tim has his cleaning cart with him, as always, leaning on it slightly. You once caught him cleaning his shell with a spray bottle and a rag, but once he noticed you looking at him, he quickly stopped, pulling his hat slightly over his eyes as you tried and failed to contain your laughter.
+Jesse: Might as well head back down then…see what I can find.
+Tim: I’ll go with you, I was heading down anyway.
+# cumulative: 50
+do Game.tod_progress(10)
+You both head into the elevator. Tim jabs his thumb on the L button, and the doors close with a resounding “ding”.
+Tim lets out an exhale, and puts his hand behind his head.
+Tim: What a day…first I had to clean up the kitchen and all that mess. Of course the cooks weren’t paying attention and let the pots overflow…
+Tim: and of COURSE they split a bottle of soy sauce…do you know how hard that stuff is to get out if it dries?!
+# cumulative: 60
+do Game.tod_progress(10)
+You nod and give a grunt in acknowledgment, not really focused on what he’s saying. 
+Tim: And NOW Jackson wants me to clean his office! I bet it’s fine, he just wants to get some free dusting on the place… but I can’t just say “no” to him…
+You give a longer grunt this time.
+# cumulative: 70
+do Game.tod_progress(10)
+Tim: And don't even get me STARTED on the factory…who knows how long I’ll be down there today. Took me hours last time…
+Jesse: Mmm…
+Jesse: [i]Maybe I’ll goad Markus into giving me something…[/i]
+# cumulative: 80
+do Game.tod_progress(10)
+Jesse: ...Wait, did you say factory?
+Tim: Yes, Jesse… good to know you’re listening.
+You throw Tim a questioning look.
+Tim stops for a moment, and suddenly looks much more alert. He glances at you.
+# cumulative: 90
+do Game.tod_progress(10)
+Tim: You mean you-you don’t…oh…oh, I…I see…
+Jesse: I “don’t” what?
+Tim looks like he realized he said something he shouldn’t have. He glances at the floor number in the elevator before looking back at you.
+Tim: Jesse, are you telling me you don’t know about…about anything that goes on here?
+# cumulative: 100
+do Game.tod_progress(10)
+Jesse: What do you mean, of course I do! I do my work and everything like that! 
+Jesse: This is the second time I’ve heard about a “basement” though… and what do you mean “factory”?
+Tim’s eyes are wide, staring off into the distance. He seems to be deep in thought.
+Jesse: Hellooo…
+# cumulative: 110
+do Game.tod_progress(10)
+Tim inhales, then slowly exhales before turning to face you. He puts his hands on your shoulders.
+Tim: Listen to me, Jesse, and don’t interrupt. I wouldn’t have said anything if I didn’t know…
+Tim: If you don’t know what I’m talking about, then there’s probably a reason for that. I thought you would’ve known by now…
+Jesse: Know WHAT?!?!
+# cumulative: 120
+do Game.tod_progress(10)
+Tim: Listen! I don’t have time to explain it right now, but don’t go snooping around too much, Jesse. There’s some people here who won’t take too kindly to that.
+Jesse: Does this have anything to do with the elevator in the construction site?
+Tim: You know about that?
+Jesse: Well, now I do for sure.
+Tim looks frustrated with himself as he presses on.
+# cumulative: 130
+do Game.tod_progress(10)
+Tim: Look, just be careful, okay? Don’t mention anything about a factory to anyone, or anything like that.
+Jesse: But-
+do Game.set_POI_visible("ElevatorLevel", "ConniePOI", true)
+do Game.set_POI_visible("ElevatorLevel", "HugoPOI", true)
+You’re cut short as you reach the ground floor. The doors swing open to reveal a slender looking flamingo and a huge hulking Crocodile you recognize as Hugo.
+Tim quickly takes his arms off you and busies himself with his cart, looking white.
+"Well, see you around.", Tim says quickly, pushing his cart out of the elevator.
+# cumulative: 140
+do Game.tod_progress(10)
+Flamingo: Ahh, nice to see you Tim! Been keeping alright?
+Her voice is somewhat airy and upbeat. She has a caring and compassionate complexion.
+Tim: "Ah, um..nice to see you too D-Director. Have a nice day!"
+do Game.set_POI_visible("ElevatorLevel", "TimPOI", false)
+He rushes past her and out of the elevator, looking like he’s trying his best to not run.
+# cumulative: 150
+do Game.tod_progress(10)
+Jesse: [i]Director? Was this the “Director Connie” that Markus was talking about?[/i]
+You go to walk by her, nodding in passing. You see her eyes crinkle a little bit in reception as you pass, her mouth in a slight smile. 
+You don’t really know why, but you feel very uneasy walking by her; nothing about her screams “danger”, but you remember what Markus told you about her reputation.
+# cumulative: 160
+do Game.tod_progress(10)
+do Game.switch_level("AtriumLevel")
+You exit the elevator and start to walk away, noticing Tim has already run off. 
+You turn as the doors are shutting and see that the Director is still smiling at you, head slightly tilted. Hugo stands behind her, face firm but looking bored. 
+The doors close, leaving you alone in the atrium.
+Well, that was a bit weird.
+“Wait a minute!!!”, you think. What did Tim mean, “don’t go snooping around”? And talking about an elevator and a factory…was there really another floor in this place you didn’t know about?
+You feel as if you were walking on eggshells; you might fall through at any moment. You stand there, thinking about what to do next.
+This was a bit much to all take in at once. You needed to talk to someone.
+# cumulative: 170
+do Game.tod_progress(10)
+Jesse: Next time I see Jordan, we’re having a SERIOUS talk. Why couldn’t I just get my pizza…
+do Game.set_POI_visible("ElevatorLevel", "ConniePOI", false)
+do Game.set_POI_visible("ElevatorLevel", "HugoPOI", false)
+do Game.set_level_init_label("ElevatorLevel", "default")
+[end_timeline]
+
+label default
+The elevator doesn't seem to be working. Try again tommorow.
+do Game.switch_level("AtriumLevel")
+[end_timeline]

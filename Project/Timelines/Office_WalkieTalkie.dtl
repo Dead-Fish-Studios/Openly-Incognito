@@ -1,0 +1,23 @@
+Seeing something on Jordan’s desk, you move over to look at what appears to be a disassembled walkie-talkie. There’s a bunch of small screwdrivers and mechanical components scattered around the desk.
+Jesse: What is this? Did Jordan bring this in? This type of thing would be right up her alley…but I thought we stopped using these.
+You heard that Blurr Sector used to use walkie-talkies for inter-department communication, but quickly stopped due to a wave of complaints\: the constant beeping and loud static sound was really distracting.\
+Looking at it, it appears that someone was working on the inside of this walkie-talkie but stopped right before they put the covering panel on. 
+The antenna has also been removed and replaced with an odd looking metal piece, much shorter and bent in multiple places.
+Taking a look around, a grin forms on your face before replacing the cover and picking it up.
+Jesse: Sure she won’t mind if I give it a spin, right?
+You turn the walkie-talkie on and jump as it starts emitting a very loud, high-pitched screeching sound.
+Jesse: Ahhh, shit!
+You almost drop the walkie-talkie as you fumble with, trying to turn down the volume. You turn it down and let out an exhale, the screeching now an audible static sound.
+Jesse: Of course it was on full blast.
+Looking at the screen, it’s clear that someone was tinkering with the walkie-talkie as instead of a frequency number, you see the text\: “ERROR”.
+Jesse: Must be busted… still though, kinda cool looking. 
+do Game.set_POI_label("OfficeLevel", "WalkieTalkiePOI", "inspected")
+label inspected
+- take the walkie talkie
+	Jesse: Maybe I’ll hang onto it for a while. It’s probably Jordan’s, I'll just give it back to her when she asks.
+	do Game.set_POI_visible("OfficeLevel", "WalkieTalkiePOI", false)
+	set {ITEMS.Office_WalkieTalkie} = true
+	[i]you gained item\:[/i] [b]Walkie Talkie[/b]
+	[i]you can view your items in your inventory.[/i]
+- (move on)
+[end_timeline]

@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7gjon4d3nmyf"]
+
+[ext_resource type="Script" path="res://assets/common/GUI/HUD.gd" id="1_6k8la"]
+[ext_resource type="Texture2D" uid="uid://bm4hk64mrnhq5" path="res://assets/common/GUI/icons/HUD_gohome.png" id="2_4ruyp"]
+[ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="2_6m10f"]
+[ext_resource type="PackedScene" uid="uid://uqj3rsqldggj" path="res://assets/common/Inventory/Inventory.tscn" id="2_x1m1l"]
+[ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="3_w64ut"]
+[ext_resource type="StyleBox" uid="uid://c7sdar01jss0" path="res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres" id="4_ovdy4"]
+[ext_resource type="StyleBox" uid="uid://c2dlwcowvukyd" path="res://assets/common/GUI/styles/GUI_button_pressed_stylebox.tres" id="5_xdet8"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6k8la")
+
+[node name="InfoHUD" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="LocationHUD" type="PanelContainer" parent="InfoHUD"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
+
+[node name="LocationInfo" type="Label" parent="InfoHUD/LocationHUD"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "In Game Location"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InfoHUD"]
+layout_mode = 2
+alignment = 1
+
+[node name="DateHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
+
+[node name="DateInfo" type="Label" parent="InfoHUD/HBoxContainer/DateHUD"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Day 00"
+
+[node name="TimeHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_6m10f")
+
+[node name="TimeInfo" type="Label" parent="InfoHUD/HBoxContainer/TimeHUD"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "24:00"
+
+[node name="GoHomeButton" type="Button" parent="InfoHUD"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_w64ut")
+theme_override_styles/hover = ExtResource("4_ovdy4")
+theme_override_styles/pressed = ExtResource("5_xdet8")
+text = "Go Home"
+icon = ExtResource("2_4ruyp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Inventory" parent="." instance=ExtResource("2_x1m1l")]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.067
+offset_left = -416.0
+offset_right = -1.0
+offset_bottom = -2.24
+
+[node name="MouseHUD" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_right = 49.0
+offset_bottom = 48.0
+theme_override_styles/panel = ExtResource("2_6m10f")
+
+[node name="MouseHoverInfo" type="Label" parent="MouseHUD"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[connection signal="pressed" from="InfoHUD/GoHomeButton" to="." method="go_home_pressed"]

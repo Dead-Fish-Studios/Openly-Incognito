@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://3qui464y71sr"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_q82j2"]
+[ext_resource type="Texture2D" uid="uid://i8can6h8eu0b" path="res://assets/levels/ConstructionSite/BG_ConstructionSite.png" id="2_6y244"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_snx4n"]
+[ext_resource type="Texture2D" uid="uid://bj28nqlyklnkh" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteTools.png" id="4_3odq7"]
+[ext_resource type="Texture2D" uid="uid://cj0ujmu30erkj" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteSecCam.png" id="4_y6qmu"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_ydgwj"]
+[ext_resource type="Texture2D" uid="uid://4nc5tw74486l" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteMortarBox.png" id="5_nx5qy"]
+
+[node name="ConstructionSiteLevel" type="Node2D"]
+script = ExtResource("1_q82j2")
+background_texture = ExtResource("2_6y244")
+init_dtl_path = "res://Timelines/ConstructionSite.dtl"
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_6y244")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="CSiteCamPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(142, 244)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -30)
+hover_info = "Security Cameras"
+dtl_path = "res://Timelines/ConstructionSite_SecCam.dtl"
+POI_sprite = ExtResource("4_y6qmu")
+
+[node name="CSiteMortarPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(166, 159)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -40)
+hover_info = "Mortar Box"
+dtl_path = "res://Timelines/ConstructionSite_MortarBox.dtl"
+POI_sprite = ExtResource("5_nx5qy")
+
+[node name="CSiteToolsPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(305, 253)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -20)
+hover_info = "Tools"
+dtl_path = "res://Timelines/ConstructionSite_Tools.dtl"
+POI_sprite = ExtResource("4_3odq7")
+
+[node name="CSiteDoorPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(306, 103)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -50)
+hover_info = "Doors"
+dtl_path = "res://Timelines/ConstructionSite_Door.dtl"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="CSite2AtriumPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(426, 228)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_ydgwj")
+POI_button_offset = Vector2(0, 0)
+hover_info = "Back to Atrium"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "csite2atrium"
+POI_sprite_enable = false
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]

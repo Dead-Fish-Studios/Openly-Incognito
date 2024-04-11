@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cuxuo4kivnrrn"]
+
+[ext_resource type="Texture2D" uid="uid://1blh3ps54c7c" path="res://assets/common/GUI/styles/GUI_stlyesheet.png" id="1_68g28"]
+
+[resource]
+texture = ExtResource("1_68g28")
+texture_margin_left = 206.0
+texture_margin_top = 56.0
+texture_margin_right = 205.0
+texture_margin_bottom = 101.0
+region_rect = Rect2(1, 529, 450, 285)

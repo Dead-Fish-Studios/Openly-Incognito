@@ -1,0 +1,17 @@
+This form looks much more official than the other one’s you’ve been working with. 
+You read the form over from the top. 
+label inspect
+- R/K Manufacturing
+	You don’t really know much about this company other than that they’re very profitable, which was why Blurr Sector was so eager to get them as a client. 
+	jump inspect
+- Prices
+	These numbers are much larger than anything you’ve been signing off on.
+	jump inspect
+- Products
+	It seems that Blurr Sector had purchased a large number of chemicals from R/K, including testosterone, estrogen, and progesterone. 
+	In fact, everything listed is some form of a growth hormone.
+	Jesse: [i] Is this some kind of mistake? Why would we ever need all this? [/i]
+	jump inspect
+- (move on)
+	
+[end_timeline]

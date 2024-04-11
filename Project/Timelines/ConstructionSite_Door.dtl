@@ -1,0 +1,17 @@
+You see a set of two swinging doors with PPE signs on them, closed, presumably leading into the construction site. 
+The doors have a little window at eye level on each of them.
+Peering into the windows, you notice that they’re very dirty, making it hard to see through them clearly. 
+It appears the room inside is darker as well, adding to the strain you put on your eyes to see through the small plastic window. 
+You can make out a figure, but only by silhouette. They seem to just be standing there, a few meters from the door. 
+After some time, they continue moving again, suddenly going out of view.
+do Game.set_POI_label("ConstructionSiteLevel", "CSiteDoorPOI", "inspect")
+label inspect
+- try to look inside again
+	You keep trying to look for any sign of movement through the window, but see nothing.
+	Jesse: Huh.
+	jump inspect
+- enter
+	Quickly making sure that no one was coming, you slip in the doors and quietly close them behind you before turning around.
+	do Game.switch_level("ConstructionSiteRoomLevel")
+- (move on)
+	[end_timeline]

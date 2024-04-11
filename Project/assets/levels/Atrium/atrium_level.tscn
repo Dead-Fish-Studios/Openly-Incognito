@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwbwi45uhci08"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
+[ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_gba8k"]
+[ext_resource type="Texture2D" uid="uid://c4v4bsqbwurm4" path="res://assets/common/GUI/icons/POI_talk.png" id="4_4xeda"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="7_817jp"]
+[ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
+
+[node name="AtriumLevel" type="Node2D"]
+script = ExtResource("1_r7mdt")
+background_texture = ExtResource("2_024kr")
+init_dtl_label = null
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_024kr")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="MarkusPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(194, 154)
+camera_zoom_in_enable = true
+camera_zoom = 1.5
+POI_button_icon = ExtResource("4_4xeda")
+POI_button_offset = Vector2(10, -30)
+hover_info = "Markus"
+dtl_path = "res://Timelines/Atrium_Markus.dtl"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="Atrium2CSitePOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(352, 150)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("7_817jp")
+POI_button_offset = Vector2(0, 0)
+hover_info = "To Left Hallway"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2csite"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="CrumpledNotePOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(326, 249)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, -20)
+hover_info = "Crumpled Note"
+dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
+dtl_start_label = ""
+POI_sprite = ExtResource("8_jmi6y")
+
+[node name="Atrium2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(457, 252)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("7_817jp")
+POI_button_offset = Vector2(0, 0)
+hover_info = "To Right Hallway"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2righthallway"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="Atrium2ElevatorPOI" parent="POIs" instance=ExtResource("3_gba8k")]
+position = Vector2(436, 143)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("7_817jp")
+POI_button_offset = Vector2(0, 0)
+hover_info = "Elevator"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "atrium2elevator"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="EnvSFX" type="AudioStreamPlayer" parent="."]

@@ -1,0 +1,86 @@
+label atrium2csite
+Head down left hallway?
+- yes
+	do Game.switch_level("ConstructionSiteLevel")
+- no
+[end_timeline]
+
+label csite2atrium
+Head back to the Atrium?
+- yes
+	do Game.switch_level("AtriumLevel")
+- no
+[end_timeline]
+
+label csiteroom_exit
+Head back to the hallway?
+- yes
+	do Game.switch_level("ConstructionSiteLevel")
+- no
+[end_timeline]
+
+label office2righthallway
+Head back to the hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
+
+label righthallway2office
+Head to your office?
+- yes
+	do Game.switch_level("OfficeLevel")
+- no
+[end_timeline]
+
+label atrium2elevator
+if {OTHER.Day} == 2:
+	Head into the elevator?
+	- yes
+		do Game.switch_level("ElevatorLevel")
+	- no
+else:
+	The elevator is currently undergoing maintainance. Try again tommorow.
+[end_timeline]
+
+label atrium2righthallway
+Head down right hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
+
+label righthallway2breakroom
+Head to the break room?
+- yes
+	do Game.switch_level("BreakroomLevel")
+- no
+[end_timeline]
+
+label breakroom2righthallway
+Head back to the hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]
+
+label righthallway2atrium
+Head to the Atrium?
+- yes
+	do Game.switch_level("AtriumLevel")
+- no
+[end_timeline]
+
+label righthallway2outsidesecurity
+Head down this hallway?
+- yes
+	do Game.switch_level("OutsideSecurityLevel")
+- no
+[end_timeline]
+
+label outsidesecurity2righthallway
+Head down this hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]

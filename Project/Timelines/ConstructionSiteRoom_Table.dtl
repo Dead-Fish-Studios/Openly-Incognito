@@ -1,0 +1,101 @@
+label inspect
+label inspected
+label croc_done
+A large conference table is pushed up against the wall.
+Jesse: That's a big table. Bet it could house a small family under it.
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
+	[end_timeline]
+do Game.tod_progress(10)
+do Game.set_POI_label("ConstructionSiteRoomLevel", "TablePOI", "inspected")
+if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
+	if Game.get_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI") == "inspected":
+		if Game.get_POI_label("ConstructionSiteRoomLevel", "FloorPOI") == "inspected":
+			jump croc_enter
+[end_timeline]
+label croc_enter
+# cumulative: 40mins progressed from inspecting table (10m), floor (10m), and door (20m)
+do Game.reset_camera()
+Before you can look anymore, you hear a pair of voices outside growing louder, and a set of squeaking wheels, like the cart you saw earlier.
+You need to think quick\:
+- Hide behind the table
+	Quickly dashing under the table, you shuffle your way to the back and crouch down into the shadow.
+	In the dim lighting, you’re practically invisible to people just walking by. You hope, at least.
+	# editor's note: too cheesy?
+	# You murmur to yourself, grinning:
+	# Jesse: And this, Jesse, is where you uncover the evil plot. Wonder what it’ll be…
+	You hold your breath as two people walk into the room, pushing a cart with more crates on it.
+	A pair of large crocodiles. They’re both in black suits and dark sunglasses. They walk by you, to the door in the back. You don’t recognize them from anywhere, although you can’t really get a good look at them. They do appear quite big though, even from your crouched position.
+	A man’s voice breaks the silence, slightly growling as he talks.
+	Croc_Man: "I hate going this way, why’d we have to be on delivery duty today?"
+	A woman’s voice answers, mimicking his growls.
+	Croc_Woman: "That’s the third time this week he “forgot” to be on cart duty…I’m gonna write him up if he keeps at it."
+	Croc_Man: And why do we have to take this rickety old elevator to the basement? I’d rather lug these things down stairs, I swear that thing’s gonna drop us one of these days.
+	# cumulative: 50
+	do Game.tod_progress(10)
+	You squint your eyes in confusion as you take in what the man just said.
+	As the pair reaches the door, the man pulls out a keycard and taps it lightly on the sensor. A distinct beep rings out, and you hear a series of locks disengage from the door.
+	The woman opens the door, and you quickly duck down completely behind the chair, as the room fills with a light emanating from the doorway.
+	As the pair move beyond the door, you hear the cart bump into something, and a crate hit the ground.
+	The pair take a sharp intake of breath. After a few moments of silence, the pair exhale, and the woman raises her voice.
+	# cumulative: 60
+	do Game.tod_progress(10)
+	Croc_Woman: Slow down, you idiot! Do you have any idea what would happen if that broke? Jackson would kill us before the end of the day! This stuff is worth more than your life!
+	Croc_Man: Sorry, sorry…
+	You hear some shuffling and scraping as the pair lift the box back onto the cart.
+	The woman then closes the door behind her, and you hear the locks engage, the room being plunged into semi-darkness again.
+	# cumulative: 80
+	do Game.tod_progress(20)
+	After waiting for a few seconds in the silence, you stand up, slowly stretching your legs.
+	Jesse: Well...that was...intriguing.
+	
+	label inspect_croc_eavesdrop
+	- what were they up to?
+		Jesse: They both sounded terrified, like they’d broken some priceless artifact. What could be so valuable in THIS place?
+		jump inspect_croc_eavesdrop
+	- basement?
+		Jesse: Basement? This building doesn’t have a basement…the elevators just have levels one through five.
+		jump inspect_croc_eavesdrop
+	- elevator?
+		Jesse: An elevator? I haven’t found one around this part of the building yet, have I been missing out?
+		jump inspect_croc_eavesdrop
+	- Jackson
+		Jesse: Of course Jackson's involved in this kind of shady business. Totally in character for him.
+		jump inspect_croc_eavesdrop
+	- (move on)
+	# cumulative: 100
+	do Game.tod_progress(20)
+	Jesse: Okay, well...I better head out before I get busted.
+	do Game.switch_level("ConstructionSiteLevel")
+- Open the door, and head back outside
+	You try to sneak out the door, but a man’s voice calls to you.
+	Croc_Man: "Hey!"
+	You turn and see a pair of large crocodiles, a man and woman, in black suits and sunglasses like the person before, pushing a cart with crates on them. The woman stares at you for a second, before raising her hand to silence the man next to her.
+	Croc_Woman: "This is a construction site, you know, can I help you?"
+	The edge of a growl tinges her voice.
+	Jesse: Sorry, I just got a bit lost. I’ll just head back.
+	The man looks like he’s about to say something again, his expression hard to read with his sunglasses, but the woman stops him again, speaking in a harsh tone.
+	Croc_Woman: "Make sure to not come down this way again, there’s mold in the walls in there, and we don’t want anyone breathing that in for too long."
+	Jesse: Alright, thanks for the warning.
+	# cumulative: 70
+	do Game.tod_progress(30)
+	do Game.switch_level("ConstructionSiteLevel")
+	You feel the pair watch you walk away, hearing them push the swinging doors open. Before they close, you hear the man speak in a loud whisper.
+	Croc_Man: "Do you think she was looking for the basement?"
+	Croc_Woman: "Even if she was, I don’t think she found it. We’ll have to put more people on patrol if we want to-"
+	The rest is cut off as the doors close.
+	# cumulative: 80
+	do Game.tod_progress(10)
+	label inspect_croc_encounter
+	- basement?
+		Jesse: A basement? What are they talking about, we don’t have a basement here…
+		jump inspect_croc_encounter
+		Jesse: Those guys seemed pretty worked up that I was in that room ... She doesn’t want me coming back, huh? Doesn’t seem like I can get further without a [b]keycard[/b] anyway. Maybe I can look around, see what I can find out.
+		jump inspect_croc_encounter
+	- those crocs...
+		Jesse: All those people were pretty big too…I don’t think I’ve seen them around before. Surely I would’ve noticed two massive crocodiles, right?
+		jump inspect_croc_encounter
+	- (move on)
+	# cumulative: 100
+	do Game.tod_progress(20)
+do Game.set_POI_label("ConstructionSiteRoomLevel", "TablePOI", "croc_done")
+[end_timeline]

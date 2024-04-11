@@ -21,47 +21,71 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jt4d")
+name_label_color_mode = 1
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
 
 [node name="Anchor" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="Panel" type="PanelContainer" parent="Anchor"]
 unique_name_in_owner = true
-self_modulate = Color(0.533333, 0.376471, 0.176471, 1)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -250.0
-offset_top = -200.0
-offset_right = 250.0
-offset_bottom = -50.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="HBox" type="HBoxContainer" parent="Anchor/Panel"]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="PortraitPanel" type="Panel" parent="Anchor/Panel/HBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Anchor/Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/Panel/HBox/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Name"
+script = ExtResource("2_y0h34")
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/Panel/HBox/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "As you look around, you notice a lion, turning the corner at the other end of the hallway, wearing a black suit and sunglasses with dark lenses. They’re pushing a cart while slightly hunched over, with a few stacked crates on it with one hand, wheels squeaking as it moves along, and reading something on a clipboard with the other. They do not notice you until they get a little closer, and quickly tuck the clipboard under their arm, nodding to you as they turn and wheel into the construction site.  "
+script = ExtResource("3_11puy")
+
+[node name="Portrait Anchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="PortraitPanel" type="Panel" parent="Portrait Anchor"]
 unique_name_in_owner = true
 clip_children = 1
-layout_mode = 2
+layout_mode = 1
+offset_right = 82.0
+offset_bottom = 111.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 theme_override_styles/panel = SubResource("StyleBoxFlat_dmg1w")
 
-[node name="PortraitBackgroundColor" type="ColorRect" parent="Anchor/Panel/HBox/PortraitPanel"]
+[node name="PortraitBackgroundColor" type="ColorRect" parent="Portrait Anchor/PortraitPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -75,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.231373)
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel/PortraitBackgroundColor"]
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Portrait Anchor/PortraitPanel/PortraitBackgroundColor"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,24 +110,3 @@ grow_vertical = 2
 script = ExtResource("1_4jxq7")
 mode = 1
 debug_character_portrait = "speaker"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Anchor/Panel/HBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/Panel/HBox/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "Name"
-script = ExtResource("2_y0h34")
-
-[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/Panel/HBox/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 6
-bbcode_enabled = true
-text = "Some text"
-scroll_following = true
-script = ExtResource("3_11puy")

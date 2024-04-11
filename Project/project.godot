@@ -10,18 +10,113 @@ config_version=5
 
 [application]
 
-config/name="Game-name-temporary"
+config/name="Openly Incognito"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Game="*res://Game_Autoload.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Croc_Man": "res://assets/common/Characters/Croc_Man.dch",
+"Croc_Woman": "res://assets/common/Characters/Croc_Woman.dch",
+"Flamingo": "res://assets/common/Characters/Flamingo.dch",
+"Hugo": "res://assets/common/Characters/Hugo.dch",
+"Jackson": "res://assets/common/Characters/Jackson.dch",
+"Jesse": "res://assets/common/Characters/Jesse.dch",
+"Jordan": "res://assets/common/Characters/Jordan.dch",
+"Markus": "res://assets/common/Characters/Markus.dch",
+"Molly": "res://assets/common/Characters/Molly.dch",
+"Tim": "res://assets/common/Characters/Tim.dch",
+"Unknown Voice": "res://assets/common/Characters/Unknown Voice.dch"
+}
+directories/dtl_directory={
+"Atrium_CrumpledNote": "res://Timelines/Atrium_CrumpledNote.dtl",
+"Atrium_Markus": "res://Timelines/Atrium_Markus.dtl",
+"Atrium_init": "res://Timelines/Atrium_init.dtl",
+"Breakroom_Couch": "res://Timelines/Breakroom_Couch.dtl",
+"Breakroom_init": "res://Timelines/Breakroom_init.dtl",
+"ConstructionSiteRoom_BasementDoor": "res://Timelines/ConstructionSiteRoom_BasementDoor.dtl",
+"ConstructionSiteRoom_Floor": "res://Timelines/ConstructionSiteRoom_Floor.dtl",
+"ConstructionSiteRoom_Table": "res://Timelines/ConstructionSiteRoom_Table.dtl",
+"ConstructionSiteRoom_init": "res://Timelines/ConstructionSiteRoom_init.dtl",
+"ConstructionSite_Door": "res://Timelines/ConstructionSite_Door.dtl",
+"ConstructionSite_MortarBox": "res://Timelines/ConstructionSite_MortarBox.dtl",
+"ConstructionSite_SecCam": "res://Timelines/ConstructionSite_SecCam.dtl",
+"ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
+"ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
+"Elevator_init": "res://Timelines/Elevator_init.dtl",
+"Home": "res://Timelines/Home.dtl",
+"Home_Morning": "res://Timelines/Home_Morning.dtl",
+"LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
+"Office_Files": "res://Timelines/Office_Files.dtl",
+"Office_Shredder": "res://Timelines/Office_Shredder.dtl",
+"Office_WalkieTalkie": "res://Timelines/Office_WalkieTalkie.dtl",
+"Office_init": "res://Timelines/Office_init.dtl",
+"OrderForm_inspect": "res://Timelines/Items/OrderForm_inspect.dtl",
+"OutsideSecurity_SecurityDoor": "res://Timelines/OutsideSecurity_SecurityDoor.dtl",
+"RightHallway_init": "res://Timelines/RightHallway_init.dtl",
+"Timelines/ph_timeline": "res://Timelines/ph_timeline.dtl",
+"ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl"
+}
+variables={
+"ITEMS": {
+"Atrium_CrumpledNote": false,
+"Item0": false,
+"Item1": false,
+"Office_OrderForm": false,
+"Office_WalkieTalkie": false,
+"SecurityRoom_Gun": false,
+"SecurityRoom_Keycard": false
+},
+"NOTES": {
+"Note0": "",
+"Note1": ""
+},
+"OTHER": {
+"Day": 1,
+"Time": 0
+}
+}
+layout/style_list=["res://Styles/Dialogue_Style1.tres", "res://Styles/Test.tres"]
+layout/default_style="res://Styles/Dialogue_Style1.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+glossary/default_case_sensitive=true
+history/simple_history_enabled=true
+history/full_history_enabled=true
+history/already_read_history_enabled=true
+text/autocolor_names=true
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://assets/common/GUI/cursor.png"
+
+[editor]
+
+movie_writer/movie_file="d:/DEV/INTD450/Game-Name-Temporary/Captures/recording.avi"
 
 [editor_plugins]
 
@@ -36,6 +131,17 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+main_gameplay_inventory={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194306,"physical_keycode":4194306,"key_label":4194306,"unicode":0,"echo":false,"script":null)
+]
+}
+main_gameplay_highlightPOIs={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(127, 12),"global_position":Vector2(131, 53),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 
