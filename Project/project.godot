@@ -33,6 +33,8 @@ directories/dch_directory={
 "Jordan": "res://assets/common/Characters/Jordan.dch",
 "Markus": "res://assets/common/Characters/Markus.dch",
 "Molly": "res://assets/common/Characters/Molly.dch",
+"Radio_Unknown_1": "res://assets/common/Characters/Radio_Unknown_1.dch",
+"Radio_Unknown_2": "res://assets/common/Characters/Radio_Unknown_2.dch",
 "Tim": "res://assets/common/Characters/Tim.dch",
 "Unknown Voice": "res://assets/common/Characters/Unknown Voice.dch"
 }
@@ -54,6 +56,7 @@ directories/dtl_directory={
 "Elevator_init": "res://Timelines/Elevator_init.dtl",
 "Home": "res://Timelines/Home.dtl",
 "Home_Morning": "res://Timelines/Home_Morning.dtl",
+"Janitors_Jordan": "res://Timelines/Janitors_Jordan.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",
 "Office_JordanDay3": "res://Timelines/Office_JordanDay3.dtl",
