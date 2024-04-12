@@ -23,9 +23,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -68.0
-offset_right = 68.0
-offset_bottom = 50.0
+offset_left = -109.0
+offset_right = 109.0
+offset_bottom = 94.0
 grow_horizontal = 2
 
 [node name="LocationHUD" type="PanelContainer" parent="InfoHUD"]
@@ -45,6 +45,7 @@ alignment = 1
 
 [node name="DateHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = ExtResource("2_6m10f")
 
 [node name="DateInfo" type="Label" parent="InfoHUD/HBoxContainer/DateHUD"]
@@ -52,9 +53,11 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Day 00"
+horizontal_alignment = 1
 
 [node name="TimeHUD" type="PanelContainer" parent="InfoHUD/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = ExtResource("2_6m10f")
 
 [node name="TimeInfo" type="Label" parent="InfoHUD/HBoxContainer/TimeHUD"]
@@ -62,19 +65,20 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "24:00"
+horizontal_alignment = 1
 
 [node name="GoHomeButton" type="Button" parent="InfoHUD"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("3_w64ut")
 theme_override_styles/hover = ExtResource("4_ovdy4")
 theme_override_styles/pressed = ExtResource("5_xdet8")
 text = "Go Home"
 icon = ExtResource("2_4ruyp")
-icon_alignment = 1
-vertical_icon_alignment = 0
+icon_alignment = 2
 
 [node name="Inventory" parent="." instance=ExtResource("2_x1m1l")]
 layout_mode = 1

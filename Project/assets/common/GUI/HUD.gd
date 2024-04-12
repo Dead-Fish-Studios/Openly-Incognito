@@ -12,7 +12,7 @@ func _process(delta):
 # toggle "Head Home" button visibility
 func go_home_visible(visibility: bool) -> void:
 	print_debug("\"go_home\" button visibility set to " + str(visibility))
-	$InfoHUD/GoHomeButton.visible = visibility
+	%GoHomeButton.visible = visibility
 
 # callback for "head home" button
 func go_home_pressed() -> void:
