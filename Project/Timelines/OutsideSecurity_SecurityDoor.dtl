@@ -236,7 +236,7 @@ Listen at the door?
 		do Game.set_POI_visible("SecurityRoomLevel", "HugoPOI", false)
 		Sweating, you listen for a moment before making your way back to the atrium, feeling like everyone’s eyes are on you.
 		Jesse: Shit… Jordan better have a good explanation for all this!
-		# do Game.set_POI_label("OutsideSecurityLevel", "SecurityDoorPOI", "done")
+		do Game.set_POI_label("OutsideSecurityLevel", "SecurityDoorPOI", "done")
 		[end_timeline]
 	else:
 		You listen, but you don’t hear anything coming from beyond the door. Maybe you can try listening again some other day.

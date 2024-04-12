@@ -56,6 +56,7 @@ directories/dtl_directory={
 "Home_Morning": "res://Timelines/Home_Morning.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",
+"Office_MollyDay3": "res://Timelines/Office_MollyDay3.dtl",
 "Office_Shredder": "res://Timelines/Office_Shredder.dtl",
 "Office_WalkieTalkie": "res://Timelines/Office_WalkieTalkie.dtl",
 "Office_init": "res://Timelines/Office_init.dtl",

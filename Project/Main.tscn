@@ -83,7 +83,6 @@ visible = false
 visible = false
 level_name = "Atrium"
 init_dtl_path = "res://Timelines/Atrium_init.dtl"
-init_dtl_label = "start"
 music_path = "res://assets/levels/Atrium/Atrium_Music.mp3"
 
 [node name="OfficeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_vc58l")]
