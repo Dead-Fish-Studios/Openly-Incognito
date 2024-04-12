@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=16 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://867emhkdfcgv" path="res://assets/levels/Breakroom/breakroom_level.tscn" id="10_nho3w"]
 [ext_resource type="PackedScene" uid="uid://dt6dsau5v6o3v" path="res://assets/levels/RightHallway/right_hallway_level.tscn" id="11_fk44q"]
 [ext_resource type="PackedScene" uid="uid://bg7jg4uc5gmp1" path="res://assets/levels/OutsideSecurity/outside_security_level.tscn" id="12_8lgyi"]
+[ext_resource type="PackedScene" uid="uid://c1iee8lgswmgx" path="res://assets/levels/OutsideJanitors/outside_janitors_level.tscn" id="12_kq5su"]
 [ext_resource type="PackedScene" uid="uid://cdt58k7uyloj8" path="res://assets/levels/SecurityRoom/security_room_level.tscn" id="13_plj6i"]
+[ext_resource type="PackedScene" uid="uid://yf1hggnk1eyu" path="res://assets/levels/Janitors/janitors_level.tscn" id="13_qitel"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -22,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jm3ko")
+end_of_day_time = 550
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 layer = 2
@@ -106,7 +109,12 @@ visible = false
 
 [node name="RightHallwayLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("11_fk44q")]
 visible = false
-init_dtl_label = "start"
+
+[node name="OutsideJanitorsLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("12_kq5su")]
+visible = false
+
+[node name="JanitorsLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("13_qitel")]
+visible = false
 
 [node name="OutsideSecurityLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("12_8lgyi")]
 visible = false

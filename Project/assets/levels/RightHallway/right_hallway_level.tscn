@@ -12,7 +12,6 @@ level_name = "Right Hallway"
 background_texture = ExtResource("2_cf08k")
 init_dtl = false
 init_dtl_path = "res://Timelines/RightHallway_init.dtl"
-init_dtl_label = null
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -23,13 +22,26 @@ centered = false
 [node name="POIs" type="Node2D" parent="."]
 
 [node name="BreakRoom2OutsideSecurityPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
-position = Vector2(240, 50)
+position = Vector2(232, 80)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_dw1pl")
 POI_button_offset = Vector2(0, 0)
+hover_info = "To Security"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "righthallway2outsidesecurity"
+POI_sprite_enable = false
+POI_sprite = null
+
+[node name="BreakRoom2OutsideSecurityPOI2" parent="POIs" instance=ExtResource("3_yjvl3")]
+position = Vector2(176, 80)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_dw1pl")
+POI_button_offset = Vector2(0, 0)
+hover_info = "To Janitor's Closet"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "righthallway2outsidejanitors"
 POI_sprite_enable = false
 POI_sprite = null
 
@@ -46,7 +58,7 @@ POI_sprite_enable = false
 POI_sprite = null
 
 [node name="RightHallway2OfficePOI" parent="POIs" instance=ExtResource("3_yjvl3")]
-position = Vector2(134, 98)
+position = Vector2(127, 78)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_icon = ExtResource("4_dw1pl")
