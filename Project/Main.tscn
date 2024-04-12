@@ -1,18 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=16 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
 [ext_resource type="PackedScene" uid="uid://dwbwi45uhci08" path="res://assets/levels/Atrium/atrium_level.tscn" id="4_55p42"]
+[ext_resource type="PackedScene" uid="uid://b01evjvooos7c" path="res://assets/levels/Home/home_morning_level.tscn" id="4_mpr6u"]
 [ext_resource type="PackedScene" uid="uid://dwujesv0ttwh" path="res://assets/levels/Home/home_level.tscn" id="4_rslly"]
 [ext_resource type="PackedScene" uid="uid://3qui464y71sr" path="res://assets/levels/ConstructionSite/construction_site_level.tscn" id="5_dbh6f"]
-[ext_resource type="Texture2D" uid="uid://b6y4kjkg0jcpd" path="res://assets/levels/Home/BG_Home_day.png" id="5_jktwr"]
 [ext_resource type="PackedScene" uid="uid://crmyj5lxqbfn7" path="res://assets/levels/Office/office_level.tscn" id="5_vc58l"]
 [ext_resource type="PackedScene" uid="uid://bypih6o8d4bc7" path="res://assets/levels/ConstructionSiteRoom/construction_site_room_level.tscn" id="6_a3rhm"]
 [ext_resource type="PackedScene" uid="uid://de0bgn2nsifqq" path="res://assets/levels/Elevator/elevator_level.tscn" id="9_uwumh"]
 [ext_resource type="PackedScene" uid="uid://867emhkdfcgv" path="res://assets/levels/Breakroom/breakroom_level.tscn" id="10_nho3w"]
 [ext_resource type="PackedScene" uid="uid://dt6dsau5v6o3v" path="res://assets/levels/RightHallway/right_hallway_level.tscn" id="11_fk44q"]
 [ext_resource type="PackedScene" uid="uid://bg7jg4uc5gmp1" path="res://assets/levels/OutsideSecurity/outside_security_level.tscn" id="12_8lgyi"]
+[ext_resource type="PackedScene" uid="uid://c1iee8lgswmgx" path="res://assets/levels/OutsideJanitors/outside_janitors_level.tscn" id="12_kq5su"]
 [ext_resource type="PackedScene" uid="uid://cdt58k7uyloj8" path="res://assets/levels/SecurityRoom/security_room_level.tscn" id="13_plj6i"]
+[ext_resource type="PackedScene" uid="uid://yf1hggnk1eyu" path="res://assets/levels/Janitors/janitors_level.tscn" id="13_qitel"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -22,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jm3ko")
+end_of_day_time = 550
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 layer = 2
@@ -74,11 +77,7 @@ editor_draw_limits = true
 [node name="HomeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_rslly")]
 visible = false
 
-[node name="HomeMorningLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_rslly")]
-visible = false
-background_texture = ExtResource("5_jktwr")
-init_dtl = true
-init_dtl_path = "res://Timelines/Home_Morning.dtl"
+[node name="HomeMorningLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_mpr6u")]
 
 [node name="AtriumLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_55p42")]
 visible = false
@@ -110,7 +109,12 @@ visible = false
 
 [node name="RightHallwayLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("11_fk44q")]
 visible = false
-init_dtl_label = "start"
+
+[node name="OutsideJanitorsLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("12_kq5su")]
+visible = false
+
+[node name="JanitorsLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("13_qitel")]
+visible = false
 
 [node name="OutsideSecurityLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("12_8lgyi")]
 visible = false

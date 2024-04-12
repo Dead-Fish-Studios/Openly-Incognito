@@ -84,3 +84,31 @@ Head down this hallway?
 	do Game.switch_level("RightHallwayLevel")
 - no
 [end_timeline]
+
+label righthallway2outsidejanitors
+Head to the janitor's closet?
+- yes
+	do Game.switch_level("OutsideJanitorsLevel")
+- no
+[end_timeline]
+
+label outsidejanitors2janitors
+Go inside?
+- yes
+	do Game.switch_level("JanitorsLevel")
+- no
+[end_timeline]
+
+label janitors2outsidejanitors
+Go back outside?
+- yes
+	do Game.switch_level("OutsideJanitorsLevel")
+- no
+[end_timeline]
+
+label outsidejanitors2righthallway
+Head back to the hallway?
+- yes
+	do Game.switch_level("RightHallwayLevel")
+- no
+[end_timeline]

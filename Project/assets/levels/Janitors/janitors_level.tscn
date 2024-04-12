@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://yf1hggnk1eyu"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_8h8fi"]
+[ext_resource type="Texture2D" uid="uid://n8huw3ktapci" path="res://assets/levels/Janitors/BG_Janitors.png" id="2_7f44m"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_u7fcp"]
+[ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_wgh6c"]
+
+[node name="JanitorsLevel" type="Node2D"]
+script = ExtResource("1_8h8fi")
+level_name = "Janitor's Closet"
+background_texture = ExtResource("2_7f44m")
+init_dtl = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_7f44m")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="Janitors2OutsideJanitorsPOI" parent="POIs" instance=ExtResource("3_u7fcp")]
+position = Vector2(247, 188)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_icon = ExtResource("4_wgh6c")
+POI_button_offset = Vector2(0, 0)
+hover_info = "Go Back Outside"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "janitors2outsidejanitors"
+POI_sprite_enable = false
+POI_sprite = null

@@ -1,6 +1,6 @@
 if {OTHER.Day} == 1:
 	jump sod_day1
-if {OTHER.Day} == 2:
+elif {OTHER.Day} == 2:
 	jump sod_day2
 elif {OTHER.Day} == 3:
 	jump sod_day3
@@ -90,4 +90,5 @@ jump go_to_work
 
 label go_to_work
 do Game.switch_level("AtriumLevel")
+You head to work.
 [end_timeline]
