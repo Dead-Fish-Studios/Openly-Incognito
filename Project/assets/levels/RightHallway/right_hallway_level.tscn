@@ -21,7 +21,7 @@ centered = false
 
 [node name="POIs" type="Node2D" parent="."]
 
-[node name="BreakRoom2OutsideSecurityPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
+[node name="RightHallway2OutsideSecurityPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
 position = Vector2(232, 80)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
@@ -33,7 +33,7 @@ dtl_start_label = "righthallway2outsidesecurity"
 POI_sprite_enable = false
 POI_sprite = null
 
-[node name="BreakRoom2OutsideSecurityPOI2" parent="POIs" instance=ExtResource("3_yjvl3")]
+[node name="RightHallway2OutsideSecurityPOI2" parent="POIs" instance=ExtResource("3_yjvl3")]
 position = Vector2(176, 80)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
@@ -45,7 +45,7 @@ dtl_start_label = "righthallway2outsidejanitors"
 POI_sprite_enable = false
 POI_sprite = null
 
-[node name="BreakRoom2AtriumPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
+[node name="RightHallway2AtriumPOI" parent="POIs" instance=ExtResource("3_yjvl3")]
 position = Vector2(250, 245)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
