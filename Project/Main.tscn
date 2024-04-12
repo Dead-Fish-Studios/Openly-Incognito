@@ -24,7 +24,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jm3ko")
-end_of_day_time = 550
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 layer = 2

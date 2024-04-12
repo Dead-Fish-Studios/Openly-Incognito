@@ -125,4 +125,5 @@ Jesse: We’re not going together?
 Jordan: No, let’s attract as little attention to ourselves as possible. Don’t worry, sounds like it’s me they’re coming after, so you should be safe.
 Jordan waits a moment, listening to make sure there’s no one on the other side. After a moment she goes out, closing the door behind her, leaving you alone in the closet.
 do Game.set_POI_visible("JanitorsLevel", "JordanPOI", false)
+do Game.set_POI_label("JanitorsLevel", "JordanPOI", "done")
 [end_timeline]
