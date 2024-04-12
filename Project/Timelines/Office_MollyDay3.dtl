@@ -109,5 +109,5 @@ Jesse: The janitor’s closet? What’s in there?
 Jordan raises her eyebrows a little.
 Jordan: You’ll see. Make sure nobody follows you!
 Jordan walks over to the door, takes the chair out from under the handle, and slips out of the room, letting the door close behind her.
-do Game.set_POI_visible("OfficeLevel", "MollyDay3POI", false)
-do Game.set_POI_label("OfficeLevel", "MollyDay3POI", "done")
+do Game.set_POI_visible("OfficeLevel", "JordanDay3POI", false)
+do Game.set_POI_label("OfficeLevel", "JordanDay3POI", "done")

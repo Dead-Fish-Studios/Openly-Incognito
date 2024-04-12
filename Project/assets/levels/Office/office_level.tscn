@@ -86,10 +86,9 @@ dtl_path = "res://Timelines/Office_Files.dtl"
 days_flags = 1
 POI_sprite = ExtResource("7_3difh")
 
-[node name="MollyDay3POI" parent="POIs" instance=ExtResource("3_gvq2x")]
-position = Vector2(319, 218)
+[node name="JordanDay3POI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(316, 214)
 scale = Vector2(1.5, 1.5)
 POI_button_offset = Vector2(0, -50)
-dtl_path = "res://Timelines/Office_MollyDay3.dtl"
 days_flags = 0
-POI_sprite = ExtResource("5_o4kya")
+POI_sprite = ExtResource("6_u1e02")

@@ -35,7 +35,7 @@ do Game.set_level_init_label("OfficeLevel", "default")
 [end_timeline]
 
 label day3_first
-do Game.set_POI_visible("OfficeLevel", "MollyDay3POI", true)
+do Game.set_POI_visible("OfficeLevel", "JordanDay3POI", true)
 Jesse: Maybe she’s in here?
 Pushing open the door, you see Jordan at her desk. She’s rummaging through her drawers, seemingly looking for something.
 Jordan: Where is it, where is it...
@@ -43,7 +43,7 @@ Jordan: Where is it, where is it...
 
 label default
 if {OTHER.Day} == 3:
-	if Game.get_POI_label("OfficeLevel", "MollyDay3POI") == "start":
+	if Game.get_POI_label("OfficeLevel", "JordanDay3POI") == "start":
 		if Game.get_POI_label("OutsideSecurityLevel", "SecurityDoorPOI") == "done":
 			jump day3_first
 Jesse: Desk sweet desk.
