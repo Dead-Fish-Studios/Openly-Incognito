@@ -1,0 +1,6 @@
+You see some crates stacked in a corner that look very similar to the ones you saw those crocodiles pushing two days ago.
+You walk over to them, and see that the top of one of the crates has been removed. Looking inside, you see a number of large metal cylinders.
+Reading some of these labels, you see words like “testosterone”, “estrogen”, and “progesterone”.
+Jesse: So that order form was about this stuff! Looks like all these crates are full of it…what are they planning to use it for?
+do Game.set_POI_visible("FactoryLevel", "CratesPOI", false)
+jump Factory_Remote/increment

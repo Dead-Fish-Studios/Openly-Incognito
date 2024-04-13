@@ -1,0 +1,4 @@
+Looking at the shutters, you see that they’re automatic, and can’t be opened manually. You can’t even find an opening to use your fingers in.
+Jesse: Wonder what’s through here…looks like I’ll have to find some other way to open this if I want to see through them.
+do Game.set_POI_visible("FactoryLevel", "ShuttersPOI", false)
+jump Factory_Remote/increment

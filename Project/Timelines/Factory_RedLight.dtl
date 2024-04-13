@@ -1,0 +1,17 @@
+You can see the glow of a little red light on the wall across the room.
+Jesse: What’s that?
+Jordan looks to where you’re pointing.
+Jordan: I dunno.
+The pair of you move towards it, and you can see that the red light illuminates a set of switches on the wall.
+Jordan: Try the red one.
+You flick the red switch, and as you do, the room lights up.
+do Game.change_level_background("FactoryLevel", "res://assets/levels/Factory/BG_FactoryShuttersClosed.jpg")
+do Game.set_POI_visible("FactoryLevel", "RedLightPOI", false)
+Jordan: Wow, what [i]is[/i] this place?
+It looks like an observation room of some kind. There’s lab equipment strewn across big tables, and two big windows with the shutters closed.
+Jordan: Perfect, this is perfect!
+Jordan exclaims, a wide grin on her face, as she pulls out a tiny camera and starts taking pictures of some of the items across the room.
+do Game.toggle_POI_visible("FactoryLevel", "JordanRightPOI")
+do Game.toggle_POI_visible("FactoryLevel", "JordanLeftPOI")
+
+

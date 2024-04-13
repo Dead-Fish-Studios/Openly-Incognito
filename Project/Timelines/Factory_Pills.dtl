@@ -1,0 +1,7 @@
+You see what looks like to be a bunch of scattered pills on one of the tables. You recognize them as Promax pills.
+Jesse: Hey, come look at this.
+You show Jordan the pills on the table.
+Jordan: Looks like they’re developing some new formula for them. Wow, who knew…
+Jordan photographs the pills, and then continues looking around.
+do Game.set_POI_visible("FactoryLevel", "PillsPOI", false)
+jump Factory_Remote/increment

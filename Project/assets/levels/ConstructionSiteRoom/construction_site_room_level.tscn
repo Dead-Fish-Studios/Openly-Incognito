@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bypih6o8d4bc7"]
+[gd_scene load_steps=7 format=3 uid="uid://bypih6o8d4bc7"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_vgfjc"]
 [ext_resource type="Texture2D" uid="uid://bgfpkol8uvmbf" path="res://assets/levels/ConstructionSiteRoom/BG_ConstructionSiteRoom.png" id="2_7pmcg"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="2_tunya"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_x1jih"]
+[ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="5_wtba3"]
+[ext_resource type="Texture2D" uid="uid://b20o2f0bi7k3c" path="res://assets/common/Characters/Portrait_Jackson.png" id="6_f4h00"]
 
 [node name="ConstructionSiteRoomLevel" type="Node2D"]
 script = ExtResource("1_vgfjc")
 level_name = "Inside Construction Site"
 background_texture = ExtResource("2_7pmcg")
 init_dtl_path = "res://Timelines/ConstructionSiteRoom_init.dtl"
-init_dtl_label = null
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -56,6 +57,20 @@ hover_info = "Head Back"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "csiteroom_exit"
 POI_sprite_enable = false
+
+[node name="JordanPOI" parent="POIs" instance=ExtResource("2_tunya")]
+position = Vector2(297, 93)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("5_wtba3")
+
+[node name="JacksonPOI" parent="POIs" instance=ExtResource("2_tunya")]
+position = Vector2(71, 118)
+scale = Vector2(2.25, 2.25)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("6_f4h00")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 

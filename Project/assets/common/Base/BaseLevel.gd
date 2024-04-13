@@ -51,4 +51,7 @@ func init_level() -> void:
 	if env_sfx_path != null and sfxNode != null:
 		$EnvSFX.play()
 		
-
+func set_background(path) -> void:
+	background_texture = load(path)
+	$Background/Sprite2D.texture = background_texture
+	

@@ -54,6 +54,13 @@ directories/dtl_directory={
 "ConstructionSite_Tools": "res://Timelines/ConstructionSite_Tools.dtl",
 "ConstructionSite_init": "res://Timelines/ConstructionSite_init.dtl",
 "Elevator_init": "res://Timelines/Elevator_init.dtl",
+"Factory_Crates": "res://Timelines/Factory_Crates.dtl",
+"Factory_Door": "res://Timelines/Factory_Door.dtl",
+"Factory_Equipment": "res://Timelines/Factory_Equipment.dtl",
+"Factory_Pills": "res://Timelines/Factory_Pills.dtl",
+"Factory_RedLight": "res://Timelines/Factory_RedLight.dtl",
+"Factory_Remote": "res://Timelines/Factory_Remote.dtl",
+"Factory_Shutters": "res://Timelines/Factory_Shutters.dtl",
 "Home": "res://Timelines/Home.dtl",
 "Home_Morning": "res://Timelines/Home_Morning.dtl",
 "Janitors_Jordan": "res://Timelines/Janitors_Jordan.dtl",
@@ -70,6 +77,9 @@ directories/dtl_directory={
 "ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl"
 }
 variables={
+"Day3": {
+"FactoryOptionalsCount": 0
+},
 "ITEMS": {
 "Atrium_CrumpledNote": false,
 "Item0": false,

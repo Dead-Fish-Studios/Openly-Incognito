@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbwi45uhci08"]
+[gd_scene load_steps=8 format=3 uid="uid://dwbwi45uhci08"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_r7mdt"]
 [ext_resource type="Texture2D" uid="uid://cqwrvrfkwrcvd" path="res://assets/levels/Atrium/BG_Atrium.png" id="2_024kr"]
 [ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="3_gba8k"]
 [ext_resource type="Texture2D" uid="uid://c4v4bsqbwurm4" path="res://assets/common/GUI/icons/POI_talk.png" id="4_4xeda"]
+[ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="4_7jmb7"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="7_817jp"]
 [ext_resource type="Texture2D" uid="uid://u0f81avcs6gw" path="res://assets/levels/Atrium/POI_CrumpledNote.png" id="8_jmi6y"]
 
@@ -16,6 +17,13 @@ background_texture = ExtResource("2_024kr")
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("2_024kr")
 centered = false
+
+[node name="JordanPOI" parent="Background/Sprite2D" instance=ExtResource("3_gba8k")]
+position = Vector2(100, 187)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("4_7jmb7")
 
 [node name="POIs" type="Node2D" parent="."]
 

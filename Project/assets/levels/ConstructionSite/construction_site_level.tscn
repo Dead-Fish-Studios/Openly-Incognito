@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3qui464y71sr"]
+[gd_scene load_steps=9 format=3 uid="uid://3qui464y71sr"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_q82j2"]
 [ext_resource type="Texture2D" uid="uid://i8can6h8eu0b" path="res://assets/levels/ConstructionSite/BG_ConstructionSite.png" id="2_6y244"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cj0ujmu30erkj" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteSecCam.png" id="4_y6qmu"]
 [ext_resource type="Texture2D" uid="uid://la7brrrgqa8" path="res://assets/common/GUI/icons/POI_enter.png" id="4_ydgwj"]
 [ext_resource type="Texture2D" uid="uid://4nc5tw74486l" path="res://assets/levels/ConstructionSite/POI_ConstructionSiteMortarBox.png" id="5_nx5qy"]
+[ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="8_m6mj7"]
 
 [node name="ConstructionSiteLevel" type="Node2D"]
 script = ExtResource("1_q82j2")
@@ -68,6 +69,13 @@ hover_info = "Back to Atrium"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "csite2atrium"
 POI_sprite_enable = false
+
+[node name="JordanPOI" parent="POIs" instance=ExtResource("3_snx4n")]
+position = Vector2(246, 120)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("8_m6mj7")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 

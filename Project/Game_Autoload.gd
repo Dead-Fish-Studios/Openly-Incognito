@@ -85,3 +85,15 @@ func inst() -> Game:
 # get HUD
 func HUD() -> Control:
 	return game.hud
+
+# change background
+func change_level_background(level: String, path: String) -> void:
+	return game.change_level_background(level, path)
+	
+# get current POI visibility
+func get_POI_visible(level: String, POI: String) -> bool:
+	return game.get_POI_visible(level, POI)
+	
+# toggle the visibility of a POI
+func toggle_POI_visible(level: String, POI: String) -> void:
+	return game.toggle_POI_visible(level, POI)

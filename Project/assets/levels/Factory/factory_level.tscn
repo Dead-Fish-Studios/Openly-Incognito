@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmjxk1ig0pjmr"]
+
+[ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_b1hwl"]
+[ext_resource type="Texture2D" uid="uid://clx55nehqu3ce" path="res://assets/levels/Factory/BG_FactoryDark.jpg" id="2_604l4"]
+[ext_resource type="Texture2D" uid="uid://v6ulrv1801gw" path="res://assets/levels/Factory/BG_FactoryShuttersOpen.jpg" id="2_jixpi"]
+[ext_resource type="PackedScene" uid="uid://7qyvlqhs5i2h" path="res://assets/common/Base/BasePOI.tscn" id="4_xbr5n"]
+[ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="5_2gnqe"]
+
+[node name="FactoryLevel" type="Node2D"]
+script = ExtResource("1_b1hwl")
+background_texture = ExtResource("2_604l4")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_jixpi")
+centered = false
+
+[node name="POIs" type="Node2D" parent="."]
+
+[node name="ShuttersPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(367, 99)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Shutters.dtl"
+POI_sprite_enable = false
+
+[node name="EquipmentPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(329, 145)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Equipment.dtl"
+POI_sprite_enable = false
+
+[node name="CratesPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(226, 237)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Remote.dtl"
+POI_sprite_enable = false
+
+[node name="RemotePOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(246, 189)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Remote.dtl"
+POI_sprite_enable = false
+
+[node name="PillsPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(217, 188)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Pills.dtl"
+POI_sprite_enable = false
+
+[node name="DoorPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(98, 128)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_Door.dtl"
+POI_sprite_enable = false
+
+[node name="RedLightPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(137, 155)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Table"
+dtl_path = "res://Timelines/Factory_RedLight.dtl"
+POI_sprite_enable = false
+
+[node name="JordanLeftPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(299, 208)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("5_2gnqe")
+
+[node name="JordanRightPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(433, 214)
+scale = Vector2(1.5, 1.5)
+show_button = false
+days_flags = 0
+POI_sprite = ExtResource("5_2gnqe")

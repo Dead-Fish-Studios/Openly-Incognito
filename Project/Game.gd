@@ -239,3 +239,20 @@ func sleep() -> void:
 # toggle "Head Home" button visibility
 func go_home_visible(visibility: bool) -> void:
 	hud.go_home_visible(visibility)
+	
+# change the background of the level
+func change_level_background(level: String, path: String) -> void:
+	var targetLevel = get_node("SubViewportContainer/SubViewport/"+level)
+	targetLevel.set_background(path)
+	
+# get current POI visibility
+func get_POI_visible(level: String, POI: String) -> bool:
+	var targetPOI = find_POI(level, POI)
+	return targetPOI.visible
+	
+# toggle the visibility of a POI
+func toggle_POI_visible(level: String, POI: String) -> void:
+	var targetPOI = find_POI(level, POI)
+	var current_visibility = targetPOI.visible
+	targetPOI.visible = !current_visibility
+

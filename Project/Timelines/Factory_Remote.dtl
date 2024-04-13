@@ -1,0 +1,124 @@
+label check
+You walk over to a remote on the table. It’s unlabelled, and only has two buttons on it in the shape of arrows pointing up and down.
+if {Day3.FactoryOptionalsCount} < 3:
+	You decide to explore the room a bit more before coming back to this remote.
+	[end_timeline]
+else:
+	Not thinking much of it, you press the arrow pointing up. Suddenly, the shutters spring to life, radiating a loud whirring sound as it rolls the metal barrier up.
+	Jordan: What did you do?!
+	Jesse: I pressed a button on this remote-I think it’s to the shutters!
+	Jordan: Quickly, get down!
+	As the shutters roll up, you and Jordan quickly move between the windows, hiding yourselves from view.
+	do Game.set_POI_visible("FactoryLevel", "JordanLeftPOI", true)
+	do Game.set_POI_visible("FactoryLevel", "JordanRightPOI", false)
+	do Game.set_POI_visible("FactoryLevel", "RemotePOI", false)
+	do Game.change_level_background("FactoryLevel", "res://assets/levels/Factory/BG_FactoryShuttersOpen.jpg")
+	The shutters go silent as they finish rolling up.
+	Jordan: Dammit Jesse, tell me before you do something like that!
+	Jesse: Sorry, I had no idea it would do that.
+	After not hearing anything out of the ordinary for a few moments, you and Jordan stand up and peer out the windows. Jordan gasps as your eyes go wide.
+	You see what looks like a large-scale production line with conveyor belts, storage shelves, and automated arms moving along what appears to be more Promax pills. You don’t see anyone in the room, and there’s nobody around.
+	Jordan: This is it, this is what I needed!
+	With a greedy look on her face, Joran starts taking pictures through the window. You stare in shock.
+	Jesse: All this time there’s been some factory underneath my job…
+	Jordan: And that’s not the worst part.
+	Jordan walks over to one of the tables and examines a paper on it. It looks to be a memo from Director Connie, dated earlier today. Jordan reads it out loud. 
+	Jordan: “Remember, we’ve got a big order this week with the new stuff."
+	Jordan: "The science team tells me they’ve been experimenting with more growth steroids to lessen the effect on us and target herbivore “genes”, so check with them before you start production.”
+	Jesse: Look at the one below…
+	There’s another memo below. It’s dated a week prior.
+	Jesse: “Science team tells me they narrowed down that little protein synthesis issue. We had to find quite a bit more herbies this week to speed up research though, so make sure you clean up the place!"
+	Jesse: "The last two swelled to the size of balloons before they gave out, and I don’t want a police investigation to find any trace of them here.”
+	You look at Jordan, face stricken with shock.
+	Jesse: ...you don’t think...
+	Jordan: All those missing people? She called them “herbies” too…
+	You both stare at each other, taking in the gravity of the situation.
+	“Herbie” was a relatively new derogatory term towards herbivores. It’s used by some carnivores towards herbivores who think they’re better than them because they’re “natural predators”, and don't like how they have to co-exist with “prey”. 
+	Of course, this term wasn’t ever accepted publicly, but that didn’t stop some from using it behind closed doors. But, there was one thing that didn’t make sense to you.
+	Jesse: Isn’t Director Connie a flamingo? I’ve never heard of non-carnivores saying that.
+	Jordan: Well, you never know, I guess.
+	Jesse: So wait a minute! What the hell is going on here?! Are you telling me that Promax is actually-actually-
+	Jordan: Looks like a concoction of growth steroids. Although, based on those memos, it looks like it’s targeting herbivores and making them put a lot more weight on.
+	Jesse: For [i]what[/i] though? “Let’s fatten up the herbivores so we can eat them easier?”
+	Your mind flashes back to the report on the night attack you saw yesterday. Could this be a part of a larger scale operation?
+	Jordan: Well, that’s not for us to figure out right now. We got what we needed, let’s head out.
+	You take one last look at the room before heading back into the elevator with Jordan. She presses the button on the left, and the elevator starts to rise.
+	Jordan: Don’t worry: with all this evidence, we’ll be sure to take this place down. I can’t believe it, what a bunch of scumbags…selling steroids marketed as pain relievers.
+	Jesse: You know, I saw a news bulletin the other day talking about the growing disparity between herbivores and carnivores. You think this would have anything to do with it?
+	Jordan: With everything we just saw, I imagine you’re right on the money.
+	do Game.switch_level("ConstructionSiteRoomLevel")
+	As the elevator reaches the top, you and Jordan step out into the dim room.
+	Jesse: What now?
+	Jordan: Now we get the hell out of here. I’ll contact headquarters real quick and we can set up a raid on this place.
+	Jordan: This’ll be the biggest bust in this city's history…hopefully it can settle a lot of that public fear I’ve been seeing.
+	You hear a rustling sound and before you can do anything, Jordan, quick as a flash, whips out her pistol and aims behind you. You whip around, and your eyes narrow.
+	Jackson emerges from behind the table leaning against the wall, gun drawn and pointed at Jordan.
+	do Game.set_POI_visible("ConstructionSiteRoomLevel", "JacksonPOI", true)
+	Jackson: Got quite the reaction time on you.
+	Jordan: Drop it Jackson, it’s over for you. This whole place is going down.
+	Jackson: I would beg to differ. You think we’re idiots? We’ve been onto you for a while now. The only reason you’re still alive is because we wanted to see how much you knew first. 
+	Jackson: Can’t fix a leak if you don’t know where the hole is. The FBI though…didn’t imagine things were that bad.
+	Jordan’s expression is blank, but she stares unwaveringly at Jackson. Jackson turns his eyes on you, still aiming at Jordan.
+	With an evil smile Jackson says, "On the other hand…I must give it to you, Jesse, I had no idea you were in on this too. Oh well, two more for the lab I suppose."
+	Jordan: Why do this Jackson? You’re a crow! What if they come after you?
+	Jackson gives a cold laugh.
+	Jackson: As long as I bring in more profit, they don’t care. I’m a huge asset to them! They wouldn’t have developed this stuff nearly as much if it weren’t for me. Besides…I don’t just eat leaves, you know…
+	Jackson’s words send a chill down your spine. 
+	Jordan: So all those innocent people disappearing at night, that was your doing?
+	Jackson: Well, not me personally. I find the targets and send people out. Testing things in beakers takes quite a while. Very helpful to have some…participants.
+	Jordan: Do you not care at all that people are dying?! You’re torturing and killing people down there!
+	Jackson: You know, Jordan? I used to care a bit. The more I’ve worked here, though, the more I learned how much you can achieve if you don’t. How much you can gain.
+	Jackson: And what now? What could possibly be the point of Promax?!
+	Hearing this, Jackson gives a small laugh.
+	Jackson: Oh yes, one of my better ideas. The Director got an offer a while back from some carnivore-supremacy group. 
+	Jackson: I don’t really care for politics, but I got the gist of it: “blah blah blah, we want to send a message, blah blah blah, eat herbivores, blah blah blah, distribute this drug.
+	Jackson: All I needed to know was that we’d be set for life if we kept shipping orders of this stuff out.
+	Jesse: So this buyer wants to increase the size of herbivores to eat them? And you see no problem with that?
+	Jackson: No, I just don’t care. I’ve made so much money from this I could practically buy this place out…but where’s the fun in that?
+	Suddenly, Jordan shoots Jackson in the chest, making him keel over in pain. Before you can register what happens, she drags you outside the room.
+	do Game.set_POI_visible("ConstructionSiteLevel", "JordanPOI", true)
+	do Game.switch_level("ConstructionSiteLevel")
+	Jesse: Oh my god, you shot him…
+	Jordan: Sorry for dragging that out, I just needed a little something.
+	Jordan grins and reaches her hand into her suit, pulling out what looks like a cassette player.
+	Jesse: What is that?
+	Jordan: I believe this is what they call “the nail in the coffin.”
+	Looking confused, Jordan explains.
+	Jordan: It’s a voice recorder. I got him to admit to everything. I’d like to see him try to weasel out of this. Interesting though, sounds like there’s another player in this picture. 
+	Jordan: Let’s get the hell out of here though, he’s probably going to get some help.
+	do Game.set_POI_visible("AtriumLevel", "JordanPOI",  true)
+	do Game.switch_level("AtriumLevel")
+		do Game.set_POI_visible("ConstructionSiteLevel", "JordanPOI", false)
+	You and Jordan try not to run, fearful of drawing attention to yourselves, and speed walk towards the reception area. You walk across the room, and are about to reach the entrance, when Jordan stops you.
+	Jordan: Shit!
+	You look through the glass doors and see a large group, clad in black suits and glasses, standing out front the entrance. The two crocodiles you saw two days ago are among them. 
+	You won’t be able to leave this way without being seen. Jordan looks panicked, eyes racing across the people outside.
+	Jordan: Okay…okay…Jesse, listen to me. This info has to reach headquarters. Here, take this…
+	She takes out her voice recorder, camera, and walkie-talkie, forcing them into your hands.
+	Jesse: What’re you-
+	Jordan: Hide behind the reception desk. I’ll distract them so you can get out. Don’t worry about me: I did track in highschool, I’ll try and do a lap of the place or something.
+	Jordan: Call the police as soon as you get home! And don’t let those things out of your sight!
+	Jesse: But-
+	Without another word, Jordan drags you over to the receptionist desk, forces you down behind it, and then draws out her pistol, shooting the glass of the doors out. 
+	The guards' heads snap to the entryway.
+	"Shots fired! They’re over there!", the Guard says.
+	The people outside draw their own weapons and began to return fire, but Jordan was already around the corner, out of sight. 
+	The guards outside storm into the building and run down the same hall Jordan did. The two familiar crocodiles bring up the rear, and you catch a bit of their conversation.
+	Croc_Man: Didn’t Jackson say there were two of them? A greyhound and a red fox? Where could the other one be?
+	Croc_Woman: Don’t know, but they can’t get far. Even if they get out, we’ve got people heading to the police station right now to intercept them. Thank goodness Jackson radioed in what happened, he sounded pretty bad.
+	Your heart sinks listening to the woman.
+	Croc_Man: Is he gonna be alright?
+	Croc_Woman: Don’t know. Heard he’s getting treated right now.
+	The pair round the corner and run out of earshot.
+	Not having much time to think about what just happened, you get up, and run out of the building to your car. 
+	Jesse: Oh my god, Jordan…
+	Not looking back, you hop in your car and head home as fast as you can, not knowing where else to go.
+	do Game.set_POI_visible("AtriumLevel", "JordanPOI", false)
+	do Game.switch_level("HomeLevel")
+	jump Home/eod_day3
+	
+label increment
+set {Day3.FactoryOptionalsCount} = {Day3.FactoryOptionalsCount} + 1
+do Game.toggle_POI_visible("FactoryLevel", "JordanLeftPOI")
+do Game.toggle_POI_visible("FactoryLevel", "JordanRightPOI")
+[end_timeline]

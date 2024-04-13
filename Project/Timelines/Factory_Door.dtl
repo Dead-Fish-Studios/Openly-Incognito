@@ -1,0 +1,4 @@
+You see a door leading out of the room, but upon further inspection, see that it’s locked tight. You don’t see a keycard scanner for this one.
+Jesse: Is it locked from the other side? Definitely, can’t get through it this way.
+do Game.set_POI_visible("FactoryLevel", "DoorPOI", false)
+jump Factory_Remote/increment

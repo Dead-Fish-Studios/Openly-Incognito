@@ -1,0 +1,7 @@
+Looking at some of the beakers and burners on the tables, it looks as if someone had been experimenting quite a bit. 
+For what purpose, you aren’t sure, but the various papers scattered everywhere seem to indicate numerous trials of something. You can’t really make sense of the hastily scribbled down numbers on them.
+Jordan sees you looking at the equipment and examines it herself.
+Jordan: Hmm… all these numbers make it seem like they’re testing something, and judging from these beakers and everything, I would hazard a guess at concentrations of substances. Better take some of these too.
+Jordan starts snapping photos of the lab equipment.
+do Game.set_POI_visible("FactoryLevel", "EquipmentPOI", false)
+jump Factory_Remote/increment
