@@ -3,7 +3,7 @@ Jordan: Hey, come here for a sec.
 Jordan shows you what she’s doing. She’s holding the walkie-talkie you gave her earlier.
 Jesse: What’s the deal with this thing?
 Jordan: Listen to this.
-[sound volume="0.0"]
+[sound path="res://assets/audio/sfx/Oneshot/radio_1.mp3" volume="0.0"]
 Jordan messes around with some of the knobs and dials on the walkie-talkie. A familiar screeching sound is emitted once more from the walkie-talkie.
 She starts fiddling with the antenna, and the noise starts to vary wildly in volume before settling as a quiet static.
 - Ask her what she's doing
