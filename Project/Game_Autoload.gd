@@ -97,3 +97,37 @@ func get_POI_visible(level: String, POI: String) -> bool:
 # toggle the visibility of a POI
 func toggle_POI_visible(level: String, POI: String) -> void:
 	return game.toggle_POI_visible(level, POI)
+
+# region AUDIO
+
+# play music
+func play_music(track_name: String, _fade_out: bool = true, _fade_in: bool = false) -> void:
+	# find target track
+	var target : AudioStreamPlayer = game.get_node("./Audio/Music"+track_name)
+	if target == null: return
+	# find currently playing track
+	var currently_playing : AudioStreamPlayer = null
+	for track : AudioStreamPlayer in game.get_node("./Audio/Music").get_children():
+		if track.playing:
+			currently_playing = track
+	# if already playing, do nothing
+	if currently_playing == target: return
+	# fade out & stop current track
+	if _fade_out && currently_playing != null:
+		var twn = create_tween()
+		twn.tween_property(currently_playing, "volume_db", -80.0, 2.0)
+		await twn.finished
+	currently_playing.stop()
+	# start & fade in target track
+	if _fade_in:
+		var twn = create_tween()
+		twn.tween_property(target, "volume_db", -12.0, 2.0)
+		await twn.finished
+	target.play()
+
+# stop music
+func stop_music(_fade: bool = true) -> void:
+	for track : AudioStreamPlayer in game.get_node("./Audio/Music").get_children():
+		if _fade:
+			create_tween().tween_property(track, "volume_db", -80.0, 2.0)
+		track.stop()
