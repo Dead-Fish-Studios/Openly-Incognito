@@ -121,6 +121,11 @@ history/simple_history_enabled=true
 history/full_history_enabled=true
 history/already_read_history_enabled=true
 text/autocolor_names=true
+event_default_overrides={
+"Sound": {
+"audio_bus": "SFX"
+}
+}
 
 [display]
 
