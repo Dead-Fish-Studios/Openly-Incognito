@@ -101,29 +101,36 @@ func toggle_POI_visible(level: String, POI: String) -> void:
 # region AUDIO
 
 # play music
-func play_music(track_name: String, _fade_out: bool = true, _fade_in: bool = false) -> void:
+func play_music(track_name: String, _cue: float = 0.0, _fade_out: bool = true, _fade_in: bool = false) -> void:
 	# find target track
-	var target : AudioStreamPlayer = game.get_node("./Audio/Music"+track_name)
-	if target == null: return
+	var target : AudioStreamPlayer = game.get_node("./Audio/Music/"+track_name)
+	if target == null: 
+		print_debug("could not find track: \"" + track_name + "\"")
+		return
 	# find currently playing track
 	var currently_playing : AudioStreamPlayer = null
 	for track : AudioStreamPlayer in game.get_node("./Audio/Music").get_children():
 		if track.playing:
 			currently_playing = track
 	# if already playing, do nothing
-	if currently_playing == target: return
+	if currently_playing == target: 
+		print_debug("already playing \"" + track_name + "\"")
+		return
 	# fade out & stop current track
-	if _fade_out && currently_playing != null:
-		var twn = create_tween()
-		twn.tween_property(currently_playing, "volume_db", -80.0, 2.0)
-		await twn.finished
-	currently_playing.stop()
+	if currently_playing != null:
+		if _fade_out:
+			var twn = create_tween()
+			twn.tween_property(currently_playing, "volume_db", -80.0, 2.0)
+			await twn.finished
+		currently_playing.stop()
 	# start & fade in target track
 	if _fade_in:
 		var twn = create_tween()
 		twn.tween_property(target, "volume_db", -12.0, 2.0)
 		await twn.finished
+	target.volume_db = -12.0
 	target.play()
+	print_debug("started playback: \"" + track_name + "\"")
 
 # stop music
 func stop_music(_fade: bool = true) -> void:
