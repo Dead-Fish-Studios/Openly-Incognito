@@ -1,3 +1,6 @@
+if {OTHER.Day} == 4:
+	jump day4
+
 label first
 do Game.tod_progress(10)
 The main atrium is cavernous as ever. You always feel like you are walking into the wide open maw of the building.
@@ -11,3 +14,10 @@ label default
 The main atrium is cavernous as ever.
 Jesse: Work sweet work.
 [end_timeline]
+
+
+label day4
+Jesse: Alright, here we go…
+Being a bit earlier than usual, you don't see many people around. The items in your pockets feel like a massive weight pulling you down with every step you take.
+do Game.tod_progress(20)
+Jesse: So, Connie said nine o’clock…I’ve got time. Let’s check out that security room.

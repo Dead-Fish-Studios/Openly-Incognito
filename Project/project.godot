@@ -24,6 +24,7 @@ Game="*res://Game_Autoload.gd"
 [dialogic]
 
 directories/dch_directory={
+"Connie": "res://assets/common/Characters/Connie.dch",
 "Croc_Man": "res://assets/common/Characters/Croc_Man.dch",
 "Croc_Woman": "res://assets/common/Characters/Croc_Woman.dch",
 "Flamingo": "res://assets/common/Characters/Flamingo.dch",
@@ -63,6 +64,7 @@ directories/dtl_directory={
 "Factory_Shutters": "res://Timelines/Factory_Shutters.dtl",
 "Home": "res://Timelines/Home.dtl",
 "Home_Morning": "res://Timelines/Home_Morning.dtl",
+"Janitors_Alarm": "res://Timelines/Janitors_Alarm.dtl",
 "Janitors_Jordan": "res://Timelines/Janitors_Jordan.dtl",
 "LevelSwitcher": "res://Timelines/LevelSwitcher.dtl",
 "Office_Files": "res://Timelines/Office_Files.dtl",
@@ -79,6 +81,9 @@ directories/dtl_directory={
 variables={
 "Day3": {
 "FactoryOptionalsCount": 0
+},
+"Day4": {
+"AlarmDone": false
 },
 "ITEMS": {
 "Atrium_CrumpledNote": false,
