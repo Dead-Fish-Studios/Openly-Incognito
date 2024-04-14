@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=22 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
@@ -18,6 +18,9 @@
 [ext_resource type="AudioStream" uid="uid://c2bnphspo01fp" path="res://assets/audio/sfx/UI/cam_zoom.mp3" id="16_4idh1"]
 [ext_resource type="PackedScene" uid="uid://dmjxk1ig0pjmr" path="res://assets/levels/Factory/factory_level.tscn" id="16_a7tux"]
 [ext_resource type="AudioStream" uid="uid://b7a4677ehgehb" path="res://assets/audio/sfx/UI/cam_reset.mp3" id="17_uchu6"]
+[ext_resource type="AudioStream" uid="uid://b0n3bcmkc418i" path="res://assets/audio/music/main.mp3" id="19_hhgx4"]
+[ext_resource type="AudioStream" uid="uid://bx5u04wgq7ftt" path="res://assets/audio/music/chill.mp3" id="20_8kbjh"]
+[ext_resource type="AudioStream" uid="uid://dgp56wbmhdc7i" path="res://assets/audio/music/fast.mp3" id="21_byj1x"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -85,7 +88,6 @@ visible = false
 visible = false
 level_name = "Atrium"
 init_dtl_path = "res://Timelines/Atrium_init.dtl"
-music_path = "res://assets/levels/Atrium/Atrium_Music.mp3"
 
 [node name="OfficeLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_vc58l")]
 visible = false
@@ -96,7 +98,6 @@ visible = false
 level_name = "Construction Site"
 init_dtl_path = "res://Timelines/ConstructionSite_init.dtl"
 init_dtl_label = "first"
-music_path = "res://assets/levels/ConstructionSite/ConstructionSite_Music.mp3"
 
 [node name="ConstructionSiteRoomLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("6_a3rhm")]
 visible = false
@@ -139,3 +140,20 @@ bus = &"SFX"
 [node name="cam_reset" type="AudioStreamPlayer" parent="Audio/SFX"]
 stream = ExtResource("17_uchu6")
 bus = &"SFX"
+
+[node name="Music" type="Node" parent="Audio"]
+
+[node name="Main" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("19_hhgx4")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Chill" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("20_8kbjh")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("21_byj1x")
+volume_db = -12.0
+bus = &"Music"
