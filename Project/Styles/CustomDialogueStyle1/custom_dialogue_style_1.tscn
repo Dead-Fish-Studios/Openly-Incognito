@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cqpb3ie51rwl5"]
+[gd_scene load_steps=22 format=3 uid="uid://cqpb3ie51rwl5"]
 
 [ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/default_layout_base.gd" id="1_ifsho"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="3_wyr0p"]
@@ -14,6 +14,7 @@
 [ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="9_l16dr"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="10_ij4o1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="11_ehmtx"]
+[ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/node_next_indicator.gd" id="12_bwytc"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="12_sd857"]
 [ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="13_o2kgv"]
 [ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="13_qbpvm"]
@@ -52,7 +53,7 @@ HistoryItem = ExtResource("4_mmlnj")
 [node name="PanelContainer" type="PanelContainer" parent="ExampleHistoryScene"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.0310263
+anchor_top = -0.0596659
 anchor_bottom = -0.0596659
 offset_right = 498.0
 offset_bottom = 467.0
@@ -157,6 +158,27 @@ script = ExtResource("6_nav3t")
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("7_iuuse")
+
+[node name="DNextIndicator" type="Control" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -8.0
+offset_right = 43.0
+offset_bottom = 46.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("12_bwytc")
+animation = 1
+
+[node name="SFX_click" type="AudioStreamPlayer" parent="Panel2/DNextIndicator"]
+unique_name_in_owner = true
+stream = ExtResource("12_sd857")
+bus = &"SFX"
 
 [node name="VN_ChoiceLayer" type="Container" parent="."]
 anchors_preset = -1
