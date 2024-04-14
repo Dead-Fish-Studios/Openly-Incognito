@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=33 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
@@ -20,7 +20,18 @@
 [ext_resource type="AudioStream" uid="uid://b7a4677ehgehb" path="res://assets/audio/sfx/UI/cam_reset.mp3" id="17_uchu6"]
 [ext_resource type="AudioStream" uid="uid://b0n3bcmkc418i" path="res://assets/audio/music/main.mp3" id="19_hhgx4"]
 [ext_resource type="AudioStream" uid="uid://bx5u04wgq7ftt" path="res://assets/audio/music/chill.mp3" id="20_8kbjh"]
+[ext_resource type="AudioStream" uid="uid://c5trtakifrm62" path="res://assets/audio/music/main1.mp3" id="20_60gcb"]
+[ext_resource type="AudioStream" uid="uid://dmi6fuvcxhdn7" path="res://assets/audio/music/chill1.mp3" id="21_8x2y6"]
 [ext_resource type="AudioStream" uid="uid://dgp56wbmhdc7i" path="res://assets/audio/music/fast.mp3" id="21_byj1x"]
+[ext_resource type="AudioStream" uid="uid://b7xykjvw0puej" path="res://assets/audio/music/main2.mp3" id="21_lfdk5"]
+[ext_resource type="AudioStream" uid="uid://b0qi5o0axjrai" path="res://assets/audio/music/chill2.mp3" id="22_60dmp"]
+[ext_resource type="AudioStream" uid="uid://bk70eqe7wujmr" path="res://assets/audio/music/main3.mp3" id="22_yp24w"]
+[ext_resource type="AudioStream" uid="uid://d1w2lpy7x6kje" path="res://assets/audio/music/chill3.mp3" id="26_jc4tm"]
+[ext_resource type="AudioStream" uid="uid://do0vjn6adxsn" path="res://assets/audio/music/fast1.mp3" id="28_bdjrr"]
+[ext_resource type="AudioStream" uid="uid://erorbu2fcpkc" path="res://assets/audio/music/fast2.mp3" id="29_mv5n2"]
+[ext_resource type="AudioStream" uid="uid://v43t7tgs5jst" path="res://assets/audio/music/fast3.mp3" id="30_hgigp"]
+[ext_resource type="AudioStream" uid="uid://bkatw5u43dj6y" path="res://assets/audio/music/fast4.mp3" id="31_klvgu"]
+[ext_resource type="AudioStream" uid="uid://ii8ba8de5c1n" path="res://assets/audio/music/fast5.mp3" id="32_r7egn"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -148,12 +159,67 @@ stream = ExtResource("19_hhgx4")
 volume_db = -12.0
 bus = &"Music"
 
+[node name="Main1" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("20_60gcb")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Main2" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("21_lfdk5")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Main3" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("22_yp24w")
+volume_db = -12.0
+bus = &"Music"
+
 [node name="Chill" type="AudioStreamPlayer" parent="Audio/Music"]
 stream = ExtResource("20_8kbjh")
 volume_db = -12.0
 bus = &"Music"
 
+[node name="Chill1" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("21_8x2y6")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Chill2" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("22_60dmp")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Chill3" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("26_jc4tm")
+volume_db = -12.0
+bus = &"Music"
+
 [node name="Fast" type="AudioStreamPlayer" parent="Audio/Music"]
 stream = ExtResource("21_byj1x")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast1" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("28_bdjrr")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast2" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("29_mv5n2")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast3" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("30_hgigp")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast4" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("31_klvgu")
+volume_db = -12.0
+bus = &"Music"
+
+[node name="Fast5" type="AudioStreamPlayer" parent="Audio/Music"]
+stream = ExtResource("32_r7egn")
 volume_db = -12.0
 bus = &"Music"
