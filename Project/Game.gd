@@ -30,6 +30,7 @@ signal day_started(day: int)
 @export var fade_time: float = 0.7
 
 @export_group("Game Time")
+@export var starting_day: int = 1 # for debug purposes
 @export var start_of_day_time: int = 9 * 60 # 09:00 AM
 @export var end_of_day_time: int = 17 * 60 # 05:00 PM
 
@@ -173,7 +174,7 @@ func POI_hover_info(entered: bool, hover_info: String = ""):
 # initialize time and day
 func reset_time_and_day() -> void:
 	reset_time()
-	day = 1
+	day = starting_day
 	print_debug("time and day reset to Day " + str(get_day()) + " / " + tod_str()) 
 
 # reset time to start of day
