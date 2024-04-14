@@ -1,3 +1,6 @@
+if {OTHER.Day} == 4:
+	jump day4
+
 Jesse: The security room. I assume this is where people watch the cameras and all that…wonder if Hugo’s in there.
 Listen at the door?
 - Yes
@@ -240,4 +243,26 @@ Listen at the door?
 		[end_timeline]
 	else:
 		You listen, but you don’t hear anything coming from beyond the door. Maybe you can try listening again some other day.
+		[end_timeline]
 - No
+[end_timeline]
+
+label day4
+if {Day4.AlarmDone} == false:
+	Listening at the door, you can hear some muffled voices. There were a fair few people inside.
+	Shit, now what? I don’t think they would take too kindly to me just strolling in.
+	If only there was a way to get them out of that room… maybe I can find a way to draw them out?
+else:
+	You press your ear to the door. The muffled voices of before are gone.
+	Jesse: Well, here we go…
+	do Game.tod_progress(20)
+	Ducking into the room, you quickly close the door behind you, locking it.
+	You’re alone in the room, various misplaced objects indicative of the people who were just in here. 
+	You had no idea how much time you had before people made their way back inside the building.
+	Quickly scanning the monitors, you see the feed of your room. Your eyes go wide.
+	Jesse: Jordan!
+	do Game.tod_progress(20)
+	You see Jordan, standing aimlessly in your office, a calculating look on her face. However, you don’t see any sign of Connie anywhere.
+	Jesse: She must’ve gone outside with everyone else, I’ve gotta get there quick!
+	do Game.tod_progress(20)
+	[end_timeline]

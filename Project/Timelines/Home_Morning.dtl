@@ -85,8 +85,33 @@ Jesse: [i]Maybe I’ll have some time to look around.[/i]
 	jump go_to_work
 
 label sod_day4
-Day 4 Morning here.
-jump go_to_work
+As usual, your alarm clock screams at you to wake up. Bleary eyed, you roll over to turn off the alarm, but a jolt of panic rushes through you as you see the walkie-talkie on your nightstand, still lightly buzzing static from the night before.
+You calm down, realizing you’re not in any immediate danger.
+Jesse: Today’s the day.
+Perhaps it was the impending task you had ahead of you, but you get ready much quicker today. You have one hand on the doorknob before you stop yourself for a moment.
+Jesse: Woah, woah, wait a second.
+You run back to your room, gather Jordan’s things, and sit down for a moment.
+I need to have a plan of some kind, I can’t just run up in there guns blazing. She doesn’t seem like an idiot, though. If I go in there without a plan, I’m dead.
+She said to meet her in my office, does that mean Jordan will be there too? She seems pretty hellbent on getting Jordan’s stuff…must be because she knows it’ll expose her and what she’s doing.
+Jesse: But what do I do?! I don’t wanna just give her Jordan’s evidence, she can’t keep getting away with that stuff!
+As you pace around the room, talking to yourself, you nearly slip on something on the floor.
+Jesse: What the-
+You look down to see what you stepped on, and see the keycard Hugo gave you.
+Jesse: Oh that… guess it fell out of my pocket last night.
+Jesse: …
+Jesse: …wait a minute. What if I…went to security beforehand? Didn’t Hugo mention there was a camera looking into our office? I could at least see what I’m up against
+Jesse: I’m willing to bet that she’ll have some of those guards from yesterday with her though. If I could just lure them away somehow, I’d be able to deal with her one-on-one, and then…
+Jesse: You trace your fingers over your pocket, feeling Hugo’s pistol sitting there menacingly.
+Jesse: Well, I hope I won’t have to use this on someone, but I might be able to gain some…leverage…if I need to.
+The thought scares you a bit, but you take a few deep breaths. Looking at the time, you’ve still got about an hour before work starts.
+Jesse: I’ll just play it cool…what did Jordan say?”Act like you’re supposed to be there?”
+You go to your room to gather Jordan’s things. Walking over to the door, you ready yourself for the day to come. You close your eyes, going over your half-plan.
+Jesse: Well, I don’t have any other ideas…
+As you walk out of the room, you laugh to yourself, both at the humour of the situation, and of the absurdity of what you’re trying to do. 
+Jesse: Maybe I’ll put this on my resume if I ever apply to the FBI.
+With that, you cross the street to your car. Looking around, you don’t see anyone, so you get in, and drive to work.
+do Game.switch_level("AtriumLevel")
+[end_timeline]
 
 label go_to_work
 do Game.switch_level("AtriumLevel")

@@ -27,6 +27,12 @@ Head back to the hallway?
 [end_timeline]
 
 label righthallway2office
+if {OTHER.Day} == 4:
+	if {Day4.AlarmDone} == false:
+		Jesse: No way I’m going in there without a plan, who knows what’s waiting on the other side.
+	else:
+		do Game.switch_level("OfficeLevel")
+		jump Office_init/day4AlarmDone
 Head to your office?
 - yes
 	do Game.switch_level("OfficeLevel")

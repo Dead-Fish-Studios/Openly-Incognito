@@ -1,0 +1,11 @@
+The fire alarm…
+You look around\: there’s no security cameras in this room.
+do Game.tod_progress(30)
+This could work! If I pull it, they’d get out, and I’d be able to take a look in the office. Although…they might be on alert once they realize there’s no fire…
+This could work! If I pull it, they’d get out, and I’d be able to take a look in the security room. Although…they might be on alert once they realize there’s no fire…
+do Game.tod_progress(30)
+You pull the level, and hear the alarm start ringing throughout the building. It isn’t too long before you hear the clattering of footsteps moving across the ground.
+You wait until the murmur of chatter fades out, and slowly open the door, peeking outside the room as the alarm echoes in the empty hallway.
+do Game.tod_progress(20)
+Jesse: No time to waste, I guess.
+set {Day4.AlarmDone} = true

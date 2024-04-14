@@ -22,6 +22,18 @@ centered = false
 
 [node name="POIs" type="Node2D" parent="."]
 
+[node name="AlarmPOI" parent="POIs" instance=ExtResource("3_u7fcp")]
+position = Vector2(210, 116)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Go Back Outside"
+dtl_path = "res://Timelines/LevelSwitcher.dtl"
+dtl_start_label = "janitors2outsidejanitors"
+days_flags = 8
+POI_sprite_enable = false
+POI_sprite = null
+
 [node name="Janitors2OutsideJanitorsPOI" parent="POIs" instance=ExtResource("3_u7fcp")]
 position = Vector2(247, 188)
 camera_zoom_in_enable = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://crmyj5lxqbfn7"]
+[gd_scene load_steps=13 format=3 uid="uid://crmyj5lxqbfn7"]
 
 [ext_resource type="Script" path="res://assets/common/Base/BaseLevel.gd" id="1_5axud"]
 [ext_resource type="Texture2D" uid="uid://cgfy6rewovums" path="res://assets/levels/Office/BG_Office.png" id="2_ond87"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bk6n0tiak5xym" path="res://assets/levels/Office/POI_Desks.png" id="6_q8oby"]
 [ext_resource type="Texture2D" uid="uid://dtidxk1woubow" path="res://assets/common/Characters/Portrait_Jordan.png" id="6_u1e02"]
 [ext_resource type="Texture2D" uid="uid://brcvydshmf1v8" path="res://assets/levels/Office/POI_Files.png" id="7_3difh"]
+[ext_resource type="Texture2D" uid="uid://ckwtqfmky6ire" path="res://assets/common/Characters/Portrait_Hugo.png" id="11_slt8r"]
+[ext_resource type="Texture2D" uid="uid://bcltpyfprjjtf" path="res://assets/common/Characters/Portrait_Flamingo.png" id="11_tl2q0"]
 
 [node name="OfficeLevel" type="Node2D"]
 script = ExtResource("1_5axud")
@@ -44,6 +46,15 @@ POI_sprite = ExtResource("5_o4kya")
 position = Vector2(283, 167)
 scale = Vector2(1.5, 1.5)
 show_button = false
+days_flags = 0
+POI_sprite = ExtResource("6_u1e02")
+
+[node name="JordanDay4POI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(350, 152)
+scale = Vector2(1.5, 1.5)
+show_button = false
+POI_button_offset = Vector2(0, -50)
+dtl_path = "res://Timelines/Office_JordanDay3.dtl"
 days_flags = 0
 POI_sprite = ExtResource("6_u1e02")
 
@@ -93,3 +104,21 @@ POI_button_offset = Vector2(0, -50)
 dtl_path = "res://Timelines/Office_JordanDay3.dtl"
 days_flags = 0
 POI_sprite = ExtResource("6_u1e02")
+
+[node name="HugoDay4POI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(231, 214)
+scale = Vector2(1.5, 1.5)
+show_button = false
+POI_button_offset = Vector2(0, -50)
+dtl_path = "res://Timelines/Office_JordanDay3.dtl"
+days_flags = 0
+POI_sprite = ExtResource("11_slt8r")
+
+[node name="ConnieDay4POI" parent="POIs" instance=ExtResource("3_gvq2x")]
+position = Vector2(275, 213)
+scale = Vector2(1.5, 1.5)
+show_button = false
+POI_button_offset = Vector2(0, -50)
+dtl_path = "res://Timelines/Office_JordanDay3.dtl"
+days_flags = 0
+POI_sprite = ExtResource("11_tl2q0")
