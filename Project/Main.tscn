@@ -15,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://c1iee8lgswmgx" path="res://assets/levels/OutsideJanitors/outside_janitors_level.tscn" id="12_kq5su"]
 [ext_resource type="PackedScene" uid="uid://cdt58k7uyloj8" path="res://assets/levels/SecurityRoom/security_room_level.tscn" id="13_plj6i"]
 [ext_resource type="PackedScene" uid="uid://yf1hggnk1eyu" path="res://assets/levels/Janitors/janitors_level.tscn" id="13_qitel"]
-[ext_resource type="PackedScene" uid="uid://dmjxk1ig0pjmr" path="res://assets/levels/Factory/factory_level.tscn" id="16_a7tux"]
 [ext_resource type="AudioStream" uid="uid://c2bnphspo01fp" path="res://assets/audio/sfx/UI/cam_zoom.mp3" id="16_4idh1"]
+[ext_resource type="PackedScene" uid="uid://dmjxk1ig0pjmr" path="res://assets/levels/Factory/factory_level.tscn" id="16_a7tux"]
 [ext_resource type="AudioStream" uid="uid://b7a4677ehgehb" path="res://assets/audio/sfx/UI/cam_reset.mp3" id="17_uchu6"]
 
 [node name="Main" type="Control"]
@@ -34,9 +34,9 @@ layer = 2
 [node name="HUD" parent="HUD_Layer" instance=ExtResource("2_ueuww")]
 unique_name_in_owner = true
 offset_left = 14.0
-offset_top = 8.0
-offset_right = -9.0
-offset_bottom = -25.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = -14.0
 
 [node name="Curtains" type="ColorRect" parent="HUD_Layer"]
 anchors_preset = 15
