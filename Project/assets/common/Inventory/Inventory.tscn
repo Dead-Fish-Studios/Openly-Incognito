@@ -139,6 +139,7 @@ text = "Walkie Talkie"
 icon = ExtResource("10_r3gdy")
 icon_alignment = 1
 vertical_icon_alignment = 0
+expand_icon = true
 script = ExtResource("3_1ofro")
 item_sprite = ExtResource("10_r3gdy")
 item_name = "Walkie Talkie"
