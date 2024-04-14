@@ -37,6 +37,8 @@ label atrium2elevator
 if {OTHER.Day} == 2:
 	Head into the elevator?
 	- yes
+		[sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0"]
+		You walk to the elevator, and press the “up” button. The doors instantly open.
 		do Game.switch_level("ElevatorLevel")
 	- no
 else:

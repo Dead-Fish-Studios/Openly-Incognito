@@ -5,8 +5,8 @@ else:
 
 label tim_encounter
 Jesse: Hmm… I could go for some food right about now, let’s see what’s on the menu for today.
-You walk to the elevator, and press the “up” button. The doors instantly open.
-You click the third floor button, being where the cafeteria is located.
+[sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0"]
+You press the third floor button, being where the cafeteria is located. The doors close and the elevator starts moving smoothly up.
 # cumulative: 10
 do Game.tod_progress(10)
 One of the benefits of working here was the free employee lunch every single day. While not restaurant-quality by any means, it was still a great alternative to having to bring in your own every single day.
@@ -15,8 +15,9 @@ While people laughed this off, you were still wary of touching them; you didn’
 # cumulative: 20
 do Game.tod_progress(10)
 Jesse: Pizza would be nice…
+[sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0" bus="Master"]
 The elevator dings as it reaches the third floor, doors opening. You surprisingly don’t see that many people\: while there was no dedicated “lunch time”, this place was routinely busy throughout the day due to people usually just coming here whenever they have a moment.
-You see the cafeteria doors are shut, and you’re wondering what could’ve happened. 
+You see the cafeteria doors are shut, and you’re wondering what could’ve happened.
 # cumulative: 30
 do Game.tod_progress(10)
 Just then, someone calls out to you.
@@ -26,21 +27,22 @@ You turn to see Tim, one of the janitors, walking towards you. You give an exasp
 Jesse: Oh well… I’m sure I can live off vending machines for the rest of my shift.
 # cumulative: 40
 do Game.tod_progress(10)
-Tim was one of the first people you met here. 
-It all started when you managed to lock yourself out of your office one day and had to phone the janitors office to come unlock it. 
+Tim was one of the first people you met here.
+It all started when you managed to lock yourself out of your office one day and had to phone the janitors office to come unlock it.
 After laughing the incident off, you two have become friends, talking to each other in passing and even eating lunch together when you can.
 Tim has his cleaning cart with him, as always, leaning on it slightly. You once caught him cleaning his shell with a spray bottle and a rag, but once he noticed you looking at him, he quickly stopped, pulling his hat slightly over his eyes as you tried and failed to contain your laughter.
 Jesse: Might as well head back down then…see what I can find.
 Tim: I’ll go with you, I was heading down anyway.
 # cumulative: 50
 do Game.tod_progress(10)
+[sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0" bus="Master"]
 You both head into the elevator. Tim jabs his thumb on the L button, and the doors close with a resounding “ding”.
 Tim lets out an exhale, and puts his hand behind his head.
 Tim: What a day…first I had to clean up the kitchen and all that mess. Of course the cooks weren’t paying attention and let the pots overflow…
 Tim: and of COURSE they split a bottle of soy sauce…do you know how hard that stuff is to get out if it dries?!
 # cumulative: 60
 do Game.tod_progress(10)
-You nod and give a grunt in acknowledgment, not really focused on what he’s saying. 
+You nod and give a grunt in acknowledgment, not really focused on what he’s saying.
 Tim: And NOW Jackson wants me to clean his office! I bet it’s fine, he just wants to get some free dusting on the place… but I can’t just say “no” to him…
 You give a longer grunt this time.
 # cumulative: 70
@@ -62,7 +64,7 @@ Tim looks like he realized he said something he shouldn’t have. He glances at 
 Tim: Jesse, are you telling me you don’t know about…about anything that goes on here?
 # cumulative: 100
 do Game.tod_progress(10)
-Jesse: What do you mean, of course I do! I do my work and everything like that! 
+Jesse: What do you mean, of course I do! I do my work and everything like that!
 Jesse: This is the second time I’ve heard about a “basement” though… and what do you mean “factory”?
 Tim’s eyes are wide, staring off into the distance. He seems to be deep in thought.
 Jesse: Hellooo…
@@ -83,6 +85,7 @@ Tim looks frustrated with himself as he presses on.
 do Game.tod_progress(10)
 Tim: Look, just be careful, okay? Don’t mention anything about a factory to anyone, or anything like that.
 Jesse: But-
+[sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0"]
 do Game.set_POI_visible("ElevatorLevel", "ConniePOI", true)
 do Game.set_POI_visible("ElevatorLevel", "HugoPOI", true)
 You’re cut short as you reach the ground floor. The doors swing open to reveal a slender looking flamingo and a huge hulking Crocodile you recognize as Hugo.
@@ -98,13 +101,15 @@ He rushes past her and out of the elevator, looking like he’s trying his best 
 # cumulative: 150
 do Game.tod_progress(10)
 Jesse: [i]Director? Was this the “Director Connie” that Markus was talking about?[/i]
-You go to walk by her, nodding in passing. You see her eyes crinkle a little bit in reception as you pass, her mouth in a slight smile. 
+You go to walk by her, nodding in passing. You see her eyes crinkle a little bit in reception as you pass, her mouth in a slight smile.
 You don’t really know why, but you feel very uneasy walking by her; nothing about her screams “danger”, but you remember what Markus told you about her reputation.
 # cumulative: 160
 do Game.tod_progress(10)
 do Game.switch_level("AtriumLevel")
-You exit the elevator and start to walk away, noticing Tim has already run off. 
-You turn as the doors are shutting and see that the Director is still smiling at you, head slightly tilted. Hugo stands behind her, face firm but looking bored. 
+[sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0"]
+You exit the elevator and start to walk away, noticing Tim has already run off.
+You turn as the doors are shutting and see that the Director is still smiling at you, head slightly tilted. Hugo stands behind her, face firm but looking bored.
+[sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0"]
 The doors close, leaving you alone in the atrium.
 Well, that was a bit weird.
 “Wait a minute!!!”, you think. What did Tim mean, “don’t go snooping around”? And talking about an elevator and a factory…was there really another floor in this place you didn’t know about?
