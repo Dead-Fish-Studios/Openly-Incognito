@@ -113,6 +113,8 @@ func zoom_camera(focus: Vector2, zoom: float):
 	#cam.zoom = Vector2(2.0, 2.0) * zoom
 	create_tween().tween_property(cam, "zoom", Vector2(2.0, 2.0) * zoom, 1.0)\
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+	# play SFX
+	$Audio/SFX/cam_zoom.play()
 
 # reset camera
 func reset_camera() -> void:
@@ -121,6 +123,8 @@ func reset_camera() -> void:
 	cam.position  = Vector2(240.0, 135.0)
 	create_tween().tween_property(cam, "zoom", Vector2(2.667, 2.667), 1.0)\
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	#play SFX
+	$Audio/SFX/cam_reset.play()
 
 # region POI
 

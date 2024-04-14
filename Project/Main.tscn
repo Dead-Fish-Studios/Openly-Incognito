@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqm0jg8nrnepf"]
+[gd_scene load_steps=18 format=3 uid="uid://cqm0jg8nrnepf"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_jm3ko"]
 [ext_resource type="PackedScene" uid="uid://b7gjon4d3nmyf" path="res://assets/common/GUI/HUD.tscn" id="2_ueuww"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cdt58k7uyloj8" path="res://assets/levels/SecurityRoom/security_room_level.tscn" id="13_plj6i"]
 [ext_resource type="PackedScene" uid="uid://yf1hggnk1eyu" path="res://assets/levels/Janitors/janitors_level.tscn" id="13_qitel"]
 [ext_resource type="PackedScene" uid="uid://dmjxk1ig0pjmr" path="res://assets/levels/Factory/factory_level.tscn" id="16_a7tux"]
+[ext_resource type="AudioStream" uid="uid://c2bnphspo01fp" path="res://assets/audio/sfx/UI/cam_zoom.mp3" id="16_4idh1"]
+[ext_resource type="AudioStream" uid="uid://b7a4677ehgehb" path="res://assets/audio/sfx/UI/cam_reset.mp3" id="17_uchu6"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -125,3 +127,15 @@ visible = false
 [node name="FactoryLevel" parent="SubViewportContainer/SubViewport" instance=ExtResource("16_a7tux")]
 visible = false
 init_dtl = false
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="SFX" type="Node" parent="Audio"]
+
+[node name="cam_zoom" type="AudioStreamPlayer" parent="Audio/SFX"]
+stream = ExtResource("16_4idh1")
+bus = &"SFX"
+
+[node name="cam_reset" type="AudioStreamPlayer" parent="Audio/SFX"]
+stream = ExtResource("17_uchu6")
+bus = &"SFX"
