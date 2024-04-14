@@ -23,6 +23,10 @@ var time_of_day: int :# time of day (in minutes)
 var time_of_day_target: int # tod tweening
 var eod := false
 
+# bpm clock (sync music)
+@export var bpm: Array[float]
+var bpm_clock := {}
+
 # time signals
 signal day_started(day: int)
 
@@ -51,6 +55,10 @@ func _ready():
 	# reset camera upon timeline exit
 	Dialogic.timeline_ended.connect(reset_camera)
 	
+	# init bpm clock
+	for tempo in bpm:
+		bpm_clock[tempo] = 0.0
+
 	# initialize time
 	reset_time_and_day()
 	# emit start of day signal
@@ -61,7 +69,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Engine.is_editor_hint(): return
+	# sync bpm clock (4/4 time signature * 16 bars = 64 beat loop)
+	for tempo in bpm_clock:
+		bpm_clock[tempo] = fmod((bpm_clock[tempo] + delta) , (64 / tempo * 60.0))
 
 # switch levels
 # simply toggles visibility of each level

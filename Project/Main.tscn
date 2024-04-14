@@ -41,6 +41,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jm3ko")
+bpm = Array[float]([90.0, 160.0])
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 layer = 2

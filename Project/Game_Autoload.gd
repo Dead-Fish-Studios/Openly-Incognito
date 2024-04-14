@@ -101,7 +101,7 @@ func toggle_POI_visible(level: String, POI: String) -> void:
 # region AUDIO
 
 # play music
-func play_music(track_name: String, _cue: float = 0.0, _fade_out: bool = true, _fade_in: bool = false) -> void:
+func play_music(track_name: String, _fade_out: bool = false, _fade_in: bool = false, _bpm_sync: bool = true) -> void:
 	# find target track
 	var target : AudioStreamPlayer = game.get_node("./Audio/Music/"+track_name)
 	if target == null: 
@@ -124,17 +124,21 @@ func play_music(track_name: String, _cue: float = 0.0, _fade_out: bool = true, _
 			await twn.finished
 		currently_playing.stop()
 	# start & fade in target track
+	if _bpm_sync:
+		target.play(game.bpm_clock[target.stream.bpm] + AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency())
+	else: target.play()
 	if _fade_in:
 		var twn = create_tween()
 		twn.tween_property(target, "volume_db", -12.0, 2.0)
 		await twn.finished
 	target.volume_db = -12.0
-	target.play()
 	print_debug("started playback: \"" + track_name + "\"")
 
 # stop music
 func stop_music(_fade: bool = true) -> void:
 	for track : AudioStreamPlayer in game.get_node("./Audio/Music").get_children():
 		if _fade:
-			create_tween().tween_property(track, "volume_db", -80.0, 2.0)
+			var twn = create_tween()
+			twn.tween_property(track, "volume_db", -80.0, 2.0)
+			await twn.finished
 		track.stop()
