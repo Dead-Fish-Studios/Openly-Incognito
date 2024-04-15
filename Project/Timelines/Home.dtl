@@ -1,6 +1,6 @@
 label confirm_eod
 Jesse: Well, that was a long day.
-It's past 6pm. Do you want to head home now?
+It's past 5pm. Do you want to head home now?
 - Yes
 	Jesse: Time to clock out.
 	do Game.switch_level("HomeLevel")
@@ -105,8 +105,8 @@ The dial tone plays loudly in your ear as you stand there in shock. You slowly p
 You try your best to control your breathing as you think.
 You feel as if you’re being watched at this very moment. How did she know to call you then? Is there someone outside who saw you?
 You run over to your windows and yank the blinds shut. Feeling marginally safer, you plop down into your couch.
-Your first instinct is that she was lying. Why would she give you a day to “think things over”...was she really serious about the job offer? 
-If you give her Jordan’s things, would she really hold up her end of the bargain? 
+Your first instinct is that she was lying. Why would she give you a day to “think things over”...was she really serious about the job offer?
+If you give her Jordan’s things, would she really hold up her end of the bargain?
 What would happen to Jordan?
 As you absentmindedly go through your evening routine, you consider calling the police anyways, but the thought is quickly pushed out of your head.
 Jesse: No…if she found me here, there’s probably someone watching me. How would she know I called the police? Maybe they have something like Jordan’s walkie-talkie-
@@ -124,7 +124,7 @@ Radio_Unknown_1: Nah, I’ll be gone in the morning, just gotta make sure she do
 Radio_Unknown_1: Heard she offered her a job…she might be on patrol with me next week, ha!
 do Game.play_music("Main1")
 You felt a bit better. It really seemed like they weren’t going to try anything tonight, but this only fueled your worry further. What were you going to do tomorrow?
-Hearing that their conversation has changed to more trivial things, you turn the volume down, placing the walkie-talkie on your nightstand. 
+Hearing that their conversation has changed to more trivial things, you turn the volume down, placing the walkie-talkie on your nightstand.
 You felt a bit better knowing you could listen in on what was happening.
 As you sit on your bed, you take out Hugo’s pistol. Staring at it, you place it next to the walkie-talkie.
 You’ve never even held a real gun before, let alone fire one, but considering your situation, you felt a whole lot safer having it as an option.

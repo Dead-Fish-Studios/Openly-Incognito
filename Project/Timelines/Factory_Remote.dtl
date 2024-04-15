@@ -66,4 +66,5 @@ label increment
 set {Day3.FactoryOptionalsCount} = {Day3.FactoryOptionalsCount} + 1
 do Game.toggle_POI_visible("FactoryLevel", "JordanLeftPOI")
 do Game.toggle_POI_visible("FactoryLevel", "JordanRightPOI")
+do Game.set_POI_visible("FactoryLevel", "ExitPOI", true)
 [end_timeline]

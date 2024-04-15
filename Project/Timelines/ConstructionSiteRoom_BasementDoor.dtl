@@ -11,13 +11,16 @@ label inspected
 	There is a little keycard reader to the side of it.
 	if {ITEMS.SecurityRoom_Keycard} == false:
 		Jesse: A keycard reader? In a place like this?
-		
 		jump inspect
-	- scan keycard
-		jump day3_jordan
-	- (move on)
-		[end_timeline]
+	else:
+		Scan keycard?
+		- yes
+			You hold the keycard in front of the scanner.
+			jump day3_jordan
+		- no
+			[end_timeline]
 - (move on)
+	[end_timeline]
 if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
 	[end_timeline]
 do Game.tod_progress(20)
@@ -29,9 +32,7 @@ if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
 [end_timeline]
 
 label day3_jordan
-You hold the keycard in front of the scanner.
 [sound path="res://assets/audio/sfx/Oneshot/beep_click.mp3" volume="0.0"]
-
 A loud beeping sound plays while the green light blinks a few times. Like last time, you hear the locks disengaging once more.
 As Jordan hands the keycard back to you, a bead of sweat rolls down your face, your expression firm as you stand in anticipation of the doors opening. Jordan has a similar look to her.
 [sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0"]
@@ -40,6 +41,12 @@ Suddenly, the doors open, and the familiar bright light blinds you for a moment.
 Jesse: Ah, forgot about that.
 Jordan: Come on, quickly.
 [sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0"]
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "JordanPOI", false)
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "BasementDoorPOI", false)
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "TablePOI", false)
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "FloorPOI", false)
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "ExitPOI", false)
+do Game.change_level_background("ConstructionSiteRoomLevel", "res://assets/levels/Elevator/BG_Elevator.png")
 Jordan presses the button. The doors close and the elevator gives a lurch as it starts to move down.
 You both stand in silence. It’s a bit unnerving not knowing how deep you’re going, but you persevere.
 Jordan: Try to act natural. People usually don’t ask questions if you look like you know what you’re doing.

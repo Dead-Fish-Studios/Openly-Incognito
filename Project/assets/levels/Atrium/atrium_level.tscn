@@ -58,6 +58,7 @@ POI_button_offset = Vector2(0, -20)
 hover_info = "Crumpled Note"
 dtl_path = "res://Timelines/Atrium_CrumpledNote.dtl"
 dtl_start_label = ""
+days_flags = 1
 POI_sprite = ExtResource("8_jmi6y")
 
 [node name="Atrium2RightHallwayPOI" parent="POIs" instance=ExtResource("3_gba8k")]
@@ -81,5 +82,6 @@ POI_button_offset = Vector2(0, 0)
 hover_info = "Elevator"
 dtl_path = "res://Timelines/LevelSwitcher.dtl"
 dtl_start_label = "atrium2elevator"
+days_flags = 3
 POI_sprite_enable = false
 POI_sprite = null

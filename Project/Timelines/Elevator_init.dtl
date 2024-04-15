@@ -120,6 +120,7 @@ do Game.tod_progress(10)
 Jesse: Next time I see Jordan, we’re having a SERIOUS talk. Why couldn’t I just get my pizza…
 do Game.set_POI_visible("ElevatorLevel", "ConniePOI", false)
 do Game.set_POI_visible("ElevatorLevel", "HugoPOI", false)
+do Game.set_POI_visible("AtriumLevel", "Atrium2ElevatorPOI", false)
 do Game.set_level_init_label("ElevatorLevel", "default")
 [end_timeline]
 

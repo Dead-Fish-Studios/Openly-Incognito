@@ -1,3 +1,6 @@
+do Game.change_level_background("ConstructionSiteRoomLevel", "res://assets/levels/ConstructionSiteRoom/BG_ConstructionSiteRoom.png")
+do Game.switch_level("ConstructionSiteRoomLevel")
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "ExitPOI", true)
 do Game.play_music("Main3")
 do Game.tod_progress(10)
 do Game.set_POI_visible("FactoryLevel", "ExitPOI", false)

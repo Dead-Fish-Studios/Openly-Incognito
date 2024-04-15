@@ -30,6 +30,7 @@ label righthallway2office
 if {OTHER.Day} == 4:
 	if {Day4.AlarmDone} == false:
 		Jesse: No way I’m going in there without a plan, who knows what’s waiting on the other side.
+		[end_timeline]
 	else:
 		do Game.set_POI_visible("OfficeLevel", "JordanDay4POI", true)
 		You try to push open the door, and are surprised to feel that it’s locked. You loudly whisper across the door.
