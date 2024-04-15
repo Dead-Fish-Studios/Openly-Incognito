@@ -141,5 +141,7 @@ func stop_music(_fade: bool = true) -> void:
 			if _fade:
 				var twn = create_tween()
 				twn.tween_property(track, "volume_db", -80.0, 2.0)
-				twn.finished.connect(func (): track.stop() )
+				twn.finished.connect((func done(stream: AudioStreamPlayer): 
+					stream.stop() 
+					print_debug("fade done")).bind(track))
 			else: track.stop()

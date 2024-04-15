@@ -14,7 +14,6 @@
 [ext_resource type="StyleBox" uid="uid://3mvcy3td0pib" path="res://assets/common/GUI/styles/GUI_label_stylebox.tres" id="9_l16dr"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="10_ij4o1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="11_ehmtx"]
-[ext_resource type="Script" path="res://Styles/CustomDialogueStyle1/node_next_indicator.gd" id="12_bwytc"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="12_kdaxc"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="12_sd857"]
 [ext_resource type="StyleBox" uid="uid://d0016ba0acq5f" path="res://assets/common/GUI/styles/GUI_button_stylebox.tres" id="13_o2kgv"]
@@ -23,6 +22,7 @@
 [ext_resource type="StyleBox" uid="uid://c7sdar01jss0" path="res://assets/common/GUI/styles/GUI_button_hovered_stylebox.tres" id="14_lpyxk"]
 [ext_resource type="AudioStream" uid="uid://dnboblpkf0fqi" path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" id="14_s5oar"]
 [ext_resource type="StyleBox" uid="uid://c2dlwcowvukyd" path="res://assets/common/GUI/styles/GUI_button_pressed_stylebox.tres" id="15_4e18i"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="16_jtgxd"]
 
 [sub_resource type="AudioStream" id="AudioStream_pe27w"]
 
@@ -184,7 +184,7 @@ offset_right = 43.0
 offset_bottom = 46.0
 grow_horizontal = 0
 grow_vertical = 0
-script = ExtResource("12_bwytc")
+script = ExtResource("16_jtgxd")
 animation = 1
 
 [node name="SFX_click" type="AudioStreamPlayer" parent="Panel2/DNextIndicator"]

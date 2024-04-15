@@ -58,7 +58,9 @@ func _ready():
 func _on_visibility_changed():
 	if visible:
 		play_animation(animation, 1.0)
-
+	# play SFX click for "progress"
+	else:
+		%SFX_click.play()
 
 func play_animation(animation: int, time:float) -> void:
 	# clean up previous tween to prevent slipping
