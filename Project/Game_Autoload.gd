@@ -101,7 +101,7 @@ func toggle_POI_visible(level: String, POI: String) -> void:
 # region AUDIO
 
 # play music
-func play_music(track_name: String, _fade_out: bool = false, _fade_in: bool = false, _bpm_sync: bool = true) -> void:
+func play_music(track_name: String, _xfade: bool = true, _bpm_sync: bool = true) -> void:
 	# find target track
 	var target : AudioStreamPlayer = game.get_node("./Audio/Music/"+track_name)
 	if target == null: 
@@ -116,29 +116,30 @@ func play_music(track_name: String, _fade_out: bool = false, _fade_in: bool = fa
 	if currently_playing == target: 
 		print_debug("already playing \"" + track_name + "\"")
 		return
-	# fade out & stop current track
-	if currently_playing != null:
-		if _fade_out:
-			var twn = create_tween()
-			twn.tween_property(currently_playing, "volume_db", -80.0, 2.0)
-			await twn.finished
-		currently_playing.stop()
-	# start & fade in target track
+	# start target playback
 	if _bpm_sync:
 		target.play(game.bpm_clock[target.stream.bpm] + AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency())
 	else: target.play()
-	if _fade_in:
-		var twn = create_tween()
+	# crossfade & stop currently playing track
+	if _xfade:
+		var twn := create_tween().set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 		twn.tween_property(target, "volume_db", -12.0, 2.0)
-		await twn.finished
-	target.volume_db = -12.0
+		if currently_playing != null:
+			twn.parallel().tween_property(currently_playing, "volume_db", -80.0, 2.0).set_delay(1.0)
+			twn.finished.connect((func done(stream: AudioStreamPlayer): 
+				stream.stop() 
+				print_debug("xfade done")).bind(currently_playing))
+	else: 
+		currently_playing.stop()
+		target.volume_db = -12.0
 	print_debug("started playback: \"" + track_name + "\"")
 
 # stop music
 func stop_music(_fade: bool = true) -> void:
 	for track : AudioStreamPlayer in game.get_node("./Audio/Music").get_children():
-		if _fade:
-			var twn = create_tween()
-			twn.tween_property(track, "volume_db", -80.0, 2.0)
-			await twn.finished
-		track.stop()
+		if track.playing:
+			if _fade:
+				var twn = create_tween()
+				twn.tween_property(track, "volume_db", -80.0, 2.0)
+				twn.finished.connect(func (): track.stop() )
+			else: track.stop()
