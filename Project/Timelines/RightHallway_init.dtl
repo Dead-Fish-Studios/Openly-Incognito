@@ -142,10 +142,7 @@ do Game.play_music("Chill1")
 Still, feeling better than you did a few minutes ago, you get ready to leave.
 # cumulative: 240
 do Game.tod_progress(10)
-You take a breath, then open the door. A quick glance down each hallway shows that you’re all alone. 
 You can faintly make out the usual murmur of the atrium reaching down the hallways.
-You step back outside.
-do Game.set_level_init_label("RightHallwayLevel", default)
-do Game.switch_level("RightHallwayLevel")
+do Game.set_level_init_label("RightHallwayLevel", "default")
 do Game.play_music("Main")
 [end_timeline]
