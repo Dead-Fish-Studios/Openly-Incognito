@@ -10,7 +10,6 @@
 script = ExtResource("1_fbmim")
 level_name = "Right Hallway"
 background_texture = ExtResource("2_cf08k")
-init_dtl = false
 init_dtl_path = "res://Timelines/RightHallway_init.dtl"
 
 [node name="Background" type="Node2D" parent="."]
