@@ -36,6 +36,7 @@ directories/dch_directory={
 "Molly": "res://assets/common/Characters/Molly.dch",
 "Radio_Unknown_1": "res://assets/common/Characters/Radio_Unknown_1.dch",
 "Radio_Unknown_2": "res://assets/common/Characters/Radio_Unknown_2.dch",
+"TV": "res://assets/common/Characters/TV.dch",
 "Tim": "res://assets/common/Characters/Tim.dch",
 "Unknown Voice": "res://assets/common/Characters/Unknown Voice.dch"
 }

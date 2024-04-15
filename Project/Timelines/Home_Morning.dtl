@@ -8,64 +8,90 @@ elif {OTHER.Day} == 4:
 	jump sod_day4
 
 label sod_day1
+do Game.play_music("Chill1", false)
 Jesse: Yawn…
 You turn your coffee maker on, eyes drooping as you aimlessly stare at the dark liquid slowly filling up the pot.
-You weren’t sure how many more times you could keep telling yourself “Just make it through this week.”, but the coffee usually helped push those thoughts away. 
-You recently got a job at the well-known Blurr Sector. 
-While “Relationship Marketing Assistant” wasn’t too exciting, you were content with it for now, grateful that you usually didn’t have to deal with too much nonsense. 
-However, the early mornings have taken their toll, and might’ve been the death of you had you not discovered the wonderful world of caffeine-infused beverages. 
-The coffee machine beeps to let you know it’s finished. 
+You weren’t sure how many more times you could keep telling yourself “Just make it through this week.”, but the coffee usually helped push those thoughts away.
+You recently got a job at the well-known Blurr Sector.
+While “Relationship Marketing Assistant” wasn’t too exciting, you were content with it for now, grateful that you usually didn’t have to deal with too much nonsense.
+However, the early mornings have taken their toll, and might’ve been the death of you had you not discovered the wonderful world of caffeine-infused beverages.
+The coffee machine beeps to let you know it’s finished.
 You pour a cup, grab a muffin, and sit down in front of your TV, turning it on to catch the news before you head out.
 The news channel comes on.
-Reporter: [i]“Another set of disappearances last night in what has become a full-on police investigation. An ever-growing list of victims only adds to the public discontent that has left this city on high alert. Reported victims include, yet again, strictly herbivores, leading people to wonder if this is merely a coincidence, or a developing hate crime.”[/i]
-Reporter: [i]“Law enforcement officials urge citizens to report any and all suspicious behaviour. Chief of Police Hannah Montgomery issued a statement this morning to the public regarding the disappearances:”[/i]
-Reporter: [i]“Rest assured, we are actively investigating each disappearance in-depth. All our officers are working around the clock in order to move forward in this case. I urge any member of the public who might have relevant information to come forward, no matter how insignificant it may seem.”[/i]
-Reporter: [i]“Some citizens have talked about organizing a night watch to-”[/i]
+do Game.play_music("Chill2")
+TV (Reporter) [i]“Another set of disappearances last night in what has become a full-on police investigation."[/i]
+TV (Reporter) [i]“An ever-growing list of victims only adds to the public discontent that has left this city on high alert."[/i]
+TV (Reporter) [i]“Reported victims include, yet again, strictly herbivores, leading people to wonder if this is merely a coincidence, or a developing hate crime.”[/i]
+TV (Reporter) [i]“Law enforcement officials urge citizens to report any and all suspicious behaviour. Chief of Police Hannah Montgomery issued a statement this morning to the public regarding the disappearances:”[/i]
+TV (TV): [i]“Rest assured, we are actively investigating each disappearance in-depth. All our officers are working around the clock in order to move forward in this case." [/i]
+TV: [i]"I urge any member of the public who might have relevant information to come forward, no matter how insignificant it may seem.”[/i]
+TV (Reporter) [i]“Some citizens have talked about organizing a night watch to-”[/i]
 You turn the TV off.
 Jesse: [i]Damn, that’s the third one this month.[/i]
-Unfortunately, there was an ongoing manhunt in your city for a bunch of people who have gone missing. 
-You remember hearing about it the first time, not thinking too much of it, but as the list of missing people increased, it was clear to everyone that something more sinister was going on. 
+do Game.play_music("Chill3")
+Unfortunately, there was an ongoing manhunt in your city for a bunch of people who have gone missing.
+You remember hearing about it the first time, not thinking too much of it, but as the list of missing people increased, it was clear to everyone that something more sinister was going on.
 Never before had you recalled so many people suddenly going missing in your city in such a short span of time.
-What really had people talking was the type of people disappearing. So far, only herbivores have gone missing, which worried some people to the point of placing an unfortunate stigma on carnivores, creating public fear around them. 
+What really had people talking was the type of people disappearing. 
+So far, only herbivores have gone missing, which worried some people to the point of placing an unfortunate stigma on carnivores, creating public fear around them.
 Being a red fox, you weren’t too worried about going missing, but a lot of this stigma was directed towards people like you.
 Certainly, not everyone thought like this, but you can recall a time last week when you were walking home at night.
-A group of herbivores were in front of you, and even though you were walking a distance behind them, they quickly sped up and walked down another road once they realized you were going the same way.
 - head to work
 	Jesse: Well, guess I’d better get going.
-You eat the last of your muffin as you get your keys, locking the door as you leave. 
+You eat the last of your muffin as you get your keys, locking the door as you leave.
 Taking the elevator to your parkade, you turn on your music as you pull your car out onto the main road.
 jump go_to_work
 
 
 label sod_day2
-
-You slowly open your eyes as you’re greeted by the usual drone of cars outside. 
-It’s almost peaceful, in a way. 
-You start to stretch but flinch as your alarm clock suddenly blares loudly into the silence. 
+do Game.play_music("Chill1")
+You slowly open your eyes as you’re greeted by the usual drone of cars outside.
+It’s almost peaceful, in a way.
+You start to stretch but flinch as your alarm clock suddenly blares loudly into the silence.
 You glare at it and restrain yourself enough as you hit the snooze button to not smash it to pieces.
-Grumbling, you make your way to the kitchen to have your usual breakfast of coffee and a muffin. 
+Grumbling, you make your way to the kitchen to have your usual breakfast of coffee and a muffin.
 You once again sit in front of the TV, and change it to the news station.
-TV: [i]What’ve we got today…[/i]
-You flip through channels a bit until you find a talk show discussing the most profitable business leaders across the country. 
+do Game.play_music("Chill2")
+TV (Reporter): [i]"What’ve we got today…"[/i]
+You flip through channels a bit until you find a talk show discussing the most profitable business leaders across the country.
 You stare at the numbers on the screen, not really hearing what’s being spoken about, until a name catches your attention.
-TV: [i]“...and that Director Connie, can we talk about her? Never before have I seen someone come up from out of nowhere like that, it’s crazy!"[/i]
+TV (TV): [i]“...and that Director Connie, can we talk about her? Never before have I seen someone come up from out of nowhere like that, it’s crazy!"[/i]
 Your eyes snap up from the numbers scrolling across the bottom, wide, as you listen on.
-TV: [i]"Profit margins for her companies are through the roof! Recently, her newest addition seems to be an investment firm called Blurr Sector. Strangely enough though, this place seems to be more on the side of “breaking even” than “profit”, if you know what I mean…a bit strange considering her reputation, but it hasn’t gone under yet!"[/i]
-Jesse: [i]Wow, I didn’t think she was that popular…maybe some of that will rub off on me, and I can finally get a place with an in-suite washer and dryer…[/i]
-You flip the channels a bit and eventually land on the news channel. A live feed of a crime scene is shown of what you recognize as downtown. There’s a cluster of police officers around the area. A reporter gives a breakdown of the situation.
-TV: [i]“An attack last night in the downtown area on an unsuspecting individual. While not fatal, reports indicate that the assailant fought the victim in what appeared to be a robbery, but quickly turned much more serious as the victim, twenty-nine year old Jack Drezin, had several of his fingers maimed.”[/i]
-TV: [i]“Police were quick to establish a motive as this is not the first time we’ve seen an attack like this. Drezin, being a cow, states that he believes this was a hate crime, and he was the victim of another carnivore attack on a herbivore. Drezin gave a statement this morning at Fairway Hospital on what happened last night.”[/i]
-TV: [i]“This big, hulking wolf came up to me, asking for some money, and when I said I didn’t have any, she came for me. She started, like…reaching for my pockets, I guess. It was when I tried to push her away that she bit my hand and didn’t let go. Could’ve been worse, really. Juut glad I’m here now.”[/i]
-TV: [i]“Drezin is expected to make a full recovery. Meanwhile, support from a group of citizens, carnivores included, made their way to Drezin’s room today to wish him well. A spokesperson for a group of carnivores had this to say.”[/i]
-TV: [i]“What happened last night was a shameful and depraved act from a member of our community. I must stress that while it is easy to judge, one must remember not to generalize. Not all carnivores are like the person who attacked Mr. Drezin last night.”[/i]
-TV: [i]“In other news-”[/i]
+TV: [i]"Profit margins for her companies are through the roof! Recently, her newest addition seems to be an investment firm called Blurr Sector."[/i]
+TV: [i]"Strangely enough though, this place seems to be more on the side of “breaking even” than “profit”, if you know what I mean…"[/i]
+TV: [i]"a bit strange considering her reputation, but it hasn’t gone under yet!"[/i]
+Jesse: [i]Wow, I didn’t think she was that popular…[/i]
+Jesse: [i]Maybe some of it will trickle down to me and I can finally get an in-suite washer and dryer[/i]
+You flip the channels a bit and eventually land on the news channel. 
+do Game.play_music("Chill3")
+A live feed of a crime scene is shown of what you recognize as downtown. 
+There’s a cluster of police officers around the area. A reporter gives a breakdown of the situation.
+TV (Reporter): [i]“An attack last night in the downtown area on an unsuspecting individual. ”[/i]
+TV (Reporter): [i]“While not fatal, reports indicate that the assailant fought the victim in what appeared to be a robbery...”[/i]
+TV (Reporter): [i]“but quickly turned much more serious as the victim, twenty-nine year old Jack Drezin, had several of his fingers maimed.”[/i]
+TV: [i]“Police were quick to establish a motive as this is not the first time we’ve seen an attack like this. ”[/i]
+TV: [i]“Drezin, being a cow, states that he believes this was a hate crime, and he was the victim of another carnivore attack on a herbivore.”[/i]
+TV: [i]“Drezin gave a statement this morning at Fairway Hospital on what happened last night.”[/i]
+TV (TV): [i]“This big, hulking wolf came up to me, asking for some money, and when I said I didn’t have any, she came for me.”[/i]
+TV (TV): [i]“She started, like…reaching for my pockets, I guess. It was when I tried to push her away that she bit my hand and didn’t let go.”[/i]
+TV (TV): [i]“Could’ve been worse, really. Juut glad I’m here now.”[/i]
+TV: [i]“Drezin is expected to make a full recovery. Meanwhile, support from a group of citizens, carnivores included, made their way to Drezin’s room today to wish him well. ”[/i]
+TV (Reporter): [i]“A spokesperson for a group of carnivores had this to say.”[/i]
+TV (TV): [i]“What happened last night was a shameful and depraved act from a member of our community. I must stress that while it is easy to judge, one must remember not to generalize. ”[/i]
+TV (TV): [i]“Not all carnivores are like the person who attacked Mr. Drezin last night.”[/i]
+TV (Reporter): [i]“In other news-”[/i]
+do Game.play_music("Chill1")
 You switch off the TV, sinking back into the couch a little as you do.
 Jesse: Sigh.
-Unfortunately, this wasn’t the first time an attack like this had happened. It seems like the wolf in question was trying to eat that cow. 
-Arguably more harmful was the stigma that came with it. Events like this have been increasing public discontent for a little while now: it seemed like every day carnivores were under a harsher and harsher light. 
-Of course, most of them hadn’t attacked anyone, but that didn’t stop people from acting like they had. There seemed to be protests every other week at city hall calling for increased police presence and harsher policies towards carnivores. The latter attracted a lot of public backlash, which created it’s own series of issues.
-What a mess…
-Everyone knew that there was a mindset among some people that things should return to “predator and prey”, but this was a very old way of thinking. 
+Unfortunately, this wasn’t the first time an attack like this had happened. 
+It seems like the wolf was trying to eat that cow. Arguably more harmful was the stigma that came with it. 
+Events like this have been increasing public discontent for a little while now. 
+It seemed like every day carnivores were under a harsher and harsher light. 
+Of course, most of them hadn’t attacked anyone, but that didn’t stop people from acting like they had. 
+There seemed to be protests every other week at city hall calling for increased police presence and harsher policies towards carnivores. 
+The latter attracted a lot of public backlash, which created it’s own series of issues.
+Jesse: [i] What a mess…[/i]
+Everyone knew that there was a mindset among some people that things should return to “predator and prey”, but this was a very old way of thinking.
 Being inherently racist and discriminatory, these groups are ostracized in today’s world. Although, some people had decided to take things into their own hands, it seems.
 You stand, quickly washing up, trying to push those thoughts out of your head.
 - head to work
@@ -73,6 +99,7 @@ You stand, quickly washing up, trying to push those thoughts out of your head.
 
 label sod_day3
 
+do Game.play_music("Chill1")
 You wake up in time to turn your alarm off before it blares into the silence. 
 Jesse: [i]What’s the point of buying this if I just wake up anyway?[/i]
 You drag yourself out of bed.
@@ -85,35 +112,45 @@ Jesse: [i]Maybe I’ll have some time to look around.[/i]
 	jump go_to_work
 
 label sod_day4
-As usual, your alarm clock screams at you to wake up. Bleary eyed, you roll over to turn off the alarm, but a jolt of panic rushes through you as you see the walkie-talkie on your nightstand, still lightly buzzing static from the night before.
+do Game.play_music("Chill1")
+As usual, your alarm clock screams at you to wake up. 
+Bleary eyed, you roll over to turn off the alarm, but a jolt of panic rushes through you as you see the walkie-talkie on your nightstand, still lightly buzzing static from the night before.
 You calm down, realizing you’re not in any immediate danger.
 Jesse: Today’s the day.
 Perhaps it was the impending task you had ahead of you, but you get ready much quicker today. You have one hand on the doorknob before you stop yourself for a moment.
 Jesse: Woah, woah, wait a second.
 You run back to your room, gather Jordan’s things, and sit down for a moment.
-I need to have a plan of some kind, I can’t just run up in there guns blazing. She doesn’t seem like an idiot, though. If I go in there without a plan, I’m dead.
-She said to meet her in my office, does that mean Jordan will be there too? She seems pretty hellbent on getting Jordan’s stuff…must be because she knows it’ll expose her and what she’s doing.
-Jesse: But what do I do?! I don’t wanna just give her Jordan’s evidence, she can’t keep getting away with that stuff!
+do Game.play_music("Chill3")
+Jesse: [i]I need to have a plan of some kind, I can’t just run up in there guns blazing. [/i]
+Jesse: [i]She doesn’t seem like an idiot, though. If I go in there without a plan, I’m dead.[/i]
+Jesse: [i]She said to meet her in my office, does that mean Jordan will be there too? [/i]
+Jesse: [i]She seems pretty hellbent on getting Jordan’s stuff…must be because she knows it’ll expose her and what she’s doing.[/i]
+Jesse: [i]But what do I do?! I don’t wanna just give her Jordan’s evidence, she can’t keep getting away with that stuff![/i]
 As you pace around the room, talking to yourself, you nearly slip on something on the floor.
 Jesse: What the-
-You look down to see what you stepped on, and see the keycard Hugo gave you.
-Jesse: Oh that… guess it fell out of my pocket last night.
-Jesse: …
-Jesse: …wait a minute. What if I…went to security beforehand? Didn’t Hugo mention there was a camera looking into our office? I could at least see what I’m up against
-Jesse: I’m willing to bet that she’ll have some of those guards from yesterday with her though. If I could just lure them away somehow, I’d be able to deal with her one-on-one, and then…
-Jesse: You trace your fingers over your pocket, feeling Hugo’s pistol sitting there menacingly.
-Jesse: Well, I hope I won’t have to use this on someone, but I might be able to gain some…leverage…if I need to.
+You look down to see what you stepped on, and see the [b]keycard[/b] Hugo gave you.
+Jesse: [i] Oh that… guess it fell out of my pocket last night.[/i]
+Jesse: [i] …wait a minute. What if I…went to security beforehand? [/i]
+Jesse: [i] Didn’t Hugo mention there was a camera looking into our office? I could at least see what I’m up against.[/i]
+Jesse: [i] I’m willing to bet that she’ll have some of those guards from yesterday with her though. [/i]
+Jesse: [i] If I could just lure them away somehow, I’d be able to deal with her one-on-one, and then…[/i]
+You trace your fingers over your pocket, feeling Hugo’s pistol sitting there menacingly.
+Jesse: [i] Well, I hope I won’t have to use this on someone, but I might be able to gain some…leverage…if I need to.[/i]
 The thought scares you a bit, but you take a few deep breaths. Looking at the time, you’ve still got about an hour before work starts.
-Jesse: I’ll just play it cool…what did Jordan say?”Act like you’re supposed to be there?”
-You go to your room to gather Jordan’s things. Walking over to the door, you ready yourself for the day to come. You close your eyes, going over your half-plan.
-Jesse: Well, I don’t have any other ideas…
+Jesse: [i] I’ll just play it cool…what did Jordan say? ”Act like you’re supposed to be there?”[/i]
+You go to your room to gather Jordan’s things. Walking over to the door, you ready yourself for the day to come. 
+You close your eyes, going over your half-plan.
+Jesse: [i] Well, I don’t have any other ideas…[/i]
+do Game.play_music("Chill1")
 As you walk out of the room, you laugh to yourself, both at the humour of the situation, and of the absurdity of what you’re trying to do. 
-Jesse: Maybe I’ll put this on my resume if I ever apply to the FBI.
+Jesse: [i] Maybe I’ll put this on my resume if I ever apply to the FBI.[/i]
 With that, you cross the street to your car. Looking around, you don’t see anyone, so you get in, and drive to work.
 do Game.switch_level("AtriumLevel")
 [end_timeline]
 
 label go_to_work
-do Game.switch_level("AtriumLevel")
+do Game.stop_music()
 You head to work.
+do Game.set_level_init_label("AtriumLevel", "day_start")
+do Game.switch_level("AtriumLevel")
 [end_timeline]
