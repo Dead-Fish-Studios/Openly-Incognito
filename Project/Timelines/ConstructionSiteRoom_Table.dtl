@@ -15,16 +15,15 @@ if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
 label croc_enter
 # cumulative: 40mins progressed from inspecting table (10m), floor (10m), and door (20m)
 do Game.reset_camera()
+do Game.play_music("Fast1")
 Before you can look anymore, you hear a pair of voices outside growing louder, and a set of squeaking wheels, like the cart you saw earlier.
 You need to think quick\:
 - Hide behind the table
 	Quickly dashing under the table, you shuffle your way to the back and crouch down into the shadow.
 	In the dim lighting, you’re practically invisible to people just walking by. You hope, at least.
-	# editor's note: too cheesy?
-	# You murmur to yourself, grinning:
-	# Jesse: And this, Jesse, is where you uncover the evil plot. Wonder what it’ll be…
 	You hold your breath as two people walk into the room, pushing a cart with more crates on it.
-	A pair of large crocodiles. They’re both in black suits and dark sunglasses. They walk by you, to the door in the back. You don’t recognize them from anywhere, although you can’t really get a good look at them. They do appear quite big though, even from your crouched position.
+	A pair of large crocodiles. They’re both in black suits and dark sunglasses. They walk by you, to the door in the back. 
+	You don’t recognize them from anywhere, although you can’t really get a good look at them. They do appear quite big though, even from your crouched position.
 	A man’s voice breaks the silence, slightly growling as he talks.
 	Croc_Man: "I hate going this way, why’d we have to be on delivery duty today?"
 	A woman’s voice answers, mimicking his growls.
@@ -33,6 +32,7 @@ You need to think quick\:
 	# cumulative: 50
 	do Game.tod_progress(10)
 	You squint your eyes in confusion as you take in what the man just said.
+	[sound path="res://assets/audio/sfx/Oneshot/beep_click.mp3" volume="0.0"]
 	As the pair reaches the door, the man pulls out a keycard and taps it lightly on the sensor. A distinct beep rings out, and you hear a series of locks disengage from the door.
 	The woman opens the door, and you quickly duck down completely behind the chair, as the room fills with a light emanating from the doorway.
 	As the pair move beyond the door, you hear the cart bump into something, and a crate hit the ground.
@@ -42,6 +42,7 @@ You need to think quick\:
 	Croc_Woman: Slow down, you idiot! Do you have any idea what would happen if that broke? Jackson would kill us before the end of the day! This stuff is worth more than your life!
 	Croc_Man: Sorry, sorry…
 	You hear some shuffling and scraping as the pair lift the box back onto the cart.
+	do Game.play_music("Main3", 0.0, false)
 	The woman then closes the door behind her, and you hear the locks engage, the room being plunged into semi-darkness again.
 	# cumulative: 80
 	do Game.tod_progress(20)
@@ -79,6 +80,7 @@ You need to think quick\:
 	# cumulative: 70
 	do Game.tod_progress(30)
 	do Game.switch_level("ConstructionSiteLevel")
+	do Game.play_music("Main3")
 	You feel the pair watch you walk away, hearing them push the swinging doors open. Before they close, you hear the man speak in a loud whisper.
 	Croc_Man: "Do you think she was looking for the basement?"
 	Croc_Woman: "Even if she was, I don’t think she found it. We’ll have to put more people on patrol if we want to-"
@@ -97,5 +99,6 @@ You need to think quick\:
 	- (move on)
 	# cumulative: 100
 	do Game.tod_progress(20)
+do Game.play_music("Main", 0.0, false)
 do Game.set_POI_label("ConstructionSiteRoomLevel", "TablePOI", "croc_done")
 [end_timeline]

@@ -1,0 +1,100 @@
+do Game.play_music("Main3")
+do Game.tod_progress(10)
+do Game.set_POI_visible("FactoryLevel", "ExitPOI", false)
+do Game.reset_camera()
+[sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0" bus="Master"]
+As the elevator reaches the top, you and Jordan step out into the dim room.
+Jesse: What now?
+Jordan: Now we get the hell out of here. I’ll contact headquarters real quick and we can set up a raid on this place.
+Jordan: This’ll be the biggest bust in this city's history…hopefully it can settle a lot of that public fear I’ve been seeing.
+You hear a rustling sound and before you can do anything, Jordan, quick as a flash, whips out her pistol and aims behind you. You whip around, and your eyes narrow.
+do Game.tod_progress(10)
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "JacksonPOI", true)
+do Game.play_music("Fast1")
+Jackson emerges from behind the table leaning against the wall, gun drawn and pointed at Jordan.
+Jackson: Got quite the reaction time on you.
+Jordan: Drop it Jackson, it’s over for you. This whole place is going down.
+Jackson: I would beg to differ. You think we’re idiots?
+Jackson: We’ve been onto you for a while now. The only reason you’re still alive is because we wanted to see how much you knew first.
+Jackson: Can’t fix a leak if you don’t know where the hole is. The FBI though…didn’t imagine things were that bad.
+Jordan’s expression is blank, but she stares unwaveringly at Jackson. Jackson turns his eyes on you, still aiming at Jordan.
+Jackson: On the other hand…I must give it to you, Jesse, I had no idea you were in on this too. Oh well, two more for the lab I suppose."
+Jordan: Why do this Jackson? You’re a crow! What if they come after you?
+do Game.tod_progress(10)
+Jackson gives a cold laugh.
+Jackson: As long as I bring in more profit, they don’t care. I’m a huge asset to them! They wouldn’t have developed this stuff nearly as much if it weren’t for me.
+Jackson: Besides…I don’t just eat leaves, you know…
+Jackson’s words send a chill down your spine.
+Jordan: So all those innocent people disappearing at night, that was your doing?
+Jackson: Well, not me personally. I find the targets and send people out. Testing things in beakers takes quite a while. Very helpful to have some…participants.
+Jordan: Do you not care at all that people are dying?! You’re torturing and killing people down there!
+do Game.tod_progress(10)
+Jackson: You know, Jordan? I used to care a bit. The more I’ve worked here, though, the more I learned how much you can achieve if you don’t. How much you can gain.
+Jackson: And what now? What could possibly be the point of Promax?!
+Hearing this, Jackson gives a small laugh.
+Jackson: Oh yes, one of my better ideas. The Director got an offer a while back from some carnivore-supremacy group.
+Jackson: I don’t really care for politics, but I got the gist of it\: “blah blah blah, we want to send a message, blah blah blah, eat herbivores, blah blah blah, distribute this drug.
+Jackson: All I needed to know was that we’d be set for life if we kept shipping orders of this stuff out.
+do Game.tod_progress(10)
+Jesse: So this buyer wants to increase the size of herbivores to eat them? And you see no problem with that?
+Jackson: No, I just don’t care. I’ve made so much money from this I could practically buy this place out…but where’s the fun in that?
+do Game.play_music("Fast5")
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "JacksonPOI", false)
+do Game.set_POI_visible("ConstructionSiteLevel", "JordanPOI", true)
+[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0"]
+Suddenly, Jordan shoots Jackson in the chest, making him keel over in pain.
+do Game.switch_level("ConstructionSiteLevel")
+Before you can register what happens, she drags you outside the room.
+Jesse: Oh my god, you shot him…
+Jordan: Sorry for dragging that out, I just needed a little something.
+Jordan grins and reaches her hand into her suit, pulling out what looks like a cassette player.
+Jesse: What is that?
+Jordan: I believe this is what they call “the nail in the coffin.”
+do Game.tod_progress(10)
+Looking confused, Jordan explains.
+Jordan: It’s a voice recorder. I got him to admit to everything.
+Jordan: I’d like to see him try to weasel out of this. Interesting though, sounds like there’s another player in this picture.
+Jordan: Let’s get the hell out of here though, he’s probably going to get some help.
+do Game.set_POI_visible("AtriumLevel", "JordanPOI", true)
+do Game.switch_level("AtriumLevel")
+do Game.set_POI_visible("ConstructionSiteLevel", "JordanPOI", false)
+You and Jordan try not to run, fearful of drawing attention to yourselves, and speed walk towards the reception area. You walk across the room, and are about to reach the entrance, when Jordan stops you.
+Jordan: Shit!
+You look through the glass doors and see a large group, clad in black suits and glasses, standing out front the entrance. The two crocodiles you saw before are among them.
+You won’t be able to leave this way without being seen. Jordan looks panicked, eyes racing across the people outside.
+do Game.tod_progress(10)
+Jordan: Okay…okay…Jesse, listen to me. This info has to reach headquarters. Here, take this…
+She takes out her voice recorder, camera, and walkie-talkie, forcing them into your hands.
+Jesse: What’re you-
+Jordan: Hide behind the reception desk. I’ll distract them so you can get out.
+Jordan: Don’t worry about me. I did track in highschool, I’ll try and do a lap of the place or something.
+Jordan: Call the police as soon as you get home! And don’t let those things out of your sight!
+Jesse: But-
+do Game.tod_progress(10)
+[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0"]
+Without another word, Jordan drags you over to the receptionist desk, forces you down behind it, and then draws out her pistol, shooting the glass of the doors out.
+The guards' heads snap to the entryway.
+"Shots fired! They’re over there!"
+[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0"]
+[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0" bus="Master"]
+The people outside draw their own weapons and began to return fire, but Jordan was already around the corner, out of sight.
+do Game.tod_progress(10)
+The guards outside storm into the building and run down the same hall Jordan did. The two familiar crocodiles bring up the rear, and you catch a bit of their conversation.
+Croc_Man: Didn’t Jackson say there were two of them? A greyhound and a red fox? Where could the other one be?
+Croc_Woman: Don’t know, but they can’t get far. 
+Croc_Woman: Even if they get out, we’ve got people heading to the police station right now to intercept them. 
+Croc_Woman: Thank goodness Jackson radioed in what happened, he sounded pretty bad.
+Your heart sinks listening to the woman.
+do Game.tod_progress(10)
+Croc_Man: Is he gonna be alright?
+Croc_Woman: Don’t know. Heard he’s getting treated right now.
+The pair round the corner and run out of earshot.
+Not having much time to think about what just happened, you get up, and run out of the building to your car.
+Jesse: Oh my god, Jordan…
+Not looking back, you hop in your car and head home as fast as you can, not knowing where else to go.
+do Game.tod_progress(10)
+do Game.set_POI_visible("AtriumLevel", "JordanPOI", false)
+do Game.play_music("Fast1")
+do Game.switch_level("HomeLevel")
+jump Home/eod_day3
+do Game.switch_level("ConstructionSiteRoomLevel")

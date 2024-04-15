@@ -1,4 +1,5 @@
 label hugo_encounter
+do Game.play_music("Chill")
 do Game.set_POI_visible("BreakroomLevel", "CouchPOI", false)
 # cumulative: 20
 do Game.tod_progress(20)

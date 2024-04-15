@@ -4,6 +4,7 @@ else:
 	jump default
 
 label day1_first
+do Game.play_music("Chill")
 Walking in, you’re greeted by the familiar scene of the desks, chairs, and filing cabinets.
 The [b]Relations Department[/b] - your department.
 Being one of the smaller departments of the company, the office wasn’t much bigger than the average meeting room.
@@ -27,9 +28,11 @@ For now though, you’re alone in the office.
 do Game.zoom_camera_xy(185, 200, 2)
 You shut the door behind you, and walk over to your desk, sinking down into your squeaky chair and leaning back.
 Jesse: Sigh…wonder where Jordan is. Did she go to Molly’s meeting too?
-Being Monday, today was the day when all the department heads met together for a short meeting. Typically this was the time where you and Jordan would have a few moments together before Molly came into the office.
+Being Monday, today was the day when all the department heads met together for a short meeting.
+Typically this was the time where you and Jordan would have a few moments together before Molly came into the office.
 Lately the two of you have taken to trying to scare her when she would walk into the office, and as such, have used this time to plan out your next attack.
-Jordan not being here was a bit of a surprise though. Molly would usually bring one of you with her in case she needed help bringing files back down, but she had said that this week was just a check in, and no planning was going on.
+Jordan not being here was a bit of a surprise though.
+Molly would usually bring one of you with her in case she needed help bringing files back down, but she had said that this week was just a check in, and no planning was going on.
 Jesse: Guess I’ll just get started.
 do Game.set_level_init_label("OfficeLevel", "default")
 [end_timeline]
@@ -49,63 +52,42 @@ if {OTHER.Day} == 3:
 		if Game.get_POI_label("OutsideSecurityLevel", "SecurityDoorPOI") == "done":
 			jump day3_first
 Jesse: Desk sweet desk.
+[end_timeline]
 
 
 label day4AlarmDone
-do Game.set_POI_visible("OfficeLevel", "JordanDay4POI", true)
-You try to push open the door, and are surprised to feel that it’s locked. You loudly whisper across the door.
-Jesse: Jordan? Jordan, are you there?
-Jordan: Jesse?! What are you doing here?
-do Game.tod_progress(20)
-Jesse: What do you think?! Why is the door locked?
-Jordan: She didn’t want me getting out, but-I didn’t think you’d come back Jesse, what about the evidence?
-Jesse: I’ve got it on me-
-do Game.tod_progress(30)
-Jordan: You’ve got it on you?! Why would you bring it back here?
-Jesse: They were watching my house, I didn’t know if they’d just break in and find it, but-never mind that! Unlock the door and let’s go!
-Jordan: I can’t, she changed the code…
-Jesse: Of course she did!
-do Game.tod_progress(20)
-The door to your office had a lock in it’s handle that you could punch in on either side. You never really used it, and just left it unlocked since none of you left valuables in your office.
-It seemed Connie punched in a new code before she left so Jordan was trapped in the room.
-Jordan: They took my gun so I can’t bust my way out, but-
-Jesse: I’ve still got Hugo’s!
-do Game.tod_progress(20)
-Jordan: Really? Okay, well…just aim at the handle and shoot it a few times, we can try to force it open.
-Jesse: A-alright, just…stand back!
-Standing back, you take out Hugo’s pistol, ready yourself, and shoot twice at the handle of the door. The handle is bent at an odd angle.
-do Game.tod_progress(20)
-I think that did it! Now, bust it down.
-You shove your shoulder against the door. The door bursts open as you sill into your office area.
 Jordan: Are you alright?
 do Game.tod_progress(20)
 Jesse: Yeah, I’m fine…what about you? What happened to you?
-Jordan: Ah, well, I thought maybe I could use a vent to find another way out, but they caught me. 
-Jordan: They just kept me here though…think it was because Connie thought she could draw you back to me. 
+Jordan: Ah, well, I thought maybe I could use a vent to find another way out, but they caught me.
+Jordan: They just kept me here though…think it was because Connie thought she could draw you back to me.
 Jordan chuckles darkly to herself.
 Jordan: Seemed pretty pissed once she realized I didn’t have anything on me.
+do Game.play_fire_alarm(false)
+do Game.stop_music()
 Suddenly, the fire alarm shuts off, blanketing the empty building in an eerie silence.
 do Game.tod_progress(20)
 Jesse: Shit, they must've realized there’s no fire. We gotta go, now!
-Connie: Not so fast.
+do Game.play_music("Fast1")
 do Game.set_POI_visible("OfficeLevel", "ConnieDay4POI", true)
-You spin around and are horrified to see Connie standing behind you, flanked by two security guards, guns at the ready. She gives you a smug smirk as she walks into the room, turning and facing you.
+Connie: Not so fast.
+You spin around to see Connie standing behind you, flanked by two security guards, guns at the ready. 
+She gives you a smug smirk as she walks into the room, turning and facing you.
 Connie: Thought that was mighty convenient timing…and would you look at that…nine o’clock, sharp.
 do Game.tod_progress(20)
-Your hands ball into fists, furious at Connie.
 Jesse: How can you do this? All those people gone, because of you…
 Connie looks at you with amused eyes. Her airy voice is gone.
-Connie: That’s what you’re thinking about right now? 
+Connie: That’s what you’re thinking about right now?
 Jesse: How could I not? And you’re making these…fattening pills so people can eat herbivores?!
 Connie gives a deep sigh, closing her eyes as she pinches the bridge of her nose.
 Connie: Look, Jesse…do you think you’re special? You know how many times I’ve heard those same lines over and over and over again?
 do Game.tod_progress(20)
-Connie: There’s a market for everything in this world: someone wanted these pills and I could make them. Who cares? If I don’t do it, someone else will. 
+Connie: There’s a market for everything in this world\: someone wanted these pills and I could make them. Who cares? If I don’t do it, someone else will.
 Jesse: Are you seriously trying to justify mass murder?!
-Connie: Why do you care, Jesse? You’re a fox, it’s not like you’re in any danger. Look at me: a flamingo who didn’t care, and was able to push boundaries like no one else! Now I’m one of the most successful people in the world! 
+Connie: Why do you care, Jesse? You’re a fox, it’s not like you’re in any danger. Look at me\: a flamingo who didn’t care, and was able to push boundaries like no one else! Now I’m one of the most successful people in the world!
 do Game.tod_progress(10)
 Connie: Everything you do in life has consequences. You’d be an idiot if you just let opportunities slip away, thinking about what’s “right” and “wrong”.
-Connie: You can stand there judging me all you want, but in the meantime, I’ll be doing something that matters. 
+Connie: You can stand there judging me all you want, but in the meantime, I’ll be doing something that matters.
 Connie: At the end of the day, people are going to remember me, and not those who whined all the time, complaining about whatever new wave of political correctness has gripped them.
 do Game.tod_progress(10)
 You feel a surge of anger in your chest. Jordan appears to be more composed, although she still glares daggers at Connie.
@@ -116,13 +98,13 @@ As you begrudgingly take out the items, Jordan looks like she’s about to argue
 do Game.tod_progress(10)
 Connie: Excellent!
 Connie gives a sweet smile as she takes Jordan’s evidence. You feel your hands shake in anger.
-Connie: You know, I wasn’t kidding when I said you could work for me. You could have anything you wanted. Really: there’s not many people out there who would stand up to me.
+Connie: You know, I wasn’t kidding when I said you could work for me. You could have anything you wanted. Really\: there’s not many people out there who would stand up to me.
 Connie gives you an evil smile, outstretching a hand.
 Connie: Whaddya say? Ready to join me in the real world?
 You swat Connie’s hand away.
 do Game.tod_progress(10)
 Jesse: Like hell I would.
-Connie gives a sigh, but she doesn't look too upset. 
+Connie gives a sigh, but she doesn't look too upset.
 Connie: Oh well, can’t say I didn’t see that coming. No matter. Two more for the labs! Works out pretty well actually, won’t have to send another team out tonight.
 Connie raises her hand as she smiles, closing her eyes.
 Connie: Take care of them.
@@ -133,6 +115,7 @@ You completely forgot about the guards. You and Jordan look behind Connie. Conni
 The doorway is empty, and the two guards are nowhere to be seen. You were so focused on Connie that you didn’t notice them in the hallway, but where could they have gone?
 A familiar voice rings out.
 do Game.tod_progress(10)
+do Game.play_music("Fast5")
 Hugo: I think they took an early break.
 do Game.set_POI_visible("OfficeLevel", "HugoDay4POI", true)
 The huge crocodile walks through the doorway, and in front of Connie.
@@ -148,30 +131,36 @@ Jesse: What did you say? Something about not letting opportunities slip away? We
 do Game.tod_progress(20)
 Connie looks furious, but shuts her mouth. She closes her eyes, exhaling, before opening them, glaring as she smiles.
 Connie: I’ll be out soon enough. None of that conclusively proves I was directly involved. Worst I’m going to get is-
-Jordan: 
-I wouldn't be so sure about that.
+Jordan: I wouldn't be so sure about that.
 Connie looks at Jordan, eyes blazing.
 Connie: Oh? And why’s that?
 Jordan: Three testimonies against yours? And all this evidence? That’s a wrap.
 Jordan steps forward, taking out her FBI badge.
 Jordan: Director Connie, you’re under arrest for…well, a whole lot of things, I’m sure.
-Connie: Connie’s arm twitches, but under the intimidating gaze of Hugo, allows herself to be searched. Jordan takes her items back, along with Connie’s pistol. 
+Connie’s arm twitches, but under the intimidating gaze of Hugo, allows herself to be searched. 
+Jordan takes her items back, along with Connie’s pistol.
+do Game.play_music("Chill3")
 Jesse: What now?
 do Game.tod_progress(20)
 Jordan: Now, we make a call.
 Jordan walks over to the phone on her desk and dials a number.
-Jordan: Lieutenant? This is Agent Sniffer. We can proceed to phase three now, send a team over to Blurr Sector. We’ve got quite a few arrests to make today…
+Jordan: Lieutenant? This is Agent Sniffer. We can proceed to phase three now, send a team over to Blurr Sector. 
+Jordan: We’ve got quite a few arrests to make today…
 do Game.set_POI_visible("AtriumLevel", "HugoDay4POI", true)
 do Game.set_POI_visible("AtriumLevel", "JordanDay4POI", true)
 do Game.switch_level("AtriumLevel")
-The next few hours are a blur. The police swarmed the building, rounding up anyone and everyone they could find. A separate unit takes Connie away to some detention center.
+do Game.play_music("Main")
+The next few hours are a blur. 
+The police swarmed the building, rounding up anyone and everyone they could find. 
+A separate unit takes Connie away.
 After everyone’s cleared out, you meet with Hugo and Jordan in the reception area.
 Jesse: Hugo, how did you know where we were?
 Hugo looks pretty pleased with himself.
 do Game.tod_progress(20)
-Hugo: Well, I would’ve been on the run by now, but I heard that Jordan got captured, and I didn’t want to just leave her here. I came back today, trying to think of something to do, but then…the fire alarm went off. I assume that was your doing?
-You grin, nodding to Hugo. He smiles and shakes his head before continuing. 
-Hugo: I went to security to try and look for Jordan on the cameras, but I saw you two being held at gunpoint in your office. 
+Hugo: Well, I would’ve been on the run by now, but I heard that Jordan got captured, and I didn’t want to just leave her here. 
+Hugo: I came back today, trying to think of something to do, but then…the fire alarm went off. I assume that was your doing?
+You grin, nodding to Hugo. He smiles and shakes his head before continuing.
+Hugo: I went to security to try and look for Jordan on the cameras, but I saw you two being held at gunpoint in your office.
 do Game.tod_progress(20)
 Jordan: But how did you take those guys out without us hearing?
 Hugo: I may be big, but that doesn’t mean I can’t be quiet. I pinged the security pagers that there was an emergency in the security room, then…
@@ -184,7 +173,7 @@ do Game.tod_progress(20)
 You punch Jordan in the shoulder.
 Jordan: What was that for?!
 Jesse: Telling me to leave you! You really think I’d just let you get killed?!
-You and Jordan glare at each other before breaking out into laughter. Hugo chuckles amusedly. 
+You and Jordan glare at each other before breaking out into laughter. Hugo chuckles amusedly.
 Hugo: So Miss FBI, what’s the next big corporation to take down?
 Jordan looks at Hugo, more serious now.
 do Game.tod_progress(20)
@@ -197,6 +186,7 @@ do Game.tod_progress(20)
 Jesse: Works with me.
 Hugo: I’m unemployed now, think you can spot me?
 As the three of you walk out the door, you feel the stress of the past few days wash off of you, ready to finally unwind a little. With Blurr Sector most likely going to be shut down, you were in the same boat as Hugo.
-Jesse
 do Game.tod_progress(20)
-I might look into that agent job, sounds pretty fun…think you can be a reference for me Jordan?
+Jesse: I might look into that agent job, sounds pretty fun…think you can be a reference for me Jordan?
+do Game.end()
+[end_timeline]

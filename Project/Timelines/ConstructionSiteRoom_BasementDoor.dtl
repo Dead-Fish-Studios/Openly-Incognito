@@ -9,8 +9,14 @@ label inspected
 	jump inspect
 - inspect around the sides
 	There is a little keycard reader to the side of it.
-	Jesse: A keycard reader? In a place like this?
-	jump inspect
+	if {ITEMS.SecurityRoom_Keycard} == false:
+		Jesse: A keycard reader? In a place like this?
+		
+		jump inspect
+	- scan keycard
+		jump day3_jordan
+	- (move on)
+		[end_timeline]
 - (move on)
 if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "croc_done":
 	[end_timeline]
@@ -20,4 +26,26 @@ if Game.get_POI_label("ConstructionSiteRoomLevel", "TablePOI") == "inspected":
 	if Game.get_POI_label("ConstructionSiteRoomLevel", "BasementDoorPOI") == "inspected":
 		if Game.get_POI_label("ConstructionSiteRoomLevel", "FloorPOI") == "inspected":
 			jump ConstructionSiteRoom_Table/croc_enter
+[end_timeline]
+
+label day3_jordan
+You hold the keycard in front of the scanner.
+[sound path="res://assets/audio/sfx/Oneshot/beep_click.mp3" volume="0.0"]
+
+A loud beeping sound plays while the green light blinks a few times. Like last time, you hear the locks disengaging once more.
+As Jordan hands the keycard back to you, a bead of sweat rolls down your face, your expression firm as you stand in anticipation of the doors opening. Jordan has a similar look to her.
+[sound path="res://assets/audio/sfx/Oneshot/elevator_open.mp3" volume="0.0"]
+do Game.reset_camera()
+Suddenly, the doors open, and the familiar bright light blinds you for a moment.
+Jesse: Ah, forgot about that.
+Jordan: Come on, quickly.
+[sound path="res://assets/audio/sfx/Oneshot/elevator_close.mp3" volume="0.0"]
+Jordan presses the button. The doors close and the elevator gives a lurch as it starts to move down.
+You both stand in silence. It’s a bit unnerving not knowing how deep you’re going, but you persevere.
+Jordan: Try to act natural. People usually don’t ask questions if you look like you know what you’re doing.
+Jesse: But they’re looking for a greyhound, right? What are you going to do?
+Jordan: Just try to stay out of sight. If it gets too hairy down there, we’ll just try and leave while we can. I’ve got a little camera on me, so if I can just get a picture of something really incriminating, we should be fine.
+do Game.set_POI_visible("FactoryLevel", "JordanRightPOI", true)
+do Game.switch_level("FactoryLevel")
+Suddenly, the elevator slows down to a stop. The doors open after a moment, and you’re met with a pitch black room.
 [end_timeline]

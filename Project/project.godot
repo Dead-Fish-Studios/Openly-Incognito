@@ -59,6 +59,7 @@ directories/dtl_directory={
 "Factory_Crates": "res://Timelines/Factory_Crates.dtl",
 "Factory_Door": "res://Timelines/Factory_Door.dtl",
 "Factory_Equipment": "res://Timelines/Factory_Equipment.dtl",
+"Factory_Exit": "res://Timelines/Factory_Exit.dtl",
 "Factory_Pills": "res://Timelines/Factory_Pills.dtl",
 "Factory_RedLight": "res://Timelines/Factory_RedLight.dtl",
 "Factory_Remote": "res://Timelines/Factory_Remote.dtl",
@@ -77,6 +78,7 @@ directories/dtl_directory={
 "OutsideSecurity_SecurityDoor": "res://Timelines/OutsideSecurity_SecurityDoor.dtl",
 "RightHallway_init": "res://Timelines/RightHallway_init.dtl",
 "Timelines/ph_timeline": "res://Timelines/ph_timeline.dtl",
+"endcredits": "res://Timelines/endcredits.dtl",
 "ph_item_timeline": "res://Timelines/Items/ph_item_timeline.dtl"
 }
 variables={

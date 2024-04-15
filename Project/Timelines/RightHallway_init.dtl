@@ -1,4 +1,4 @@
-if {OTHER.Day} != 2:
+if {OTHER.Day} == 2:
 	jump jackson_encounter
 else:
 	jump first
@@ -10,8 +10,9 @@ label default
 [end_timeline]
 
 label jackson_encounter
+do Game.play_music("Main3")
 Just as you’re about to turn the corner, you hear some people having a conversation.
-You stop and take a few steps back as you recognize one of the voices\:
+You stop and take a few steps back as you recognize one of the voices.
 It’s Jackson.
 His tone, however, is uncharacteristically friendly. You’ve never seen him so much as smile before, but it’s unmistakably him.
 # cumulative: 10
@@ -38,6 +39,7 @@ do Game.tod_progress(15)
 The two share a laugh as their conversation ends abruptly. You hear a sharp clicking of heels as the other person walks away, slowly getting quieter.
 # cumulative: 50
 do Game.tod_progress(5)
+do Game.play_music("Fast1")
 Suddenly, you hear a different set of footsteps, coming towards you from around the corner.
 It must be Jackson.
 - pretend to be innocent
@@ -62,6 +64,7 @@ do Game.tod_progress(10)
 Not hearing any more footsteps, Jackson lowers his hand, and places them both behind his back, seemingly deep in thought as he looks at you.
 # cumulative: 110
 do Game.tod_progress(10)
+do Game.play_music("Main3")
 He says nothing.
 Jesse: Uh… what’s up Jackson?
 # cumulative: 120
@@ -91,6 +94,7 @@ do Game.switch_level("OfficeLevel")
 do Game.set_POI_visible("RightHallwayLevel", "JacksonPOI", false)
 # cumulative: 170
 do Game.tod_progress(10)
+do Game.play_music("Chill1")
 The office is quiet. Molly and Jordan aren’t here, their empty desks cluttered with a mess of papers.
 You wait with your back to the door, hearing Jackson’s quiet footsteps walk away.
 You let out a sigh and sink to the ground against the door. The sunlight shines inside through the windows.
@@ -103,7 +107,7 @@ You take a few deep breaths, trying to calm yourself down.
 do Game.tod_progress(10)
 You close your eyes, sitting there in silence for a moment before slowly opening them, looking at the silent, dusty office.
 Jesse: I gotta… gotta call the police…
-do Game.zoom_camera(210, 210, 2)
+do Game.zoom_camera_xy(210, 210, 2)
 You reach to the phone on your desk, but stop as you grab the handle, thinking to yourself.
 Jesse: No… no, they wouldn’t believe me, would they? It’s just my word against theirs, and if I accuse them of something like that, would they just “dispose” of me next?
 do Game.reset_camera()
@@ -120,12 +124,13 @@ Jesse: …
 Jesse: Nothing I can do right now, I guess. Who could I talk to about this…
 # cumulative: 220
 do Game.tod_progress(10)
+do Game.play_music("Chill3")
 Your eyes snap wide, realization hitting you like a truck.
 Jesse: Jordan! She would believe me, she’s my best friend!
 do Game.zoom_camera_xy(300, 200, 2)
 You turn to look at Jordan’s desk before realizing she’s not here.
 Jesse: She must be on lunch or something, I’ll leave her a note at her desk.
-do Game.zoom_camera(210, 210, 2)
+do Game.zoom_camera_xy(210, 210, 2)
 Just as you’re about to grab a pen, you walk by your desk and see a note from Jordan.
 - read note
 “Went home, stomach ache \:(“
@@ -133,11 +138,14 @@ Jesse: [i] Of course, the one day she misses… [/i]
 do Game.reset_camera()
 # cumulative: 230
 do Game.tod_progress(10)
+do Game.play_music("Chill1")
 Still, feeling better than you did a few minutes ago, you get ready to leave.
 # cumulative: 240
 do Game.tod_progress(10)
-You take a breath, then open the door. A quick glance down each hallway shows that you’re all alone. You can faintly make out the usual murmur of the atrium reaching down the hallways.
+You take a breath, then open the door. A quick glance down each hallway shows that you’re all alone. 
+You can faintly make out the usual murmur of the atrium reaching down the hallways.
 You step back outside.
 do Game.set_level_init_label("RightHallwayLevel", default)
 do Game.switch_level("RightHallwayLevel")
+do Game.play_music("Main")
 [end_timeline]

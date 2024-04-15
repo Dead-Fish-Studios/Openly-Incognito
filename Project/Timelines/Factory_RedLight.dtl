@@ -1,17 +1,38 @@
+do Game.tod_progress(10)
 You can see the glow of a little red light on the wall across the room.
-Jesse: What’s that?
-Jordan looks to where you’re pointing.
-Jordan: I dunno.
 The pair of you move towards it, and you can see that the red light illuminates a set of switches on the wall.
-Jordan: Try the red one.
-You flick the red switch, and as you do, the room lights up.
+label switches
+- flick first switch
+	[sound path="res://assets/audio/sfx/Oneshot/switch.wav" volume="0.0"]
+	Nothing happens.
+	jump switches
+- flick second switch
+	[sound path="res://assets/audio/sfx/Oneshot/switch.wav" volume="0.0"]
+	Nothing happens.
+	jump switches
+- flick third switch
+	[sound path="res://assets/audio/sfx/Oneshot/switch.wav" volume="0.0"]
+	jump light_on
+- (move on)
+	[end_timeline]
+label light_on
+do Game.play_music("Main3")
 do Game.change_level_background("FactoryLevel", "res://assets/levels/Factory/BG_FactoryShuttersClosed.jpg")
 do Game.set_POI_visible("FactoryLevel", "RedLightPOI", false)
+do Game.set_POI_visible("FactoryLevel", "ShuttersPOI", true)
+do Game.set_POI_visible("FactoryLevel", "CratesPOI", true)
+do Game.set_POI_visible("FactoryLevel", "RemotePOI", true)
+do Game.set_POI_visible("FactoryLevel", "PillsPOI", true)
+do Game.set_POI_visible("FactoryLevel", "DoorPOI", true)
+do Game.set_POI_visible("FactoryLevel", "EquipmentPOI", true)
+do Game.toggle_POI_visible("FactoryLevel", "JordanRightPOI")
+do Game.toggle_POI_visible("FactoryLevel", "JordanLeftPOI")
+do Game.tod_progress(10)
+You flick the switch, and as you do, the room lights up.
+do Game.reset_camera()
 Jordan: Wow, what [i]is[/i] this place?
 It looks like an observation room of some kind. There’s lab equipment strewn across big tables, and two big windows with the shutters closed.
 Jordan: Perfect, this is perfect!
 Jordan exclaims, a wide grin on her face, as she pulls out a tiny camera and starts taking pictures of some of the items across the room.
-do Game.toggle_POI_visible("FactoryLevel", "JordanRightPOI")
-do Game.toggle_POI_visible("FactoryLevel", "JordanLeftPOI")
-
-
+do Game.tod_progress(10)
+[end_timeline]

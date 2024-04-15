@@ -19,45 +19,28 @@ label inspect
 	Quickly making sure that no one was coming, you slip in the doors and quietly close them behind you before turning around.
 	do Game.switch_level("ConstructionSiteRoomLevel")
 - (move on)
-	[end_timeline]
-	
+[end_timeline]
+
 label day3_factory
 As you reach the construction site, you casually take a look around the area. It looks exactly the same as it did when you came here two days ago, but there’s no sign of Jordan.
 Jesse: Maybe she’s inside?
 do Game.switch_level("ConstructionSiteRoomLevel")
 Walking into the room, you still don’t see Jordan anywhere.
 Jesse: Must’ve gotten here before her.
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "JordanPOI", true)
 As you say this, Jordan springs up from behind the table.
 Jesse: Ahh! Oh my god, you scared the shit out of me Jordan!
 Jordan: Sorry, but I didn’t want to be seen. 
-You recover from this momentary panic, hands on your knees, while Jordan asks you a question.
+You recover from this momentary panic, hands on your knees.
 Jordan: Where did you say this keycard scanner was?
-Over there.
+Jesse: Over there.
+do Game.zoom_camera_xy(330, 70, 2)
 The two of you walk over to the scanner on the wall. It’s a little black box with a green light at the top.
 Jordan: Looks like you just tap it. You ready?
-You take a look at Jordan, then at the door behind you. You inhale before looking back at Jordan.
-Jesse: Yeah. Let’s do it.
-Jordan takes out the keycard and holds it on the black surface.
-*Beep*
-A loud beeping sound plays while the green light blinks a few times. Like last time, you hear the locks disengaging once more. 
-As Jordan hands the keycard back to you, a bead of sweat rolls down your face, your expression firm as you stand in anticipation of the doors opening. Jordan has a similar look to her.
-Suddenly, the doors open, and the familiar bright light blinds you for a moment.
-Jesse: Ah, forgot about that.
-Jordan: Come on, quickly.
-The elevator is very similar to the other one, although you realize that this one is a little bit larger on the inside, and instead of the typical button panel with floor numbers, there are just two unlabelled buttons next to each other.
-Jesse: Which one do you think it is?
-Jordan: Hmm…
-After examining it for a moment, Jordan points to the button on the right.
-I would say that one, but I’m not sure, what do you think?
-Jesse: Yeah, I think so too.
-Jordan: Go ahead.
-Jordan gives a mock bow towards the buttons as she gestures towards it with an open hand, a grin on her face. You roll your eyes.
-As you press the button, the elevator doors close, and the elevator gives a lurch as it starts to move down.
-You both stand in silence. It’s a bit unnerving not knowing how deep you’re going, but you persevere. 
-Jordan: Try to act natural. People usually don’t ask questions if you look like you know what you’re doing.
-Jesse: But they’re looking for a greyhound, right? What are you going to do?
-Jordan: Just try to stay out of sight. If it gets too hairy down there, we’ll just try and leave while we can. I’ve got a little camera on me, so if I can just get a picture of something really incriminating, we should be fine.
-do Game.set_POI_visible("FactoryLevel", "JordanRightPOI", true)
-do Game.switch_level("FactoryLevel")
-Suddenly, the elevator slows down to a stop. The doors open after a moment, and you’re met with a pitch black room.
-[end_timeline]
+- yes
+	Jesse: let's do this.
+	jump ConstructionSiteRoom_BasementDoor/
+- not yet
+	Jesse: sorry, could you give me a second?
+	Jordan: okay.
+	[end_timeline]

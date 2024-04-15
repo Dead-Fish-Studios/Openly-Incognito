@@ -54,6 +54,7 @@ position = Vector2(350, 152)
 scale = Vector2(1.5, 1.5)
 show_button = false
 POI_button_offset = Vector2(0, -50)
+hover_info = "Jordan"
 dtl_path = "res://Timelines/Office_JordanDay3.dtl"
 days_flags = 0
 POI_sprite = ExtResource("6_u1e02")

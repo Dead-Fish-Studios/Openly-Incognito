@@ -1,8 +1,10 @@
+do Game.tod_progress(5)
 Jesse: Hey.
 Jordan: Hey, come here for a sec.
 Jordan shows you what she’s doing. She’s holding the walkie-talkie you gave her earlier.
 Jesse: What’s the deal with this thing?
 Jordan: Listen to this.
+do Game.tod_progress(5)
 [sound path="res://assets/audio/sfx/Oneshot/radio_1.mp3" volume="0.0"]
 Jordan messes around with some of the knobs and dials on the walkie-talkie. A familiar screeching sound is emitted once more from the walkie-talkie.
 She starts fiddling with the antenna, and the noise starts to vary wildly in volume before settling as a quiet static.
@@ -10,14 +12,17 @@ She starts fiddling with the antenna, and the noise starts to vary wildly in vol
 	Jesse: What are you doing?
 	Jordan: Listen!
 - (move on)
+do Game.tod_progress(10)
 After a few seconds, you hear a garbled voice coming from the walkie-talkie. It’s difficult to make out what they’re saying due to the static.
 Radio_Unknown_1: …have to…before tonight. When’s…to take us off?
 After a few seconds, another voice starts talking.
 Radio_Unknown_2: Wouldn't be…now…that order coming…isn’t it?
+do Game.tod_progress(5)
 Jesse: Who are those people?
 Jordan: I remember hearing that this place used to use walkie-talkies to communicate. I was kinda surprised, but I didn’t really think anything of it at the time. Until…
 Jesse: Until what?
 Jordan: I began to notice a few things. An out of place pallet here, crate being moved there, people I don’t really see in this place walking around. It wasn’t crazy, but it seemed out of place.
+do Game.tod_progress(5)
 Jordan: One day, I saw another crate being pushed through this place, and I decided to follow them.
 label hub_1
 - Who were they?
@@ -30,11 +35,13 @@ label hub_1
 	Jesse: Were they going to the construction site?
 	Jordan: Bingo. I couldn’t really stay around there for too long though, I didn't want to look suspicious, but I began to wonder.
 - (move on)
+	do Game.tod_progress(5)
 Jesse: Did they go in that elevator?
 Jordan: Well, I couldn’t really follow them for too long. I think one of them noticed that I was up to something, so I had to walk by them to make it seem like I was just going in the same direction…
 Jordan: I don’t think that’ll work again though.
 Jordan: But one day, I saw something. One of the people pushing those carts pulled something out when they were walking into those doors near the site.
 Jordan: I swore they brought it to their mouth, and that’s when it hit me.
+do Game.tod_progress(5)
 Jordan shakes the walkie-talkie with a grin on her face.
 label hub_2
 - You tapped into their comms?
@@ -49,60 +56,71 @@ label hub_2
 	Jordan: Yeah, I do. I’ve never seen someone talk in a walkie-talkie up here before, so it’s gotta be that.
 	jump hub_2
 - (move on)
+	do Game.tod_progress(5)
 As Jordan stops talking, another voice rumbles out from the walkie-talkie. This time, the voices are much clearer.
 Radio_Unknown_1: Is it time?
 Radio_Unknown_2: Not yet, wait for the boss to get down here.
 Jesse: That sounded way better this time.
 Jordan: Yeah, that happens sometimes. I think they must be closer to us down there.
+do Game.tod_progress(5)
 Suddenly, a familiar airy voice rings out from the walkie-talkie. You and Jordan crowd around the radio, leaning in to hear it better.
 Flamingo: Hello everyone! Just checking in. Ground floor, how’s your post doing?
 Jordan: Hmm…haven’t heard that voice before.
 Jesse: I think that the Director!
 Jordan: Wait, I think you’re right! I’ve never heard her on here before…
+do Game.tod_progress(5)
 Radio_Unknown_1: Uh…f-fine! Ground floor is fine. Nothing to report.
 Flamingo: Excellent.
 After a few moments, the two previous voices start talking again.
 Radio_Unknown_1: Holy shit, I didn’t know she came down here…
 Radio_Unknown_2: Just relax, you didn’t do anything wrong.
+do Game.tod_progress(5)
 You and Jordan look at each other.
 Jesse: Sounds like she’s pretty scary.
 Jordan: I imagine it’s more what she can do. I’d be scared too.
 Radio_Unknown_1: Hey, did you hear about Hugo?
 Your eyes go wide.
 Did they already know about Hugo? Did he get caught? That wasn’t that long ago!
+do Game.tod_progress(5)
 Radio_Unknown_2: No, what?
 Radio_Unknown_1: Heard Jackson was going to pay him a visit today. Seems like he’s done with the whole “security” thing.
 Radio_Unknown_2: Wow, you don’t mean…
 Radio_Unknown_1: What else? You know the rules.
 Radio_Unknown_2: I guess, but…Hugo? Didn’t see that coming.
 Radio_Unknown_1: Guess what though? I talked to Jackson not too long ago. Turns out, we might have a bigger problem.
+do Game.tod_progress(5)
 Jordan’s eyes harden.
 Radio_Unknown_2: What?
 Radio_Unknown_1: Word is that there’s a spy here. Some guys on security said they keep seeing this greyhound wandering around the place, like she’s looking for something. Think she got pretty close to the elevator.
 Jordan: Knew it. Damn, I thought I was being pretty inconspicuous.
 Radio_Unknown_2: And she works here? How’d that happen?
 Radio_Unknown_1: Dunno. Don’t worry though, I hear Jackson’s gonna pay her a visit as well.
+do Game.tod_progress(5)
 You subtly glance at Jordan as the two of you hear this information, and see that she’s gone white. She has a hard look on her face.
 Radio_Unknown_2: Well, doesn't sound like it’ll be our problem.
 Radio_Unknown_1: Nope. We’ve got enough to do anyway for this next rollout. I couldn’t believe how much we ordered last time, no wonder that greyhound noticed.
 Radio_Unknown_1: Business is booming. We’ve got another huge quota to fill.
 Jordan looks excited as she listens on.
 Jordan: (whispering) Finally, a lead!
+do Game.tod_progress(5)
 Radio_Unknown_2: Where’s it going this time?
 Radio_Unknown_1: “PharmaCo”, I think.
 Jordan looks very confused by this information.
 Jordan: That big drug mart chain? Okay…so they’re exporting something to a pharmacy, but what?
 Radio_Unknown_2: Heh, I can’t believe no one’s noticed how it only affects herbivores yet. You’d think they’d start asking more questions about those “side effects”.
+do Game.tod_progress(5)
 Jordan looks positively alarmed.
 Radio_Unknown_2: Yeah. Pretty useful for us though, my canines grew half an inch so far.
 Radio_Unknown_1: Wow, maybe I should try some…
 Radio_Unknown_2: Couldn’t hurt. Make sure you check for any conflicts with other things though. I know we’re careful for that stuff, but this Promax is pretty serious stuff…you’ve seen how much crap we put into that.
 Jordan’s jaw drops.
+do Game.tod_progress(5)
 Jordan: They manufacture Promax here?! That pain reliever? No wonder they’ve got an underground factory, they must be rich!
 Jesse: Yeah…
 You’ve heard of Promax before. It was a pain reliever you could buy over the counter, and you know a lot of people that took it regularly…even now, you realize with a sinking stomach, some herbivore friends.
 Radio_Unknown_1: Yeah, I will. Think we could just meet Jackson halfway? It’s almost time to rotate.
 Radio_Unknown_2: Yeah, sure, let’s go.
+do Game.tod_progress(5)
 The radio falls back into a silence filled with silence. The two of you process what you just heard. Jordan is the first to speak.
 Jordan: Alright, this is WAY more than I thought I would be getting today. Maybe you’re my good luck charm. I’m gonna send a message to HQ quickly.
 Jesse: Then what?
@@ -111,19 +129,23 @@ Jesse: You’re not still thinking of going down there, are you?
 Jordan: I know it seems convincing to us, but that’s it. We’re really still in the same spot we were ten minutes ago. Now, we just have some more info.
 Jesse: Hmph…this sucks.
 Jordan: Yes, it does.
+do Game.tod_progress(5)
 Jordan whispers into the collar of her suit jacket, before straightening it back out.
 Jesse: What are you-
 Jordan: Just letting headquarters know. I’m gonna take a closer look.
 Jesse: You mean we’re going to take a closer look.
+do Game.tod_progress(5)
 Jordan rolls her eyes.
 Jordan: Yes, my impromptu sidekick.
 Jesse: Is that a downgrade from “coworker”?
 Jordan: I’ll give you a performance review at the end, we’ll talk about it.
+do Game.tod_progress(5)
 The two of you laugh. Jordan stows the walkie-talkie and keycard away in her suit.
 Jordan: Alright, let’s meet at the construction site.
 Jesse: We’re not going together?
 Jordan: No, let’s attract as little attention to ourselves as possible. Don’t worry, sounds like it’s me they’re coming after, so you should be safe.
 Jordan waits a moment, listening to make sure there’s no one on the other side. After a moment she goes out, closing the door behind her, leaving you alone in the closet.
+do Game.tod_progress(5)
 do Game.set_POI_visible("JanitorsLevel", "JordanPOI", false)
 do Game.set_POI_label("JanitorsLevel", "JordanPOI", "done")
 [end_timeline]

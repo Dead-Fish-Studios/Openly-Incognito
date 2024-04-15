@@ -8,33 +8,33 @@ Listen at the door?
 		do Game.set_POI_visible("OutsideSecurityLevel", "SecurityDoorPOI", false)
 		# cumulative: 10
 		do Game.tod_progress(10)
-		You stop in front of the door, listening intently. You can faintly make out the sound of someone talking\: it sounds like they’re pretty upset. 
-		???: …no, that’s it. I’m not gonna just pretend like he’s not-
-		Another voice answers, this one sounding annoyed and angry, 
-		???: Idiot! You can’t back out now, you’ll be killed. What do you think will happen if you say you randomly want to quit? You think they’ll just be okay with that?"
+		You stop in front of the door, listening intently. You can faintly make out the sound of someone talking\: it sounds like they’re pretty upset.
+		…no, that’s it. I’m not gonna just pretend like he’s not-
+		Another voice answers, this one sounding annoyed and angry,
+		Idiot! You can’t back out now, you’ll be killed. What do you think will happen if you say you randomly want to quit? You think they’ll just be okay with that?"
 		A silence falls between the two, with a familiar low growl eventually breaking the quiet.
 		You recognize this voice.
 		# cumulative: 20
 		do Game.tod_progress(10)
 		Hugo: It’s always “you can’t” or “it’s too late” or “you don’t have a choice”...
 		The other voice sounds like they’re trying to soothe Hugo.
-		???: Trust me, I get it…I’m scared every day I’m here! But we’re so close to finishing, maybe you can look for an out then.
+		Trust me, I get it…I’m scared every day I’m here! But we’re so close to finishing, maybe you can look for an out then.
 		Another silence. You try your best to look casual outside the door, but your ears are expertly trained on the door, anxious for more information.
 		# cumulative: 30
 		do Game.tod_progress(10)
 		Hugo: This is the last time…I wonder if I could fake an injury or something, they wouldn’t want me then…
 		The voice sounds a bit relieved.
-		???: That’s the spirit. Come on, let’s get going.
+		That’s the spirit. Come on, let’s get going.
 		do Game.reset_camera()
-		You suddenly hear the sound of footsteps, getting louder and louder. 
+		You suddenly hear the sound of footsteps, getting louder and louder.
 		You hardly have any time to react, but try to make it look like you were just walking by.
 		# cumulative: 40
 		do Game.tod_progress(10)
 		do Game.set_POI_visible("OutsideSecurityLevel", "HugoPOI", true)
 		As you walk forward, you hear the door open behind you. Two sets of footsteps come out. The pair speak to each other.
-		???: When’s the next rotation coming?
+		When’s the next rotation coming?
 		Hugo: Not for a while, they’re going on patrol first.
-		???: Alright. Well, I’ll see you later then.
+		Alright. Well, I’ll see you later then.
 		The other set of footsteps gets quieter as they walk away.
 		# cumulative: 50
 		do Game.tod_progress(10)
@@ -80,9 +80,9 @@ Listen at the door?
 		Hugo: Come here for a moment.
 		He opens the security room door, gesturing for you to walk in.
 		do Game.switch_level("SecurityRoomLevel")
-		You walk in the room, and are met with a small room with monitors plastered on almost every wall you can see. 
+		You walk in the room, and are met with a small room with monitors plastered on almost every wall you can see.
 		do Game.set_POI_visible("OutsideSecurityLevel", "HugoPOI", false)
-		There’s a little table in the middle of the room with stacks of papers on it, and chairs placed all over, seemingly spots to sit and watch the camera feeds. 
+		There’s a little table in the middle of the room with stacks of papers on it, and chairs placed all over, seemingly spots to sit and watch the camera feeds.
 		do Game.zoom_camera_xy(370, 150, 2)
 		There seems to be a feed from almost every part of the building. A quick scan and you even see your office, the camera angle looking oddly from like where the lightswitch is…
 		# cumulative: 100
@@ -105,32 +105,32 @@ Listen at the door?
 		Hugo: That’s the master keycard for the place, it’ll get her through there.
 		Jesse: Hugo…why don’t we just call the police? I heard Jackson basically admitting to killing people, we could-
 		Hugo: There’s no point. the place is way too well hidden and Blurr covers its tracks really well…
-		Hugo: I should know, I’ve been doing it for years. 
-		Hugo: And even if you did, once the cops come here they wouldn’t find anything, but I guarantee you the people here would start looking into who talked. 
+		Hugo: I should know, I’ve been doing it for years.
+		Hugo: And even if you did, once the cops come here they wouldn’t find anything, but I guarantee you the people here would start looking into who talked.
 		Hugo: Wouldn’t be long until you’re gone yourself.
 		You swallow, whitening a bit at Hugo’s words. Hugo sighs.
 		# cumulative: 120
 		do Game.tod_progress(10)
-		Hugo: I would say just leave and never come back, but I know better. You might be seen as a loose end, so it would only be a matter of time. 
+		Hugo: I would say just leave and never come back, but I know better. You might be seen as a loose end, so it would only be a matter of time.
 		Hugo: But don’t worry, I’ve got a plan.
 		Hugo checks that the door is shut, looking a bit anxious.
 		Jesse: Hugo, if you have this all planned out, why don’t you do it?
 		Hugo looks at you, and you’re surprised to see a little sadness in his eyes.
-		Hugo: I should’ve Jesse, a long time ago. I was blinded by the money, power, all that nonsense. 
+		Hugo: I should’ve Jesse, a long time ago. I was blinded by the money, power, all that nonsense.
 		Hugo: For a while, it was fine, until I started having to do more and more of the dirty work.
 		Jesse: What do you mean?
 		# cumulative: 130
 		do Game.tod_progress(10)
-		Hugo: I started getting sent out onto labor jobs. I…I saw first hand what we were doing to people. 
+		Hugo: I started getting sent out onto labor jobs. I…I saw first hand what we were doing to people.
 		Hugo: I think that’s when I first realized I wanted out. But by this point, I’d seen too much. They’d kill me if I hinted at leaving.
 		Jesse: Well it sounds like you’re going now, so isn’t it gonna happen anyway?! Why should I go down there?
 		Hugo gives a low chuckle.
-		Hugo: I think the only reason I haven’t been killed yet is because they can’t find a replacement for me. 
+		Hugo: I think the only reason I haven’t been killed yet is because they can’t find a replacement for me.
 		# cumulative: 140
 		do Game.tod_progress(10)
-		Hugo: A few weeks ago, I made an offhand comment about quitting to someone, but Jackson overheard me. 
-		Hugo: He asked me if I was serious, but I said it was more of a thought. 
-		Hugo: I think he saw right through me. He doesn’t trust me at all anymore. Everywhere I go, it always seems like he’s there. 
+		Hugo: A few weeks ago, I made an offhand comment about quitting to someone, but Jackson overheard me.
+		Hugo: He asked me if I was serious, but I said it was more of a thought.
+		Hugo: I think he saw right through me. He doesn’t trust me at all anymore. Everywhere I go, it always seems like he’s there.
 		Hugo: I haven’t been called down to the factory since then, so I wanted to tell someone else, just in case.
 		Hugo: Honestly Jesse, if you hadn't talked to me yesterday, I wouldn’t have told you. Believe it or not, that’s the first time someone’s just talked to me like that since I’ve been here…
 		Hugo: I felt like you’d understand.
@@ -142,7 +142,7 @@ Listen at the door?
 		Hugo: Hmm, I guess she hasn’t told you…you’re friends with her, right?
 		Jesse: Well, yeah, but told me what?
 		Hugo shakes his head, indicating for you to be quiet.
-		Hugo: Then it’s fine, just make sure you’re alone when you talk to her. 
+		Hugo: Then it’s fine, just make sure you’re alone when you talk to her.
 		# cumulative: 160
 		do Game.tod_progress(10)
 		Hugo: Find her, and tell her she’s on the right track\: that walkie-talkie of hers should help her out.
@@ -164,7 +164,7 @@ Listen at the door?
 		Suddenly, Hugo raises a hand, indicating for you to stop talking. He looks at the monitors.
 		do Game.zoom_camera_xy(370, 150, 2)
 		You turn and see what he’s looking at. Jackson is coming down the hallway outside the security room, and he doesn’t look happy.
-		Hugo loudly whispers, pointing to a space under one of the tables. 
+		Hugo loudly whispers, pointing to a space under one of the tables.
 		Hugo: Get under here, now!
 		You hurry under the table, not eager to go against the massive crocodile.
 		# cumulative: 180
@@ -184,21 +184,23 @@ Listen at the door?
 		Jackson: I know you’ve been having some thoughts of leaving, Hugo…I would’ve thought you’d know better than anyone what happens to those who want to get out.
 		Hugo: It’s more for my health, Jackson, I’m getting pretty old, and-
 		Jackson: Shut up.
-		SIlence falls between the two. 
-		Jackson paces around a little, and turns his back to Hugo. 
+		SIlence falls between the two.
+		Jackson paces around a little, and turns his back to Hugo.
 		do Game.reset_camera()
-		You can’t really see what’s going on, but you swear you see Hugo flinch just a little bit, hand moving inside his suit, but he stops himself. 
+		You can’t really see what’s going on, but you swear you see Hugo flinch just a little bit, hand moving inside his suit, but he stops himself.
 		After a moment, Jackson speaks again.
 		Jackson: …yes…yes, I think I’ll have to. Can’t afford any slip ups now, can we?
 		# cumulative: 200
 		do Game.tod_progress(10)
-		In a flash, Jackson spins around, pistol in hand, and shoots Hugo twice in the chest. The gun must be silenced because you hear an odd sharp hissing sound followed by the rattling of two casings on the ground. 
+		[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0"]
+		
+		In a flash, Jackson spins around, pistol in hand, and shoots Hugo twice in the chest.
 		Hugo groans, and sinks back into the couch, limp. Jackson lowers his gun, stowing it back inside his suit.
 		do Game.set_POI_visible("SecurityRoomLevel", "HugoPOI", false)
 		It took all you had in order to not make a sound, your eyes wide in shock.
 		Jackson: I do wish you would’ve just kept your mouth shut and went along, but I guess I’ll just have to find someone else.
 		do Game.set_POI_visible("SecurityRoomLevel", "JacksonPOI", false)
-		Jackson walks out of the room. 
+		Jackson walks out of the room.
 		# cumulative: 210
 		do Game.tod_progress(10)
 		You stay there, unmoving, not sure if Hugo was alive or not. Once Jackson’s footsteps fade away, Hugo groans out to you.
@@ -212,16 +214,16 @@ Listen at the door?
 		# cumulative: 220
 		do Game.tod_progress(10)
 		Hugo looks at you with a serious expression.
-		Hugo: I’ve made a lot of mistakes, ones that I can’t fix. 
-		Hugo: I keep seeing new people come in here all the time, and so many of them have no idea what they’re getting themselves into. 
-		Hugo: I know I’m pretty much done for. Jackson’s gonna send a cleaning crew here soon and once they see that I’m not here, they won’t stop coming after me. 
+		Hugo: I’ve made a lot of mistakes, ones that I can’t fix.
+		Hugo: I keep seeing new people come in here all the time, and so many of them have no idea what they’re getting themselves into.
+		Hugo: I know I’m pretty much done for. Jackson’s gonna send a cleaning crew here soon and once they see that I’m not here, they won’t stop coming after me.
 		Hugo: You still have a chance though - I would get out while you still can.
 		do Game.set_POI_visible("SecurityRoomLevel", "HugoPOI", true)
 		Hugo stands up, clutching his chest. It’s evident he’s in some pain, but he moves over to the monitors to watch for anyone coming.
-		Hugo: Get out of here, Jesse. You should still be safe from Jackson. I’ll turn off this camera system then head out myself. 
+		Hugo: Get out of here, Jesse. You should still be safe from Jackson. I’ll turn off this camera system then head out myself.
 		Hugo: Damn…I’d come with you, but I think I’d be more harm than good\: I think my ribs are broken.
 		Jesse: But-
-		Hugo: Now, Jesse! The cleaning crew’s gonna be here soon. 
+		Hugo: Now, Jesse! The cleaning crew’s gonna be here soon.
 		Hugo: Here, take this, I don’t need it anymore, not with people going to be shooting me on sight.
 		# cumulative: 230
 		do Game.tod_progress(10)
@@ -250,19 +252,23 @@ Listen at the door?
 label day4
 if {Day4.AlarmDone} == false:
 	Listening at the door, you can hear some muffled voices. There were a fair few people inside.
-	Shit, now what? I don’t think they would take too kindly to me just strolling in.
-	If only there was a way to get them out of that room… maybe I can find a way to draw them out?
+	Jesse: [i] Shit, now what? I don’t think they would take too kindly to me just strolling in. [/i]
+	Jesse: [i] If only there was a way to get them out of that room… maybe I can find a way to draw them out?[/i]
+	[end_timeline]
 else:
+	do Game.play_music("Fast1")
 	You press your ear to the door. The muffled voices of before are gone.
 	Jesse: Well, here we go…
 	do Game.tod_progress(20)
 	Ducking into the room, you quickly close the door behind you, locking it.
-	You’re alone in the room, various misplaced objects indicative of the people who were just in here. 
+	You’re alone in the room, various misplaced objects indicative of the people who were just in here.
 	You had no idea how much time you had before people made their way back inside the building.
 	Quickly scanning the monitors, you see the feed of your room. Your eyes go wide.
+	do Game.play_music("Fast2")
 	Jesse: Jordan!
 	do Game.tod_progress(20)
 	You see Jordan, standing aimlessly in your office, a calculating look on her face. However, you don’t see any sign of Connie anywhere.
 	Jesse: She must’ve gone outside with everyone else, I’ve gotta get there quick!
 	do Game.tod_progress(20)
+	do Game.play_music("Fast1")
 	[end_timeline]

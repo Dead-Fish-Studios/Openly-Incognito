@@ -129,7 +129,7 @@ func play_music(track_name: String, _xfade: bool = true, _bpm_sync: bool = true)
 			twn.finished.connect((func done(stream: AudioStreamPlayer): 
 				stream.stop() 
 				print_debug("xfade done")).bind(currently_playing))
-	else: 
+	elif currently_playing != null:
 		currently_playing.stop()
 		target.volume_db = -12.0
 	print_debug("started playback: \"" + track_name + "\"")
@@ -145,3 +145,16 @@ func stop_music(_fade: bool = true) -> void:
 					stream.stop() 
 					print_debug("fade done")).bind(track))
 			else: track.stop()
+
+# fire alarm
+func play_fire_alarm(play: bool) -> void:
+	game.get_node("./Audio/SFX/fire_alarm").playing = play
+
+# ending
+func end() -> void:
+
+	play_music("Main")
+	game.get_node("./HUD_Layer").visible = false
+	game.switch_level("none")
+	game.get_node("./EndCredits").visible = true
+	Dialogic.start("res://Timelines/endcredits.dtl")

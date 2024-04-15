@@ -7,4 +7,25 @@ do Game.set_level_init_label("ConstructionSiteRoomLevel", "default")
 
 label default
 It's dark in here. The air is thick with dust.
+if {OTHER.Day} == 3:
+	if Game.get_POI_label("JanitorsLevel", "JordanPOI") == "done":
+		jump day3_factory
+[end_timeline]
+
+label day3_factory
+It looks exactly the same as it did the last time you were here, but there’s no sign of Jordan.
+Jesse: Must’ve gotten here before her.
+do Game.set_POI_visible("ConstructionSiteRoomLevel", "JordanPOI", true)
+As you say this, Jordan springs up from behind the table.
+Jesse: Ahh! Oh my god, you scared the shit out of me Jordan!
+Jordan: Sorry, but I didn’t want to be seen.
+You recover from this momentary panic, hands on your knees, while Jordan asks you a question.
+Jordan: Where did you say this keycard scanner was?
+Jesse: Over there.
+do Game.zoom_camera(330, 70)
+The two of you walk over to the scanner on the wall. It’s a little black box with a green light at the top.
+Jordan: Looks like you just tap it. Here, you can do the honors.
+Jordan hands you back the [b]keycard[/b].
+set {ITEMS.SecurityRoom_Keycard} = true
+[i] you gained item\: [/i] [b]keycard[/b].
 [end_timeline]

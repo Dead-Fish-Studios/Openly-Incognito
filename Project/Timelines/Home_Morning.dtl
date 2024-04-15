@@ -19,20 +19,20 @@ The coffee machine beeps to let you know it’s finished.
 You pour a cup, grab a muffin, and sit down in front of your TV, turning it on to catch the news before you head out.
 The news channel comes on.
 do Game.play_music("Chill2")
-TV (Reporter) [i]“Another set of disappearances last night in what has become a full-on police investigation."[/i]
-TV (Reporter) [i]“An ever-growing list of victims only adds to the public discontent that has left this city on high alert."[/i]
-TV (Reporter) [i]“Reported victims include, yet again, strictly herbivores, leading people to wonder if this is merely a coincidence, or a developing hate crime.”[/i]
-TV (Reporter) [i]“Law enforcement officials urge citizens to report any and all suspicious behaviour. Chief of Police Hannah Montgomery issued a statement this morning to the public regarding the disappearances:”[/i]
+TV (Reporter): [i]“Another set of disappearances last night in what has become a full-on police investigation."[/i]
+TV (Reporter): [i]“An ever-growing list of victims only adds to the public discontent that has left this city on high alert."[/i]
+TV (Reporter): [i]“Reported victims include, yet again, strictly herbivores, leading people to wonder if this is merely a coincidence, or a developing hate crime.”[/i]
+TV (Reporter): [i]“Law enforcement officials urge citizens to report any and all suspicious behaviour. Chief of Police Hannah Montgomery issued a statement this morning to the public regarding the disappearances\:”[/i]
 TV (TV): [i]“Rest assured, we are actively investigating each disappearance in-depth. All our officers are working around the clock in order to move forward in this case." [/i]
 TV: [i]"I urge any member of the public who might have relevant information to come forward, no matter how insignificant it may seem.”[/i]
-TV (Reporter) [i]“Some citizens have talked about organizing a night watch to-”[/i]
+TV (Reporter): [i]“Some citizens have talked about organizing a night watch to-”[/i]
 You turn the TV off.
 Jesse: [i]Damn, that’s the third one this month.[/i]
 do Game.play_music("Chill3")
 Unfortunately, there was an ongoing manhunt in your city for a bunch of people who have gone missing.
 You remember hearing about it the first time, not thinking too much of it, but as the list of missing people increased, it was clear to everyone that something more sinister was going on.
 Never before had you recalled so many people suddenly going missing in your city in such a short span of time.
-What really had people talking was the type of people disappearing. 
+What really had people talking was the type of people disappearing.
 So far, only herbivores have gone missing, which worried some people to the point of placing an unfortunate stigma on carnivores, creating public fear around them.
 Being a red fox, you weren’t too worried about going missing, but a lot of this stigma was directed towards people like you.
 Certainly, not everyone thought like this, but you can recall a time last week when you were walking home at night.
@@ -62,9 +62,9 @@ TV: [i]"Strangely enough though, this place seems to be more on the side of “b
 TV: [i]"a bit strange considering her reputation, but it hasn’t gone under yet!"[/i]
 Jesse: [i]Wow, I didn’t think she was that popular…[/i]
 Jesse: [i]Maybe some of it will trickle down to me and I can finally get an in-suite washer and dryer[/i]
-You flip the channels a bit and eventually land on the news channel. 
+You flip the channels a bit and eventually land on the news channel.
 do Game.play_music("Chill3")
-A live feed of a crime scene is shown of what you recognize as downtown. 
+A live feed of a crime scene is shown of what you recognize as downtown.
 There’s a cluster of police officers around the area. A reporter gives a breakdown of the situation.
 TV (Reporter): [i]“An attack last night in the downtown area on an unsuspecting individual. ”[/i]
 TV (Reporter): [i]“While not fatal, reports indicate that the assailant fought the victim in what appeared to be a robbery...”[/i]
@@ -75,7 +75,7 @@ TV: [i]“Drezin gave a statement this morning at Fairway Hospital on what happe
 TV (TV): [i]“This big, hulking wolf came up to me, asking for some money, and when I said I didn’t have any, she came for me.”[/i]
 TV (TV): [i]“She started, like…reaching for my pockets, I guess. It was when I tried to push her away that she bit my hand and didn’t let go.”[/i]
 TV (TV): [i]“Could’ve been worse, really. Juut glad I’m here now.”[/i]
-TV: [i]“Drezin is expected to make a full recovery. Meanwhile, support from a group of citizens, carnivores included, made their way to Drezin’s room today to wish him well. ”[/i]
+TV (Reporter): [i]“Drezin is expected to make a full recovery. Meanwhile, support from a group of citizens, carnivores included, made their way to Drezin’s room today to wish him well. ”[/i]
 TV (Reporter): [i]“A spokesperson for a group of carnivores had this to say.”[/i]
 TV (TV): [i]“What happened last night was a shameful and depraved act from a member of our community. I must stress that while it is easy to judge, one must remember not to generalize. ”[/i]
 TV (TV): [i]“Not all carnivores are like the person who attacked Mr. Drezin last night.”[/i]
@@ -83,12 +83,12 @@ TV (Reporter): [i]“In other news-”[/i]
 do Game.play_music("Chill1")
 You switch off the TV, sinking back into the couch a little as you do.
 Jesse: Sigh.
-Unfortunately, this wasn’t the first time an attack like this had happened. 
-It seems like the wolf was trying to eat that cow. Arguably more harmful was the stigma that came with it. 
-Events like this have been increasing public discontent for a little while now. 
-It seemed like every day carnivores were under a harsher and harsher light. 
-Of course, most of them hadn’t attacked anyone, but that didn’t stop people from acting like they had. 
-There seemed to be protests every other week at city hall calling for increased police presence and harsher policies towards carnivores. 
+Unfortunately, this wasn’t the first time an attack like this had happened.
+It seems like the wolf was trying to eat that cow. Arguably more harmful was the stigma that came with it.
+Events like this have been increasing public discontent for a little while now.
+It seemed like every day carnivores were under a harsher and harsher light.
+Of course, most of them hadn’t attacked anyone, but that didn’t stop people from acting like they had.
+There seemed to be protests every other week at city hall calling for increased police presence and harsher policies towards carnivores.
 The latter attracted a lot of public backlash, which created it’s own series of issues.
 Jesse: [i] What a mess…[/i]
 Everyone knew that there was a mindset among some people that things should return to “predator and prey”, but this was a very old way of thinking.
@@ -100,10 +100,10 @@ You stand, quickly washing up, trying to push those thoughts out of your head.
 label sod_day3
 
 do Game.play_music("Chill1")
-You wake up in time to turn your alarm off before it blares into the silence. 
+You wake up in time to turn your alarm off before it blares into the silence.
 Jesse: [i]What’s the point of buying this if I just wake up anyway?[/i]
 You drag yourself out of bed.
-Sitting on the edge of the bed for a moment, the fleeting peacefulness of sleep fades as you remember the day before. 
+Sitting on the edge of the bed for a moment, the fleeting peacefulness of sleep fades as you remember the day before.
 You feel much better about it now, likely due to the sleep you had.
 Jesse: [i]I’m sure I’ll figure it out. No reason to worry about it now.[/i]
 Feeling a bit more energized, you grab your breakfast, and head out the door, not bothering to watch TV.
@@ -113,7 +113,7 @@ Jesse: [i]Maybe I’ll have some time to look around.[/i]
 
 label sod_day4
 do Game.play_music("Chill1")
-As usual, your alarm clock screams at you to wake up. 
+As usual, your alarm clock screams at you to wake up.
 Bleary eyed, you roll over to turn off the alarm, but a jolt of panic rushes through you as you see the walkie-talkie on your nightstand, still lightly buzzing static from the night before.
 You calm down, realizing you’re not in any immediate danger.
 Jesse: Today’s the day.
@@ -138,11 +138,11 @@ You trace your fingers over your pocket, feeling Hugo’s pistol sitting there m
 Jesse: [i] Well, I hope I won’t have to use this on someone, but I might be able to gain some…leverage…if I need to.[/i]
 The thought scares you a bit, but you take a few deep breaths. Looking at the time, you’ve still got about an hour before work starts.
 Jesse: [i] I’ll just play it cool…what did Jordan say? ”Act like you’re supposed to be there?”[/i]
-You go to your room to gather Jordan’s things. Walking over to the door, you ready yourself for the day to come. 
+You go to your room to gather Jordan’s things. Walking over to the door, you ready yourself for the day to come.
 You close your eyes, going over your half-plan.
 Jesse: [i] Well, I don’t have any other ideas…[/i]
 do Game.play_music("Chill1")
-As you walk out of the room, you laugh to yourself, both at the humour of the situation, and of the absurdity of what you’re trying to do. 
+As you walk out of the room, you laugh to yourself, both at the humour of the situation, and of the absurdity of what you’re trying to do.
 Jesse: [i] Maybe I’ll put this on my resume if I ever apply to the FBI.[/i]
 With that, you cross the street to your car. Looking around, you don’t see anyone, so you get in, and drive to work.
 do Game.switch_level("AtriumLevel")

@@ -31,6 +31,33 @@ if {OTHER.Day} == 4:
 	if {Day4.AlarmDone} == false:
 		Jesse: No way I’m going in there without a plan, who knows what’s waiting on the other side.
 	else:
+		do Game.set_POI_visible("OfficeLevel", "JordanDay4POI", true)
+		You try to push open the door, and are surprised to feel that it’s locked. You loudly whisper across the door.
+		Jesse: Jordan? Jordan, are you there?
+		Jordan: Jesse?! What are you doing here?
+		do Game.tod_progress(20)
+		Jesse: What do you think?! Why is the door locked?
+		Jordan: She didn’t want me getting out, but-I didn’t think you’d come back Jesse, what about the evidence?
+		Jesse: I’ve got it on me-
+		do Game.tod_progress(30)
+		Jordan: You’ve got it on you?! Why would you bring it back here?
+		Jesse: They were watching my house, I didn’t know if they’d just break in and find it, but-never mind that! Unlock the door and let’s go!
+		Jordan: I can’t, she changed the code…
+		Jesse: Of course she did!
+		do Game.tod_progress(20)
+		The door to your office had a lock in it’s handle that you could punch in on either side. You never really used it, and just left it unlocked since none of you left valuables in your office.
+		It seemed Connie punched in a new code before she left so Jordan was trapped in the room.
+		Jordan: They took my gun so I can’t bust my way out, but-
+		Jesse: I’ve still got Hugo’s!
+		do Game.tod_progress(20)
+		Jordan: Really? Okay, well…just aim at the handle and shoot it, we can try to force it open.
+		Jesse: A-alright, just…stand back!
+		[sound path="res://assets/audio/sfx/Oneshot/gunshot.mp3" volume="0.0" bus="Master"]
+		Standing back, you take out Hugo’s pistol, ready yourself, and shoot twice at the handle of the door. The handle is bent at an odd angle.
+		do Game.tod_progress(20)
+		I think that did it! Now, bust it down.
+		You shove your shoulder against the door. The door bursts open as you sill into your office area.
+		do Game.play_music("Chill")
 		do Game.switch_level("OfficeLevel")
 		jump Office_init/day4AlarmDone
 Head to your office?
@@ -47,8 +74,10 @@ if {OTHER.Day} == 2:
 		You walk to the elevator, and press the “up” button. The doors instantly open.
 		do Game.switch_level("ElevatorLevel")
 	- no
-else:
+elif {OTHER.Day} == 1:
 	The elevator is currently undergoing maintainance. Try again tommorow.
+else:
+	Jesse: Cafeteria's still closed.
 [end_timeline]
 
 label atrium2righthallway

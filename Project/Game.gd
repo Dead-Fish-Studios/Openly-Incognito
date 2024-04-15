@@ -85,7 +85,7 @@ func switch_level(to_level:String, fade: bool = true):
 		var fade_tweener: Tween = create_tween()
 		fade_tweener.tween_property($HUD_Layer/Curtains, "color", Color(0,0,0,1), fade_time )
 		await fade_tweener.finished
-
+	if to_level == "none": return
 	# turn off visiblity for all levels
 	for level in $SubViewportContainer/SubViewport.get_children():
 		if level is Camera2D: continue

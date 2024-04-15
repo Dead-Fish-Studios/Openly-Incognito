@@ -7,7 +7,9 @@
 
 [node name="FactoryLevel" type="Node2D"]
 script = ExtResource("1_b1hwl")
+level_name = "Factory"
 background_texture = ExtResource("2_604l4")
+init_dtl = false
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -22,8 +24,9 @@ position = Vector2(367, 99)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Shutters"
 dtl_path = "res://Timelines/Factory_Shutters.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="EquipmentPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -31,8 +34,9 @@ position = Vector2(329, 145)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Lab Equipment"
 dtl_path = "res://Timelines/Factory_Equipment.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="CratesPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -40,8 +44,9 @@ position = Vector2(226, 237)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Crates"
 dtl_path = "res://Timelines/Factory_Remote.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="RemotePOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -49,8 +54,9 @@ position = Vector2(246, 189)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Remote"
 dtl_path = "res://Timelines/Factory_Remote.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="PillsPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -58,8 +64,9 @@ position = Vector2(217, 188)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Pills"
 dtl_path = "res://Timelines/Factory_Pills.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="DoorPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -67,8 +74,19 @@ position = Vector2(98, 128)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Door"
 dtl_path = "res://Timelines/Factory_Door.dtl"
+days_flags = 0
+POI_sprite_enable = false
+
+[node name="ExitPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
+position = Vector2(375, 228)
+camera_zoom_in_enable = true
+camera_zoom = 2.0
+POI_button_offset = Vector2(0, 0)
+hover_info = "Back to Elevator"
+dtl_path = "res://Timelines/Factory_Exit.dtl"
+days_flags = 0
 POI_sprite_enable = false
 
 [node name="RedLightPOI" parent="POIs" instance=ExtResource("4_xbr5n")]
@@ -76,7 +94,7 @@ position = Vector2(137, 155)
 camera_zoom_in_enable = true
 camera_zoom = 2.0
 POI_button_offset = Vector2(0, 0)
-hover_info = "Table"
+hover_info = "Light"
 dtl_path = "res://Timelines/Factory_RedLight.dtl"
 POI_sprite_enable = false
 
